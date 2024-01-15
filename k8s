@@ -2,3 +2,43 @@
 Vertical scaling involves adjusting the resources (CPU, memory) of a single pod, while horizontal scaling involves increasing the number of pod replicas. 
 Vertical scaling is suitable for applications with varying resource needs, while horizontal scaling improves overall application availability and performance.
 
+Explain how resource limits and requests are set for containers in Kubernetes. 
+Answer: Resource limits define the maximum amount of resources a container can use, preventing resource contention. Requests, on the other hand, guarantee a certain amount of resources for a container. Not setting resource limits can lead to resource starvation, affecting the overall cluster performance.
+
+Compare blue-green deployments and canary releases. When would you choose one over the other? Answer: Blue-green deployments involve switching between two identical environments, while canary releases gradually roll out changes to a subset of users. Blue-green is suitable for minimizing downtime, while canary releases are effective in identifying and mitigating issues before a full rollout.
+
+Describe a situation where a pod is in a "Pending" state. What steps would you take to diagnose and resolve the issue? Answer: Check events using kubectl describe pod for insights, verify resource requests and limits, examine node resource availability, and investigate any network-related issues. Use logs and tools like kubectl logs for further analysis.
+
+
+========
+Let's break down the explanation for handling deployments with breaking changes in Kubernetes, covering the concepts of versioned APIs, canary deployments, and feature flags. Additionally, I'll address the question about blue/green deployments. 
+
+ 1. Versioned APIs: In Kubernetes, APIs are crucial for communication and interaction with the cluster. When deploying applications with breaking changes, it's essential to use versioned APIs to ensure backward compatibility. Versioning helps in maintaining support for existing clients while introducing changes for newer clients. By carefully managing API versions, you can roll out updates without disrupting existing functionalities.
+
+  Example:  
+Instead of modifying the existing API directly, introduce a new version (e.g., v2) alongside the existing one (e.g., v1). 
+Gradually migrate clients to the new API version, allowing them to adapt to the changes without immediate disruption. 
+
+2. Canary Deployments: Canary deployments involve rolling out changes to a small subset of users or traffic before applying them to the entire application. This approach allows for real-world testing and monitoring of the changes' impact, minimizing the risk of widespread issues.  
+
+Example:  
+
+Deploy the new version of your application to a small percentage of the production environment. 
+Monitor the canary deployment for any issues, such as increased error rates or performance degradation. 
+If the canary deployment is successful, gradually increase the rollout to the entire user base. 
+
+3. Feature Flags: Feature flags, also known as feature toggles, allow you to enable or disable specific features within your application at runtime. This provides flexibility in controlling the visibility of breaking changes and allows for easy rollback if issues arise.  
+
+Example:  
+Introduce a feature flag that controls whether the breaking change is active or inactive. 
+Initially, set the flag to inactive, keeping the existing behavior. 
+Gradually enable the feature flag for a subset of users or environments to test the breaking changes. 
+If issues arise, quickly disable the feature flag to revert to the previous behavior. 
+
+Blue/Green Deployments: While blue/green deployments are a valid strategy for managing deployments, they involve switching traffic from one environment (blue) to another (green). In the context of breaking changes, blue/green deployments may not be the ideal choice if you need a more controlled and gradual rollout.  
+
+Consideration:  
+Blue/green deployments involve a full cutover from the old environment to the new one, potentially causing immediate disruption if issues arise. 
+Canary deployments and feature flags provide more fine-grained control over the rollout, allowing for better monitoring and mitigation of issues before a full deployment. 
+
+In summary, the choice between versioned APIs, canary deployments, feature flags, or blue/green deployments depends on the specific requirements of your application and the desired level of control over the rollout of breaking changes. Each approach has its advantages, and the decision should align with your application's architecture and the tolerance for potential disruptions during the deployment process.
