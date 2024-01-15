@@ -1,4 +1,4 @@
-<b>How do you scale applications vertically and horizontally in Kubernetes? </b>
+<b>How do you scale applications vertically and horizontally in Kubernetes? </b> 
 Vertical scaling involves adjusting the resources (CPU, memory) of a single pod, while horizontal scaling involves increasing the number of pod replicas. 
 Vertical scaling is suitable for applications with varying resource needs, while horizontal scaling improves overall application availability and performance.
 
