@@ -1,3 +1,4 @@
+Observations indicate that when scanning an image for the first time, Aqua completes the scan in a normal timeframe. However, subsequent requests for the same image with different tags result in a quicker scan without downloading the image from Artifactory. This behavior differs from Twistlock, which treats the same image with different tags as a new image.
 Scanning the Same Image in Parallel:
 Scanning the same image with the same tag in parallel for the first time reveals that only a single scanner takes the responsibility of downloading and completing the scan. Additionally, if multiple scanners are busy with image scanning and the same image is in-progress, Aqua intelligently avoids queuing the request, recognizing that the image is already being scanned.
 
