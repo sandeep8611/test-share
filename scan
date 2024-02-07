@@ -1,0 +1,11 @@
+Scanning the Same Image in Parallel:
+Scanning the same image with the same tag in parallel for the first time reveals that only a single scanner takes the responsibility of downloading and completing the scan. Additionally, if multiple scanners are busy with image scanning and the same image is in-progress, Aqua intelligently avoids queuing the request, recognizing that the image is already being scanned.
+
+Deleting Image from Aqua UI:
+Deleting an image from the Aqua UI for testing purposes doesn't always trigger Aqua to treat the image as entirely new. Although the UI may show that the image has not been scanned before, Aqua may still scan it quickly without downloading the image. This discrepancy may be due to the backend deleting job still being in-progress, taking a few minutes for Aqua to treat the image as brand new.
+
+Finding Status for Image Scans:
+The Aqua status endpoint provides the status of scanned images (in-progress, queued, scanned). However, it only takes the image name as an argument. Scanning the same image in parallel may complicate understanding the completion status, especially if a subsequent request is triggered before the initial scan is finished. Further testing with large image sizes is required to ensure accurate status reporting.
+
+Scan Result:
+Scan reports (VES) from Aqua differ from those of Twistlock. Comprehensive testing will be conducted to evaluate scan result accuracy, performance, and latency in comparison with Twistlock.
