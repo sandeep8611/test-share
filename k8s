@@ -1,15 +1,15 @@
-if [ "$scan_status" == "STARTED" ]; then
-    echo -e "\e[33m⚠️ Scan in Progress\e[0m"
-    echo "The scan has been initiated. Your CI build will continue while the scan is running in the background."
-    echo "You can check the summary report for vulnerabilities in approximately 5 minutes using the following link:"
-    echo "$summary_report_link"
-    echo ""
-    echo "If you need to adjust the timeout settings or have any questions, refer to our documentation."
-else
-    echo -e "\e[32m✅ Scan Completed\e[0m"
-    echo "The scan has been successfully completed. You can access the summary report using the provided link."
-    echo "Thank you for your patience."
-fi
+I hope this message finds you well.
+
+As part of our ongoing efforts to enhance our external image ingestion pipeline, I would like to invite you to a feedback session. Your firsthand experience with the pipeline is invaluable, and we greatly appreciate your input as we work towards improving its efficiency and effectiveness.
+
+During the session, we will discuss your experiences, challenges encountered, and suggestions for improvement. Your feedback will play a crucial role in shaping the future enhancements of our pipeline.
+
+Meeting Details:
+Date: [Insert Date]
+Time: [Insert Time]
+Location: [Insert Location/Zoom Link]
+
+Please confirm your availability by [Insert Deadline], and feel free to reach out if you have any questions or specific topics you would like to address during the session.
 
 
 <b>How do you scale applications vertically and horizontally in Kubernetes? </b> 
