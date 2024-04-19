@@ -1,3 +1,17 @@
+if [ "$scan_status" == "STARTED" ]; then
+    echo -e "\e[33m⚠️ Scan in Progress\e[0m"
+    echo "The scan has been initiated. Your CI build will continue while the scan is running in the background."
+    echo "You can check the summary report for vulnerabilities in approximately 5 minutes using the following link:"
+    echo "$summary_report_link"
+    echo ""
+    echo "If you need to adjust the timeout settings or have any questions, refer to our documentation."
+else
+    echo -e "\e[32m✅ Scan Completed\e[0m"
+    echo "The scan has been successfully completed. You can access the summary report using the provided link."
+    echo "Thank you for your patience."
+fi
+
+
 <b>How do you scale applications vertically and horizontally in Kubernetes? </b> 
 Vertical scaling involves adjusting the resources (CPU, memory) of a single pod, while horizontal scaling involves increasing the number of pod replicas. 
 Vertical scaling is suitable for applications with varying resource needs, while horizontal scaling improves overall application availability and performance.
