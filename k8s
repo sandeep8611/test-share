@@ -1,13 +1,15 @@
-2.1 Duplication of Process
+3. Lack of Process Validation
+3.1 Trust-Based Approach
 
-Issue: Duplication of effort when bringing in new versions of existing images, where only the image tag changes, but users are required to fill out the entire form from scratch.
-Feedback: Users report that the process of filling out the form for each image is time-consuming and prone to copy-paste errors. This is particularly burdensome when working with multiple images, such as with Aqua, where five images are brought in at a time.
+Issue: The current system relies on users checking off that they have followed necessary processes like ETLC/SDLC without any automated validation or verification.
+Feedback: Users are just checking a box to indicate that they've completed certain steps, but there is no mechanism to verify whether these steps have indeed been followed. This can lead to discrepancies and process inconsistencies, especially since different teams may be following varying methodologies.
+Challenges:
+No API or integration available to validate certain processes.
+Different teams may use different methodologies, making validation complex.
 Suggested Actions:
-Implement a more efficient process that allows users to auto-fill or copy existing information when only the image tag changes.
-Explore the possibility of minimizing manual form completion to reduce redundancy and prevent errors.
-Consider implementing an automation tool or script to streamline the process of importing multiple images with minimal manual intervention.
-
-I hope this message finds you well.
+Revise the text in forms and checklists to ensure users understand what they are accepting, with clear language describing each process (e.g., ETLC, ISRP).
+Implement automated checks where possible to verify that processes have been followed. For example, query a Jira board to confirm if ETLC has been completed.
+Explore methods to validate other processes, providing more robust checks and reducing reliance on trust alone.
 
 As part of our ongoing efforts to enhance our external image ingestion pipeline, I would like to invite you to a feedback session. Your firsthand experience with the pipeline is invaluable, and we greatly appreciate your input as we work towards improving its efficiency and effectiveness.
 
