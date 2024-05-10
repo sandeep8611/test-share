@@ -1,3 +1,14 @@
+1. Reporting Challenges
+1.1 Email Format and Information Overload
+
+Issue: The current email report for image ingestion contains too much information and has an unclear structure, making it difficult to read and understand.
+Feedback: Key information such as status and actions should be at the top, with a more concise format to reduce scrolling and information overload. The excessive details, like the complete output from image assessments, clutter the report and create confusion.
+Suggested Actions:
+Redesign the email template to improve readability by placing key information (status, actions) at the top.
+Condense the report to focus on critical points, allowing users to get an overview without having to scroll extensively.
+Provide an option to download detailed reports separately for users who need more information.
+Remove irrelevant details that don't require user action or input to streamline the report.
+
 I hope this message finds you well.
 
 As part of our ongoing efforts to enhance our external image ingestion pipeline, I would like to invite you to a feedback session. Your firsthand experience with the pipeline is invaluable, and we greatly appreciate your input as we work towards improving its efficiency and effectiveness.
