@@ -1,13 +1,11 @@
-1. Reporting Challenges
-1.1 Email Format and Information Overload
+2.1 Duplication of Process
 
-Issue: The current email report for image ingestion contains too much information and has an unclear structure, making it difficult to read and understand.
-Feedback: Key information such as status and actions should be at the top, with a more concise format to reduce scrolling and information overload. The excessive details, like the complete output from image assessments, clutter the report and create confusion.
+Issue: Duplication of effort when bringing in new versions of existing images, where only the image tag changes, but users are required to fill out the entire form from scratch.
+Feedback: Users report that the process of filling out the form for each image is time-consuming and prone to copy-paste errors. This is particularly burdensome when working with multiple images, such as with Aqua, where five images are brought in at a time.
 Suggested Actions:
-Redesign the email template to improve readability by placing key information (status, actions) at the top.
-Condense the report to focus on critical points, allowing users to get an overview without having to scroll extensively.
-Provide an option to download detailed reports separately for users who need more information.
-Remove irrelevant details that don't require user action or input to streamline the report.
+Implement a more efficient process that allows users to auto-fill or copy existing information when only the image tag changes.
+Explore the possibility of minimizing manual form completion to reduce redundancy and prevent errors.
+Consider implementing an automation tool or script to streamline the process of importing multiple images with minimal manual intervention.
 
 I hope this message finds you well.
 
