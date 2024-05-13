@@ -1,3 +1,24 @@
+2.5 Use Case for Snyk Team
+2.5.1 Integration Challenges and Efficiency Concerns
+
+Issue:
+The Snyk team's use case presents integration challenges within the ingestion pipeline, particularly regarding the registration of multiple components with their own versions.
+Requiring the Snyk team to perform an ISRP for each component version may not be efficient and could slow down their workflow.
+Problem Statement:
+Registering each component version in CTC would necessitate multiple ISRP processes for the Snyk team, leading to inefficiencies and potential delays in the ingestion process.
+Addressing the use case for the Snyk team is essential to ensure that the pipeline can accommodate their workflow while maintaining efficiency and productivity.
+Implications:
+Inefficient processes for the Snyk team may impact their productivity and the overall efficiency of the ingestion pipeline.
+Failure to address this use case could result in delays and challenges in integrating Snyk's components into the pipeline.
+Suggested Actions:
+Engage with the Snyk team to understand their specific requirements and workflow for importing multiple components.
+Explore options for streamlining the registration process to allow the Snyk team to perform only one ISRP for multiple components.
+Implement solutions that accommodate the Snyk team's use case while ensuring compliance with relevant processes and standards.
+Next Steps:
+Collaborate with the Snyk team to develop a tailored solution that meets their needs while aligning with the goals of the ingestion pipeline.
+Implement changes to the pipeline to accommodate the Snyk team's use case, with clear communication and support provided throughout the process.
+
+
 5.1 Delays in VA Review
 
 Issue: The current pipeline allows a run time of 5 days for the VA team to review generated tickets, but there are significant delays in the review process, suggesting that the VA team may not meet its SLA as user volume increases.
