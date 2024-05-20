@@ -1,64 +1,26 @@
-Story Title: Implement Delegation Approval Process for Ingestion Pipeline When App Owner or ISO is Unavailable
+To ensure the ingestion process is not delayed due to the unavailability of key personnel like App Owners or ISOs, we need to implement a delegation approval process. This involves integrating with JP API to fetch delegation/manager details and updating the pipeline approval workflow to allow designated managers or support managers to approve ingestions. This feature aims to streamline the approval process, reduce delays, and improve the overall efficiency of the ingestion pipeline.
 
-Story Description:
+Delegation Feature:
 
-As an Ingestion Pipeline User, I want the ability to delegate approval to a manager or support manager if the App Owner or ISO is unavailable, so that the ingestion process is not delayed due to unavailability of key personnel.
+Introduce a feature that allows delegation of approval to a designated manager or support manager when the App Owner or ISO is unavailable.
+Ensure that the delegation process is secure and clearly documented in the pipeline.
+Integration with JP API:
 
-Story Title: Provide CSV/Excel Report Format for Vulnerability Reports in the Ingestion Pipeline
+Check if the JP API provides information on delegation, managers, or support managers.
+Integrate with JP API to fetch the necessary delegation/manager/support manager details.
+Approval Workflow:
 
-Story Description:
+Update the approval workflow to include the ability for delegated personnel to approve image ingestions.
+Ensure that the approval records clearly indicate when a delegation has been used.
+Notification and Alerts:
 
-As a Pipeline User, I want to download vulnerability reports in CSV/Excel format so that I can easily share these reports with vendors, ISO teams, and attach them to various compliance documents like ETLC and CAPs/Res.
+Implement notification mechanisms to inform the delegates when they need to approve an ingestion request.
+Provide alerts to the App Owner or ISO when a delegation is triggered.
+User Interface Updates:
 
-Acceptance Criteria:
-
-CSV/Excel Download Option:
-
-Users can download vulnerability reports in both CSV and Excel formats.
-The download option is clearly visible and easily accessible in the user interface.
-Standardized Report Format:
-
-The CSV/Excel reports follow a standardized format with useful fields (e.g., image name, vulnerability ID, severity, status, vendor feedback).
-Ensure the report format is customizable to include additional fields if required by the user.
-Usability and Performance:
-
-The download process is quick and does not negatively impact the performance of the pipeline.
-The reports are easily readable and well-organized to facilitate quick understanding and sharing.
+Update the user interface to allow users to set and view delegation details.
+Ensure that users can easily identify who the current approvers and delegates are.
 Documentation and User Guidance:
 
-Provide clear documentation on how to download and use the CSV/Excel reports.
-Include examples and best practices for sharing and attaching these reports to compliance documents.
-Tasks:
-
-Design Report Template:
-
-Design a standardized template for the CSV/Excel reports.
-Ensure the template includes all necessary fields and is customizable.
-Develop Download Functionality:
-
-Implement the functionality to download vulnerability reports in CSV/Excel formats.
-Ensure this feature is integrated seamlessly into the existing pipeline interface.
-Testing and Validation:
-
-Test the download functionality to ensure it works correctly and efficiently.
-Validate that the reports are accurate and formatted as per the designed template.
-Update Documentation:
-
-Create user documentation detailing the steps to download and use the CSV/Excel reports.
-Include guidelines on customizing the report and examples of how to use it for compliance purposes.
-User Training and Support:
-
-Conduct training sessions or provide support materials to help users understand the new report format and how to utilize it effectively.
-Gather user feedback to make any necessary adjustments or improvements.
-Priority: High
-
-Story Points: 8
-
-Assignees: [Assign to appropriate team members]
-
-Labels: CSV Report, Excel Report, Vulnerability Reporting, Ingestion Pipeline, User Experience
-
-Attachments: None
-
-Description:
-Users have requested the ability to download vulnerability reports in CSV/Excel formats to facilitate easier sharing with vendors, ISO teams, and for attaching to compliance documents. This feature aims to provide a standardized, customizable report format that enhances usability and compliance. By offering this download option, we aim to improve the overall user experience and streamline the process of managing and sharing vulnerability information.
+Provide clear documentation on how to set up and use the delegation feature.
+Include guidelines on how to manage delegation settings and what to do if an approver is unavailable.
