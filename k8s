@@ -1,37 +1,11 @@
-Jira Story: Enhance Documentation for Ingestion Pipeline
-Story Title: Enhance Documentation for Ingestion Pipeline to Support Various Use Cases
+The current process for verifying that users have completed necessary steps (such as ETLC/SDLC) relies on self-reporting, which is prone to errors and inconsistencies. By implementing enhanced verification processes, including automated checks and integrations with external tools, we aim to ensure greater accuracy and compliance, reduce manual errors, and streamline the user experience. This story addresses the critical need for improved process verification in the Ingestion Pipeline.
 
-Story Description:
+As a Pipeline Administrator, I want to implement enhanced process verification within the Ingestion Pipeline to ensure that users have accurately completed necessary processes like ETLC/SDLC, reducing reliance on user self-reporting and increasing compliance.
 
-As a Documentation Specialist, I want to create comprehensive and user-friendly documentation for the Ingestion Pipeline so that all users, regardless of their specific use case or team requirements, can understand and effectively utilize the pipeline.
+Implement automated checks to verify that required processes have been followed.
+For example, query a Jira board to confirm if ETLC has been completed.
+Ensure these checks are integrated smoothly into the existing pipeline process.
 
-Acceptance Criteria:
-
-General Documentation:
-
-Introduction to the Ingestion Pipeline.
-Overview of the Ingestion Pipeline's capabilities and benefits.
-Detailed steps on how to get started with the Ingestion Pipeline.
-Use Case Scenarios:
-
-Snyk Team Use Case:
-Detailed steps for importing multiple images with different tags.
-Examples and screenshots illustrating the process.
-Aqua Team Use Case:
-Detailed steps for importing different images with the same tags.
-Examples and screenshots illustrating the process.
-Single Image Import Use Case:
-Step-by-step guide for teams bringing only one image.
-Examples and screenshots illustrating the process.
-Migration from Old Process:
-Instructions for migrating from the old process to the Ingestion Pipeline.
-Tips and common issues encountered during migration, with solutions.
-Common Procedures:
-
-How to navigate and use the Ingestion Pipeline interface.
-Explanation of key fields and options in the forms.
-Instructions on how to validate images and handle errors.
-FAQs and Troubleshooting:
 
 Frequently asked questions with detailed answers.
 Common troubleshooting steps for known issues.
