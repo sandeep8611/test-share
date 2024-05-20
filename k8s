@@ -1,119 +1,59 @@
-The current process for verifying that users have completed necessary steps (such as ETLC/SDLC) relies on self-reporting, which is prone to errors and inconsistencies. By implementing enhanced verification processes, including automated checks and integrations with external tools, we aim to ensure greater accuracy and compliance, reduce manual errors, and streamline the user experience. This story addresses the critical need for improved process verification in the Ingestion Pipeline.
+Implement CSV/Excel Report Format for Vulnerability Reports
+Story Title: Provide CSV/Excel Report Format for Vulnerability Reports in the Ingestion Pipeline
 
-As a Pipeline Administrator, I want to implement enhanced process verification within the Ingestion Pipeline to ensure that users have accurately completed necessary processes like ETLC/SDLC, reducing reliance on user self-reporting and increasing compliance.
+Story Description:
 
-Implement automated checks to verify that required processes have been followed.
-For example, query a Jira board to confirm if ETLC has been completed.
-Ensure these checks are integrated smoothly into the existing pipeline process.
+As a Pipeline User, I want to download vulnerability reports in CSV/Excel format so that I can easily share these reports with vendors, ISO teams, and attach them to various compliance documents like ETLC and CAPs/Res.
 
+Acceptance Criteria:
 
-Frequently asked questions with detailed answers.
-Common troubleshooting steps for known issues.
-Appendices:
+CSV/Excel Download Option:
 
-Glossary of terms used in the documentation.
-Links to additional resources and support.
+Users can download vulnerability reports in both CSV and Excel formats.
+The download option is clearly visible and easily accessible in the user interface.
+Standardized Report Format:
+
+The CSV/Excel reports follow a standardized format with useful fields (e.g., image name, vulnerability ID, severity, status, vendor feedback).
+Ensure the report format is customizable to include additional fields if required by the user.
+Usability and Performance:
+
+The download process is quick and does not negatively impact the performance of the pipeline.
+The reports are easily readable and well-organized to facilitate quick understanding and sharing.
+Documentation and User Guidance:
+
+Provide clear documentation on how to download and use the CSV/Excel reports.
+Include examples and best practices for sharing and attaching these reports to compliance documents.
 Tasks:
 
-Research and Outline:
+Design Report Template:
 
-Gather all necessary information from the teams using the pipeline.
-Outline the structure of the documentation to cover all use cases.
-Draft Documentation:
+Design a standardized template for the CSV/Excel reports.
+Ensure the template includes all necessary fields and is customizable.
+Develop Download Functionality:
 
-Write detailed documentation for each use case scenario.
-Create diagrams, screenshots, and examples to illustrate the steps.
-Review and Feedback:
+Implement the functionality to download vulnerability reports in CSV/Excel formats.
+Ensure this feature is integrated seamlessly into the existing pipeline interface.
+Testing and Validation:
 
-Share the draft with stakeholders for feedback.
-Incorporate feedback and make necessary revisions.
-Final Review and Publish:
+Test the download functionality to ensure it works correctly and efficiently.
+Validate that the reports are accurate and formatted as per the designed template.
+Update Documentation:
 
-Conduct a final review to ensure clarity and completeness.
-Publish the documentation on the appropriate platform (e.g., Confluence, internal wiki).
-Ongoing Maintenance:
+Create user documentation detailing the steps to download and use the CSV/Excel reports.
+Include guidelines on customizing the report and examples of how to use it for compliance purposes.
+User Training and Support:
 
-Set up a process for regular updates to the documentation.
-Ensure the documentation stays current with any changes in the pipeline.
+Conduct training sessions or provide support materials to help users understand the new report format and how to utilize it effectively.
+Gather user feedback to make any necessary adjustments or improvements.
 Priority: High
 
 Story Points: 8
 
 Assignees: [Assign to appropriate team members]
 
-Labels: Documentation, Ingestion Pipeline, User Guide
+Labels: CSV Report, Excel Report, Vulnerability Reporting, Ingestion Pipeline, User Experience
 
 Attachments: None
 
 Description:
-We need to ensure that the documentation for the Ingestion Pipeline is comprehensive and caters to various use cases, including teams importing multiple images with different tags, teams importing different images with the same tags, single image imports, and teams migrating from the old process to the new pipeline. The documentation should be clear, detailed, and include examples and screenshots to facilitate understanding and ease of use.
-5.1 Delays in VA Review
-
-Issue: The current pipeline allows a run time of 5 days for the VA team to review generated tickets, but there are significant delays in the review process, suggesting that the VA team may not meet its SLA as user volume increases.
-Problem Statement: On 8th May, we observed that tickets from 1st May were still pending for review, well beyond the 5-day SLA. This raises concerns about the VA team's capacity to handle reviews, especially as more users begin to use the pipeline.
-Implications:
-Delays in VA review can slow down the pipeline, affecting deployment timelines and potentially delaying production.
-Increased user adoption could exacerbate the bottleneck, leading to a backlog of unresolved tickets.
-Suggested Actions:
-Assess the capacity and workload of the VA team to understand the root cause of the bottleneck.
-Implement a monitoring system to track VA review times and identify where delays occur.
-Explore process improvements, such as automation or reallocation of resources, to reduce review times.
-Next Steps:
-Engage with the VA team to discuss capacity and workload, and determine if additional resources or process changes are needed.
-Develop an action plan to address the bottleneck, with clear timelines for implementation to avoid future delays.
-
-
-During the session, we will discuss your experiences, challenges encountered, and suggestions for improvement. Your feedback will play a crucial role in shaping the future enhancements of our pipeline.
-
-Meeting Details:
-Date: [Insert Date]
-Time: [Insert Time]
-Location: [Insert Location/Zoom Link]
-
-Please confirm your availability by [Insert Deadline], and feel free to reach out if you have any questions or specific topics you would like to address during the session.
-
-
-<b>How do you scale applications vertically and horizontally in Kubernetes? </b> 
-Vertical scaling involves adjusting the resources (CPU, memory) of a single pod, while horizontal scaling involves increasing the number of pod replicas. 
-Vertical scaling is suitable for applications with varying resource needs, while horizontal scaling improves overall application availability and performance.
-
-Explain how resource limits and requests are set for containers in Kubernetes. 
-Answer: Resource limits define the maximum amount of resources a container can use, preventing resource contention. Requests, on the other hand, guarantee a certain amount of resources for a container. Not setting resource limits can lead to resource starvation, affecting the overall cluster performance.
-
-Compare blue-green deployments and canary releases. When would you choose one over the other? Answer: Blue-green deployments involve switching between two identical environments, while canary releases gradually roll out changes to a subset of users. Blue-green is suitable for minimizing downtime, while canary releases are effective in identifying and mitigating issues before a full rollout.
-
-Describe a situation where a pod is in a "Pending" state. What steps would you take to diagnose and resolve the issue? Answer: Check events using kubectl describe pod for insights, verify resource requests and limits, examine node resource availability, and investigate any network-related issues. Use logs and tools like kubectl logs for further analysis.
-
-
-========
-Let's break down the explanation for handling deployments with breaking changes in Kubernetes, covering the concepts of versioned APIs, canary deployments, and feature flags. Additionally, I'll address the question about blue/green deployments. 
-
- 1. Versioned APIs: In Kubernetes, APIs are crucial for communication and interaction with the cluster. When deploying applications with breaking changes, it's essential to use versioned APIs to ensure backward compatibility. Versioning helps in maintaining support for existing clients while introducing changes for newer clients. By carefully managing API versions, you can roll out updates without disrupting existing functionalities.
-
-  Example:  
-Instead of modifying the existing API directly, introduce a new version (e.g., v2) alongside the existing one (e.g., v1). 
-Gradually migrate clients to the new API version, allowing them to adapt to the changes without immediate disruption. 
-
-2. Canary Deployments: Canary deployments involve rolling out changes to a small subset of users or traffic before applying them to the entire application. This approach allows for real-world testing and monitoring of the changes' impact, minimizing the risk of widespread issues.  
-
-Example:  
-
-Deploy the new version of your application to a small percentage of the production environment. 
-Monitor the canary deployment for any issues, such as increased error rates or performance degradation. 
-If the canary deployment is successful, gradually increase the rollout to the entire user base. 
-
-3. Feature Flags: Feature flags, also known as feature toggles, allow you to enable or disable specific features within your application at runtime. This provides flexibility in controlling the visibility of breaking changes and allows for easy rollback if issues arise.  
-
-Example:  
-Introduce a feature flag that controls whether the breaking change is active or inactive. 
-Initially, set the flag to inactive, keeping the existing behavior. 
-Gradually enable the feature flag for a subset of users or environments to test the breaking changes. 
-If issues arise, quickly disable the feature flag to revert to the previous behavior. 
-
-Blue/Green Deployments: While blue/green deployments are a valid strategy for managing deployments, they involve switching traffic from one environment (blue) to another (green). In the context of breaking changes, blue/green deployments may not be the ideal choice if you need a more controlled and gradual rollout.  
-
-Consideration:  
-Blue/green deployments involve a full cutover from the old environment to the new one, potentially causing immediate disruption if issues arise. 
-Canary deployments and feature flags provide more fine-grained control over the rollout, allowing for better monitoring and mitigation of issues before a full deployment. 
-
-In summary, the choice between versioned APIs, canary deployments, feature flags, or blue/green deployments depends on the specific requirements of your application and the desired level of control over the rollout of breaking changes. Each approach has its advantages, and the decision should align with your application's architecture and the tolerance for potential disruptions during the deployment process.
+Users have requested the ability to download vulnerability reports in CSV/Excel formats to facilitate easier sharing with vendors, ISO teams, and for attaching to compliance documents. This feature aims to provide a standardized, customizable report format that enhances usability and compliance. By offering this download option, we aim to improve the overall user experience and streamline the process of managing and sharing vulnerability information.
