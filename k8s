@@ -1,4 +1,9 @@
-Implement CSV/Excel Report Format for Vulnerability Reports
+Story Title: Implement Delegation Approval Process for Ingestion Pipeline When App Owner or ISO is Unavailable
+
+Story Description:
+
+As an Ingestion Pipeline User, I want the ability to delegate approval to a manager or support manager if the App Owner or ISO is unavailable, so that the ingestion process is not delayed due to unavailability of key personnel.
+
 Story Title: Provide CSV/Excel Report Format for Vulnerability Reports in the Ingestion Pipeline
 
 Story Description:
