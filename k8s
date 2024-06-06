@@ -1,3 +1,5 @@
+Due to a recently identified vulnerability, Postman has been disabled at Citi. As an alternative, you can now use SoapUI. It's available for download via DevHub or can be installed manually. Please transition to SoapUI for your API testing needs.
+
 To ensure the ingestion process is not delayed due to the unavailability of key personnel like App Owners or ISOs, we need to implement a delegation approval process. This involves integrating with JP API to fetch delegation/manager details and updating the pipeline approval workflow to allow designated managers or support managers to approve ingestions. This feature aims to streamline the approval process, reduce delays, and improve the overall efficiency of the ingestion pipeline.
 
 Delegation Feature:
