@@ -1,28 +1,30 @@
-Due to a recently identified vulnerability, Postman has been disabled at Citi. As an alternative, you can now use SoapUI. It's available for download via DevHub or can be installed manually. Please transition to SoapUI for your API testing needs.
+Subject: Urgent: Twistlock Certificate Issue Affecting VSaaS Connection
 
-To ensure the ingestion process is not delayed due to the unavailability of key personnel like App Owners or ISOs, we need to implement a delegation approval process. This involves integrating with JP API to fetch delegation/manager details and updating the pipeline approval workflow to allow designated managers or support managers to approve ingestions. This feature aims to streamline the approval process, reduce delays, and improve the overall efficiency of the ingestion pipeline.
+Hi [Team Lead's Name],
 
-Delegation Feature:
+I hope this email finds you well. I wanted to bring to your attention an issue I encountered with the Twistlock console today.
 
-Introduce a feature that allows delegation of approval to a designated manager or support manager when the App Owner or ISO is unavailable.
-Ensure that the delegation process is secure and clearly documented in the pipeline.
-Integration with JP API:
+Summary of the Issue:
 
-Check if the JP API provides information on delegation, managers, or support managers.
-Integrate with JP API to fetch the necessary delegation/manager/support manager details.
-Approval Workflow:
+The Twistlock console is currently down.
+Our VSaaS API is unable to connect to Twistlock using the certificate.
+After troubleshooting, I discovered that the Twistlock certificate expired today, which matches the timing of the VSaaS failover issue.
+Actions Taken:
 
-Update the approval workflow to include the ability for delegated personnel to approve image ingestions.
-Ensure that the approval records clearly indicate when a delegation has been used.
-Notification and Alerts:
+I spoke with Aamir, who confirmed the certificate expiration. He has received a new certificate for the Twistlock console.
+I have uploaded the new certificate to Vault Dev and tested it in our Dev environment. Unfortunately, the VSaaS app is still failing to connect using the new certificate.
+Next Steps:
 
-Implement notification mechanisms to inform the delegates when they need to approve an ingestion request.
-Provide alerts to the App Owner or ISO when a delegation is triggered.
-User Interface Updates:
+I have requested Aamir to collaborate with Noor on Monday to resolve the certificate issue in the Dev environment.
+Once verified in Dev, Aamir will upload the new certificates to Vault PROD, allowing us to restore VSaaS production.
+Impact and Temporary Measures:
 
-Update the user interface to allow users to set and view delegation details.
-Ensure that users can easily identify who the current approvers and delegates are.
-Documentation and User Guidance:
+I tested our CI build, which runs the VSaaS scan through LSE. The CI build is failing fast, so it appears users' CI builds will fail fast with the VSaaS scan but should not impact their overall build time or cause other issues.
+I have attached an example of the CI build I ran today for your reference.
+Availability:
 
-Provide clear documentation on how to set up and use the delegation feature.
-Include guidelines on how to manage delegation settings and what to do if an approver is unavailable.
+I will be out of office on Monday. However, please feel free to call me if needed, and I will come online to assist.
+Please let me know if you have any questions or require further assistance.
+
+Best regards,
+
