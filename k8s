@@ -1,13 +1,46 @@
-Feedback from the LightSpeed Enterprise (LSE) team highlighted that the VSaaS scan is one of the longest-running steps in the container image build process, causing significant delays. The scan, which runs after the container image build and is almost always the last step, takes over 3 minutes on average. This effectively doubles the build time for performance-sensitive users, making the delay unsustainable and adversely affecting overall productivity.
+Goal Title:
+Enhance Financial Performance by Transitioning from Twistlock to Aqua for Container Scanning
 
-In response, I have enhanced financial performance by optimizing the VSaaS container scanning process within the LSE pipeline, resulting in a significant reduction in scan times and improved developer productivity.
+Goal Description:
+To improve financial performance, we are transitioning from Twistlock to Aqua for all our services and products by Q2. This transition includes ensuring full support within the VSaaS (Vulnerability Scanning as a Service) container scanning API for Aqua, replacing Grafeas with Aqua, and updating our pipelines to support Aqua. Achieving these milestones will result in significant financial savings and reduced support overhead.
 
+Objectives:
+
+Full Integration of Aqua in VSaaS:
+Provide full support for Aqua within the VSaaS container scanning API for backend scanning.
+Replacement of Grafeas with Aqua:
+Develop and implement a fully functional Grafeas-replacement library to support Aqua, removing all dependencies on Grafeas.
+Populate new data in Aqua and migrate existing data from Grafeas to Aqua, ensuring all new data is pulled and persisted in Aqua.
+This replacement will significantly reduce financial costs and the support required for maintaining an extra product.
+Pipeline Transition:
+Ensure full support for external ingestion, UBI, and Middleware pipelines to use Aqua instead of Twistlock for backend scanning.
+RHEL7 to RHEL8/9 Transition:
+Enhance the UBI pipeline to support RHEL 8 and 9 using Aqua for backend scanning by the end of June, in light of the discontinuation of RHEL7 support by the Linux team.
 Key Performance Indicators (KPIs):
 
-Reduce Scan Time: Achieve the 99th percentile of scans completing in less than 120 seconds, with the median scan time under 60 seconds.
-Improve Developer Productivity: Minimize build times to align with overall build duration targets, thereby reducing the impact on developer productivity.
-Outcomes:
+Successful Integration:
+Complete integration of Aqua into the VSaaS container scanning API, eliminating all dependencies on Twistlock and Grafeas.
+Data Migration and Accuracy:
+Successful migration of all data from Grafeas to Aqua with no data loss.
+Ensure all new data is accurately pulled and persisted in Aqua.
+Pipeline Support:
+Full operational support for external ingestion, UBI, and Middleware pipelines using Aqua by the end of Q2.
+Complete transition of UBI pipeline to support RHEL 8 and 9 using Aqua by the end of June.
+Financial Savings:
+Achieve projected savings of $1MM over 3 years in licensing costs by transitioning from Twistlock to Aqua.
+Expected Outcomes:
 
 Enhanced efficiency and reduced delays in the CI/CD pipeline.
-Improved developer productivity and satisfaction by significantly reducing build times.
-Streamlined and efficient vulnerability scanning process, contributing to overall financial performance.
+Improved developer productivity and satisfaction by reducing build times.
+Streamlined and efficient vulnerability scanning process.
+Significant financial savings and reduced support overhead.
+Timeline:
+
+Complete all transitions and integrations by the end of Q2.
+Transition UBI pipeline to support RHEL 8 and 9 by the end of June.
+Stakeholders:
+
+VSaaS Team
+Development Teams
+Linux Team
+Financial Planning Team
