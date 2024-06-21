@@ -1,1 +1,7 @@
-By Q2, transition the External Ingestion Container Image import pipeline, as well as the UBI & Middleware pipelines, to utilize Aqua for image scanning. Ensure a seamless migration process to leverage Aqua's scanning capabilities effectively. This transition aims to enhance security measures and streamline the scanning process across these critical pipelines.
+Enhance Container Image Security and Streamline Scanning (Q2)
+
+Objective: Migrate the External Container Image Ingestion pipeline, UBI pipeline, and Middleware pipeline to leverage Aqua's image scanning capabilities by Q2.
+Benefits:
+Improved Security: Aqua's scanning will strengthen the security posture of our container images by identifying vulnerabilities, misconfigurations, and potential threats.
+Streamlined Scanning: Utilizing a single scanning solution across these pipelines will simplify the process and improve efficiency.
+Smoother Migration: A well-planned migration ensures minimal disruption and allows teams to effectively utilize Aqua's functionalities.
