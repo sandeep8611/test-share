@@ -1,16 +1,27 @@
-How We Take Ownership
-As a leader, I embody the principle of ownership by taking full responsibility for the critical projects and their successful delivery. After leading the VSaaS team to production last year, I expanded my responsibilities to include additional key work streams such as the external ingestion pipeline, UBI, and middleware pipelines. This year presents a significant challenge as we transition from Twistlock to Aqua, with a strict deadline to avoid dual licensing costs. This migration is critical because our services are used by customers in production environments, necessitating a seamless transition that supports production loads from day one.
+## Leadership Review - "How" We Deliver Results
 
-To meet this challenge, I lead by example, creating a stress-free environment where my team can clearly understand the vision and work towards achieving this crucial milestone. I focus on the vision and challenges, fostering a culture that prioritizes solutions over problems. I ensure my team has clear direction and sufficient support, allowing them to navigate and overcome obstacles effectively.
+**Demonstrating Ownership, Pride, and Teamwork**
 
-How We Deliver with Pride
-I am committed to delivering high-quality results with pride. In transitioning our container services from Twistlock to Aqua, I ensure that each work stream, including VSaaS, the external ingestion pipeline, UBI pipeline, and middleware pipelines, meets the highest standards. The VSaaS project is now in the UAT environment, using Aqua as the backend scanning tool, with ongoing work to replace Grafeas. We are rigorously testing in our production environment, and pipelines are being migrated to support Aqua.
+This past year, I've embraced the core leadership principles of ownership, pride, and teamwork to navigate a complex and critical project: the migration of our container security services from Twistlock to Aqua. 
 
-The external ingestion pipeline, a critical service for our customers, presents both technical and human/process-oriented challenges. I lead these projects by setting a clear vision, listening to team members, and addressing necessary improvements to productionalize our services. I work closely with family teams to enhance the external ingestion pipeline for their use cases, ensuring the best user experience and onboarding new teams with complex requirements.
+**Taking Ownership:**
 
-How We Succeed Together
-Our success is rooted in collaboration and mutual support. I lead my team by fostering a culture of psychological safety, encouraging continuous learning, and providing clear, constructive feedback. I hold weekly meetings to listen to their ideas and concerns, develop their learning plans, and recognize their achievements publicly.
+* **Expanded Scope:** Leading the VSaaS team last year and successfully transitioning the project to production laid the groundwork. This year, I proactively took ownership of additional critical workstreams – external ingestion pipeline, UBI pipeline, and middleware pipelines – to ensure seamless integration with Aqua.
 
-I have onboarded new team members, such as Rimas, setting clear directions and goals for their work. I work closely with both contractors and permanent staff, ensuring a cohesive team environment. By building strong relationships with other sectors and lines of business (LOBs), I enhance our collaboration and integration efforts. For example, I have worked closely with the LightSpeed team to integrate and enhance our security products within their CI/CD solution, receiving positive feedback for our collaborative efforts.
+**Delivering with Pride:**
 
-Additionally, I engage with the Andromeda team to enhance the platform with new features, providing user experience feedback. I also support the Kibana team in scaling their service for broader use. Through these efforts, I build rapport and establish a strong leadership presence within the container security wider team, ensuring we succeed together.
+* **Meeting Tight Deadlines:** We faced a critical deadline to avoid incurring significant licensing costs for both vendors. I led with clear vision, focusing on challenges and solutions rather than dwelling on problems. This fostered a positive, results-oriented environment.
+* **Production-Ready Services:** My leadership ensured clear direction, readily available support, and a focus on customer needs. The VSaaS project is already in UAT with Aqua integration. The Grafeas replacement is in progress, and pipelines are being migrated. The critical external ingestion pipeline is actively being productionalized, addressing both technical and human/process challenges.
+
+**Succeeding Together:**
+
+* **Building a High-Performing Team:** Weekly meetings facilitate open communication, address development plans, and cultivate psychological safety. I actively encourage feedback, recognize achievements, and celebrate team victories. Onboarding new team members like Rimas and fostering a continuous learning culture further strengthens our collective success.
+* **Cross-Functional Collaboration:**  Building rapport beyond our team, I fostered strong relationships with LightSpeed, Andromeda, and Kibana teams. This facilitated VSaaS integration, platform enhancements, and scalability support, leading to positive feedback and successful project outcomes.
+
+**Leading by Example**
+
+My leadership style prioritizes clear communication, a stress-free environment, and collaborative problem-solving. I empower my team with clear direction, encourage ownership, and celebrate their achievements. By actively managing both permanent and contract staff, I've fostered a strong team spirit and built trust  within the wider container security community.
+
+**Looking Ahead**
+
+Moving forward, I'm committed to continuously improving our processes, maintaining a positive work environment, and collaborating effectively with cross-functional teams.  I am confident that by upholding these leadership principles, my team will continue to deliver exceptional results.
