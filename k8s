@@ -1,7 +1,16 @@
-Enhance Container Image Security and Streamline Scanning (Q2)
+How We Take Ownership
+As a leader, I embody the principle of ownership by taking full responsibility for the critical projects and their successful delivery. After leading the VSaaS team to production last year, I expanded my responsibilities to include additional key work streams such as the external ingestion pipeline, UBI, and middleware pipelines. This year presents a significant challenge as we transition from Twistlock to Aqua, with a strict deadline to avoid dual licensing costs. This migration is critical because our services are used by customers in production environments, necessitating a seamless transition that supports production loads from day one.
 
-Objective: Migrate the External Container Image Ingestion pipeline, UBI pipeline, and Middleware pipeline to leverage Aqua's image scanning capabilities by Q2.
-Benefits:
-Improved Security: Aqua's scanning will strengthen the security posture of our container images by identifying vulnerabilities, misconfigurations, and potential threats.
-Streamlined Scanning: Utilizing a single scanning solution across these pipelines will simplify the process and improve efficiency.
-Smoother Migration: A well-planned migration ensures minimal disruption and allows teams to effectively utilize Aqua's functionalities.
+To meet this challenge, I lead by example, creating a stress-free environment where my team can clearly understand the vision and work towards achieving this crucial milestone. I focus on the vision and challenges, fostering a culture that prioritizes solutions over problems. I ensure my team has clear direction and sufficient support, allowing them to navigate and overcome obstacles effectively.
+
+How We Deliver with Pride
+I am committed to delivering high-quality results with pride. In transitioning our container services from Twistlock to Aqua, I ensure that each work stream, including VSaaS, the external ingestion pipeline, UBI pipeline, and middleware pipelines, meets the highest standards. The VSaaS project is now in the UAT environment, using Aqua as the backend scanning tool, with ongoing work to replace Grafeas. We are rigorously testing in our production environment, and pipelines are being migrated to support Aqua.
+
+The external ingestion pipeline, a critical service for our customers, presents both technical and human/process-oriented challenges. I lead these projects by setting a clear vision, listening to team members, and addressing necessary improvements to productionalize our services. I work closely with family teams to enhance the external ingestion pipeline for their use cases, ensuring the best user experience and onboarding new teams with complex requirements.
+
+How We Succeed Together
+Our success is rooted in collaboration and mutual support. I lead my team by fostering a culture of psychological safety, encouraging continuous learning, and providing clear, constructive feedback. I hold weekly meetings to listen to their ideas and concerns, develop their learning plans, and recognize their achievements publicly.
+
+I have onboarded new team members, such as Rimas, setting clear directions and goals for their work. I work closely with both contractors and permanent staff, ensuring a cohesive team environment. By building strong relationships with other sectors and lines of business (LOBs), I enhance our collaboration and integration efforts. For example, I have worked closely with the LightSpeed team to integrate and enhance our security products within their CI/CD solution, receiving positive feedback for our collaborative efforts.
+
+Additionally, I engage with the Andromeda team to enhance the platform with new features, providing user experience feedback. I also support the Kibana team in scaling their service for broader use. Through these efforts, I build rapport and establish a strong leadership presence within the container security wider team, ensuring we succeed together.
