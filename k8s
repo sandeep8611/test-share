@@ -1,1 +1,36 @@
-use_aqua = os.getenv("USE_AQUA", "false").lower() in ("true", "1", "t", "y", "yes")
+Test Repository Access:
+
+Manual Testing:
+Attempt to manually access various repositories through the proxy using tools like curl or wget. This helps verify that the proxy is correctly routing requests.
+Example command:
+sh
+Copy code
+curl -I -x http://your-proxy:port https://repository.url/path/to/resource
+Pipeline Job:
+Create a simple pipeline job that attempts to download artifacts from multiple repositories. Check if the job succeeds for all repositories.
+Example pipeline script (Jenkinsfile for Jenkins):
+groovy
+Copy code
+pipeline {
+    agent any
+    stages {
+        stage('Test Repository Access') {
+            steps {
+                script {
+                    def repositories = [
+                        'https://repo1.url/path/to/artifact',
+                        'https://repo2.url/path/to/artifact',
+                        // Add more repositories as needed
+                    ]
+                    repositories.each { repo ->
+                        sh "curl -I -x http://your-proxy:port ${repo}"
+                    }
+                }
+            }
+        }
+    }
+}
+Automated Tests:
+
+Implement automated tests in your pipeline that check access to various repositories and validate the retrieved content.
+Use tools like pytest or Jest to write test cases that attempt to fetch resources from different repositories and verify the response.
