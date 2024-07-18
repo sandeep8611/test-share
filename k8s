@@ -1,9 +1,5 @@
-{panel:bgColor=#FFFF00}
-**Announcement: New External Image Ingestion Pipeline Available**
-
-We are pleased to announce that our new 3rd Party Ingestion Pipeline (3pip) is now in production, allowing for the ingestion of external images.
-
-**Important Notice:** The old process for external image ingestion will be discontinued by the end of September. Please migrate to the new pipeline as soon as possible.
-
-For migration instructions, please refer to our [FAQ here](#).
-{panel}
+Harpal has demonstrated strong engineering skills and ownership by successfully managing the UBI pipeline from Chris Losso, leading to the delivery of the RHEL 7 and 8 UBI pipeline. This is a significant accomplishment. However, to excel in a Senior VP role, there are areas that need further development. This includes taking ownership of decision-making, driving projects independently, and prioritising work effectively to deliver maximum value.
+Ownership: While Harpal has shown good ownership of the UBI pipeline, it is crucial for him to enhance his ability to make critical decisions independently and drive them to completion. He should be able to move projects forward with clear direction. For example, in the case of the 3PIIP, taking ownership of defining the project scope and timeline would have accelerated progress.
+Prioritisation: Effective prioritisation is essential for project success. Harpal needs to prepare work streams for sprints independently, ensuring they are critical and aligned with the team's priorities. He should enhance his ability to distinguish between 'must-have' and 'nice-to-have' deliverables, ensuring the team focuses on high-impact work. A clear example of this would be to prioritise the completion of the 3PIIP for production rather than adding incremental features without a defined path or scope to production.
+Independence and Reliability: While Harpal possesses good technical skills, he needs to demonstrate the ability to accomplish tasks independently and proactively identify and address blockers. This involves tackling and unblocking issues collaboratively but without over-reliance on other teams.
+By the end of this year, we expect Harpal to take on more leadership responsibilities, ensuring projects are not only technically sound but also strategically aligned and driven to completion.
