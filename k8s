@@ -1,37 +1,31 @@
-
-The teams are already starting migration along with new teams into 3PIIP. Just to reiterate, our documentation and support model needs to be executed as we planned so that teams can onboard as self-service. Without going to specific task details, just to reiterate our milestone here while I am away.
-
-Aqua Migration- Riaz is looking into it. Haroon will be back on Tuesday to support the migration, if/when needed.
-Middleware Pipeline - I have asked for the detailed steps what is remaining for Migration to RHEL 8 and Aqua. Haroon can you please follow-up and remind, if needed, that this is critical path task and will be blocker when Twistlock is shutdown by end of next month.
-New teams onboarding/Migration- Crowdstrike Daemon Set Image team will look into our doc to onboard. Mike will work with his vendor to get Qualys image onboard into 3PIIP.
-
-Please check with Noor in case you have any question or blocker about anything.
-
-
-VSaaS
-
-Aqua Migration - Chris is already executing migration of CSIs and so far we are doing well. We will slowly migrate new CSI.
-
-I have already created few stories and some other stories are in the priority backlog.
+Subject: Handover Update for Upcoming Week
 
 Dear Team,
-As I will be out for the upcoming week, I wanted to quick handover update to ensure our progress on the projects continues smoothly. 
-Here is a brief overview of our current milestones and responsibilities during my absence:
-Pipelines:
-While the teams using old process are already migrating and new teams are onboarding into 3PIIP, It's essential that we adhere to our planned documentation and support model to facilitate a self-service onboarding experience.
-3PIIP Aqua Migration
-	•	Riaz is looking into it. Haroon will be back on Tuesday to support the migration, if/when needed.
-	•	
-Middleware Pipeline Aqua Migration
-I have requested detailed steps for the migration to RHEL 8 and Aqua. Haroon, please follow up and ensure the remaining tasks are completed. This is a critical path task and will become a blocker if Twistlock is shut down by the end of next month.
-New Teams Onboarding/Migration
-	•	Crowdstrike Daemon Set Image: The team will refer to our documentation for onboarding.
-	•	Qualys Image: Mike will coordinate with his vendor to onboard the Qualys image into 3PIIP.
-For any questions or blockers, please reach out to Noor.
 
-VSaaS
-Aqua Migration
-	•	Progress: Chris is actively managing the migration of CSIs, and the process is going well. We will continue with a gradual migration of new CSIs.
+As I will be out for the upcoming week, I wanted to provide a quick handover update to ensure our progress on the projects continues smoothly. Here is a brief overview of a few important milestones and responsibilities during my absence:
+
+Pipelines (Romeo, Haroon)
+General Update:
+While the teams using the old process are already migrating, new teams are also onboarding into 3PIP. It’s essential that we adhere to our support model and self-service documentation to facilitate a seamless onboarding experience for users without unnecessary support.
+
+3rd Party Pipeline Aqua Migration:
+
+Romeo: You are overseeing the Aqua migration for the 3rd party pipeline.
+Middle Pipeline Aqua Migration:
+
+Haroon: Please ensure that the Middle team is migrating to Aqua. Make sure to follow up with them daily, as this is the biggest risk in the Twistlock migration.
+I have requested detailed steps for the migration to RHEL 8 and Aqua from the Middle team. Please follow up and ensure the remaining tasks are completed. This is a critical path task and will become a blocker if Twistlock is shut down by the end of next month.
+New Teams Onboarding/Migration:
+
+Crowdstrike Daemon Set Image: The team will refer to our documentation for onboarding.
+Qualys Image: Mike will coordinate with his vendor to onboard the Qualys image into the 3rd Party pipeline.
+For any questions or blockers, please reach out to Noor.
+VSaaS (Chris) - Aqua Migration
+Progress: Chris is actively managing the migration of CSIs, and the process is going well. We will continue with a gradual migration of new CSIs.
 Backlog Management
-	•	Stories: I have created several stories, and additional stories are in the priority backlog. Please review and prioritize accordingly.
-Thank you for your attention and cooperation. I trust the team will continue to execute the plan effectively. Should any urgent issues arise, do not hesitate to contact Noor.
+Stories: I have created a few stories, and additional stories are in the priority backlog. Please review and prioritize accordingly.
+Should any issues or questions arise, do not hesitate to contact Chris.
+Thank you for your support and cooperation. Please ensure these tasks are managed diligently in my absence.
+
+Best regards,
+[Your Name]
