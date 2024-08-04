@@ -1,31 +1,13 @@
-Subject: Handover Update for Upcoming Week
+I wanted to share a few updates with you:
 
-Dear Team,
-
-As I will be out for the upcoming week, I wanted to provide a quick handover update to ensure our progress on the projects continues smoothly. Here is a brief overview of a few important milestones and responsibilities during my absence:
-
-Pipelines (Romeo, Haroon)
-General Update:
-While the teams using the old process are already migrating, new teams are also onboarding into 3PIP. It’s essential that we adhere to our support model and self-service documentation to facilitate a seamless onboarding experience for users without unnecessary support.
-
-3rd Party Pipeline Aqua Migration:
-
-Romeo: You are overseeing the Aqua migration for the 3rd party pipeline.
-Middle Pipeline Aqua Migration:
-
-Haroon: Please ensure that the Middle team is migrating to Aqua. Make sure to follow up with them daily, as this is the biggest risk in the Twistlock migration.
-I have requested detailed steps for the migration to RHEL 8 and Aqua from the Middle team. Please follow up and ensure the remaining tasks are completed. This is a critical path task and will become a blocker if Twistlock is shut down by the end of next month.
-New Teams Onboarding/Migration:
-
-Crowdstrike Daemon Set Image: The team will refer to our documentation for onboarding.
-Qualys Image: Mike will coordinate with his vendor to onboard the Qualys image into the 3rd Party pipeline.
-For any questions or blockers, please reach out to Noor.
-VSaaS (Chris) - Aqua Migration
-Progress: Chris is actively managing the migration of CSIs, and the process is going well. We will continue with a gradual migration of new CSIs.
-Backlog Management
-Stories: I have created a few stories, and additional stories are in the priority backlog. Please review and prioritize accordingly.
-Should any issues or questions arise, do not hesitate to contact Chris.
-Thank you for your support and cooperation. Please ensure these tasks are managed diligently in my absence.
-
-Best regards,
-[Your Name]
+CrowdStrike Image Onboarding:
+I had a productive meeting with a team looking to import the CrowdStrike image using the 3rd party pipeline. They have a good understanding of the requirements and will follow our documentation to proceed with the onboarding.
+Qualys Image Import:
+Martin's team is currently importing the Qualys image using the old process and receiving it in TAR format. I informed him that the 3rd party pipeline accepts images from a container registry. He will coordinate with the vendor to transition to the 3rd party pipeline, as we no longer support the TAR format.
+Aqua Migration:
+Romeo is overseeing the Aqua migration for the 3rd party pipeline.
+I have asked Haroon to follow up daily with the Middle team to ensure their Aqua migration progresses smoothly. New teams are onboarding while old teams are migrating to the 3rd party pipeline.
+SO Approval Process:
+There is a team still seeking approval confirmation involving SOs, which is blocking their progress. I clarified in the chat that SO approval in image ingestion was also required in the old process and that we've automated this in our pipeline to address some gaps. However, they still seem to need an approval document. Since I will be out next week, I wanted to bring this to your attention in case they escalate the issue to you.
+VSaaS Migration:
+The VSaaS migration is progressing well. We successfully migrated another CSI to Aqua on Friday, and the builds are being successfully scanned with VSaaS and Aqua.
