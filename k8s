@@ -1,13 +1,12 @@
-I wanted to share a few updates with you:
+I wanted to touch base regarding the ongoing migration of the Middle team's pipelines to RHEL 8 and Aqua from Twistlock. While I appreciate the updates provided, I believe that understanding the complete work plan and all the tasks required to accomplish this activity for production is crucial for our planning and coordination.
 
-CrowdStrike Image Onboarding:
-I had a productive meeting with a team looking to import the CrowdStrike image using the 3rd party pipeline. They have a good understanding of the requirements and will follow our documentation to proceed with the onboarding.
-Qualys Image Import:
-Martin's team is currently importing the Qualys image using the old process and receiving it in TAR format. I informed him that the 3rd party pipeline accepts images from a container registry. He will coordinate with the vendor to transition to the 3rd party pipeline, as we no longer support the TAR format.
-Aqua Migration:
-Romeo is overseeing the Aqua migration for the 3rd party pipeline.
-I have asked Haroon to follow up daily with the Middle team to ensure their Aqua migration progresses smoothly. New teams are onboarding while old teams are migrating to the 3rd party pipeline.
-SO Approval Process:
-There is a team still seeking approval confirmation involving SOs, which is blocking their progress. I clarified in the chat that SO approval in image ingestion was also required in the old process and that we've automated this in our pipeline to address some gaps. However, they still seem to need an approval document. Since I will be out next week, I wanted to bring this to your attention in case they escalate the issue to you.
-VSaaS Migration:
-The VSaaS migration is progressing well. We successfully migrated another CSI to Aqua on Friday, and the builds are being successfully scanned with VSaaS and Aqua.
+From the recent communications, I understand that:
+
+Testing in the development environment has been completed.
+The ticket for RH8 VM Jenkins Agent setup has been promoted to UAT.
+The EB UAT RH8 VMs are still under construction.
+Additionally, there was a mention in an email about seeking existing RH8 binaries in the Artifactory repository. Could you please clarify the current status and the dependencies involved? Specifically, whom are we waiting on for the binaries, and what steps are pending from the EB side?
+
+To ensure a smoother and more efficient process, could we arrange a meeting or have a detailed discussion to outline all tasks and milestones required to complete the migration to production? This will help us gauge the timeline accurately and address any potential blockers proactively.
+
+Please note that I will be out of the office for a week starting [start date], and I will return on [return date]. It would be helpful to set up a discussion before my absence if possible. Otherwise, I can follow up promptly upon my return.
