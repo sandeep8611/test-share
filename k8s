@@ -1,16 +1,18 @@
-Har ownership - 
-   Middlewre prod,
-   metrics (infr + meeting- what observability needed), 
-   UBI homepage + infra (including certificates, email groups, ownership...), Middleware emergency switch (like LSE)
-  
+Black
+Purpose: Code Formatter
 
-Rims - 
-   3PiiP infra page (same.....), 
-   NEXT VERSION - scalability, monitoring needed? (failover, availability), 
+Lint (Linters)
+Purpose: Code Quality Checker
 
-Ni actions:
-   Rimas - Nic msg - Rahul team option…Batch requirement. Time window…
-   Harpal - PDF/Confluence doc - our workflow e2e - design diagram (internal vs. External)
-   ISO step temporarily removed
+Flake8
+Purpose: Linter for Code Style and Quality
 
-2025 Go/Objec
+isort
+Purpose: Imports Sorting
+
+
+Lint/Linters: Detects potential errors, bugs, and style violations.
+Flake8: A specific linter that checks for coding style (PEP 8), errors, and complexity.
+isort: Sorts imports in Python code in a consistent manner.
+
+These tools are commonly used together to ensure that code is clean, formatted, and error-free.
