@@ -1,3 +1,4 @@
+As part of our commitment to engineering excellence, we ensure that our codebase is not only functionally correct but also adheres to high standards of readability, consistency, and maintainability. To achieve this, we have incorporated the following tools into our automated testing pipeline:
 Black
 Purpose: Code Formatter
 
