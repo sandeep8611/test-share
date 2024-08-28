@@ -1,1 +1,9 @@
-We’ve implemented rate limiting in our Scanning API as part of our security-first approach. This ensures stability and prevents abuse by limiting the number of scans a user can perform per hour. By controlling request frequency, we protect against brute force attacks, resource exhaustion, and denial-of-service incidents while ensuring reliable performance for all users.
+Dear Team,
+
+As previously discussed in our email chain for 3PIIP, I'm scheduling this meeting to address any questions you may have regarding CI access to docker-3piip-prod.
+
+Currently, the CI fid is unable to access this repository, which prevents the development team from utilizing the image they import in their CI build.
+
+I understand that finding a suitable time slot might be challenging for everyone, so I'd like to request at least one representative from the CI team to attend this meeting. I'm happy to answer any questions you may have.
+
+Please let me know your availability so we can find a mutually convenient time.
