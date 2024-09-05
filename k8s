@@ -1,9 +1,32 @@
-Dear Team,
+Hi Team,
 
-As previously discussed in our email chain for 3PIIP, I'm scheduling this meeting to address any questions you may have regarding CI access to docker-3piip-prod.
+Thank you for raising these important points and for the continued collaboration. I'd like to take this opportunity to clarify the role and scope of the 3rd-party ingestion pipeline and address the concerns raised. I'll also propose steps to ensure we move forward with a solution that works for everyone.
 
-Currently, the CI fid is unable to access this repository, which prevents the development team from utilizing the image they import in their CI build.
+### 1. **Scope of the 3rd-Party Ingestion Pipeline**
+I want to reiterate that the primary purpose of this pipeline is to provide a secure and standardized way for teams to bring external images into the organization. Once a team ingests their image into the internal `docker-3rd-party` repository, it becomes an internal image, vetted and approved for internal use. 
 
-I understand that finding a suitable time slot might be challenging for everyone, so I'd like to request at least one representative from the CI team to attend this meeting. I'm happy to answer any questions you may have.
+**Key point**: After ingestion, these images should follow the same workflow as any other internal image. Teams can customize an ingested image (e.g., by adding a certificate or adjusting it to meet specific needs) using the existing CI pipelines, just as they do with any internal image today.
 
-Please let me know your availability so we can find a mutually convenient time.
+### 2. **Current Practices for External Image Customization**
+Teams today are already pulling external images, ingesting them into their own internal repositories, and using CI to customize them. The only difference with the 3rd-party pipeline is that it provides a standardized, secure way to bring these images in. 
+
+If we weren’t using this pipeline, and teams were instead bringing external images into their own repositories, we likely wouldn't even be having this discussion. **The ability to customize images through the CI process already exists**—this pipeline does not introduce any fundamentally new risks or practices.
+
+### 3. **CI Team’s Concerns on Access and Image Attribution**
+I understand the concerns raised by the CI team, particularly around image attribution and responsibility for vulnerabilities (CVEs). Here’s my perspective:
+
+- **Image Responsibility**: The team ingesting the image is responsible for ensuring that it is secure and addressing any vulnerabilities within their own usage context. However, there is no mechanism in place to stop other teams from using that image in their own workflows, just as there isn’t for other internal images.
+  
+  For instance, today, any team can use an image from the `docker-internal` repository without explicit approval from the team that built or maintains that image. The same logic would apply here: any internal image (including those ingested via 3rd-party pipeline) can be used as a base for further customization.
+
+- **Access Control**: The CI pipeline FID currently has access to other internal repositories, like `docker-internal`, without restricting specific images to specific teams. So, if a team can pull and customize an internal image today (e.g., `docker-internal/ci-build-image:1.0`), why should it be different for an image ingested via the 3rd-party pipeline? 
+   
+  The controls today do not restrict the usage of internal images by other teams, and the same applies here.
+
+
+### 5. **Next Steps**
+I recommend that we continue using the CI pipeline to access images from the `docker-3rd-party` repository, consistent with how we handle other internal images.
+
+However, if there is still concern around controlling which teams use specific images, we could explore potential solutions such as **access controls**. Implementing such controls would be a significant shift in how the CI pipeline currently accesses internal images (whether ingested via 3rd-party or built internally), and we would need to weigh the impact of such changes carefully.
+
+Please let me know if you’d like to discuss this further. I’m happy to join a call to ensure we’re aligned and find a resolution that works for everyone.
