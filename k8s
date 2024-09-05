@@ -1,3 +1,4 @@
+To streamline your commits before initiating a pull request, it's important to consolidate related commits using Git's squashing technique. This approach helps clean up your Git history and makes your pull request easier to review by grouping related changes into a single, coherent commit.
 Here’s a draft for your article on Git version control and best practices for engineering excellence:
 
 ---
