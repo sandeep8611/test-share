@@ -1,3 +1,8 @@
+Things that work fine at small volumes often slow down or fail completely as volume increases. As your system scales, new bottlenecks and failure points emerge that were not evident at lower volumes. This is why it’s essential to conduct performance testing under conditions that simulate real-world and peak usage.
+
+Michael Nygard captures this challenge perfectly:
+
+"You can’t build something that will never break. You have to constantly be looking for the next issue or bottleneck and fix it." – Michael Nygard
 For business-critical applications, ensuring availability and fast recovery in the event of a failure is paramount. These systems are typically deployed across one or more data centers to maintain availability and meet the business's Recovery Time Objective (RTO). The RTO defines the acceptable amount of time the system can be offline before it significantly impacts business operations.
 
 Failover to Data Centers: If a whole data center goes down, the application must be able to quickly switch to another location to maintain operations. Depending on the system's characteristics, this failover may be automatic—running simultaneously in multiple data centers—or require specific configuration steps to "flip" processes over to the secondary data center.
