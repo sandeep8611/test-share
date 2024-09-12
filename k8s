@@ -1,3 +1,5 @@
+End-to-end tests give us the most confidence that the system works, but they are expensive, slow, and brittle. We must balance them carefully with faster, more reliable tests at lower levels." – Martin Fowler
+
 Engineering Excellence Through Comprehensive Software Testing
 
 "Quality is never an accident; it is always the result of intelligent effort." – John Ruskin
