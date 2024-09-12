@@ -1,5 +1,6 @@
-Manual Testing
-While automated testing is essential for efficiency and consistency, manual testing plays a crucial role in areas where human judgment and intuition are needed. Two common types of manual testing that focus on human interaction with the system are Exploratory and Usability Testing.
+Modern systems are increasingly complex, and failures are not just possible but inevitable. This reality was captured succinctly by Werner Vogels, CTO of Amazon Web Services, when he said:
+
+"Everything fails all of the time." – Werner VogelsWhile automated testing is essential for efficiency and consistency, manual testing plays a crucial role in areas where human judgment and intuition are needed. Two common types of manual testing that focus on human interaction with the system are Exploratory and Usability Testing.
 
 Exploratory Testing
 
