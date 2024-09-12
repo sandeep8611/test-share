@@ -1,3 +1,14 @@
+For business-critical applications, ensuring availability and fast recovery in the event of a failure is paramount. These systems are typically deployed across one or more data centers to maintain availability and meet the business's Recovery Time Objective (RTO). The RTO defines the acceptable amount of time the system can be offline before it significantly impacts business operations.
+
+Failover to Data Centers: If a whole data center goes down, the application must be able to quickly switch to another location to maintain operations. Depending on the system's characteristics, this failover may be automatic—running simultaneously in multiple data centers—or require specific configuration steps to "flip" processes over to the secondary data center.
+This is where Resilience Testing becomes critical. It simulates real-world failures, such as data center outages, and verifies that the application can maintain core functionality and recover rapidly. These tests ensure that even in catastrophic failure scenarios, such as the loss of an entire data center, the application can continue to operate with minimal disruption.
+
+Sub-types:
+Chaos Engineering: Intentionally injects failures like server crashes or network partitions, simulating scenarios such as a data center failure, to observe how well the system withstands and recovers.
+Fault Injection Testing: Deliberately introduces faults into the system to validate the effectiveness of failover mechanisms and recovery processes.
+Disaster Recovery Drills: Test the system's ability to meet RTOs by switching operations from one data center to another under controlled conditions.
+By subjecting applications to resilience testing, you ensure that they can handle both minor disruptions and large-scale failures, maintaining uptime, data integrity, and critical business functions.
+
 Modern systems are increasingly complex, and failures are not just possible but inevitable. This reality was captured succinctly by Werner Vogels, CTO of Amazon Web Services, when he said:
 
 "Everything fails all of the time." – Werner VogelsWhile automated testing is essential for efficiency and consistency, manual testing plays a crucial role in areas where human judgment and intuition are needed. Two common types of manual testing that focus on human interaction with the system are Exploratory and Usability Testing.
