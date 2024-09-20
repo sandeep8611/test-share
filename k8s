@@ -1,127 +1,36 @@
-Tools for Automated Security Testing
+In my role at JP, I lead the Container Security Team as both the Technical and Product Lead. My responsibilities include owning and managing multiple work streams, delivering critical container security services that support the organisation’s containerised infrastructure. Key delierables my role include:
+	1	Vulnerability Scanning as a Service (VSaaS): I lead the design, implementation, and management of VSaaS, a state-of-the-art vulnerability scanning solution for container images. This service allows developers across JP to request vulnerabilities scans of their container images and receive actionable, easy-to-understand reports. The solution is developer-friendly, scalable, and integrated with strategic tools such as LightSpeed, Jenkins Enterprise and other firms CI/CD offerings. VSaaS currently handles around 65K scans per month.
+	2	3rd Party Image Ingestion Pipeline (XX): I am responsible for the ownership of the 3rd Party Image Ingestion Pipeline, a service that allows our development teams securely ingests container images from external registries. Its self-service model….. More than 50 teams within JP are ingesting at anytime bringing their external container images securely and consistently.
+	3	UBI RHEL Base Images: I lead the efforts in the ingestion and management of UBI RHEL base images, which form the backbone of many container images used within JP. My platform ensures that these foundational images are up-to-date, secure, and available for developers and MM teams to build upon.
+	4	Partnership with MM Team: I partnered and collaborate extensively with the MM Team to produce secure, approved base images. These images are widely used across JP, helping developers maintain a high standard of security in their containerised applications.
+Overall, my role focuses on delivering secure, scalable solutions that enhance JP’s container security landscape, while also driving collaboration across multiple teams and ensuring alignment with strategic goals.
 
-In the context of security testing within the software development lifecycle (SDLC), there are several tools available that facilitate automated vulnerability scanning and security assessments. In particular, for teams working in Japan (JP), the following tools can be seamlessly integrated into the SDLC to enhance security:
 
-Snyk: Snyk provides automated vulnerability scanning for open source dependencies. It integrates directly into your development workflow, continuously monitoring for vulnerabilities and offering remediation advice to keep your dependencies secure.
-Snyk Container: This tool focuses specifically on container security. Snyk Container scans container images for vulnerabilities, helping ensure that your containerized applications do not have security flaws before they are deployed. It offers insights into potential risks within the container environment and provides recommendations for remediation.
-Clair: Clair is an open-source project used for container security. It analyzes container images for vulnerabilities, helping to detect and manage risks within containerized environments. Clair integrates with your CI/CD pipelines, enabling continuous security assessments as part of your build and deployment processes.
-These tools automate the process of vulnerability detection and management, making it easier to maintain a secure development environment. By incorporating these tools into your SDLC, you can proactively identify and address security issues, ensuring that your software remains resilient against potential threats.
+I am applying for entering advanced engineering program. This is program overview. a futural This solective arogram amnamore anainaore to hone and analy their technical chille ae woll ac arom thai
+E3 creates the opportunity for talented engineers at JP to step up as technical leaders of the future! This selective program empowers engineers to hone and apply their technical skills, as well as grow their professional network through collaborative working. By completing this exciting E3 program you will develop your engineering mindset, gain new technical knowledge, and develop high performance behavioral skills that unlock your potential as a future change maker! I want to answered few questions to make my application successful. 
+First question is "Describe your Role". My role in JP is leading container security team. I am currently owned and managed multiple work stream as Technical and Product Lead. Few products which are included: VSaaS - Vulnerability Scanning as a Service. VSaaS  provides vulnerability scanning for containers. It is a developer friendly, security solution to allow our developers to request vulnerability scanning of their container images and provides easy to understand, actionable vulnerability reports to make better choices about the attack surface of their container images. VSaaS is a state-of-the-art container image scanning service for JP developers and other internal customers in a secure, resilient, and scalable way. It is already integrated with some strategic tooling like LightSpeed, Jenkins Enterprise etc. As of August, VSaaS executes 65K scans / month and is on target to exceed 80K / month by Dec. see http://jp/vsaas . 
+I am also owning 3rd Party Image Ingestion Pipeline which is a service that enables ingestion of container images from external registries in a secure and repeatable fashion. As of today, more than 50 teams in JP are extensively using this strategic service to ingest image in JP securely. 
+I am also responsible for leading the ingesting UBI RHEL latest base images in JP. These images are the backbone of all the container images built on top of the images. 
+Lastly, I am extersively partnered with Middleware Team on producing approved secure base images in JP. Our service pipeline produce these approved base images which are extensively used by our developers in JP.
 
-Things that work fine at small volumes often slow down or fail completely as volume increases. As your system scales, new bottlenecks and failure points emerge that were not evident at lower volumes. This is why it’s essential to conduct performance testing under conditions that simulate real-world and peak usage.
 
-Michael Nygard captures this challenge perfectly:
+"How do you currently contribute to the Engineering Culture across the organisation?" 
+As part of my continuous delivery of the products I am delivering, I am not only deliver with high quality but these products are now becoming a standard for our teams in CISO to follow. The project VSaaS is in the maturity level 3 of engineering excellence which is the top level project. The frameworks I designed and developed has been used in various other projects in CISO. I was designing from scratch as development micro service. This was the first project in our CISO org that integrate and leverage all the new strategic tooling in JP including LSE, Openshift Andro, Observability/telemetry Kibana/Splunk, Thread modelling, ISRP level etc. In short, this project is now becoming as standard for engineering excellence in CISO. 
+As part of my continuous contribution to engineering community, I published regular videos, articles for our engineering community. As part of my continuous effort, my video on techfest titled "How to create, develop, build, deploy, and run apps in Citi" is in the top 10 watched videos in JP. In addition, I have published numerous articles and demos on best practices across various topics which includes devops, container security (jp/slim-container), software testing (jp/software-testing) etc.
+I am also mentoring lots of engineers from graduates to VP levels both from my teams and the outside teams.
 
-"You can’t build something that will never break. You have to constantly be looking for the next issue or bottleneck and fix it." – Michael Nygard
-For business-critical applications, ensuring availability and fast recovery in the event of a failure is paramount. These systems are typically deployed across one or more data centers to maintain availability and meet the business's Recovery Time Objective (RTO). The RTO defines the acceptable amount of time the system can be offline before it significantly impacts business operations.
 
-Failover to Data Centers: If a whole data center goes down, the application must be able to quickly switch to another location to maintain operations. Depending on the system's characteristics, this failover may be automatic—running simultaneously in multiple data centers—or require specific configuration steps to "flip" processes over to the secondary data center.
-This is where Resilience Testing becomes critical. It simulates real-world failures, such as data center outages, and verifies that the application can maintain core functionality and recover rapidly. These tests ensure that even in catastrophic failure scenarios, such as the loss of an entire data center, the application can continue to operate with minimal disruption.
+* How do you see that contribution changing as a result of your E3 graduation?
 
-Sub-types:
-Chaos Engineering: Intentionally injects failures like server crashes or network partitions, simulating scenarios such as a data center failure, to observe how well the system withstands and recovers.
-Fault Injection Testing: Deliberately introduces faults into the system to validate the effectiveness of failover mechanisms and recovery processes.
-Disaster Recovery Drills: Test the system's ability to meet RTOs by switching operations from one data center to another under controlled conditions.
-By subjecting applications to resilience testing, you ensure that they can handle both minor disruptions and large-scale failures, maintaining uptime, data integrity, and critical business functions.
 
-Modern systems are increasingly complex, and failures are not just possible but inevitable. This reality was captured succinctly by Werner Vogels, CTO of Amazon Web Services, when he said:
-
-"Everything fails all of the time." – Werner VogelsWhile automated testing is essential for efficiency and consistency, manual testing plays a crucial role in areas where human judgment and intuition are needed. Two common types of manual testing that focus on human interaction with the system are Exploratory and Usability Testing.
-
-Exploratory Testing
-
-Exploratory testing involves interactively testing an application without a predefined script or plan. Testers explore the application by creating theories about how it should behave based on previous interactions and then test those theories to see if the application behaves as expected. While less structured than scripted tests, exploratory testing is a disciplined and thoughtful activity. It is often more effective in finding real-world bugs that rigidly scripted tests might miss, as testers actively think about the application in ways that may not have been anticipated by developers or automation scripts.
-
-Usability Testing
-
-Usability testing ensures that the software is fit for purpose, verifying whether real users can effectively use the application to achieve their goals. Unlike other testing types, usability tests rely heavily on subjective feedback, evaluating how easy or intuitive the software is to use from the perspective of the end-user. These tests measure things like navigation, workflow, and overall user satisfaction, providing critical insights into the user experience that can be used to improve the product.
-
-Achieving Excellence Through Automation and Testing (Final Section)
-For developers, mastering both functional and non-functional testing is essential for delivering high-quality software that meets user expectations and handles real-world conditions. By combining automated tests with manual exploratory efforts, teams can ensure that their applications are not only functional but also resilient, performant, and secure.
-
-Functional testing provides immediate feedback on code correctness at various levels (unit, integration, E2E).
-Non-functional testing ensures the system meets architectural goals such as performance, scalability, and security.
-Manual testing, especially exploratory and usability testing, provides human insights that automation cannot fully capture, particularly when understanding user behavior and experience.
-The intelligent application of these testing techniques results in faster development cycles, fewer defects, and greater confidence in the quality of the final product. By following these principles, developers can achieve engineering excellence and deliver robust software that exceeds user expectations.
-Engineering Excellence Through Comprehensive Software Testing
-
-"Quality is never an accident; it is always the result of intelligent effort." – John Ruskin
-
-In software engineering, testing is not merely a phase of development but an essential practice that ensures the delivery of reliable, scalable, and secure applications. With the many forms of testing available, it's crucial to have a common understanding of the different types, methods, and objectives. This article serves as a guide to help developers navigate the world of software testing and automation, promoting a shared vocabulary and strategy for achieving engineering excellence.
-
-The Importance of Clear Definitions
-Effective software testing begins with a common language. Miscommunication regarding test types often leads to inefficiencies or poor implementation. Below are a few foundational definitions for this discussion:
-
-System Under Test (SUT): The part of the software being tested. For unit tests, it could be a method or function, while for broader tests, it may be an entire application.
-Component: A self-contained unit of code that can be independently compiled and deployed.
-Categories of Testing
-We categorize testing into three groups: Automated Functional, Automated Non-Functional, and Manual Testing. Each group plays a key role in the software development lifecycle.
-
-1. Functional Testing
-Functional testing focuses on ensuring that the software behaves according to specified requirements, checking whether individual components and systems work as intended.
-
-Unit Testing
-
-Unit tests focus on the smallest components, such as individual functions or methods, verifying that these components behave as expected. While unit tests are primarily concerned with the developer's intentions, they lay the foundation for reliable software by ensuring code correctness at the most granular level.
-
-Sub-types:
-UI Testing: Ensures graphical interface elements (buttons, icons, etc.) work as specified without verifying underlying business logic.
-Contract Testing: Ensures that APIs or services communicate correctly, verifying that the producer and consumer of the service follow the agreed contract.
-Integration Testing
-
-Integration tests ensure that multiple modules or components of an application interact correctly. These tests are essential in detecting issues that might arise when independently developed components are combined.
-
-Sub-types:
-Container Testing: Runs tests in an environment that includes external dependencies, such as databases or message queues.
-API Testing: Directly tests APIs for functionality, reliability, and security.
-End-to-End (E2E) Testing
-
-E2E tests simulate real user workflows, ensuring that the system behaves as expected from start to finish. While these tests provide comprehensive coverage, they are also more fragile and time-consuming, often requiring frequent updates due to changes in UI or workflow.
-
-Acceptance Testing
-
-Acceptance tests verify that the software meets business requirements. These tests are typically written in collaboration with stakeholders and represent the criteria that must be met for the product to be considered "done."
-
-2. Non-Functional Testing
-Non-functional tests evaluate aspects of the software that are not directly related to specific features but are critical to its performance, security, and reliability.
-
-Static Code Analysis
-
-Static code analysis inspects the source code without executing it, identifying potential bugs, security vulnerabilities, or coding standard violations. This technique is crucial for catching issues early in the development process.
-
-Sub-types:
-Linting: Analyzes code for stylistic or syntactic errors, helping ensure code quality and maintainability.
-Performance Testing
-
-Performance testing assesses how well a system performs under expected and peak load conditions. This type of testing helps identify bottlenecks and ensures the software can handle the necessary level of traffic or data.
-
-Sub-types:
-Stress Testing: Determines the system's breaking point by applying extreme loads.
-Load Testing: Simulates expected user loads to ensure the system performs well under normal conditions.
-Spike Testing: Observes how the system responds to sudden, large increases in load.
-Endurance Testing: Evaluates the system's ability to perform well over an extended period of sustained load.
-Volume Testing: Measures how well the system handles large amounts of data.
-Scalability Testing: Assesses how effectively the system scales as load increases.
-Resilience Testing
-
-Resilience tests ensure that the system can handle failures or unexpected conditions while continuing to operate effectively. This testing focuses on the system's ability to recover and maintain functionality even in the face of disruptions.
-
-Sub-types:
-Chaos Engineering: Introduces random failures or disruptions to assess system behavior under stress.
-Mutation Testing: Modifies code in small ways to test if the existing test suite can detect errors, ensuring the quality of the tests themselves.
-Security Testing
-
-Security testing evaluates how well the system can resist malicious attacks or protect sensitive data. This testing is vital for identifying vulnerabilities that could be exploited by attackers.
-
-Sub-types:
-Vulnerability Scans: Automatically detect known security flaws in the system.
-Penetration Testing: Simulates attacks on the system to identify security vulnerabilities and assess their potential impact.
-3. Manual Testing
-While automation is critical in modern development, manual testing remains valuable for exploratory testing, user experience assessments, and scenarios where human intuition can identify issues automated tests may miss. Manual testing is particularly useful in the early stages of development when functionality is still evolving or for verifying complex user interactions that are difficult to automate.
-
-Achieving Excellence Through Automation and Testing
-For developers, mastering both functional and non-functional testing is critical for delivering high-quality software that meets user expectations and handles real-world conditions. By combining automated tests with manual exploratory efforts, teams can ensure that their applications are not only functional but also resilient, performant, and secure.
-
-Functional testing gives immediate feedback on whether the code performs as expected at various levels (unit, integration, E2E).
-Non-functional testing ensures that the system meets architectural goals such as performance, scalability, and security.
-Manual testing provides human insights that automation cannot fully capture, especially in complex scenarios.
-The intelligent application of these testing techniques results in faster development cycles, fewer defects, and greater confidence in the quality of the final product. By following these principles, developers can truly achieve engineering excellence and deliver robust software that meets the highest standards.
+"Non-engineers can also benefit from version control. I've used Git when working on Excel templates. No need to have 10+ files named
+"version 1 as of xxxxxx", "version 2 as of..." when you can leave detailed comments about why each version changed, with Git automatically dating them for you.
+Other reasons to use version control even when you're the only person working on a script:
+1. Ever work on something, break it, and have no idea how to fix it again? Use git reset to roll back to the last time it worked correctly
+2. Are you the kind of person who comments out old code but leaves it in "just in case"? with version control you can just delete it and keep your code clean. the "just in case" code will be saved in the version history.
+3. If you're in the middle of a messy refactor, but need to make a small change to the working script? 'git stash' to save your mess,
+'git checkout main' to hop back to working code, push the hotfix, then 'git checkout [original branch]' and 'git stash pop' to restore the mess so you can keep working on it. the cherry on top is using 'git merge main' to easily include the hotfix in the mess - if you're moving between SCRIPT ORIGINALps1 and SCRIPT WIP.ps1 then you have to perform copy/paste surgery to get the same results
+4. If you work with non-engineers who don't know how to use git/don't have access you can use git hooks to do things like
+"automatically save your script to a shared network drive whenever you merge changes to main branch".
+5. For personal projects outside of the JP VDI environment, having a Github repo means you can work on your code on any computer. No need to carry around a flash drive.
+6. It's nice to see the squares light up on GitHub when you make commits." - This is from Engineering Excellence team chat. I was thinking to reply to this saying that I have written an introductory article for Git §
