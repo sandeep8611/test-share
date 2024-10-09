@@ -1,27 +1,5 @@
-# /tests/test_app.py
+Overall, the candidate demonstrated good knowledge and relevant experience. However, at times, their explanations were unclear, especially when discussing technical concepts like Multi-Stage and Dependency Injection. Instead of breaking down the concepts in simple terms, they focused on specific examples from past projects, which were overly complex and difficult to follow.
 
-import unittest
-from wsgi import create_app  # Import create_app from wsgi.py
+On the positive side, their understanding of REST APIs was strong, particularly around idempotency and the differences between PUT and POST, which many candidates struggle with. Additionally, their experience with Cloud/Kubernetes and overall engineering background is solid.
 
-class TestEngExcellenceApp(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        """This method runs once for the entire test class."""
-        app = create_app().app
-        app.config['TESTING'] = True  # Set testing mode on
-        cls.client = app.test_client()  # Create test client once for the whole class
-
-    def test_health(self):
-        """Test the /health endpoint."""
-        response = self.client.get('/health')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json, {"status": "healthy"})
-
-    def test_hello(self):
-        """Test the /hello endpoint."""
-        response = self.client.get('/hello')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json, {"message": "Hello, Engineers!"})
-
-if __name__ == '__main__':
-    unittest.main()
+Based on their technical knowledge and past experience, I would recommend them for the role.
