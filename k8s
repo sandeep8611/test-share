@@ -1,46 +1,35 @@
-Post-Deployment Test Suite for VSaaS Scanning API
+Test status endpoint:
+Input: Use the job_id from the previous step to check status.
+Expectation: Status should be pending or in progress initially, and eventually turn to complete.
+Test Cases:
+After submitting the job, hit the status endpoint immediately and verify the status is pending.
+Continuously check the status until it turns to complete.
+Ensure status transitions happen in a reasonable time.
+Test report endpoint:
+Input: Use the completed job_id to retrieve the report.
+Expectation: The API should return a report link and any additional fields.
+Test Cases:
+Retrieve the report once the job status is complete.
+Ensure the report contains the expected fields like vulnerability details, severity, etc.
+Check that the report link is valid and accessible.
 
-We need to develop and execute a comprehensive post-deployment test suite for the VSaaS Scanning API to ensure that all endpoints, workflows, and functionalities are working as expected after each deployment. This will include testing job creation, status checks, report generation, error handling, load testing, security, and data validation.
 
-Scope:
-The post-deployment test suite should cover the following:
+est fetching report before job completes:
+Input: Try to fetch the report before the status is complete.
+Expectation: The API should return a meaningful error (e.g., 400 Bad Request or 202 Accepted, indicating the job is still in progress).
 
-Functional Tests:
-Test image submission (job creation)
-Test status endpoint using the job_id
-Test report endpoint for completed scans
-Error Handling & Edge Case Tests:
-Handle invalid image formats
-Handle invalid or missing job_id for status and report retrieval
-Poll status endpoint frequently and ensure API stability
-Attempt to fetch report before job completion and validate appropriate error messages
-Load and Performance Tests:
-Concurrent job submissions
-High volume of status checks
-High volume of report retrieval requests
-Security Tests:
-Authentication and authorization
-SQL injection and input validation
-Report link security
-Timeout and Retry Mechanism Tests:
-Test long-running jobs
-Ensure proper handling of stuck or timeout jobs
-Validate retry mechanisms on temporary failures
-Data Validation Tests:
-Verify consistency of status and report data
-Ensure proper image-to-report mapping
-Regression Tests:
-Run regression tests to verify no existing functionality breaks after deployment
-Optional Backend Tests:
-Ensure job-related data is stored and updated correctly in the database
-Validate that completed job data persists for the expected duration
-Deliverables:
-Test scripts for each of the above areas (preferably using pytest and requests)
-Load testing scripts using tools like Locust or JMeter
-Security test results from OWASP ZAP or Burp Suite
-Documentation on how to run the post-deployment test suite
-Acceptance Criteria:
 
-All critical tests must pass.
-Test results must be documented and reviewed after each deployment.
-No major performance degradation, security vulnerabilities, or data inconsistencies should be present after deployment.
+Test job timeout:
+Input: Test how the system handles jobs that take too long to process or get stuck.
+Expectation: The API should return an appropriate status like timeout or failed after a certain duration.
+
+
+6. Data Validation Tests
+Ensure that data returned by the API is consistent and correct.
+
+Test field consistency in status and report endpoints:
+Input: Validate that the fields returned by the status and report endpoints follow the API schema.
+Expectation: Ensure that no fields are missing, the data is formatted correctly, and contains all the expected information.
+Test proper image-to-report mapping:
+Input: For each image, validate that the report contains the correct data specific to that image.
+Expectation: Ensure there’s no data mix-up, and each report corresponds to its respective scan.
