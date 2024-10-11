@@ -1,5 +1,46 @@
-Overall, the candidate demonstrated good knowledge and relevant experience. However, at times, their explanations were unclear, especially when discussing technical concepts like Multi-Stage and Dependency Injection. Instead of breaking down the concepts in simple terms, they focused on specific examples from past projects, which were overly complex and difficult to follow.
+Post-Deployment Test Suite for VSaaS Scanning API
 
-On the positive side, their understanding of REST APIs was strong, particularly around idempotency and the differences between PUT and POST, which many candidates struggle with. Additionally, their experience with Cloud/Kubernetes and overall engineering background is solid.
+We need to develop and execute a comprehensive post-deployment test suite for the VSaaS Scanning API to ensure that all endpoints, workflows, and functionalities are working as expected after each deployment. This will include testing job creation, status checks, report generation, error handling, load testing, security, and data validation.
 
-Based on their technical knowledge and past experience, I would recommend them for the role.
+Scope:
+The post-deployment test suite should cover the following:
+
+Functional Tests:
+Test image submission (job creation)
+Test status endpoint using the job_id
+Test report endpoint for completed scans
+Error Handling & Edge Case Tests:
+Handle invalid image formats
+Handle invalid or missing job_id for status and report retrieval
+Poll status endpoint frequently and ensure API stability
+Attempt to fetch report before job completion and validate appropriate error messages
+Load and Performance Tests:
+Concurrent job submissions
+High volume of status checks
+High volume of report retrieval requests
+Security Tests:
+Authentication and authorization
+SQL injection and input validation
+Report link security
+Timeout and Retry Mechanism Tests:
+Test long-running jobs
+Ensure proper handling of stuck or timeout jobs
+Validate retry mechanisms on temporary failures
+Data Validation Tests:
+Verify consistency of status and report data
+Ensure proper image-to-report mapping
+Regression Tests:
+Run regression tests to verify no existing functionality breaks after deployment
+Optional Backend Tests:
+Ensure job-related data is stored and updated correctly in the database
+Validate that completed job data persists for the expected duration
+Deliverables:
+Test scripts for each of the above areas (preferably using pytest and requests)
+Load testing scripts using tools like Locust or JMeter
+Security test results from OWASP ZAP or Burp Suite
+Documentation on how to run the post-deployment test suite
+Acceptance Criteria:
+
+All critical tests must pass.
+Test results must be documented and reviewed after each deployment.
+No major performance degradation, security vulnerabilities, or data inconsistencies should be present after deployment.
