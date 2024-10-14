@@ -1,35 +1,40 @@
-Test status endpoint:
-Input: Use the job_id from the previous step to check status.
-Expectation: Status should be pending or in progress initially, and eventually turn to complete.
-Test Cases:
-After submitting the job, hit the status endpoint immediately and verify the status is pending.
-Continuously check the status until it turns to complete.
-Ensure status transitions happen in a reasonable time.
-Test report endpoint:
-Input: Use the completed job_id to retrieve the report.
-Expectation: The API should return a report link and any additional fields.
-Test Cases:
-Retrieve the report once the job status is complete.
-Ensure the report contains the expected fields like vulnerability details, severity, etc.
-Check that the report link is valid and accessible.
+In the RR category, I have been instrumental in leading several key initiatives to drive automation, enhance operational controls, and reduce risk across key projects such as VSaaS, Aqua, 3PIIP, and UBI Pipeline. My focus has been on automating manual processes, implementing robust monitoring solutions, and fostering operational excellence, with tangible improvements in compliance, risk mitigation, and scalability.
+
+1. Automating VSaaS Release Process with RoD and PTS Integration
+To address the inefficiencies in the release process for Vulnerability Scanning as a Service (VSaaS), I spearheaded the integration of Release-on-Demand (RoD) with the Project Tracking System (PTS). This automated the entire release process, reducing manual effort and significantly improving compliance.
+	•	Key Achievement: The automation reduced release times from one week to just one day, allowing us to perform multiple daily releases with zero manual intervention in compliance submissions. This not only streamlined operations but also eliminated compliance risks and freed up resources for strategic priorities.
+	•	Impact: By expanding RoD’s capabilities beyond the ICG sector, I set the foundation for broader adoption across the firm, improving operational efficiency and aligning with the firm’s focus on engineering excellence and risk management.
+
+	“A round of applause for Chris and Muhammad who were able to successfully get the PTS artifacts uploaded with RoD today for the first time from their release. Great work, guys!” — Charla
+
+2. Strengthening Operational Support and Controls for VSaaS and 3PIIP
+Managing operational support for VSaaS and leading the automation of support for the 3rd Party Image Ingestion Pipeline (3PIIP), I restructured processes to reduce complexity, minimise operational risk, and improve scalability.
+	•	Key Achievement for VSaaS: I established clear roles between engineers and support teams, implemented SLAs for L1 support tickets, and set up a dedicated ServiceNow group. This reduced the response time for ticket resolution, enabling the support team to work more efficiently while allowing engineers to focus on development. Designed an onboarding system for new support team members to ensure they had the necessary access and controls in place, as well as comprehensive training on the VSaaS environment.
+	•	Key Achievement for 3PIIP: Faced with the challenge of no dedicated support team for the 3PIIP project, I designed an automated support model that allowed us to successfully migrate over 30 teams from an old manual process to 3PIIP, meeting critical deadlines while minimising downtime and operational disruption.
+	•	Impact: Both initiatives streamlined operations, enhanced control, and contributed to greater scalability and risk reduction. By proactively addressing recurring support issues using a data-driven approach, I improved system stability and support efficiency across multiple projects.
+
+3. Developing a Scalable Observability and Monitoring Framework
+Recognising the need for real-time visibility and proactive monitoring, I developed a comprehensive observability framework for both VSaaS and 3PIIP. This included the integration of Kibana, Splunk, and AppDynamics, providing critical insights into system health and enabling the support team to detect issues before they escalated.
+	•	Key Achievement: I designed a custom monitoring and alerting system that provided early warnings for issues impacting critical dependencies such as Aqua, Artifactory, and S3, reducing downtime and improving system reliability.
+	•	Impact: The proactive monitoring frameworks and integration improved cybersecurity resilience and engineering excellence by ensuring that potential problems were addressed before they affected service availability. It also served as a model for improving visibility and reliability across other projects across CISO.
+
+4. Strengthening Team Management and Controls as a Matrix Manager
+As the matrix manager of four permanent staff and one contractor, I prioritised the development, compliance, and performance of my team members. Through weekly/biweekly 1:1 meetings, structured feedback, and career development planning, I ensured that my team was aligned with the firm’s objectives while fostering their growth.
+	•	Key Achievement: I successfully ensured that all team members completed mandatory compliance training and access reviews, meeting the firm’s governance standards. My focus on regular communication and structured performance reviews helped my team balance high-impact projects like VSaaS and 3PIIP without overextending themselves.
+	•	Impact: My management approach has driven employee engagement, enhanced operational efficiency, and ensured that my team consistently delivered high-quality results on mission-critical projects, while maintaining compliance with risk management protocols.
+
+5. Leading the 3PIIP Integration with LightSpeed
+I led the integration of 3PIIP with the LightSpeed CI/CD Pipeline, collaborating with key stakeholders across ICG, CISO, and Cyber teams to create a secure and automated workflow for customisation of external vendor image ingestion.
+	•	Key Achievement: This integration eliminated manual customisation steps, reducing human error and strengthening the controls for securely incorporating external images into the development pipeline. This streamlined the development process and ensured consistency across teams.
+	•	Impact: The workflow transformation supported scalability and security by allowing development teams to securely ingest and customise external vendor images. It reduced the risk of introducing vulnerabilities into the system, contributing to the firm’s overall cybersecurity posture.
+
+6. Contribution to the Cyber Vanguard Program
+As a member of the Cyber Vanguard Program, I contributed to high-profile CISO and CSO programs, collaborating on strategies to protect JP from evolving cyber threats. I participated in key engagements, including conferences, regional cybersecurity events, and cross-functional collaboration initiatives.
+	•	Key Achievement: Through my involvement, I helped promote best practices for cybersecurity, contributed to high-level discussions on risk management, and played a key role in enhancing JP’s defences against emerging threats.
+	•	Impact: My contribution to the Cyber Vanguard Program strengthened JP’s ability to respond to unique cyber risks, reinforcing our commitment to safer business practices and resilience against cyber threats.
+
+Summary of Impact
+My leadership across automation, risk management, and operational efficiency has enabled significant improvements in scalability, cybersecurity resilience, and engineering excellence across key initiatives like VSaaS, Aqua and 3PIIP. My focus on delivering automation solutions, improving system reliability, and fostering team development has supported the firm’s broader mission of safer business practices and operational scalability.
 
 
-est fetching report before job completes:
-Input: Try to fetch the report before the status is complete.
-Expectation: The API should return a meaningful error (e.g., 400 Bad Request or 202 Accepted, indicating the job is still in progress).
 
-
-Test job timeout:
-Input: Test how the system handles jobs that take too long to process or get stuck.
-Expectation: The API should return an appropriate status like timeout or failed after a certain duration.
-
-
-6. Data Validation Tests
-Ensure that data returned by the API is consistent and correct.
-
-Test field consistency in status and report endpoints:
-Input: Validate that the fields returned by the status and report endpoints follow the API schema.
-Expectation: Ensure that no fields are missing, the data is formatted correctly, and contains all the expected information.
-Test proper image-to-report mapping:
-Input: For each image, validate that the report contains the correct data specific to that image.
-Expectation: Ensure there’s no data mix-up, and each report corresponds to its respective scan.
