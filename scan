@@ -1,12 +1,34 @@
-Observations indicate that when scanning an image for the first time, Aqua completes the scan in a normal timeframe. However, subsequent requests for the same image with different tags result in a quicker scan without downloading the image from Artifactory. This behavior differs from Twistlock, which treats the same image with different tags as a new image.
-Scanning the Same Image in Parallel:
-Scanning the same image with the same tag in parallel for the first time reveals that only a single scanner takes the responsibility of downloading and completing the scan. Additionally, if multiple scanners are busy with image scanning and the same image is in-progress, Aqua intelligently avoids queuing the request, recognizing that the image is already being scanned.
+This year, I played a pivotal role in delivering key projects that strengthened client outcomes, operational efficiencies, and developer experience across JP. My contributions were central to the successful delivery of critical capabilities, including Vulnerability Scanning as a Service (VSaaS), the 3rd Party Image Ingestion Pipeline (3PIIP), the Red Hat Universal Base Image (UBI) pipeline, and Middleware pipeline through Aqua Migration from Twistlock. These projects significantly enhanced security, scalability, and automation, contributing to the firm’s goals of cybersecurity and engineering excellence, while ensuring long-term value for our clients.
+Successful Production Launch of 3rd Party Image Ingestion Pipeline (3PIIP) Under my leadership, the 3PIIP—stalled for four years—was successfully launched, automating and improving how external container images are ingested into JP’s systems. My key accomplishments include:
+	•	Reduced external image ingestion time from over a month to a day, improving security and efficiency.
+	•	Implemented automated security control checks, reducing vulnerabilities with Aqua to ensure only secure, validated images are ingested, improving JP’s overall security posture.
+	•	Engaged key stakeholders across ICG, CTO, CTI, and ICG Cyber teams to ensure the new pipeline met their requirements. I also rebranded the project as 3PIIP, introduced a new logo, and launched a strategic communication campaign leading to a successful beta launch and full production.
+	•	Led the decommissioning of legacy system and successfully migrated over 50 teams to 3PIIP, including key teams like Aqua, EKS, Crowdstrike, and Qualys.
 
-Deleting Image from Aqua UI:
-Deleting an image from the Aqua UI for testing purposes doesn't always trigger Aqua to treat the image as entirely new. Although the UI may show that the image has not been scanned before, Aqua may still scan it quickly without downloading the image. This discrepancy may be due to the backend deleting job still being in-progress, taking a few minutes for Aqua to treat the image as brand new.
+Red Hat Universal Base Image (UBI) Pipeline Transition and Enhancement As part of my expanded role, I took ownership of the Red Hat UBI pipeline, ensuring the availability of Red Hat UBI 9 for developers across the bank. My leadership ensured a seamless transition from RHEL 7 to RHEL 8 and 9 with enhanced automation and security.
+	•	Enabled RHEL UBI 9 and integrated Aqua for backend scanning of UBI images to provide continuous security and vulnerability assessments. This ensured that RHEL 8 and 9 images are available within a day of release, greatly enhancing operational agility and security.
+	•	Delivered faster image availability, reducing processing times from days to within one day, boosting developer productivity.
+	•	Decommissioned legacy RHEL 7 infrastructure, reducing costs and freeing up resources to focus on strategic priorities.
 
-Finding Status for Image Scans:
-The Aqua status endpoint provides the status of scanned images (in-progress, queued, scanned). However, it only takes the image name as an argument. Scanning the same image in parallel may complicate understanding the completion status, especially if a subsequent request is triggered before the initial scan is finished. Further testing with large image sizes is required to ensure accurate status reporting.
+Successful Middleware Pipeline Transition to Aqua and RHEL 8 I spearheaded the critical migration of the Middleware pipeline from Twistlock to Aqua and upgraded its infrastructure to run on RHEL 8:
+	•	Took full ownership of the migration with Twistlock’s decommissioning looming. I initiated and led the cross-functional workstream to transition the Middleware pipeline to Aqua, engaging stakeholders across CTI, Cyber, ICG, Artifactory, and Operations.
+	•	Enabled continuous security scanning for all base images used by developers, ensuring compliance with the latest cybersecurity standards and policies.
+	•	Upgraded the pipeline’s infrastructure from RHEL 7 to RHEL 8, maintaining image security, stability, and scalability aligned with JP’s modernisation goals.
+	•	Improved operational efficiency by reducing cycle times for base image approvals and availability, directly impacting developer productivity.
 
-Scan Result:
-Scan reports (VES) from Aqua differ from those of Twistlock. Comprehensive testing will be conducted to evaluate scan result accuracy, performance, and latency in comparison with Twistlock.
+Engineering Excellence in Vulnerability Scanning as a Service (VSaaS) As the engineering lead for VSaaS, I spearheaded advancements that made it a flagship service for scalability, resilience, and automation within CISO. Other CISO teams are now following VSaaS’s blueprint to deliver high-performance, secure applications to their users.
+	•	Scaled VSaaS from 20,000 scans per month to over 80,000, with projections to reach 100,000 scans by year-end.
+	•	Built a resilient active-active architecture, ensuring uninterrupted service even during major outages. During a 25-hour outage of the SWDC Andromeda cluster, VSaaS continued operating seamlessly by routing traffic to the MWDC cluster.
+	•	Improved the developer experience through zero-touch onboarding and seamless integration with LightSpeed for automated scanning after each release build, accelerating release cycles and boosting productivity.
+	•	Achieved 80% unit test coverage, with 27 automated integration and post-deployment tests, ensuring zero downtime and uninterrupted service by automatically rolling back deployments if issues arise.
+	•	Leveraging Release-on-Demand (RoD), I implemented fully automated creation of change control tickets and release runbooks, with rolling deployments managed via Harness. I expanded RoD beyond ICG and established VSaaS as the first team to integrate it in CISO.
+	•	Developed a custom-built stress testing framework to simulate large-scale scanning scenarios, handling hundreds of scans per minute, ensuring scalability and reliability.
+	•	Built with a security-first approach, VSaaS includes features like rate limiting to protect against denial-of-service attacks and authorization controls to prevent unauthorized actions.
+	•	Integrated with ELK Stack and Kibana for real-time monitoring, offering observability into scan times and success rates.
+
+Contributing to JP’s Success Through Leadership and Engineering Excellence Initiatives Throughout the year, I have contributed to JP’s mission by driving engineering excellence, fostering leadership, and promoting operational efficiency and scalability across the firm:
+	•	Served as an SME in the Engineering Excellence Program, guiding teams to onboard and modernise applications for enhanced security and scalability.
+	•	Delivered multiple demos and workshops attended by over 200 members, driving best practices across CISO.
+	•	Authored several articles on topics like test automation, container best practices, version control (Git), and CI/CD pipelines, creating a knowledge hub for development teams to improve engineering practices across JP.
+	•	Presented VSaaS and 3PIIP solutions at prestigious platforms like Engineering Excellence Tech Con and Tech Fest.
+	•	Mentored future leaders through programs like the Diversity Operating Committee Mentorship Program and the Caliber Global Leadership Accelerator Program.
