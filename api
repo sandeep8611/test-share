@@ -1,87 +1,17 @@
-Automating VSaaS Release Process with RoD and PTS Integration to Improve Operational Controls and Reduce Risk
-One of the significant challenges in the production release process for Vulnerability Scanning as a Service (VSaaS) was the complex, time-consuming, and risk-prone manual submission of compliance documents. This led to unnecessary delays, resource constraints, and operational risks. The process required substantial time from operational teams, involving manual evidence collection and documentation to ensure Project Tracking System (PTS) compliance.
+Throughout this year, I have demonstrated a commitment to JP's leadership principles by taking ownership of high-impact initiatives, delivering quality results with pride, and fostering a collaborative environment. My efforts have contributed to key projects that drive engineering excellence, enhance cybersecurity, and improve operational efficiency, while also supporting the growth and development of my colleagues.
 
-To address these challenges, I took ownership of integrating Release-on-Demand (RoD) with PTS, fully automating the release process. This initiative not only streamlined compliance but also reduced manual effort significantly, enabling faster, audit-compliant releases. By expanding RoD’s capabilities beyond the ICG sector, I laid the foundation for broader adoption, contributing to improved operational efficiency across the firm.
 
-Problem & Impact
-	•	Time-Consuming Manual Processes: Each production release for VSaaS previously required up to a week due to manual tasks in change ticket creation/approval and evidence submission for audit purposes. This delayed releases, increased labor costs, and introduced operational risks, with potential compliance vulnerabilities.
-	•	High Compliance Costs: Meeting PTS compliance standards involved labor-intensive manual collection of artifacts for auditing. This raised operational costs and slowed down time-to-market for critical updates, affecting engineering productivity and delaying feature delivery.
+"We Take Ownership" I took ownership of stalled and high-risk projects, such as the 3rd Party Image Ingestion Pipeline (3PIIP), Middleware pipeline, UBI Pipeline, and the VSaaS, which were essential to JP's strategy. I approached them with a problem-solving mindset, embracing challenges and driving them to completion despite tight deadlines, significant technical challenges, and required complex coordination across multiple teams. When 3PIIP had been delayed for years, I revitalized the project by engaging key stakeholders across ICG, CTO, CTI, and Cyber teams to align on requirements. I rebranded the initiative as 3PIIP, launched a strategic communication plan, and transitioned more than 30 teams, including flagship applications such as Crowdstrike, Qualys, Postgres, and Spark, to the new automated system between August and September.
+With the decommissioning of Twistlock, I took ownership of developing and executing a comprehensive roadmap to transition all container security services (VSaaS, 3PIIP, UBI, and Middleware Pipelines) to Aqua. I led every aspect of this transition, including stakeholder engagement across ICG and CTO sectors, migration planning, and resolving technical blockers, ensuring a seamless shift without disrupting production. My efforts included creating a detailed strategy to migrate users, collaborating with teams across sectors, and managing dependencies and integration with critical systems such as LightSpeed and Artifactory.
 
-Solution: RoD Integration and Automation
-To mitigate risks and enhance operational controls, I led the following initiative:
-	•	RoD Integration with PTS: I spearheaded a cross-functional effort, working with key stakeholders across RoD (Daniel), PTS (Charla), PQA (Julie), and PMO (Terri) to fully automate the release process. This involved enhancing CTI Jira workflows to align with RoD’s templates, automating everything from change ticket creation to approvals. All compliance documentation was auto-generated and uploaded to PTS, eliminating the need for any manual steps. This improved communication across teams and ensured a smooth transition to automated processes.
-	•	End-to-End Automation: By integrating RoD and automating the PTS compliance and audit submission process, I reduced release times from a week to just one day. The automated process transformed the release workflow, significantly reducing operational risk, improving audit compliance, and lowering resource overhead. This shift also freed engineering resources to focus on strategic priorities, while ensuring full audit compliance without manual intervention.
+"We Deliver With Pride" I consistently delivered high-quality results by simplifying processes, implementing sustainable solutions, and upholding JP's standards of operational excellence. In leading the transition from Twistlock to Aqua, I achieved a 75% reduction in scan times and improved failure rates from 3% to just 0.2%, driving significant enhancements in efficiency and developer productivity. Over the past 10 months, VSaaS scaled from 20,000 image scans per month in December 2023 to over 80,000 scans today, with a projected 100,000 scans by year-end.
+For the 3PIIP and UBI pipelines, I addressed root causes, user challenges, and blockers that had stalled progress. By conducting user interviews and analysing feedback, I introduced enhancements that resulted in an 80% decrease in error rates.  The automation of the pipeline reduced image ingestion times from over a month to a single day, while new user capabilities expanded the adoption of the pipeline across multiple teams and sectors. Additionally, I partnered with Artifactory team in decommissioning outdated manual process and migrated teams to a secure, automated workflow, resulting in long-term value through cost savings, risk reduction, and improved developer experiences.. I also ensured the availability of RHEL 8 and 9 images for UBI, with scans completed within a day of release, by decommissioning the legacy RHEL 7 infrastructure.
 
-Key Achievements:
-	•	Increased Efficiency, Agility, and Reduced Toil: The automation reduced the release process from a week to a single day, ensuring full compliance with PTS and PQA standards while minimizing human error in regulatory submissions. This allowed engineering resources to focus on higher-value tasks and strategic initiatives. As a result, multiple VSaaS releases can now occur in a single day, speeding up time-to-market and enhancing developer productivity. By automating tasks such as ServiceNow ticket creation, approvals, and PTS uploads, I have eliminated bottlenecks and enhanced responsiveness to market demands while maintaining audit compliance with zero manual intervention.
-	•	Scalability Across Multiple Sectors: Initially restricted to the ICG sector, I collaborated with stakeholders to extend RoD usage across CISO and additional sectors. This broad implementation allowed teams across the organization to benefit from the risk mitigation and compliance automation capabilities, enhancing the firm’s risk management framework at a larger scale and driving efficiency.
-	•	Driving Engineering, Cybersecurity, and Controls Excellence: The RoD integration with our VSaaS project, including the LightSpeed pipeline, Bitbucket, Jira, Harness deployment, and ServiceNow group, improved operational controls, ensuring adherence to PMO quality standards and audit requirements. The enhanced controls significantly reduce the risk of non-compliance, improving transparency in release operations and ensuring that every release is properly documented and compliant. This project reinforces the firm's commitment to engineering excellence and strengthens our cybersecurity risk management, aligning with audit and regulatory standards.
-Feedback and Recognition:
-The integration of RoD into the PTS system has received positive feedback from various teams:
+"We Succeed Together" I fostered a collaborative culture, breaking down silos to deliver optimal results for JP. I worked closely with cross-functional teams, including Artifactory, VA, Cyber, and LightSpeed, to ensure seamless migrations and coordinated testing of Aqua with critical services. 
+My leadership in guiding the cross-functional workstreams to transition the Middleware pipeline to Aqua ensured that we met the Twistlock decommissioning deadline, avoiding potential security risks. With no clear ownership for the Middleware pipeline migration, I stepped forward to lead the transformation by aligning multiple stakeholders across CTI, Cyber, ICG, Artifactory, and Operations to ensure success. 
+I partnered with the ICG LightSpeed and Artifactory teams to migrate over 700 CSI applications that leveraged VSaaS for image scanning from Twistlock to Aqua, resulting in more than 80,000 scans per month with improved accuracy and fewer false positives.
 
-	•	“A round of applause for ABC and DEF who were able to successfully get the PTS artifacts uploaded with RoDtoday for the first time from their release. Great work, guys!” — Charla
-	•	“Outstanding—great work all!” — Michael
-	•	“On a serious note, great job on the collaboration! I'm glad RoD is getting more and more traction with other sectors. It seems to be a win-win across the board.” — Laurie
-
-Strengthening Operational Support and Controls for VSaaS and 3PIIP
-
-1. Enhancing Operational Efficiency for VSaaS
-In my role managing the operational support for VSaaS, I optimized both the support structure and processes to improve efficiency and control:
-	•	Created a clear separation of responsibilities between engineers and support teams, allowing each group to focus on its core functions.
-	•	Defined operational standards and support processes, including SLAs for L1 support tickets, which led to faster resolution times.
-	•	Established a dedicated ServiceNow support group to streamline ticket management, ensuring faster responses and better prioritization.
-	•	Designed an onboarding system for new support team members to ensure they had the necessary access and controls in place, as well as comprehensive training on the VSaaS environment.
-Impact: These initiatives reduced the operational burden on engineers, increased support team responsiveness, and drove significant operational efficiency and resource optimization.
-
-2. Automating the 3PIIP Support Model to Scale Operations and Mitigate Risk
-Faced with the challenge of no dedicated support team for the 3rd Party Image Ingestion Pipeline (3PIIP) project, I designed and implemented an automated support model that met the critical August production deadline:
-	•	Developed an automated ticketing system with a dedicated support email group and templates to streamline the handling of support tickets.
-	•	Created a centralized support channel in Microsoft Teams, improving collaboration and response times.
-	•	Introduced a data-driven approach to categorize and analyze support tickets, addressing recurring issues proactively and improving pipeline stability.
-This innovative model allowed us to:
-	•	Successfully migrate over 30 teams from a old manual ingestion process to the new 3PIIP platform and 20 new onboard teams, driving broader firm adoption.
-	•	Seamlessly transition existing teams while minimizing downtime and operational disruptions.
-Impact: The automation of support processes significantly reduced operational risk, enhanced scalability, and strengthen risk management and operational agility.
-
-3. Developing a Scalable Observability and Monitoring Framework
-To further improve the stability and security of both VSaaS and 3PIIP, I implemented and delivered a comprehensive observability framework:
-	•	Integrated Kibana, Splunk, and AppDynamics to provide real-time insights into system health, allowing the support team to monitor key services proactively.
-	•	Designed a custom monitoring and alerting system for dependencies like Aqua, Artifactory, and S3, ensuring that any issues impacting the VSaaS and Pipelines were identified and resolved immediately.
-This framework has:
-	•	Increased visibility into the health of both systems, allowing for faster issue resolution.
-	•	Reduced downtime and improved system reliability by alerting the team to potential problems before they escalated.
-Impact: The observability solution supported my commitment to engineering excellence and cybersecurity by providing the tools needed for efficient, proactive support model to increase system visibility, reduce downtime, improve reliability.
-
-Summary of Impact
-Through my leadership in automating support models, establishing operational standards, and implementing advanced monitoring systems, I enhanced the overall efficiency and security of the VSaaS and 3PIIP platforms. These contributions support automation, risk reduction, and engineering excellence, and have created a scalable framework for continued growth and operational stability.
-
-Strengthening Team Management and Controls as a People Manager
-As the matrix manager of four permanent employees and one contractor, I take full responsibility for their professional development, performance, and adherence to compliance standards. My role is focused on building a productive and supportive environment, ensuring that my matrix reports are equipped to deliver their best work while meeting the firm’s control and risk management expectations.
-
-1. Regular 1:1 Meetings and Continuous Feedback
-	•	I hold weekly/biweekly 1:1 meetings with each of my matrix reports, ensuring a consistent flow of communication where they can share updates, voice concerns, and receive feedback.
-	•	This structured dialogue allows me to proactively remove obstacles, ensuring my employees work without unnecessary constraints within JP.
-Impact: Maintaining regular communication ensures my team feels supported and engaged, while allowing me to address challenges in real-time, which boosts employee satisfaction and performance.
-
-2. Career Development and Growth Support
-	•	As their manager, I work closely with each employee to outline their career development plans, providing tailored guidance on skill development and career progression opportunities.
-	•	I actively encourage participation in training programs that align with both the firm’s strategic objectives and the individual’s career goals.
-Impact: This investment in my team’s growth fosters long-term employee retention and builds a strong culture of continuous development, keeping the team aligned with future business needs.
-
-3. Monitoring Compliance and Access Control
-	•	I am responsible for ensuring my matrix reports complete all mandatory compliance training on time and reviewing their entitlements regularly to make sure access controls are in line with JP’s governance standards.
-	•	This includes keeping track of regulatory requirements and making sure my team adheres to security protocols across all projects.
-Impact: My strict oversight of compliance and access controls minimizes operational risk and ensures that my team upholds firm-wide security standards, reducing the likelihood of audit or security issues.
-
-4. Conducting Performance Reviews and Evaluations
-	•	I carry out Mid-Year and Year-End performance reviews for each of my matrix reports, providing structured feedback and setting clear objectives that align with business priorities.
-	•	My focus is on helping my employees grow professionally while holding them accountable to their performance metrics.
-Impact: These evaluations provide clear accountability and motivation for my team, while also ensuring that their work aligns with both departmental goals and the firm’s broader strategy.
-
-5. Managing Employees Across Multiple Projects
-	•	As the matrix manager of employees working on various high-impact projects, including VSaaS and 3PIIP, I ensure they receive the right support to balance their workloads and optimize their contributions.
-	•	I work closely with them to ensure they are not overwhelmed and that they have access to the resources they need to succeed in these complex projects.
-Impact: My guidance ensures that my matrix reports can effectively contribute to key initiatives without overextending themselves, fostering both employee well-being and project success.
-
-Summary of Impact
-In my role as a people manager, I prioritize the growth, well-being, and compliance of my matrix reports. By establishing a structured approach to team management, compliance, and career development, I ensure that my employees thrive in their roles while contributing meaningfully to JP’s strategic goals. This leadership approach fosters a high-performing team that aligns with the firm’s values of risk management, operational excellence, and employee development.
+In my efforts to automate the release process for VSaaS, I spearheaded a cross-functional initiative to integrate Release-on-Demand (RoD) with the Project Tracking System (PTS), significantly reducing manual efforts and enabling faster, audit-compliant releases. Previously, production releases took up to a week due to manual tasks in change ticket creation and audit submission. By automating the PTS compliance and audit process, I reduced release times from a week to just one day. This initiative laid the foundation for expanding RoD capabilities across other sectors, further promoting operational efficiency within the firm.
+Investing in the growth of my colleagues and teams has been a top priority. This year, I expanded my role to include four matrix reports (1 SVP, 2 VPs, and a 2nd-year graduate). As their matrix manager, I take full responsibility for their professional development, performance, and compliance adherence. I conduct regular one-on-one meetings, create career development plans, and ensure all mandatory training is completed. I also take the lead in talent acquisition for critical roles, successfully interviewing and hiring for two VP positions and conducting interviews for a new Site Reliability Engineering (SRE) team to ensure operational excellence for container security products and other infrastructure.
+As a Subject Matter Expert (SME) for the Engineering Excellence Program in CISO, I have played a key role in helping teams modernise their applications and adopt best practices. I have delivered multiple demos and workshops, attended by over 200 members, upskilling teams across the firm. Additionally, I authored articles and published videos on topics such as test automation, container best practices, version control, and CI/CD pipelines. These resources, featured on JP's Techfest channel, serve as a knowledge hub for the organization, with one of my video tutorials becoming one of the top most-watched.
+I also actively contributed to the EO&T Global Mentoring Program, mentoring team members and guiding them in career advancement and personal growth. Through my involvement with the Caliber Global Leadership Accelerator Program and the EO&T Diversity Operating Committee, I have supported leadership development initiatives and talent diversity, promoting inclusion within the organization.
