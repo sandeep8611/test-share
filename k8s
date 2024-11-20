@@ -1,3 +1,29 @@
-msg_content = (f"Alert:\n"
-                   f"The report time for the latest container report for prod-ose is {report_time}.\n"
-                   f"This exceeds the container report age of {exceeded_by} by threshold by {threshold_exceeded_by}.")
+# templates/cronjob.yaml
+{{- range $env, $config := .Values.envs }}
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Release.Name }}-{{ $config.name }}
+spec:
+  schedule: "{{ $config.schedule }}"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            - name: {{ .Release.Name }}-{{ $config.name }}
+              image: {{ $.Values.image }}
+              resources:
+                requests:
+                  memory: {{ $config.resources.memory.min }}
+                  cpu: {{ $config.resources.cpu.min }}
+                limits:
+                  memory: {{ $config.resources.memory.max }}
+                  cpu: {{ $config.resources.cpu.max }}
+              env:
+                - name: AQUA_SERVER
+                  value: {{ $config.aquaServer }}
+                - name: THRESHOLD_MINUTES
+                  value: "{{ $config.threshold_minutes }}"
+          restartPolicy: Never
+{{- end }}
