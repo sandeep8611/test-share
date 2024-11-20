@@ -27,3 +27,48 @@ spec:
                   value: "{{ $config.threshold_minutes }}"
           restartPolicy: Never
 {{- end }}
+
+
+
+# values.yaml
+image: "my-python-module:latest"
+
+envs:
+  dev:
+    name: "dev"
+    schedule: "0 0 * * *"  # Cron schedule for dev environment
+    threshold_minutes: 1000
+    resources:
+      memory:
+        min: "512Mi"
+        max: "1Gi"
+      cpu:
+        min: "250m"
+        max: "500m"
+    aquaServer: "https://aqua-server-dev.net"
+    
+  uat:
+    name: "uat"
+    schedule: "0 1 * * *"  # Cron schedule for uat environment
+    threshold_minutes: 1000
+    resources:
+      memory:
+        min: "1Gi"
+        max: "2Gi"
+      cpu:
+        min: "500m"
+        max: "1"
+    aquaServer: "https://aqua-server-uat.net"
+
+  prod:
+    name: "prod"
+    schedule: "0 2 * * *"  # Cron schedule for prod environment
+    threshold_minutes: 1000
+    resources:
+      memory:
+        min: "2Gi"
+        max: "4Gi"
+      cpu:
+        min: "1"
+        max: "2"
+    aquaServer: "https://aqua-server-prod.net"
