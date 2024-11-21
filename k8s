@@ -1,74 +1,59 @@
-# templates/cronjob.yaml
-{{- range $env, $config := .Values.envs }}
-apiVersion: batch/v1
-kind: CronJob
-metadata:
-  name: {{ .Release.Name }}-{{ $config.name }}
-spec:
-  schedule: "{{ $config.schedule }}"
-  jobTemplate:
-    spec:
-      template:
-        spec:
-          containers:
-            - name: {{ .Release.Name }}-{{ $config.name }}
-              image: {{ $.Values.image }}
-              resources:
-                requests:
-                  memory: {{ $config.resources.memory.min }}
-                  cpu: {{ $config.resources.cpu.min }}
-                limits:
-                  memory: {{ $config.resources.memory.max }}
-                  cpu: {{ $config.resources.cpu.max }}
-              env:
-                - name: AQUA_SERVER
-                  value: {{ $config.aquaServer }}
-                - name: THRESHOLD_MINUTES
-                  value: "{{ $config.threshold_minutes }}"
-          restartPolicy: Never
-{{- end }}
+Harpal (Haroon, JP, Romeo)
+======
+Risk and control
+Haroon played an important role in bringing the 3rd Party Ingestion Image Pipeline (3PIIP) into production this year, enabling development teams to securely and efficiently ingest external images into the bank. Delivered under a tight deadline due to the Twistlock migration, 3PIIP replaced a legacy process that was less secure and prone to errors. Haroon also contributed significantly to enhancing 3PIIP by enabling Aqua scanning, which improved performance and reduced false positives. 
+
+In addition, Haroon was instrumental in decommissioning RHEL7 and enabling UBI pipelines for RHEL8 and RHEL9, ensuring our pipelines remain secure and aligned with the latest Red Hat features and security patches. His efforts in migrating Middleware pipelines to RHEL8 and integrating Aqua scanning capabilities were pivotal for the successful decommissioning of Twistlock, providing developers access to more secure and reliable base images. Furthermore, Haroon has completed all required training on time, demonstrating his commitment to upholding risk and control standards.
 
 
+Financial
+By successfully bringing the 3rd Party Ingestion Image Pipeline (3PIIP) into production, development teams in JP now using a more streamlined and automated process for bringing external images into the bank. This transition significantly improved efficiency and reduced reliance on the slower, manual processes of the past. Furthermore, Haroon’s contributions to decommissioning RHEL7 and migrating pipelines from Twistlock to Aqua in JP this year resulted in substantial cost savings for the bank, reinforcing our commitment to optimising financial performance while maintaining secure and modern systems.
 
-# values.yaml
-image: "my-python-module:latest"
+Client
+This year, Haroon collaborated closely with family teams to incorporate their feedback into the development of the 3rd Party Ingestion Image Pipeline (3PIIP). His efforts ensured that 3PIIP was tailored to their specific use cases, delivering a seamless client experience prior to its launch into production. This proactive approach resulted in a positive experience for new teams adopting 3PIIP for securely ingesting external images into the bank.
+Haroon also played a key role in onboarding new teams to 3PIIP and facilitating the migration of existing teams from the legacy process. His contributions were critical in fostering strong client relationships and ensuring a smooth and efficient transition. Furthermore, Haroon’s work in delivering observability metrics using Splunk for our pipelines has been instrumental in enhancing the overall client experience. These metrics provide valuable insights into pipeline usage by development teams, helping to identify and address bottlenecks while ensuring a reliable and efficient service.
+Add Scaling of 3PIIP? - test and ensure 3PIIP will scale to our users when production over time…
+Leadership
+Haroon has been an integral member of the container security team over the past few years, consistently demonstrating a strong willingness to contribute and assist wherever needed. His support in onboarding Romeo, a new team member in the pipeline group, was instrumental in ensuring a smooth transition. Haroon provided valuable technical assistance that helped Romeo quickly get up to speed. Additionally, Haroon played a key role in the successful delivery of both the 3PIIP and UBI pipelines, gaining extensive experience in the end-to-end process of taking products into production.
+As Haroon continues to grow in his role as SVP, he is now well-positioned to take on greater responsibility and technical ownership of the products he supports. By further developing his ability to manage ownership from engineering through to production, Haroon can strengthen his leadership presence. Additionally, focusing on building closer collaboration with stakeholders to address blockers and ensure efficient product delivery will enhance his influence and overall effectiveness within the team.
 
-envs:
-  dev:
-    name: "dev"
-    schedule: "0 0 * * *"  # Cron schedule for dev environment
-    threshold_minutes: 1000
-    resources:
-      memory:
-        min: "512Mi"
-        max: "1Gi"
-      cpu:
-        min: "250m"
-        max: "500m"
-    aquaServer: "https://aqua-server-dev.net"
-    
-  uat:
-    name: "uat"
-    schedule: "0 1 * * *"  # Cron schedule for uat environment
-    threshold_minutes: 1000
-    resources:
-      memory:
-        min: "1Gi"
-        max: "2Gi"
-      cpu:
-        min: "500m"
-        max: "1"
-    aquaServer: "https://aqua-server-uat.net"
+Rimas (Ramesh, Haroon)
+=====
+Risk and control
+=============
+Ramesh has consistently contributed to the security and reliability of our pipeline infrastructure by ensuring regular updates, patches, and implementing improvements to make systems more resilient and self-healing. He also provides valuable feedback to enhance the security posture of our pipelines, exemplified by his efforts to address and resolve exposed secrets in Splunk—a critical task that significantly mitigated potential risks. Furthermore, Ramesh has completed all required training on time, demonstrating his commitment to upholding risk and control standards.
 
-  prod:
-    name: "prod"
-    schedule: "0 2 * * *"  # Cron schedule for prod environment
-    threshold_minutes: 1000
-    resources:
-      memory:
-        min: "2Gi"
-        max: "4Gi"
-      cpu:
-        min: "1"
-        max: "2"
-    aquaServer: "https://aqua-server-prod.net"
+Financial
+=======
+Ramesh’s contributions to the migration from Twistlock to Aqua for our 3PIIP were instrumental. He demonstrated strong ownership and played a key role, alongside other team members, in successfully achieving this critical milestone. This migration enables the decommissioning of Twistlock, positioning Aqua to deliver projected cost savings of approximately $10 million over the next three years.
+
+Clients
+======
+
+Ramesh’s contributions to bringing 3PIIP into production this year were instrumental. After joining the team in August, he quickly began contributing to the 3PIIP codebase and made a vital impact by revising and improving the documentation. His updates ensured that development teams could onboard seamlessly, ingest their images effectively, and follow the documentation with ease. Ramesh also regularly incorporated feedback from users to keep the documentation relevant and user-friendly.
+His commitment and ownership in defining the 3PIIP support model were critical to providing first-class support for both migrating existing users from the manual process and onboarding new users. This dedication ensured 3PIIP was as self-service as possible for its users. Additionally, Ramesh played a key role in improving the reliability and availability of 3PIIP post-production, ensuring its ongoing success and value to the development teams.
+Leadership
+========
+Ramesh has demonstrated strong ownership and played a critical role in the development and production of 3PIIP. He made significant contributions, including revamping our documentation, defining and implementing the support model, and providing essential post-production support to users. As a team player, Ramesh has shown excellent collaboration, particularly with Haroon in the pipeline team. He worked seamlessly with the team, performing peer reviews, providing constructive feedback, and proactively raising and taking ownership of JIRA tasks for priority requirements.
+Ramesh has also been proactive in improving the security posture of our pipelines, such as identifying and addressing exposed secrets in the logs. He has partnered effectively with key stakeholder teams, including Artifactory, ISOs, and app teams, ensuring alignment and resolving issues. Despite joining in August, Ramesh has had a strong few months and is now in a position to take on greater responsibility and apply the skills and experience he has gained to drive further success.
+
+Nodir
+====
+Leadership
+=========
+Noor possesses excellent teamwork skills, collaborating effectively with different team members and consistently offering his support. He has demonstrated strong technical leadership, with his ownership of key initiatives such as the Grafeas Replacement, CVE review automation, and Image Validation codebases being instrumental to the team's success this year.
+In addition to his technical contributions, Noor has been actively mentoring junior team members, such as Oyin, helping them onboard and develop their skills. His collaboration with both the Aqua and Pipeline teams showcases his ability to work well with others and deliver on broader workstreams. Noor also demonstrates a commitment to continuous learning and expanding his technical knowledge.
+Looking ahead, Noor should aim to further broaden his ownership and collaboration across the team, particularly with the Aqua team, to enhance his leadership impact and take on greater responsibilities.
+Risk and Control
+=============
+Noor’s contribution to replacing the existing process of uploading Vault secrets with a more secure and user-friendly framework was a key achievement this year. The new process is now widely adopted, serving both developers within the team and the operations team for production, significantly enhancing security and efficiency.
+Additionally, Noor consistently completes all required training on time, demonstrating his commitment to upholding the team’s risk and control standards.
+
+Financial
+======
+Noor’s delivery of the Grafeas replacement client library, modernisation of CVE review automation, enhancement of the image-validation script, and the migration and integration of these codebases with Aqua were critical to the success of the broader Aqua delivery initiative. His efforts in transitioning from Grafeas to Aqua will enable the decommissioning of Grafeas-related infrastructure, resulting in significant cost reductions and contributing to projected savings of $10 million over the next three years as Twistlock is decommissioned.
+
+Client
+=====
+Noor’s delivery of the Grafeas replacement API code, modernisation of the CVE review automation script, and the new version of the Image Validation script—integrated with Aqua as the backend scan engine—were key achievements for our clients this year. His work consistently reflects high quality and adherence to timelines, ensuring client expectations are met effectively.
+Additionally, Noor’s collaboration with the Pipelines and Aqua teams has been instrumental in delivering broader workstreams with a focus on quality and timely execution, further enhancing the client experience.
