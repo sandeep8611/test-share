@@ -1,49 +1,5 @@
-def test_sanitize_command_with_password(self):
-        # Command containing sensitive password information
-        command = "MY_EAR_PASS=sensitivepassword&& yum install && yum install cve"
-        sanitized_command = self.report_generator._sanitize_command(command)
-        self.assertEqual(
-            sanitized_command,
-            "MY_EAR_PASS=***&& yum install && yum install cve",
-            "Should sanitize the password and keep the rest of the command intact"
-        )
+Thank you for your response and for offering alternative cohort options. Unfortunately, due to my childcare responsibilities, switching to the APAC or NAM cohort would not be feasible for me.
 
-    def test_sanitize_command_without_password(self):
-        # Command without sensitive information
-        command = "yum install && yum install cve"
-        sanitized_command = self.report_generator._sanitize_command(command)
-        self.assertEqual(
-            sanitized_command,
-            "yum install && yum install cve",
-            "Should return the original command when no sensitive information is present"
-        )
+It would be best for me to continue with the same cohort, as I can better manage my childcare commitments. While I understand the importance of fully engaging with the module, I will unfortunately have to miss the session on February 5 due to my pre-scheduled Project Vendor meeting.
 
-    def test_sanitize_command_with_multiple_sensitive_data(self):
-        # Command with multiple sensitive key-value pairs
-        command = "MY_EAR_PASS=secret1 OTHER_PASS=secret2&& yum install cve"
-        sanitized_command = self.report_generator._sanitize_command(command)
-        self.assertEqual(
-            sanitized_command,
-            "MY_EAR_PASS=*** OTHER_PASS=secret2&& yum install cve",
-            "Should sanitize only MY_EAR_PASS and leave other keys intact"
-        )
-
-    def test_sanitize_command_empty(self):
-        # Empty command
-        command = ""
-        sanitized_command = self.report_generator._sanitize_command(command)
-        self.assertEqual(
-            sanitized_command,
-            "",
-            "Should return an empty string for an empty input"
-        )
-
-    def test_sanitize_command_no_sensitive_data(self):
-        # Command with a similar pattern but not MY_EAR_PASS
-        command = "NOT_MY_EAR_PASS=nothing_sensitive"
-        sanitized_command = self.report_generator._sanitize_command(command)
-        self.assertEqual(
-            sanitized_command,
-            "NOT_MY_EAR_PASS=nothing_sensitive",
-            "Should not sanitize unrelated patterns"
-        )
+Please let me know if this works, and I appreciate your understanding and support.
