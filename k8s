@@ -1,9 +1,20 @@
-   “Ensuring smooth trading operations & risk accuracy.”
-   How do EV inconsistencies impact trading decisions and risk management?
-   How is EV used in daily trading decisions?
-   What risks do you face with the current EV calculation process?
-   Do traders need real-time updates? How often?
-   How should backdated changes (e.g., for Equities) be handled?
-   regulatory penalties. - EUC COMPLIANCE due to manual intervention
-   What are the most critical improvements from a trading perspective?
-How urgent is this solution for trading teams?
+Technical Lead for TITAN (Equities-Specific EV System)
+Focus: Technical feasibility of implementing EV changes in TITAN. Key Questions:
+	•	What challenges exist in modifying TITAN for backdated EV updates?
+	•	How much effort would it take to make TITAN handle other asset classes?
+	•	Are there performance constraints or architectural bottlenecks?
+	•	What are the biggest integration challenges TITAN faces with EV calculations?
+	•	What data sources and dependencies must be accounted for?
+	•	Are there any technical constraints that impact this project?
+	•	
+
+Technical Lead for JEDI (Rates & Credit EV System)
+Focus: Adapting JEDI to new EV calculations and integrations.
+ Key Questions:
+	•	Can JEDI support the new EV calculation methods (negative EV, sales split, etc.)?
+	•	What dependencies does JEDI have with other systems (e.g., Sales Comp Tool, TFP)?
+	•	How difficult is it to automate exception management in JEDI?
+	•	What risks do you foresee in implementing these changes before year-end?
+	•	How does JEDI currently interact with EV data, and what limitations exist?
+	•	What technical enhancements would make EV processing more efficient?
+	•	Are there any non-functional requirements we should be aware of (scalability, latency, etc.)?
