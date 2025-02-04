@@ -1,11 +1,9 @@
-
-	•	Problem: The current Economic Value (EV) calculation system is fragmented, inconsistent, and dependent on the unmodifiable EOLDB, leading to inefficiencies and operational risks.
-	•	Impact: The lack of a centralized and real-time validation system results in discrepancies across asset classes, increased manual interventions, and potential regulatory non-compliance???.
-	⁃	Report is wrong
-	⁃	
-	•	Consequence:
-	•	       EUC - COMPLIANCE way… register to EUC   Failure to enhance the system may lead to incorrect EV calculations, regulatory penalties??, operational bottlenecks, and reputational risks.
-	⁃	overridden 
-	⁃	
-	•	Urgency:
-	•	With a year-end deadline for regulatory compliance and growing complexity in EV methodologies, an immediate solution is required to ensure accuracy, efficiency, and risk mitigation.
+   “Ensuring smooth trading operations & risk accuracy.”
+   How do EV inconsistencies impact trading decisions and risk management?
+   How is EV used in daily trading decisions?
+   What risks do you face with the current EV calculation process?
+   Do traders need real-time updates? How often?
+   How should backdated changes (e.g., for Equities) be handled?
+   regulatory penalties. - EUC COMPLIANCE due to manual intervention
+   What are the most critical improvements from a trading perspective?
+How urgent is this solution for trading teams?
