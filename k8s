@@ -1,20 +1,10 @@
-Technical Lead for TITAN (Equities-Specific EV System)
-Focus: Technical feasibility of implementing EV changes in TITAN. Key Questions:
-	•	What challenges exist in modifying TITAN for backdated EV updates?
-	•	How much effort would it take to make TITAN handle other asset classes?
-	•	Are there performance constraints or architectural bottlenecks?
-	•	What are the biggest integration challenges TITAN faces with EV calculations?
-	•	What data sources and dependencies must be accounted for?
-	•	Are there any technical constraints that impact this project?
-	•	
+Hi [User's Name],
 
-Technical Lead for JEDI (Rates & Credit EV System)
-Focus: Adapting JEDI to new EV calculations and integrations.
- Key Questions:
-	•	Can JEDI support the new EV calculation methods (negative EV, sales split, etc.)?
-	•	What dependencies does JEDI have with other systems (e.g., Sales Comp Tool, TFP)?
-	•	How difficult is it to automate exception management in JEDI?
-	•	What risks do you foresee in implementing these changes before year-end?
-	•	How does JEDI currently interact with EV data, and what limitations exist?
-	•	What technical enhancements would make EV processing more efficient?
-	•	Are there any non-functional requirements we should be aware of (scalability, latency, etc.)?
+Thank you for reaching out. The rate limit is in place to ensure fair usage and system stability. To better understand your use case and see if an exception is needed, could you please provide the following details?
+
+Pipeline Details – Is this part of a regular CI/CD pipeline, or is it a one-time bulk scan?
+FID (if applicable) – This helps us track your request.
+Scan Volume – How many scans are you running, and at what frequency?
+Once we have this information, we can evaluate whether a whitelist exception is appropriate or if an alternative solution is needed.
+
+Looking forward to your response.
