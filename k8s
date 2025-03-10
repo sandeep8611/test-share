@@ -1,14 +1,14 @@
-Release Notes - VSaaS Updates
-
-New Features
-Feature	Benefit
-VSaaS now supports scanning images by digest.	Users can now scan or rescan their images using SHA ID with VSaaS.
-VSaaS now supports multi-arch images for scanning.	The 3rd-party-operator pipeline can now scan images with multi-arch support, improving compatibility.
-VSaaS now supports an additional repository, docker-gas-*, for image scanning.	Users can now scan images from docker-gas-* repositories, expanding supported registries.
-Security and Improvements
-Security/Improvement	Benefit
-Improved error message for unsupported registries, including DEV Artifactory (xoc.artifactrepo-dev.net).	Users now receive a clear error message: "Invalid input: Scan of images in registry xxxx.artifactrepo-dev.net is not supported with VSaaS", improving user experience.
-Updates to the scan request throttle whitelist.	More teams, including the OpenShift Platform team, can now submit scan requests without hitting the throttle limit.
-Improved handling of rescan requests for images that have not been previously scanned.	Instead of an error, users now receive a clear message explaining that rescans for unscanned images are not supported and should request a fresh scan instead.
-Base image upgrade.	The base image used by VSaaS has been updated to the latest version, ensuring improved security and performance.
-Upgraded Python-Json-Logger and Tabulate libraries.	Addressed and fixed high vulnerabilities in the libraries, enhancing overall security and stability of the application.
+parameters:
+  - name: imageName
+    in: query
+    description: "Name of the image. Supports both old and new Artifactory URLs."
+    required: true
+    schema:
+      type: string
+    examples:
+      existingUrl:
+        summary: Existing Artifactory URL format
+        value: "https://old-artifactory.example.com/images/sample-image.jpg"
+      newUrl:
+        summary: New Artifactory URL format
+        value: "https://new-artifactory.example.com/images/sample-image.jpg"
