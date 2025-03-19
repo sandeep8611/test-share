@@ -1,9 +1,38 @@
-I hope you’re both doing well.
+Story 1: Review and Update Documentation for JP Products
+Description:
+Review and update the documentation that compares different JP products, ensuring clarity on their purpose and usage.
 
-As you may remember, I worked closely with you to enable ROD for teams outside the ICG sector, and I’m happy to share that more teams in our CISC sector are now adopting it. This is an amazing tool, and I’d love to see even more teams leveraging it for automating their releases.
+Tasks:
 
-I was wondering if there are any metrics available that I could access to gain insights into how many teams in our sector are adopting ROD. Having this data would help me better understand our impact and drive further adoption.
+Review existing documentation comparing VSaaS, Snyk, and Blackduck.
+Update the document to clearly explain:
+The purpose of each product.
+When and why users should choose one over the other.
+Any relevant use cases.
+Ensure the document is easy to understand and aligns with current product functionalities.
+Acceptance Criteria:
 
-Let me know if this is possible. I’d really appreciate any guidance you can provide.
+✅ Documentation is updated with clear comparisons and explanations.
+✅ Users can easily understand the purpose and selection criteria for VSaaS, Snyk, and Blackduck.
+✅ Changes are reviewed and approved.
+Priority: Medium
+Labels: Documentation, JP Products
 
-Thanks,
+Story 2: Upgrade Base Image to Python 3.12 & Update Readme
+Description:
+Upgrade the base image to support Python 3.12, update the README accordingly, and ensure the JP API functions correctly after the upgrade.
+
+Tasks:
+
+Upgrade the base image to Python 3.12, as 3.11 has vulnerabilities and will be removed.
+Update the README to reflect the new Python version.
+Test the JP API locally to ensure it works end-to-end with Python 3.12.
+Deploy with the latest base image and verify the application functions properly in the OpenShift environment.
+Acceptance Criteria:
+
+✅ Base image upgraded to Python 3.12.
+✅ README updated with relevant information.
+✅ JP API works as expected with Python 3.12 locally.
+✅ Deployment in OpenShift is successful, and the app functions correctly.
+Priority: High
+Labels: Upgrade, Security, OpenShift, Python3.12
