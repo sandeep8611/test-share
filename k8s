@@ -1,38 +1,18 @@
-Story 1: Review and Update Documentation for JP Products
-Description:
-Review and update the documentation that compares different JP products, ensuring clarity on their purpose and usage.
+VSaaS Release Notes
 
-Tasks:
+New Features
 
-Review existing documentation comparing VSaaS, Snyk, and Blackduck.
-Update the document to clearly explain:
-The purpose of each product.
-When and why users should choose one over the other.
-Any relevant use cases.
-Ensure the document is easy to understand and aligns with current product functionalities.
-Acceptance Criteria:
+Federated Instance Support for Artifactory
+Benefit: VSaaS now supports scanning container images stored in a federated instance of Artifactory, enhancing security and compliance for distributed environments.
+Upgrade to Latest Connexion and Flask
+Benefit: VSaaS is now upgraded to the latest versions of Connexion and Flask, improving performance, security, and compatibility with modern frameworks.
+Expanded Registry Support
+Benefit: VSaaS now supports additional registries for container image scanning, including the operator-3rdparty registry, broadening coverage and flexibility for users.
+Security & Improvements
 
-✅ Documentation is updated with clear comparisons and explanations.
-✅ Users can easily understand the purpose and selection criteria for VSaaS, Snyk, and Blackduck.
-✅ Changes are reviewed and approved.
-Priority: Medium
-Labels: Documentation, JP Products
-
-Story 2: Upgrade Base Image to Python 3.12 & Update Readme
-Description:
-Upgrade the base image to support Python 3.12, update the README accordingly, and ensure the JP API functions correctly after the upgrade.
-
-Tasks:
-
-Upgrade the base image to Python 3.12, as 3.11 has vulnerabilities and will be removed.
-Update the README to reflect the new Python version.
-Test the JP API locally to ensure it works end-to-end with Python 3.12.
-Deploy with the latest base image and verify the application functions properly in the OpenShift environment.
-Acceptance Criteria:
-
-✅ Base image upgraded to Python 3.12.
-✅ README updated with relevant information.
-✅ JP API works as expected with Python 3.12 locally.
-✅ Deployment in OpenShift is successful, and the app functions correctly.
-Priority: High
-Labels: Upgrade, Security, OpenShift, Python3.12
+Integration with Renovate
+Benefit: VSaaS is now integrated with Renovate, an automated dependency management tool that scans configured projects, detects newer versions of dependencies, and raises PRs for updates, ensuring up-to-date and secure software.
+Upgrade to Python 3.12
+Benefit: The VSaaS base image has been upgraded to support Python 3.12, improving security, performance, and compatibility with the latest tools.
+Package Upgrades
+Benefit: All packages used by VSaaS have been updated to their latest versions, enhancing stability, security, and performance.
