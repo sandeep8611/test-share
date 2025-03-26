@@ -1,18 +1,11 @@
-VSaaS Release Notes
+Team,
 
-New Features
+Renovate allows us to automatically generate PRs whenever a newer base image or package version is available.
 
-Federated Instance Support for Artifactory
-Benefit: VSaaS now supports scanning container images stored in a federated instance of Artifactory, enhancing security and compliance for distributed environments.
-Upgrade to Latest Connexion and Flask
-Benefit: VSaaS is now upgraded to the latest versions of Connexion and Flask, improving performance, security, and compatibility with modern frameworks.
-Expanded Registry Support
-Benefit: VSaaS now supports additional registries for container image scanning, including the operator-3rdparty registry, broadening coverage and flexibility for users.
-Security & Improvements
+I am starting the onboarding process for our aquased project, beginning with aquased-api. Once onboarding is complete, Renovate will generate PRs to upgrade both the base image and packages automatically.
 
-Integration with Renovate
-Benefit: VSaaS is now integrated with Renovate, an automated dependency management tool that scans configured projects, detects newer versions of dependencies, and raises PRs for updates, ensuring up-to-date and secure software.
-Upgrade to Python 3.12
-Benefit: The VSaaS base image has been upgraded to support Python 3.12, improving security, performance, and compatibility with the latest tools.
-Package Upgrades
-Benefit: All packages used by VSaaS have been updated to their latest versions, enhancing stability, security, and performance.
+While this automation helps keep our dependencies up to date, it may also introduce issues. We need to be mindful when merging these PRs. A simple rule of thumb I’m following:
+
+Minor version upgrades – Generally safe to merge.
+Major version upgrades – Require testing before merging.
+Let me know if you have any questions or concerns!
