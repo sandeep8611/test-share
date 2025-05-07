@@ -1,6 +1,1 @@
-Hi Team,
-As we approach the holiday season in July and August, I just wanted to open up a quick conversation around planning time off. These are key months when many of us may be taking holidays, and we’ll also be saying goodbye to Chris, which will be a big change for the team.
-
-If you're thinking about booking time off during this period, could we please have a quick chat first? It would really help us ensure we have the right coverage to continue supporting our products and users smoothly.
-
-Thanks so much for your understanding and collaboration!
+Why are we increasing memory again? 7GB seems quite high for this API. Can we investigate what's driving the increased usage and identify any underlying bottlenecks? Simply increasing memory may mask issues and could introduce other side effects.
