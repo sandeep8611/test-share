@@ -1,1 +1,30 @@
-Omar has consistently demonstrated strong performance across all pillars. Under Risk & Control, he significantly improved the security posture of the VSaaS project by upgrading key libraries despite compatibility challenges, showcasing his problem-solving skills and commitment to secure development practices. In terms of Client & Franchise Outcomes, he played a key role in advancing the Aqua statistics project by resolving bugs and improving report accuracy. His ongoing work migrating observability to Grafana is critical in enhancing monitoring and alerting, ultimately improving service reliability and client experience. For Financial Performance, Omar’s efforts to containerise the Aqua statistics project and deploy it as a cron job in OpenShift have enhanced maintainability and reduced operational costs, supporting long-term efficiency. These contributions collectively reflect Omar’s readiness for the AVP role.
+Competencies – Detailed Examples
+1. Time Management
+Omar effectively managed competing priorities while working on both the Aqua statistics project and the observability migration. He ensured timely delivery of the Aqua cron job while also progressing on Grafana dashboards. His ability to manage time across multiple streams demonstrates strong organisational skills and reliability.
+
+2. Attention to Detail
+While upgrading libraries for the VSaaS project, Omar carefully tested each change to ensure system stability. His meticulous approach helped prevent negative impacts on production and ensured a smooth transition, which significantly improved the security posture of the application.
+
+3. Dependability
+Omar consistently delivers high-quality work independently, but he also seeks clarification when needed to meet customer expectations. His delivery of the Aqua statistics project, including containerisation and cron job deployment, is a testament to his reliability and commitment to project success.
+
+4. Technical & Analytical Skills
+Omar demonstrated strong technical ability during the containerisation and deployment of the Aqua statistics project in OpenShift. His analytical approach to debugging and refining the statistics generation process led to a more maintainable and efficient solution.
+
+5. Judgement & Problem Solving
+Faced with complex compatibility issues during library upgrades in the VSaaS project, Omar applied sound judgment and problem-solving skills to find appropriate solutions. His work resulted in enhanced system security without disrupting existing functionality.
+
+6. Teamwork
+Omar collaborates effectively across teams, including with Aqua and SRE colleagues. His teamwork on the observability migration, involving coordination and shared decision-making, highlights his ability to work toward common goals in a multi-disciplinary environment.
+
+7. Innovation & Business Knowledge / Commercial Awareness
+His work on the Grafana observability stream demonstrates innovation and business insight. By enabling actionable dashboards and alerting for VSaaS, Omar provided tools that enhance system monitoring and help teams respond proactively—improving service quality and client satisfaction.
+
+8. Communication
+Omar communicates clearly with stakeholders and team members, particularly when seeking input to validate his work. His willingness to clarify requirements and share updates ensures alignment and transparency, contributing to successful project delivery.
+
+9. Self-Development
+Omar’s contributions across core development and SRE workstreams show his dedication to continuous learning. By embracing new tools and responsibilities, he has demonstrated a strong growth mindset and eagerness to expand his skillset.
+
+10. Involvement in JP Initiatives (Outside of Rotation)
+Although not directly part of his rotation, Omar is actively contributing to initiatives such as the observability workstream and cross-functional collaborations. His involvement in these broader efforts reflects his proactive engagement and investment in the success of the organisation beyond his immediate role.
