@@ -1,30 +1,122 @@
-Competencies – Detailed Examples
-1. Time Management
-Omar effectively managed competing priorities while working on both the Aqua statistics project and the observability migration. He ensured timely delivery of the Aqua cron job while also progressing on Grafana dashboards. His ability to manage time across multiple streams demonstrates strong organisational skills and reliability.
+1. Define the Problem (Clarity First)
+Start by ensuring everyone agrees on what the issue is.
 
-2. Attention to Detail
-While upgrading libraries for the VSaaS project, Omar carefully tested each change to ensure system stability. His meticulous approach helped prevent negative impacts on production and ensured a smooth transition, which significantly improved the security posture of the application.
+Questions to ask/discuss:
 
-3. Dependability
-Omar consistently delivers high-quality work independently, but he also seeks clarification when needed to meet customer expectations. His delivery of the Aqua statistics project, including containerisation and cron job deployment, is a testament to his reliability and commitment to project success.
+What part of the scanning service specifically depends on the Aqua SaaS console?
+What happens to our scanning pipeline if the Aqua console is down?
+Have we experienced outages/delays before? (If yes: how long, what impact?)
+Is this a high-availability (HA) issue, a performance issue, or a scalability issue?
+Goal: Phrase the problem as:
+"Our scanning service has a single point of failure due to reliance on a single Aqua SaaS instance, which introduces availability risks to our security pipeline."
+2. Business Impact
+Discuss the consequences of this dependency.
 
-4. Technical & Analytical Skills
-Omar demonstrated strong technical ability during the containerisation and deployment of the Aqua statistics project in OpenShift. His analytical approach to debugging and refining the statistics generation process led to a more maintainable and efficient solution.
+Questions to ask:
 
-5. Judgement & Problem Solving
-Faced with complex compatibility issues during library upgrades in the VSaaS project, Omar applied sound judgment and problem-solving skills to find appropriate solutions. His work resulted in enhanced system security without disrupting existing functionality.
+What is the impact if the Aqua console goes down (e.g. deployments blocked, SLA violations, compliance risks)?
+What’s the estimated cost of downtime (lost productivity, security risk exposure)?
+Is this system business-critical or mission-critical?
+3. Current Architecture Overview
+Ensure everyone understands how the system is wired today.
 
-6. Teamwork
-Omar collaborates effectively across teams, including with Aqua and SRE colleagues. His teamwork on the observability migration, involving coordination and shared decision-making, highlights his ability to work toward common goals in a multi-disciplinary environment.
+Questions to ask:
 
-7. Innovation & Business Knowledge / Commercial Awareness
-His work on the Grafana observability stream demonstrates innovation and business insight. By enabling actionable dashboards and alerting for VSaaS, Omar provided tools that enhance system monitoring and help teams respond proactively—improving service quality and client satisfaction.
+How does the scanning service interact with Aqua (API endpoints, scheduling, feedback loop)?
+Where is the SaaS console hosted? What failover/redundancy does Aqua provide?
+Do we have monitoring and alerting around console availability today?
+4. Risk Assessment
+Explore failure modes and dependencies.
 
-8. Communication
-Omar communicates clearly with stakeholders and team members, particularly when seeking input to validate his work. His willingness to clarify requirements and share updates ensures alignment and transparency, contributing to successful project delivery.
+Questions to ask:
 
-9. Self-Development
-Omar’s contributions across core development and SRE workstreams show his dedication to continuous learning. By embracing new tools and responsibilities, he has demonstrated a strong growth mindset and eagerness to expand his skillset.
+What are the potential failure points? (e.g. network, auth, Aqua API quota/rate limiting)
+Do we have visibility into Aqua’s SLA and reliability guarantees?
+Can we get audit logs or latency metrics to analyze usage patterns?
+5. Explore Design Options / Requirements
+Get initial thoughts on what a more resilient design looks like.
 
-10. Involvement in JP Initiatives (Outside of Rotation)
-Although not directly part of his rotation, Omar is actively contributing to initiatives such as the observability workstream and cross-functional collaborations. His involvement in these broader efforts reflects his proactive engagement and investment in the success of the organisation beyond his immediate role.
+Design questions to raise:
+
+Can we introduce redundancy or caching to reduce real-time dependency?
+Should we run multiple Aqua tenants (e.g., split by region, workload)?
+Would a self-hosted fallback make sense?
+What level of availability (e.g., 99.9%) do we need for this system?
+Requirements to define:
+
+Resilience expectations (e.g. tolerate 15-min Aqua downtime without blocking pipeline).
+Recovery time objectives (RTO) and recovery point objectives (RPO).
+Observability and fallback behavior (e.g. skip scan, queue, retry).
+6. Next Steps
+Define how you’ll move forward:
+
+Who owns the design investigation?
+What stakeholders (e.g. DevOps, security, vendor contact) should be involved?
+What is the timeline/urgency?
+Should we file a risk report or RFC?
+
+
+Scalability Discussion Points for the Meeting
+
+1. Current Load vs. Projected Growth
+Understand the system’s capacity and how fast your demand is growing.
+
+Questions to ask:
+
+How many container images are scanned per day/week today?
+What’s the expected growth rate (apps, images, clusters, pipelines)?
+Are there peak times where scanning jobs pile up?
+Discuss a projection:
+“Today we scan 5,000 images/day. With containerization doubling every 6 months, we'll hit 20,000+/day in a year.”
+2. Aqua SaaS Throughput Limits
+Identify capacity limitations of your current Aqua SaaS backend.
+
+Questions to raise:
+
+Does Aqua have a documented API rate limit or concurrency limit?
+Are there performance thresholds after which scans slow down or queue?
+What’s our current CPU/queue time per scan?
+Follow-up: Can Aqua scale elastically with our load, or are we hitting shared tenancy limits?
+3. Parallelism & Concurrency
+Can your current system scale horizontally?
+
+Discussion points:
+
+How are scan jobs triggered (e.g., one at a time, batch)?
+Can we run parallel scans without Aqua throttling us?
+Do we queue scans centrally or per team/cluster?
+4. Architecture Bottlenecks
+Find out where scaling breaks down.
+
+Ask:
+
+Are we limited by API latency, network throughput, or scan job queuing?
+Does the Aqua console store scan history or metadata that grows indefinitely?
+If all apps depend on a shared scanning gateway, it might become a choke point.
+5. Design Options for Scalability
+Start brainstorming long-term solutions:
+
+Ideas to bring up:
+
+Multi-tenant setup: Split Aqua consoles by region, LOB, or business unit.
+Self-hosted Aqua clusters: For heavy users or critical workloads.
+Async scan pipeline: Decouple scans from deployment path where possible.
+Scan caching or diffing: Avoid full scans for unchanged layers/images.
+6. SLA for Scan Turnaround Time
+Set expectations with developers and security teams.
+
+Ask:
+
+What’s the acceptable delay for a scan?
+Do all images need to be scanned in real-time, or can some be deferred?
+This informs whether you need real-time scaling or scheduled batch scanning.
+📌 Summary: What to Bring to the Meeting
+Here’s your scalability-focused checklist:
+
+Category	Talking Points
+Load Growth	Container adoption rate, expected image scan volume
+SaaS Limits	Aqua API limits, scan time, resource contention
+Architecture	Queuing model, parallelism, shared vs. distributed
+Risk	Slower scans, skipped scans, deployment delays
+Design Options	Multi-instance Aqua, async pipeline, caching
+Requirements	Max scan latency, throughput target, SLA
