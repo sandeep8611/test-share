@@ -1,12 +1,3 @@
-Streamlined VA Review Processes (Driving Efficiency | Improving Safety & Soundness)
-Retired manual Vulnerability Assessment (VA) review steps for 3piip, UBI, and MW pipelines. This simplification reduced engineering overhead, improved security posture through automation, and contributed to indirect cost savings.
-VSaaS Migration to Aquasec CSI ID & Engineering Excellence Enablement
-(Improving Safety & Soundness | Driving Efficiency)
-Completed migration of VSaaS to Aquasec CSI ID, ensuring compliance with security and audit standards.
-Additionally, enabled long-term engineering scalability by onboarding to:
-GitHub (version control best practices)
-Renovate (automated dependency updates)
-R0D, Dolphyn, JP Squad (internal tooling for deployment, observability, and team alignment)
-Federated Artifactory Support for Pipelines and VSaaS
-(Enabling Revenue Growth & Client Experience | Improving Safety & Soundness)
-Delivered support for Federated Instance Artifactory, enabling secure, scalable artifact management across pipelines. This improves build reliability and reduces latency for globally distributed teams, contributing to both platform robustness and developer experience.
+"Thanks for sharing — it's clear the shift toward security-left is accelerating with platforms like Minimus and Chainguard. Compared to that, the base images we currently produce via Middle team are significantly heavier and harder to secure. There's a real opportunity here to modernize our approach."
+
+Would be great to explore a pilot or POC to see how a switch could improve our CVE profile and developer experience.
