@@ -1,3 +1,19 @@
-Can you try cloning the Bitbucket repo using Git directly from the command line (outside of VSCode)? If that works, then the issue is likely related to VSCode itself.
+Hi Noor,
 
-In that case, try checking your VSCode proxy settings:
+Since our 1:1 was canceled, I wanted to briefly highlight three key issues that surfaced last week:
+
+1. VSaaS VTM Delivery – Q2 Delay
+
+Status: Delivery will slip beyond Q2. Nadir is currently OOO and is the only resource available for VSaaS work.
+Impact: A short delay is expected.
+Recommendation: No immediate action needed—just flagging for awareness. I’ll reassess timelines once Nadir is back and share a revised ETA.
+2. Approved MW Image Migration – Blocked
+
+Status: Amin is pushing back on taking ownership of migrating approved MW images to developersvcl*. He expects our team to handle it, though this responsibility logically sits with his team.
+Impact: The Nginx image (and potentially other MW images) will be blocked unless we manually add extra repos in the Aqua config.
+Recommendation: I’ve forwarded Amin’s response. Escalating further from my side is likely to result in circular conversations with Arun. Could you please escalate on your end?
+3. Lack of Platform Support – Risk to Production Stability
+
+Status: Romeo had to manually revert federated changes in the Aqua Prod consoles due to the lack of timely support. He’s shared his concerns in the email I forwarded.
+Impact: Engineers are pulled into support roles, affecting roadmap delivery and morale. While Aqua has limited support coverage, VSaaS, 3PIIP, and UBI have none.
+Recommendation: Tactically, I’ve been supporting where I can, but longer-term, we need to consider a dedicated support structure (even part-time) to maintain platform stability.
