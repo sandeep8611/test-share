@@ -1,97 +1,121 @@
-In the first half of the year, I have driven multiple initiatives to strengthen the risk and security posture of our container platforms. My efforts were centered on embedding security earlier in the development lifecycle, enhancing platform observability, eliminating bringing unauthorised container image into the firm, and building foundational tooling for traceability and compliance. These actions directly contribute to our North Star themes, particularly in improving Safety & Soundness, Driving Efficiency, and Enabling Revenue Growth through Secure Innovation.
+As always, I have led by example - taking full ownership of my core responsibilities (VSaaS, 3PIIP, and UBI), stepping up during periods of transition, and contributing beyond my formal areas of ownership. I have also played a key role in driving accountability across teams, guiding those with formal ownership to meet the needs of both our team and the broader goals of JPMC.
+
+We Take Ownership
+When our senior team member and Product Owner Chris announced his retirement, I proactively stepped in to fill multiple leadership gaps. I partnered with him to transfer knowledge, secure delivery continuity, and maintain team focus during this transition. Key Contributions:
+	•	Assumed interim Product Owner responsibilities for VSaaS. Ensure ownership and knowledge transfer for GR Replacement, CVE review automation, and FITR.
+	•	Updated roadmaps, managed delivery plans, and mitigated risk despite constrained team capacity (was expected to get two new team members but hiring got freezes and now I am also losing Chris who was the most knowledgable team member working for last 25 years in JPMC).
+	•	Stepped-up to lead VSaaS platform engagement with PTS, working with Abigail to ensure timely approval of Risk Exceptions, Sprint planning and managing/running stand-ups, ensuring sprint are ready with tickets assigned to team members with right priority.
+	•	Maintained team morale and delivery velocity, despite the departure of product owner.
+After the departure of key team members from the AquaSec team, I proactively identified quality and process gaps within the project. I partnered with Product Lead Adam to drive significant improvements:
+	•	Led enhancements to the AquaSec codebase by reviewing pull requests, enforcing engineering standards, and improving overall code hygiene. Introduced mandatory code reviews (by Adam and myself), integrated SonarQube for static code analysis, initiated GitHub migration for select repositories, integrate Renovate for automated dependency updates, and integrated Gen-AI tooling (Squad and Delphyne) to streamline development workflows.
+	•	Initiated RoD and PTS integration for AquaSec to automate and audit the release process.
+
+We Deliver With Pride
+I set a high engineering bar for container security platforms under my leadership.  Key Contributions:
+	•	Delivered the VSaaS CSI migration two quarters ahead of schedule, unlocking cost savings and freeing capacity for strategic work.
+	•	Maintained engineering excellence and scalability across VSaaS (~200K scans/month, projected to hit 300K by year-end) and 3PIIP (~300 imported images/month, ~50% reaching production).
+	•	Selected for the E3 Program — one of JPMC’s most competitive leadership accelerators — where I collaborate with top engineers across sectors to modernise 10+ applications and drive firmwide engineering excellence.
+
+We Succeed Together
+I actively support colleagues, mentor others, and champion modern tooling adoption across our platform teams. Key Contributions:
+	•	Led firmwide enablement of Gen-AI tools (Squad, Copilot, Snyk) across container security and wider teams like Vault and Public Cloud.
+	•	Provided direct SME support, demos, and workshops to help teams adopt Lightspeed, GitHub, Renovate, RoD, and other strategic tooling.
+	•	Work weekly with SRE and Ops to co-develop roadmaps and ensure reliable, high-quality service delivery for our users.
+	•	Participate in the Diversity Operating Committee Mentorship Program and the Caliber Global Leadership Accelerator, coaching colleagues across the firm.
+	•	Interviewed over 30 candidates to help build a high-performing SRE team, ensuring talent quality and long-term capacity across our domain.
+
+People Leadership
+As a manager of four permanent employees and one contractor, I focus on performance, growth, and career empowerment. Key Contributions:
+	•	Developed personalised growth plans aligned with team and firm objectives.
+	•	Fostered a collaborative and high-performance culture while balancing delivery across complex initiatives.
+
+What
+==
+In the first half of the year, I led several key initiatives to strengthen the risk and security posture of our container platforms. My focus has been on embedding security earlier in the SDLC, increasing visibility and alerting, and closing key control gaps across the platform.
 
 1. Integration of VTM “Best Practice” Rules into VSaaS
-I successfully advanced the integration of new "Best Practice" rules into VSaaS, providing development teams with deeper visibility into vulnerabilities, GEMs, and exploitable CVEs. This "shift-left" strategy significantly strengthens our Secure by Design approach by embedding architectural and remediation insights earlier in the SDLC. Key Achievement:
-	•	Enhanced vulnerability reporting now equips developers with actionable data to remediate risk faster.
-	•	Image gating intelligence has been embedded into VSaaS reports, improving compliance posture.
-This initiative directly supports Safety and Soundness, while fostering a culture of proactive remediation.
+I designed and currently lead the integration of new “Best Practice” rules into VSaaS, enabling deeper visibility into vulnerabilities, GEMs, and exploitable CVEs. This shift-left approach enhances our Secure by Design strategy by embedding remediation insights earlier in the lifecycle. Key Achievements:
+	•	Embedded image gating (pass/fail) criteria into VSaaS reports.
+	•	Delivered enhanced vulnerability reporting to provide developers with actionable remediation data.
+This initiative directly supports Safety and Soundness and promotes a culture of proactive remediation.
 
-2. Enhanced Observability through Grafana
-To reduce tool sprawl and increase operational insight, I led the replication and expansion of Kibana dashboards into Grafana, while also designing a comprehensive alerting system for VSaaS. Key Achievement:
-	•	Introduced new dashboards with expanded system metrics for better performance and availability tracking.
-	•	Partnered with SRE team, implemented alerting capabilities in both Kibana and Grafana, enabling faster incident detection and response.
-These efforts promote Efficiency by centralising observability, and ensure system reliability, aligning directly with our goals of improving Safety and Soundness.
+2. Interim Product Owner Responsibilities
+Following the unexpected retirement of Chris (the former PO of VSaaS), I stepped up as interim Product Owner to ensure delivery continuity. Key Achievements:
+	•	Partnered with Chris to define a handover plan and update the 2025 roadmap to maintain delivery targets despite reduced team capacity.
+	•	Collaborated with the PTS PM and PQA teams to ensure ongoing compliance with the 2025 PTS program.
+	•	Coordinating with Abigail to ensure timely re-evaluation and renewal of the VSaaS Authentication RE in July.
+	•	Worked with Chris to successfully complete the ISRP security assessment for VSaaS at Assurance Level 3 (AL3).
 
-3. Secure Container Image Governance
-I conducted a detailed investigation into unauthorised 3rd-party image promotion practices and defined a hardened, approved image promotion pattern. This work eliminates critical gaps in container security across Openshift, EKS, Tanzu, and GCP. Key Achievement:
-	•	Partnered with stakeholders including LightSpeed, Artifactory and supply-chain teams to document and remediate backdoor processes.
-	•	Rolled out governance policies, including blocklists for unapproved registries and an exception process framework.
-	•	Designed and implemented of a firm-wide approved image promotion pattern.
-This initiative is a prime example of delivering Safety and Soundness while Enabling Revenue Growth by allowing teams to innovate securely with compliant practices.
+3. Enhanced Observability via Grafana
+To strengthen monitoring and operational reliability, I partnered with the SRE team to migrate and enhance VSaaS observability tooling. Key Achievements:
+	•	Delivered new dashboards in Grafana with expanded performance and availability metrics.
+	•	Implemented alerting across Grafana and Kibana to improve failure detection and response time for the VSaaS team.
 
-4. FITR Design and Development
-I spearheaded the design and prototyping of the FITR system to establish reliable ancestry tracking for container images in production. Key Achievement:
-	•	Completed system design and producing a working POC for development environments.
-	•	This provides the foundation for identifying insecure base images and enabling more precise vulnerability remediation.
-This initiative supports Safety and Soundness by giving us visibility into image lineage, a critical control in secure container operations.
+4. Secured 3rd-Party Container Image Ingestion Process
+I led an in-depth investigation into unauthorised and insecure image promotion practices and established a secure, standardised ingestion pattern. Key Achievements:
+	•	Collaborated with the LightSpeed team to eliminate a backdoor in LSE and implemented controls to prevent promotion of images from dev to prod during production builds.
+	•	Rolled out registry blocklists and a governed exception process across Openshift, EKS, and GCP.
+	•	Scale secure image ingestion, with 3PIIP adoption reaching ~350 approved images per month.
+This effort advanced Safety and Soundness while Enabling Revenue Growth by empowering secure innovation across application teams.
 
-Summary
-My contributions in the Risk and Control domain this half have been rooted in proactive risk reduction, smarter tooling, and sustainable control frameworks. I’ve prioritised collaboration, documentation, and transparency, while aligning my deliverables to JPMC’s broader goals of building a secure and efficient digital bank. These achievements position us well for scaling secure software practices across the organisation in the second half and beyond.
+5. FITR Design and Development
+I am leading the design and development of the FITR system to enable traceable ancestry tracking of container images used in production. Key Achievements:
+	•	Completed design and currently leading the development of a working POC using engineering best practices from the ground up.
+	•	Laid the foundation for identifying vulnerable base images and improving targeted remediation.
+This work reinforces Safety and Soundness by improving transparency and accountability across the container image lifecycle.
+
+
 —————————
+During the first half of the year, I executed several initiatives to improve automation, reduce operational costs, and enhance resource efficiency across our container security ecosystem.
 
-Overview
-During the first half of the year, I executed several initiatives designed to improve automation, reduce operational costs, and enhance resource efficiency across our container security ecosystem. These initiatives delivered significant productivity gains and improved fiscal outcomes by reducing manual overhead, accelerating secure delivery timelines, and optimising infrastructure usage. Each project reflects JPMC’s strategic focus on building a competitive, secure, and efficient bank for the digital era.
+1. CSI ID Migration for VSaaS
+I led the seamless migration of all VSaaS environments from the legacy Twistlock CSI ID to the new AquaSec CSI ID, without disruption to services or users. Key Achievements:
+	•	Improved infrastructure utilisation by retiring outdated CSI resources.
+	•	Decommissioned legacy infrastructure two quarters ahead of schedule (Q2 vs Q4), accelerating cost savings.
+	•	Maintained consistent service levels throughout the transition.
 
-1. Image Validation (IV) Script Implementation across Key Pipelines
-I successfully developed and deployed the Image Validation (IV) script to enforce the 2025 VTM Best Practices—specifically around GEM and exploitability gating—for the 3PIIP, UBI, and Middleware pipelines. Key Achievement:
-	•	Fully automated the validation process, replacing a previously time-consuming manual workflow.
-	•	Enabled real-time, policy-driven gating on exploitable vulnerabilities and GEMs, improving compliance and risk response.
-	•	Instrumented observability metrics and telemetry to monitor effectiveness and performance.
-By eliminating manual reviews and accelerating the validation lifecycle, this work drove efficiency, lowered labor costs, and supported Safety and Soundness with stronger, faster controls.
+2. VTM Best Practices Implementation Across Key Pipelines
+As part of the VTM Best Practices migration, I led the automation of Vulnerability Assessment (VA) reviews—previously manual, time-consuming, and resource-intensive—for the 3PIIP, UBI, and Middleware pipelines. Key Achievements:
+	•	Fully automated validation, replacing manual workflows.
+	•	Enabled real-time gating on exploitable vulnerabilities and GEMs, improving risk response and compliance.
+	•	Released VA team capacity for higher-value responsibilities.
+	•	Increased 3PIIP success rate from ~44% to 96%.
+	•	Reduced image ingestion delays from an average of approximately 4 days to under 10 minutes for all images.
+This initiative significantly improved efficiency, lowered labor costs, and enhanced Safety and Soundness through faster, more consistent controls.
 
-2. Onboarding to Release on Demand (ROD) with AquaSec
-I am leading the onboarding and integration of Release on Demand for AquaSec, streamlining the deployment pipeline with PTS, Tekton, and Harness. Key Achievement:
-	•	Transitioned to a fully automated, auditable release process that complies with internal control policies.
-	•	Reduced the risk and delay inherent in manual deployments.
-	•	Ensured that deployment evidence will automatically store in PTS, aligning tightly with audit and regulatory expectations.
-This initiative improve the speed and reliability of secure deployments, supporting both Efficiency and Safety and Soundness, while contributing to faster time-to-value for our platforms.
-
-3. CSI ID Migration for VSaaS
-I led the seamless migration of all VSaaS instances from the legacy Twistlock CSI ID to the new AquaSec CSI ID, with zero disruption to services or client teams.  Key Achievement:
-	•	Significantly improved infrastructure utilisation by decommissioning old resources.
-	•	Reduced costs tied to legacy support and monitoring.
-	•	Maintained consistent service levels and user experience throughout the migration.
-This work exemplifies financial stewardship, contributing to lower long-term costs and optimised resource management, while also enhancing platform resilience and modernisation.
-
-Summary
-In the first half of 2025, I delivered strong outcomes across three high-impact projects that advanced our financial performance by reducing operational friction, accelerating secure release cycles, and streamlining infrastructure management. Each initiative supports our strategic imperative to build a secure, scalable, and cost-effective digital platform, contributing directly to JPMC’s continued growth and innovation.
-
-
+3. Automating AquaSec Release Process via ROD + PTS
+To streamline AquaSec deployments, I am leading the onboarding and integration of Release on Demand (RoD) with PTS, replacing manual release and compliance processes. Key Achievements:
+	•	Establishing a fully automated and auditable release process aligned with control policies.
+	•	Reducing release cycles from days to hours, enabling multiple daily releases and eliminating manual compliance steps.
+	•	Ensuring automatic submission of deployment evidence to PTS, strengthening audit readiness.
 Client and Franchise Outcomes
-Overview
-My work this year has centred on elevating the client experience and enabling platform teams across JPMC to operate with greater agility, security, and efficiency. Through improved engineering practices, infrastructure modernisation, and product enhancements, I have strengthened our container security ecosystem and delivered meaningful outcomes to internal stakeholders. These contributions are directly aligned with the firm’s North Star goal of building a secure and efficient digital financial environment, especially through client-first collaboration, technology enablement, and long-term platform investments.
+In the first half of the year, my work has focused on elevating the client experience and enabling platform teams across JPMC to operate with greater agility, security, and efficiency. Through engineering modernisation, infrastructure upgrades, and cross-team collaboration, I’ve helped strengthen our container security ecosystem and deliver meaningful value to stakeholders. These efforts align with JPMC’s North Star by advancing secure-by-default platforms, enabling faster delivery, and fostering strong internal partnerships.
 
-1. Driving Engineering Excellence Across the Container Security Portfolio
-I led the transformation of engineering practices for products including VSaaS, 3PIIP, UBI, Aqua, and FITR by executing a multi-faceted modernisation strategy. Key Achievement:
-	•	Migrated all major repositories to GitHub Enterprise, laying the foundation for scalable, standardised development.
-	•	Integrated Gen-AI tools (Squad, Delphyne) for automated code reviews and enabled GitHub Copilot across the team, significantly improving code quality and speed.
-	•	Fully automated the VSaaS release process through Release on Demand with PTS integration, enabling secure and continuous delivery.
-	•	Established adherence to the Developer Manifesto through structured reviews and documentation.
-	•	Introduced engineering telemetry for tracking productivity and quality metrics.
-This uplift in engineering culture and tooling not only drove internal efficiency, but also enhanced our ability to deliver secure, reliable products to downstream teams.
+1. Enabled VSaaS Support for 3rd-Party Operator Pipeline (Multi-Architecture Images)
+I partnered with the OpenShift team to resolve a critical gap in VSaaS that previously blocked scanning of multi-architecture images in their operator pipeline. Key Achievements:
+	•	Delivered full support for scanning multi-arch operator images within VSaaS.
+	•	Validated end-to-end integration with operator pipeline with post-deploy and E2E testing.
+	•	Enabled OpenShift teams to fully adopt VSaaS, improving security coverage and client delivery.
+This initiative directly supported client satisfaction, broader internal service adoption, and long-term platform growth.
 
-2. Enabling VSasS Support for 3rd Party Operator Pipeline, Including Multi-Archltecture Images Support for OpenShift Teams
-I collaborated closely with the OpenShift team to provide support within VSaaS for their 3rd party operator pipeline. This includes addressing the current limitation in VSaaS that prevents scanning of multi-architecture images.
- Key Achievement:
-	•	Delivered end-to-end support for scanning multi-arch operator images.
-	•	Validated integration workflows with OpenShift teams and implemented robust post-deploy and E2E testing.
-	•	Empowered OpenShift to fully adopt VSaaS for vulnerability scanning, improving product security and service delivery.
-This initiative directly contributed to client satisfaction, broader service adoption, and potential revenue enablement by supporting critical platform use cases.
+2. Drove Engineering Excellence Across the Container Security Portfolio
+I led key initiatives to uplift engineering practices across products such as VSaaS, 3PIIP, UBI, Aqua, and FITR, driving continuous improvement and standardisation. Key Achievements:
+	•	Migrated all major repositories to GitHub Enterprise for unified, scalable development.
+	•	Championed integration of Gen-AI tools (Squad, Delphyne) for automated code reviews; enabled GitHub Copilot adoption by onboarding SMEs and supporting team enablement.
+	•	Fully automated the VSaaS release process via RoD and PTS after CSI migration, enabling secure, hands-free deployments.
+	•	Enforced Developer Manifesto standards across container security projects through structured code reviews and documentation.
+	•	Continuously improved code quality via SonarQube integration and test coverage tracking.
+These efforts enhanced both internal engineering velocity and the quality of client-facing capabilities.
 
-3. Ensuring Availability of RHEL 9 Micro and Minimal Images
-To meet the evolving needs of platform and application teams such as LightSpeed, I ensured the availability of RHEL 9 Micro and Minimal images within Citi environments. 
-Key Achievement:
-	•	Delivered hardened UBI 9 Minimal and Micro Images for production use, enabling smaller attack surfaces and more secure builds.
-	•	Defined automatic update pipelines aligned with Red Hat’s upstream releases to ensure consistency and long-term support.
-	•	Partnered with stakeholders to publish RFP and internal communications around availability.
-These efforts helped teams optimise resource usage, accelerate builds, and meet security baselines, enhancing both operational efficiency and safety.
+3. Migrated Container Security Products to Federated Artifactory
+As part of our containerisation strategy, I led the migration of all container security services (VSaaS, AquaSec Scanners, 3PIIP, GR Filter, etc.) from shared Artifactory instance to a federated Artifactory repository. This transition was critical to improving platform stability, scalability, and service resilience. Key Achievements:
+	•	Completed full migration by Q2 for all container security services.
+	•	Reduced Artifactory-related incidents by 60% by offloading traffic from the shared Artifactory instance, resulting in improved uptime and reliability for dependent services.
+This initiative significantly improved system reliability, and platform scalability, benefiting our users that rely on uninterrupted image scanning.
 
-4. Migrating to Federated Artifactory Repository
-Recognising the growing challenges with Artifactory stability, I led the migration of all container security product pipelines (VSaaS, AquaSec Scanners, 3PIP, GR Filter, etc.) to the federated Artifactory repository. Key Achievement:
-	•	Achieved full migration of container security tooling to the federated model within Q2.
-	•	Improved system reliability and reduced incidents tied to Artifactory downtime by an initial 80%.
-	•	Maintained or improved performance across all scanning workflows, monitored via completion time SLAs.
-This migration enables scalability, platform resilience, and a better experience for internal clients who depend on uninterrupted scanning services.
 
-Summary
-Across the board, I’ve delivered improvements that empower JPMC teams to develop faster, operate more securely, and serve clients more reliably. Whether it’s enabling OpenShift adoption of VSaaS, modernising development workflows, or improving infrastructure reliability, I’ve focused on creating durable value and reinforcing trust in our security platforms. These outcomes not only improve franchise stability but also position us to scale support for a growing number of internal stakeholders in the second half of the year.
+4. Enablement RHEL 9 Minimal and Micro Images 
+To support evolving platform needs, including LightSpeed, ensured the delivery and readiness of hardened RHEL 9 Minimal and Micro images for secure production use. Key Achievements:
+	•	Delivered and maintained UBI 9 Minimal Images; currently working on the enablement of Micro Images.
+	•	Defined automatic update pipelines aligned with Red Hat upstream releases to ensure consistency, freshness, and faster adoption across teams.
+This enabled teams to build more secure, resource-efficient applications, contributing to both Safety and Soundness and Engineering Efficiency.
