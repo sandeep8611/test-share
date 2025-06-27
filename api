@@ -1,1 +1,6 @@
 ITR report update. My team and I have processed the data from DEV (approx. 15k images, which is roughly half of our usual volume) using the adjusted aqua-statistics script. Kudos to the team for pulling this together despite the hurdles we encountered.
+
+A couple of points for your guidance:
+
+This data covers only half of the typical volume, but the usage pattern looks consistent and quite telling already.
+Would you still prefer us to proceed with the PROD-OSE run this weekend, or are we comfortable drawing conclusions from this current DEV sample?
