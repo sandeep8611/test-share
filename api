@@ -1,6 +1,7 @@
-ITR report update. My team and I have processed the data from DEV (approx. 15k images, which is roughly half of our usual volume) using the adjusted aqua-statistics script. Kudos to the team for pulling this together despite the hurdles we encountered.
+Not entirely sure what specific use case you're referring to under "AI tools for Automation Testing"—are you looking for test case generation, test execution, coverage analysis, or something else?
 
-A couple of points for your guidance:
+That said, here are some tools we currently have access to or use:
 
-This data covers only half of the typical volume, but the usage pattern looks consistent and quite telling already.
-Would you still prefer us to proceed with the PROD-OSE run this weekend, or are we comfortable drawing conclusions from this current DEV sample?
+🤖 GitHub Co-pilot in JPMC – useful for code completion and generating test code snippets.
+✅ Sqood – used for automated code reviews; it can suggest changes within a single PR or across entire repositories, which helps improve code quality and testability.
+If you’re thinking about a particular stage in the testing lifecycle (e.g., test generation, validation, or CI optimization), happy to dive deeper or explore options with you.
