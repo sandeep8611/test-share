@@ -1,7 +1,32 @@
-Omer is progressing well as a junior member of the team. He is receptive to guidance, collaborates effectively with others, and consistently delivers quality work. As he continues to grow, he is encouraged to deepen his technical understanding of the tools and platforms we work with, which will help him take greater ownership of tasks and operate more independently. Additionally, further developing his problem-solving skills—particularly around root cause analysis and viewing issues from a broader, end-to-end perspective—will enhance his ability to address challenges effectively and drive outcomes with greater confidence and impact.
+📝 Meeting Minutes: Call with SRE Team
 
-Omer has made meaningful contributions to improving the security posture of our codebase by upgrading libraries in both VSaaS and CS API codebase. He not only completed the upgrades where possible but also created well-documented follow-up tickets for unresolved dependencies, enabling other team members in CS API team to continue the work efficiently. This ensure the codebase remains secure and up to date.  Omer completed his required training on time and continues to show strong progress in his role. As he advances in his career, it will be important for him to proactively raise potential risks or timeline concerns—particularly when sprint tasks are at risk of slipping. Strengthening his ability to identify blockers early, seek support promptly, and maintain open communication with both team members and partner teams will be key to ensuring timely and reliable delivery. As Omer continues to grow, these will be valuable learning opportunities for him to focus on in the second half of the year.
+Date: [Insert date]
+Participants: Aly, SRE Team, Haroon, Houssem, Mo
 
-Omer has been consistently taking on new tasks and expanding his knowledge across different areas of our product. His growing involvement in various workstreams is helping him build a broader understanding of the platform, which will in turn support greater efficiency and more confident delivery in the second half of the year. Continuing to deepen this cross-functional knowledge will be key to increasing his impact and execution speed over time.
+1. VSaaS Support Onboarding
+The SRE team will review the VSaaS support pages previously shared by Aly.
+They will verify whether they are able to perform the emergency switch process for VSaaS.
+The team has been:
+Added as a support role in the VSaaS project.
+Included in relevant Google Groups and the VSaaS support team Slack channel.
+Agreement: SRE team will take on VSaaS support responsibilities for end users.
+🔧 Action:
 
-Omer has been actively involved in the pipeline team, taking responsibility for ensuring pipeline nodes are rebuilt ahead of deadlines—critical for maintaining pipeline stability. This work required him to learn new technologies and tools, including provisioning, Ansible, and environment setup. By stepping outside his comfort zone and delivering successfully, Omer demonstrated adaptability and initiative. He has also been a key contributor to the Aqua Statistics project, consistently addressing feature requests and resolving bugs. His continued involvement across these workstreams is helping to build his technical depth and strengthen his relationships within the team and with wider group.
+Aly to schedule a follow-up meeting next week to address any remaining onboarding questions or blockers.
+2. Pipeline Alerts Setup
+Haroon will provide an example alert configuration that should be implemented for monitoring the pipelines.
+🔧 Action:
+
+Haroon to share the alert example with the relevant team.
+3. Metricbeat Use Case for FITR
+Houssem will deliver details about the Metricbeat use case related to the FITR project.
+Mo and team will evaluate the use case and provide feedback in the next scheduled call.
+🔧 Action:
+
+Houssem to share use case documentation.
+Mo’s team to analyze and prepare an update for the next discussion.
+4. Exception Process for Role Assignments
+Mo will explore the exception process needed to assign the SRE team as both developer and support roles within the system.
+🔧 Action:
+
+Mo to investigate and report back on the process for dual-role assignments for the SRE team.
