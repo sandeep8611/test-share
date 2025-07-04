@@ -1,32 +1,19 @@
-📝 Meeting Minutes: Call with SRE Team
+Subject: Weekly Updates – July 4
 
-Date: [Insert date]
-Participants: Aly, SRE Team, Haroon, Houssem, Mo
+Hi Noor,
 
-1. VSaaS Support Onboarding
-The SRE team will review the VSaaS support pages previously shared by Aly.
-They will verify whether they are able to perform the emergency switch process for VSaaS.
-The team has been:
-Added as a support role in the VSaaS project.
-Included in relevant Google Groups and the VSaaS support team Slack channel.
-Agreement: SRE team will take on VSaaS support responsibilities for end users.
-🔧 Action:
+A few updates from my side:
 
-Aly to schedule a follow-up meeting next week to address any remaining onboarding questions or blockers.
-2. Pipeline Alerts Setup
-Haroon will provide an example alert configuration that should be implemented for monitoring the pipelines.
-🔧 Action:
-
-Haroon to share the alert example with the relevant team.
-3. Metricbeat Use Case for FITR
-Houssem will deliver details about the Metricbeat use case related to the FITR project.
-Mo and team will evaluate the use case and provide feedback in the next scheduled call.
-🔧 Action:
-
-Houssem to share use case documentation.
-Mo’s team to analyze and prepare an update for the next discussion.
-4. Exception Process for Role Assignments
-Mo will explore the exception process needed to assign the SRE team as both developer and support roles within the system.
-🔧 Action:
-
-Mo to investigate and report back on the process for dual-role assignments for the SRE team.
+Oyin’s New Arrival
+Oyin welcomed a baby girl yesterday! Both mother and baby are doing well.
+VSaaS Support Onboarding
+I had a meeting with Mo and the team – I’ve shared the meeting minutes with you (you’ve been CC’d).
+Next Steps:
+I’ll schedule a follow-up session to address any remaining questions and assist with onboarding to the VSaaS support entitlements.
+I’ll also add the SRE team distribution list to the VSaaS Alert DL so they receive alerts from both vsaas-monitor and Netcool.
+Naeem’s Care Leave
+I recall you mentioned you'd be creating the HR ticket for Naeem’s care leave. Do you need anything from my end to move this forward or assist with the approval?
+Manager Review
+I’m working on the manager review and will share an updated feedback draft with you for review shortly.
+Team Holidays – Capacity Impact
+Rimas and Houssem will be out starting next Friday, which means Haroon will be the only one available on the team. I anticipate this will slow our progress through July and August.
