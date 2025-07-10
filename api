@@ -1,3 +1,11 @@
-Noor is an exceptionally talented and high-performing member of the team who consistently delivers high-quality technical outcomes. His ownership of critical workstreams has been excellent—most notably demonstrated by the early delivery of the VSaaS CSI migration, which exceeded expectations and had a meaningful impact on our roadmap. Noor's deep technical expertise is a strong asset to the team, and his participation in the E3 program this year reflects his leadership potential.
-To continue growing as a leader, Noor is encouraged to take greater end-to-end ownership—driving initiatives independently, engaging more proactively with stakeholders such as Operations and SRE, and increasing his visibility through presentations and demos across the wider team. These steps will help him expand his influence beyond technical execution and strengthen his impact across the organisation.
-It is also important to address a recurring concern under “The Way We Work.” While Noor is managing a difficult personal family situation and the management fully empathises with his circumstances, there have been instances where he worked remotely (including internationally) without prior approval. This includes both earlier work-from-home for dental treatment and recent work from his home country. While these decisions may have been made with good intent, they created compliance risks. Going forward, Noor is expected to strictly follow JPMC policies regarding workplace arrangements and communication. This is essential not only for policy compliance but also for maintaining trust and transparency. Repeated policy violations may affect performance ratings regardless of technical performance.
+UBI 9 Micro is a specialized build that comes with no package manager, and it's easy for users to mistakenly assume it behaves like the Minimal or Standard variants. Without clear documentation, that quickly turns into confusion, incorrect usage, and a flood of support questions — which we honestly don’t have the bandwidth to handle.
+
+📚 Documentation is our first line of support. If we can make it so good that it answers nearly all the questions before they get asked — that’s the goal.
+
+Here’s what we’re trying to avoid:
+
+🚫 What We’re Avoiding:
+
+Users reaching out with basic questions like “Why can’t I install packages?”
+Confusion over when to use Micro vs Minimal vs Standard
+Becoming the support team for things that could’ve been covered in a clear README
