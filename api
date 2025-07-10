@@ -1,11 +1,1 @@
-UBI 9 Micro is a specialized build that comes with no package manager, and it's easy for users to mistakenly assume it behaves like the Minimal or Standard variants. Without clear documentation, that quickly turns into confusion, incorrect usage, and a flood of support questions — which we honestly don’t have the bandwidth to handle.
-
-📚 Documentation is our first line of support. If we can make it so good that it answers nearly all the questions before they get asked — that’s the goal.
-
-Here’s what we’re trying to avoid:
-
-🚫 What We’re Avoiding:
-
-Users reaching out with basic questions like “Why can’t I install packages?”
-Confusion over when to use Micro vs Minimal vs Standard
-Becoming the support team for things that could’ve been covered in a clear README
+We've made several updates to the vSaaS project this month: the Python base image has been upgraded to the latest version; error messages for image scan failures (especially pre-condition failures like unsupported registries) now include the image name for better clarity; and package dependencies such as spicy, too, coverage, and flake8 have been updated to their latest versions. We've also migrated our Dockerfile to use the federated registry. All these changes are available in UAT and are scheduled for production release in the coming days.
