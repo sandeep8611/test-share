@@ -1,17 +1,16 @@
-Title: Integrate Image Assurance Policies into VSaaS Compliance Report
-Story Description:
-As part of enhancing the compliance visibility in the VSaaS (Video Security as a Service) platform, we will support the integration of Image Assurance policies into the VSaaS compliance report.
+Title:
+Investigate Discrepancy Between Console and Report Container Counts in aqua-statistic
 
-The Aqua team will be responsible for adding the Image Assurance policies to the schema and making them available via the engineering console. Once available, the VSaaS team will validate that these policies appear in the VSaaS compliance report.
+Description:
+Manager reported that the console is showing 98k running containers, while the generated report shows 52k. This inconsistency suggests a potential issue in the aqua-statistic code/script responsible for generating these numbers.
 
-Assumption: No schema changes are expected that affect the VSaaS code. The current implementation is expected to automatically display the new policies in the report without requiring code changes.
-Acceptance Criteria:
- Aqua team adds Image Assurance policies to the schema.
- Policies become available in the eng console.
- VSaaS pipeline reads these policies and automatically includes them in the compliance report.
- Manual validation confirms that Image Assurance policies are reflected in the VSaaS compliance report.
- No breaking changes or regressions in existing compliance report behavior.
-Testing Notes:
-Validate in staging that the policies are populated correctly in the compliance section of the VSaaS report.
-Cross-reference with the engineering console to ensure consistency in policy data.
-Ensure no manual config changes are required in VSaaS to support this addition.
+Steps/Details:
+
+Console output: 98,000 running containers
+Report output: 52,000 running containers
+Code module involved: aqua-statistic
+Potential area of investigation: container counting logic, data source mismatch, filtering conditions.
+Expected Outcome:
+
+Root cause identified and fixed.
+Report and console should reflect consistent container counts.
