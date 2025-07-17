@@ -1,16 +1,37 @@
-Title:
-Investigate Discrepancy Between Console and Report Container Counts in aqua-statistic
+Subject: Handover Plan During My Absence
 
-Description:
-Manager reported that the console is showing 98k running containers, while the generated report shows 52k. This inconsistency suggests a potential issue in the aqua-statistic code/script responsible for generating these numbers.
+Hi Team,
 
-Steps/Details:
+I’ll be on vacation for the next three weeks. Please refer to the plan below for key points of contact and workstream ownership during my absence:
 
-Console output: 98,000 running containers
-Report output: 52,000 running containers
-Code module involved: aqua-statistic
-Potential area of investigation: container counting logic, data source mismatch, filtering conditions.
-Expected Outcome:
+Primary Point of Contact
+Haroon will serve as the main point of contact in my absence. Please reach out to him directly for any blockers, priority clarifications, or general support needs.
+Operational Support
+VSaaS Support
+Both Kevin’s team (Operational) and Mo’s team (SRE) have authority to handle VSaaS-related support, including incident tickets and emergency switches.
+Haroon – please coordinate with Mo and Kevin for any VSaaS issues requiring cross-team support.
+PTS Matters
+Charla (PTS Manager) will manage PTS-related topics and escalate to Adam as needed.
+Administrative Tasks (Workday Approvals, Leave Requests)
+For any urgent approvals or leave matters, please contact Adam or Noor.
+Workstream Ownership & Priorities
+Workstream	Priority	Owner/Responsible
+FITR (Critical Path)	Critical	Haroon
+- CS API Production Deployment (FITR ON)		Haroon (updates to Noor)
+Image Assurance Policies	High	Haroon (liaising with Adam)
+UBI 9 Micro	High	Haroon (Romeo upon return)
+Chainguard	High	Haroon (Romeo upon return)
+CSI Migration Decommission	Medium	Adam (coordinating with Kevin)
+Aqua Statistics (Container Count Discrepancy)	Medium	Oyin
+VSaaS Dependency – Single Console	Medium	Romeo
+Enterprise Jenkins Migration	Medium	Haroon / Romeo
+Openscap Testing (UBI Pipeline)	Medium	Romeo
+Engineering Excellence	Ongoing	Everyone
+General Reminder
+Before starting your own leave, please ensure:
 
-Root cause identified and fixed.
-Report and console should reflect consistent container counts.
+Your workstream is properly handed over (coordinate with Haroon).
+Backup coverage is arranged for critical/emergency support where necessary.
+Thanks all—please continue to collaborate closely to ensure smooth operations during this period.
+
+Best regards,
