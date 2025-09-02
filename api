@@ -1,1 +1,5 @@
-This month, we updated the VSaaS Dockerfile to use the Federated Artifactory instance for improved scalability and performance, and enhanced error messaging by including the input image name when unsupported images are detected. On the security and improvements side, we migrated the test_2005_end_to_end_multi_arch_image integration test to the latest CSI 177, upgraded the base image and codebase to the latest Python version, and refreshed all Vigas packages to their most recent releases for stability and security. Additionally, we adopted the latest Vault image for secret injection and configured VSaaS as an active-active service across two OpenShift clusters, with preparations underway to test failover capabilities in production to address the current dependency on a single Aqua Server.
+However, I’m still seeing a few references that need adjustment:
+Other images are still using the latest tag. Could you please update them with explicit version tags so developers can reference a fixed version instead of latest?
+I also noticed references to RHEL UBI 7, which is now end-of-life. These should be updated to supported versions.
+There’s a page for base images where all the latest tags are listed. I’d recommend updating those references with explicit tags as well.
+Can you make these changes too, please?
