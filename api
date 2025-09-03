@@ -1,5 +1,5 @@
-However, I’m still seeing a few references that need adjustment:
-Other images are still using the latest tag. Could you please update them with explicit version tags so developers can reference a fixed version instead of latest?
-I also noticed references to RHEL UBI 7, which is now end-of-life. These should be updated to supported versions.
-There’s a page for base images where all the latest tags are listed. I’d recommend updating those references with explicit tags as well.
-Can you make these changes too, please?
+I hope you are doing well. I’m following up on the request from [Team Member’s Name] regarding the updated GEM list for JP, which we need in order to proceed with the vulnerability decision. Would you be able to share the latest version with us?
+In addition, we’d like to improve the process so that we don’t need to follow up each time manually. In your earlier note, you mentioned exploring better solutions than sending spreadsheets by hand. Could we please clarify next steps on that? For example:
+Is there a way we can be proactively informed whenever changes are made to the container GEM list?
+If automation isn’t yet possible, can we agree on a regular cadence (or a defined contact point) for sharing updated lists?
+This will help us integrate GEM list updates into our workflows more reliably, without delays.
