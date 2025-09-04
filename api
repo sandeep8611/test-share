@@ -1,1 +1,6 @@
-I build secure-by-default container solutions that make it easy for Citi developers to deliver business value quickly, while ensuring compliance and free of vulnerabilities. My focus is on embedding security seamlessly into the development process, so teams can innovate with confidence.
+I wanted to check in regarding the local container developer experience. I remember Jon and someone else have been looking at Docker Desktop, but it’s still not available, and developers currently can’t run Docker locally on their VDIs.
+Would it make sense for us to take a closer look at improving the local container experience? Some areas I think could use attention are:
+Local builds: Can developers build/test images locally versus relying only on remote CI?
+Tooling access: Access to Podman, Docker Desktop, or similar developer-friendly container runtimes.
+Developer workflow: Integration with IDEs, debugging support, and smooth onboarding for container-based development.
+I’m not sure who is currently driving this in JP, so any guidance would be helpful.
