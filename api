@@ -1,6 +1,3 @@
-I wanted to check in regarding the local container developer experience. I remember Jon and someone else have been looking at Docker Desktop, but it’s still not available, and developers currently can’t run Docker locally on their VDIs.
-Would it make sense for us to take a closer look at improving the local container experience? Some areas I think could use attention are:
-Local builds: Can developers build/test images locally versus relying only on remote CI?
-Tooling access: Access to Podman, Docker Desktop, or similar developer-friendly container runtimes.
-Developer workflow: Integration with IDEs, debugging support, and smooth onboarding for container-based development.
-I’m not sure who is currently driving this in JP, so any guidance would be helpful.
+Hey Dan,
+I hope you're doing well! I'm currently transitioning from an individual contributor role to a managerial position and am seeking mentorship to guide me through this career shift. Would you be open to connecting for some advice? I’d really appreciate any time you could spare.
+Thanks so much!
