@@ -1,3 +1,12 @@
-Hey Dan,
-I hope you're doing well! I'm currently transitioning from an individual contributor role to a managerial position and am seeking mentorship to guide me through this career shift. Would you be open to connecting for some advice? I’d really appreciate any time you could spare.
-Thanks so much!
+Hi Team,
+I’d like to nominate myself as Tooling Champion for a few key areas that I’ve been actively driving and contributing to:
+1. Containers Development
+I’ve been deeply involved in container development—covering the end-to-end lifecycle of building, optimizing, and managing containers. Beyond day-to-day engineering, I’ve also authored “5 Tricks to Slim Your Containers”, sharing practical guidance to help teams build leaner, more efficient container images.
+2. Container Security
+Security is core to container adoption at scale. I currently lead VSaaS (Vulnerability Scanning as a Service), which is fully integrated with our CI system. It provides developers with shift-left, actionable vulnerability reports for container images—helping teams catch and remediate issues earlier, reduce risk, and maintain compliance.
+3. 3rd Party Image Ingestion Pipeline (3PIIP)
+I also drive the 3rd Party Image Ingestion Pipeline (3PIIP) initiative, which securely enables ingestion of container images from external registries into our internal Artifactory. This self-service platform ensures that all imported images undergo vulnerability scanning and essential compliance checks—offering developers a streamlined and secure way to promote images for use in their applications.
+I’m passionate about helping our engineering teams adopt, scale, and get the most value out of these tools and frameworks. As Tooling Champion, I’ll continue to:
+Share best practices and learning resources.
+Provide guidance on effective usage.
+Ensure smooth adoption and integration across teams.
