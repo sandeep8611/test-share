@@ -1,12 +1,18 @@
-Hi Team,
-I’d like to nominate myself as Tooling Champion for a few key areas that I’ve been actively driving and contributing to:
-1. Containers Development
-I’ve been deeply involved in container development—covering the end-to-end lifecycle of building, optimizing, and managing containers. Beyond day-to-day engineering, I’ve also authored “5 Tricks to Slim Your Containers”, sharing practical guidance to help teams build leaner, more efficient container images.
-2. Container Security
-Security is core to container adoption at scale. I currently lead VSaaS (Vulnerability Scanning as a Service), which is fully integrated with our CI system. It provides developers with shift-left, actionable vulnerability reports for container images—helping teams catch and remediate issues earlier, reduce risk, and maintain compliance.
-3. 3rd Party Image Ingestion Pipeline (3PIIP)
-I also drive the 3rd Party Image Ingestion Pipeline (3PIIP) initiative, which securely enables ingestion of container images from external registries into our internal Artifactory. This self-service platform ensures that all imported images undergo vulnerability scanning and essential compliance checks—offering developers a streamlined and secure way to promote images for use in their applications.
-I’m passionate about helping our engineering teams adopt, scale, and get the most value out of these tools and frameworks. As Tooling Champion, I’ll continue to:
-Share best practices and learning resources.
-Provide guidance on effective usage.
-Ensure smooth adoption and integration across teams.
+Hi all,
+Here’s a summary of our discussion and proposed next steps:
+Summary of challenge:
+Aqua’s “Root User” check does not differentiate between USER root explicitly set and no USER specified.
+At JPMC, images cannot run as root due to OpenShift/EKS platform controls, so the current Aqua output risks creating unnecessary noise.
+At the same time, we want to start promoting best practice of explicitly setting a non-root USER in Dockerfiles.
+Proposed next step:
+Customise Message in VSaaS – Build a mapping layer in VSaaS that translates Aqua findings into JPMC-specific developer messages. Example for the USER rule:
+Case A – USER root set → Update Dockerfile to use non-root.
+Case B – No USER set → Low severity/Info; best practice is to set USER explicitly.
+Case C – USER non-root set → Pass; compliant.
+Scope Phase 1 – Apply initially to internally built app images only. Exempt platform, operator, and 3rd-party vendor images (which may legitimately require root for package installs).
+Production Rollout – Enable and deploy VSaaS with this policy applied only to internal app images.
+Benefit:
+This approach reduces developer noise while still giving clear and actionable guidance.
+I’ll book a slot early next week to finalise the approach with everyone.
+Thanks,
+Noor
