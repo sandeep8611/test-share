@@ -1,3 +1,19 @@
-Thanks for thinking ahead about the 2026 roadmap. Regarding Noor’s vision and priorities, he usually holds a meeting around this time to discuss and share his direction for the next year. That will be happening soon, and I’ll make sure to share any key updates once they’re available.
-In the meantime, I’d recommend checking out Jon’s recent update on the strategy from Mark’s TownHall. His talk covers the “container-first” approach and the strategic pillars, which will give useful context for planning and help align our ideas with the broader vision.
-Once we have Noor’s input, we can refine which areas—new features, new solutions, or migrations—should be prioritized.
+Story Title: Optimize METHOD to Find Previous Occurrence of Image for Faster Execution in CI
+Problem Statement:
+The current METHOD to find the previous occurrence of an image is too slow to be used in CI pipelines. This delay impacts build time and makes it unacceptable for CI, which is used by all developers.
+Proposed Solution:
+Improve the METHOD by narrowing down the dataset and leveraging scope optimizations to reduce search time.
+Steps to Make It Faster:
+Allow input with image name to reduce the dataset being searched.
+Use GR Scope for vSaaS to minimize search overhead.
+Prioritize searching images tagged with GEM/exploitable to optimize for CI use cases.
+Acceptance Criteria:
+ METHOD accepts image name as input to restrict search dataset.
+ METHOD leverages GR Scope for vSaaS search.
+ METHOD successfully identifies GEM/exploitable images with optimized speed.
+ Execution time is significantly reduced compared to the current approach.
+ METHOD can be reliably used in the CI pipeline without causing build delays.
+ Validated with real CI runs to confirm faster performance and no regressions.
+Notes:
+Focus on reducing dataset and scope to achieve meaningful performance improvements.
+Ensure solution integrates seamlessly with existing CI processes.
