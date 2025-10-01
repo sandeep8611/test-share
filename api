@@ -1,3 +1,14 @@
-Team,
-I believe this course may be assigned to us, but if not, it’s definitely worth taking: Asking Smart Questions – Prompting Like a Pro (link below).
-This training builds a key skill for the future and is a fundamental step in our AI journey. With 6.5M+ prompts already entered by colleagues this year, strengthening our prompting skills will help us scale AI adoption responsibly and unlock its full potential.
+Thanks for the update and for addressing the MW_EAR_PASS issue. That’s great progress.
+However, I want to highlight that this is just one example of sensitive data exposure. There are still other cases where sensitive information is present in images currently running in production. For instance, I noticed that the following image in Artifactory still contains encrypted private keys:
+Image: docker-prod.artifactory.com/...
+Findings:
+ENCRYPTED PRIVATE KEY – /opt/middleware/nginx/1.22.1/certs/server.key
+ENCRYPTED PRIVATE KEY – /opt/middleware/nginx/1.22.1/certs/159223_p12_pkc512.pem
+Root Cause:
+Sensitive data (keys/certs) is being embedded directly into image layers under /opt/middleware/nginx/1.22.1/certs/.
+This is a similar risk to the earlier password exposure: anyone with access to the image (or images built upon it) can extract these keys.
+To mitigate:
+Certificates/keys should not be packaged into base or application images.
+Instead, they should be mounted at runtime using Kubernetes secrets, Vault, or another secure secret-management solution.
+Existing images should be cleaned and rebuilt without embedding sensitive files.
+Please let me know if you’d like me to share more detailed examples or steps to reproduce.
