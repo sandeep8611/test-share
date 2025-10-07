@@ -1,11 +1,20 @@
-Hi Mike & Stef — since we rolled out UBI Minimal/Micro bases in JPMC, I’m collecting success stories + hard numbers to share with senior leadership and for demos.
-Could you share a quick before → after for a Lightspeed (Tekton) step where you tried UBI Minimal/Micro? Even rough numbers help.
-What to share (before → after)
-Image size (MB) & layer count
-CVE counts (Critical/High/Medium)
-Package count
-Build performance (step pull time, total pipeline p50)
-Runtime impact (start-up latency, RSS/CPU)
-Network/storage (pull/push MB, registry egress, workspace artifact size)
-Anything else you noticed (e.g., simpler patching, fewer re-approvals)
-If it’s easier, just paste logs/artifacts and I’ll extract the numbers. Thanks so much!
+5-minute survey (paste into Forms/Confluence)
+Title: UBI Minimal/Micro Adoption – Quick Win Survey
+Team / Service / Repo: (short text)
+UBI base used: (radio) UBI Micro / UBI Minimal / Mix / Not sure
+Java strategy (if applicable): (checkbox) Builder-only JDK / jlink runtime / Runtime JRE / Runtime JDK / N/A
+Image size (MB) and layers
+Before: ___ MB, ___ layers
+After: ___ MB, ___ layers
+CVE counts (from your scanner)
+Before: Crit ___ / High ___ / Med ___
+After: Crit ___ / High ___ / Med ___
+Scanner used: (ACS / Trivy / Grype / Other)
+Package count: Before ___ / After ___ (how measured?)
+Build perf (Tekton):
+Step pull time (p50): Before ___s / After ___s
+Pipeline total time (p50): Before ___m / After ___m
+Cache hit % (if available): Before ___% / After ___%
+Runtime: Cold start latency / RSS / CPU notes (free text)
+Operational wins: patch cadence, approvals, image sprawl, etc. (free text)
+Quote we can attribute to your team (free text)
