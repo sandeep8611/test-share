@@ -1,14 +1,11 @@
-Thanks for the update and for addressing the MW_EAR_PASS issue. That’s great progress.
-However, I want to highlight that this is just one example of sensitive data exposure. There are still other cases where sensitive information is present in images currently running in production. For instance, I noticed that the following image in Artifactory still contains encrypted private keys:
-Image: docker-prod.artifactory.com/...
-Findings:
-ENCRYPTED PRIVATE KEY – /opt/middleware/nginx/1.22.1/certs/server.key
-ENCRYPTED PRIVATE KEY – /opt/middleware/nginx/1.22.1/certs/159223_p12_pkc512.pem
-Root Cause:
-Sensitive data (keys/certs) is being embedded directly into image layers under /opt/middleware/nginx/1.22.1/certs/.
-This is a similar risk to the earlier password exposure: anyone with access to the image (or images built upon it) can extract these keys.
-To mitigate:
-Certificates/keys should not be packaged into base or application images.
-Instead, they should be mounted at runtime using Kubernetes secrets, Vault, or another secure secret-management solution.
-Existing images should be cleaned and rebuilt without embedding sensitive files.
-Please let me know if you’d like me to share more detailed examples or steps to reproduce.
+Hi Mike & Stef — since we rolled out UBI Minimal/Micro bases in JPMC, I’m collecting success stories + hard numbers to share with senior leadership and for demos.
+Could you share a quick before → after for a Lightspeed (Tekton) step where you tried UBI Minimal/Micro? Even rough numbers help.
+What to share (before → after)
+Image size (MB) & layer count
+CVE counts (Critical/High/Medium)
+Package count
+Build performance (step pull time, total pipeline p50)
+Runtime impact (start-up latency, RSS/CPU)
+Network/storage (pull/push MB, registry egress, workspace artifact size)
+Anything else you noticed (e.g., simpler patching, fewer re-approvals)
+If it’s easier, just paste logs/artifacts and I’ll extract the numbers. Thanks so much!
