@@ -1,20 +1,15 @@
-5-minute survey (paste into Forms/Confluence)
-Title: UBI Minimal/Micro Adoption – Quick Win Survey
-Team / Service / Repo: (short text)
-UBI base used: (radio) UBI Micro / UBI Minimal / Mix / Not sure
-Java strategy (if applicable): (checkbox) Builder-only JDK / jlink runtime / Runtime JRE / Runtime JDK / N/A
-Image size (MB) and layers
-Before: ___ MB, ___ layers
-After: ___ MB, ___ layers
-CVE counts (from your scanner)
-Before: Crit ___ / High ___ / Med ___
-After: Crit ___ / High ___ / Med ___
-Scanner used: (ACS / Trivy / Grype / Other)
-Package count: Before ___ / After ___ (how measured?)
-Build perf (Tekton):
-Step pull time (p50): Before ___s / After ___s
-Pipeline total time (p50): Before ___m / After ___m
-Cache hit % (if available): Before ___% / After ___%
-Runtime: Cold start latency / RSS / CPU notes (free text)
-Operational wins: patch cadence, approvals, image sprawl, etc. (free text)
-Quote we can attribute to your team (free text)
+Over the year I strengthened our container security posture and control environment across VSaaS, FITR (with DRIFT), Scripts (GR, CRA & image ingest validation), Middleware build, and UBI & 3PIIP by designing preventative controls, eliminating backdoors, improving observability, and embedding “shift-left” checks. 
+	•	FITR ancestry controls: Led the designed and delivered of the end-to-end Full Image Tree Reporting (FITR) workstream to provide traceable parent/ancestor lineage for production images—enabling accurate attribution of vulnerabilities to base images and targeted remediation across JPMC. FITR provides authoritative, auditable lineage data (parents/ancestors) for container images, improving accuracy of ownership, risk attribution, and remediation tracking.
+	•	DRIFT CVE attribution: Implemented enhancements so CVEs are attributed to parent images via FITR, improving remediation focus and reducing false ownership disputes.
+	•	Image Validation (VTM Best Practice) gating: Built and deployed automated GEM/exploitability gating for 3PIIP, UBI, and Middleware pipelines, replacing a multi-day manual control with instantaneous, consistent enforcement.
+	•	VSaaS “shift-left” controls: Added “VTM Best Practice” rules and soft-gating outcomes into VSaaS reports (pass/fail visibility, GEMs/exploitable CVEs highlighted), embedding security earlier in the lifecycle and improving developer decision-making.
+	•	Platform hygiene controls: Blocked RHEL7 images in the middleware pipeline and s390x UBI images in 3PIIP to prevent insecure or unsupported base usage.
+	•	Secure third-party ingestion (backdoor eliminated): Led an investigation and partnered with LightSpeed to close a “dev to prod promotion” backdoor and prevent unapproved libraries during prod builds. Rolled out registry blocklists and a governed exception process across OpenShift and EKS,, driving secure ingestion at ~400 approved 3PIIP images/month and improving control adherence at scale.
+	•	Sensitive data exposure remediation: Identified and escalated issues where middleware base images leaked credentials (e.g., MW_EAR_PASS) in Docker history and where NGINX images contained private keys. Drove remediation by partnering with owners, documented root causes, and provided clear guidance to prevent recurrence.
+	•	Container reporting for aging images: Produced a management report to senior manager (Jon) flagging production images (OpenShift/EKS) with any layer > 9 months old, including full image path, FITR ancestry dates, and layer-age  indicators mapped to owning teams to drive upgrades.
+	•	Interim Product Owner (VSaaS): Ensured delivery continuity and compliance after former PO (Chris) retirement—coordinated with PM/PQA to meet PTS 2025 requirements; ~18 successful releases YTD with required artifacts delivered and signed-off; maintained cadence on sprint planning, retros, and RE/CAP reviews.
+	•	ServiceNow modernisation: Migrated ROD (VSaaS & AquaSec) from ServiceNow Fuji to SaaS, including templates and service groups, and implemented automated artifact uploads to PTS—reducing manual error risk and improving auditability.
+	•	Authentication RE: Re-evaluated and renewed VSaaS Authentication RE on time, sustaining control coverage.
+	•	Secure-by-default engineering: Ensured Container Security products repos (vsaas-api/monitor/tools, cve-review, image-validation, gr-clients, vtm-library, 3PIIP framework) follow firm-recommended tooling and developer manifesto with best practices, stay on current base images via Renovate, and maintain up-to-date dependencies with no known critical vulnerabilities.
+	•	Reusable VTM Best Practice library: Built a reusable VTM “Best Practice” library consumed by our CI pipelines (3PIIP, UBI, Middleware) and VSaaS, standardising rule logic and minimising drift across enforcement points.
+	•	Observability for scale and availability: With SRE, delivered new Grafana dashboards for performance/availability and capacity, plus alerting to accelerate detection/response; assessed VSaaS at 180k+ monthly requests, tuned requests/limits and HPA across DEV/UAT/PROD, and documented the monitoring strategy to prevent capacity-related incidents.
