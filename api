@@ -1,45 +1,6 @@
-Why 2 (Exceeds): Cross-product ownership, cross-sector/vendor coordination, and quantified outcomes beyond assigned scope
-Pipelines (3PIIP, UBI, Middleware)
-	•	What: Delivered VTM best-practice migration across all pipelines; delivered UBI Micro base image; migrated jobs to Jenkins OSS; ongoing 3PIIP support.
-	•	Impact: Success rate 44%→96%; ingestion time 3.55 days→<10 min (small images <3 min); manual VA eliminated; ~2.4k images ingested YTD (1,261 last 90 days, ~170 to prod); UBI Micro: Renovate 92% CVE↓, 68% size↓; K&S ~87.5% Critical/High CVE↓, ~65% size↓.
-	•	Interaction: LSE, Jenkins, Middleware, Ops/SRE, Artifactory, App/dev teams, Security/ISOs.
-AquaSec
-	•	What: Drove federated-registry adoption (3PIIP/UBI/MW) and Aqua console integration to UAT; designed MVP automated testing framework for Aqua components.
-	•	Impact: Shared Artifactory load ~55k→~40k calls/day (−20–25%), improving stability/scalability despite overall traffic growth; foundation to reduce manual test effort/errors and speed releases.
-	•	Interaction: Aqua (vendor), LSE, Artifactory, OpenShift Eng.
-VSaaS
-	•	What: Twistlock to Aqua CSI migration; Active-Active HA solution MVP (prod targeted Q4); delivered Chainguard evaluation.
-	•	Impact: Seamless migration; DR in place; HA to improve availability/perf; avoided licensing spend, flagged scanning/compatibility risks; defined internal image-hardening path.
-	•	Interaction: VSaaS product, AquaSec, Chainguard (vendor), Ops/Networking,
-FITR
-	•	What: Contributed to FITR library + CS API; enabled container statistics reporting (multiple asks from Jon/Nic); used FITR data to identify/close image-ingress backdoors.
-	•	Impact: Insights on base-image hygiene/age; LSE controls added (block dev to prod promotions; prevent unapproved libs); various backdoors closed with Artifactory;
-	•	Interaction: AquaSec, DRIFT/Reporting, LSE, Artifactory, Software Supply Chain.
+I delivered meaningful cost savings and efficiency gains across the container-security estate by decommissioning legacy CSI and the VSaaS–Twistlock platform, automating manual controls, and modernising release workflows with RoD—while keeping services reliable for users and application teams. Highlights include an early VSaaS CSI cutover (ahead of plan), eliminating a ~$1.2M/year enterprise license by moving all pipelines to open-source Jenkins, and replacing multi-day manual validations with instant, automated gating aligned to the new VTM Best Practices.
+VSaaS CSI ID migration & cutover (delivered early) Migrated VSaaS from Twistlock CSI ID to AquaSec CSI ID in Q2 (planned Q3) and decommissioned the old CSI resources—reducing run costs and eliminating legacy dependencies while maintaining production service standards.
+Migration from Enterprise Jenkins to open-source Jenkins Moved 3PIIP, Middleware, and UBI pipelines off CloudBees Jenkins Enterprise to open-source Jenkins, removing a ~$1.2MM annual license and advancing our modernisation and cost-reduction strategy.
+VSaaS & pipeline enhancements with VTM Best Practices: Aligned 3PIIP ingestion and VSaaS visibility to VTM standards; introduced GEM/exploitability gating and telemetry, replacing multi-day manual VA reviews with instant automation. VSaaS now surfaces pre-gating signals to accelerate decisions. Impact: freed the VA team for higher-value work; 3PIIP pass rate ~44% → 96%; ingestion latency for previously delayed images cut from ~3.55 days → <10 minutes—fewer blockers for app teams and faster time-to-market.
 
-
-Delivered cross-team outcomes ahead of plan (Q3 → Q2) while in E3 program, and raised the engineering bar—impacting client experience and costs.
-VSaaS — CSI Migration
-	•	What: Owned migration from legacy Twistlock CSI to Aqua; delivered in Q2 vs planned Q3, while meeting E3 commitments; executed with engineering excellence
-	•	Impact: Enabled early retirement of legacy CSI and earlier infra return/decommission, reducing risk and cost; smoother platform experience.
-	•	Interaction: VSaaS, Ops/SRE, Networking, AquaSec, Openshift
-VSaaS — Major Platform Upgrade (Flask & Connexion)
-	•	What: Led upgrade of VSaaS services to Flask + Connexion; engaged Connexion maintainers directly to track/unblock an upstream bug affecting rollout.
-	•	Impact: Modernised stack, improved maintainability/perf, unblocked roadmap items; reduced future risk by resolving upstream rather than local workaround.
-	•	Interaction: VSaaS Connexion
-
-
-FITR
-	•	What: Stepped up as acting PO when Chris retired; kept roadmap and decisions moving; unblocked team to deliver FITR milestones.
-	•	Impact: Maintained delivery velocity and stakeholder alignment; ensured FITR stayed production-ready and useful for DRIFT reporting and downstream integrations.
-	•	Interaction: FITR team, Reporting/DRIFT, AquaSec, Security.
-UBI 
-	•	What: Delivered UBI 9 Minimal (foundation for UBI 9 Micro); demonstrated ownership of the UBI pipeline; guiding base-image owners on correct build approach.
-	•	Impact: Standardised modern base images; reduced image size and attack surface, lowering CVE exposure and improving rollout speed across teams.
-	•	Interaction: Base-image owner teams, Security/ISOs
-3PIIP/Middleware
-	•	What: Contributed to migration work and config changes needed for the Enterprise→OSS Jenkins move, Ongoing 3PIIP maintenance/support alongside project delivery. Helped base-image owner teams produce UBI 9 Minimal-based images with the right standards and patterns.
-	•	Interaction: App/dev teams, Artifactory, Security/ISOs, Jenkins platform, Middleware
-VSaaS
-	•	What: Delivered feature such as add Medium-count CVEs to tabular report;
-	•	Interaction: VSaaS team,
-
+Release on Demand (RoD) + PTS for AquaSec Partnered with Adam to onboard AquaSec to RoD and integrate PTS, Tekton, and Harness, achieving fully automated deployments and compliance evidence. Result: removing manual, error-prone steps, accelerating release throughput, and reducing audit overhead.
