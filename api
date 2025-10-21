@@ -1,15 +1,21 @@
-I led by example—stepping into gaps created by resourcing constraints and a Product Owner retirement—while keeping delivery quality and timelines on track. As a line manager also took interim PO responsibilities across Container Security, and upheld a high bar on engineering, documentation, and architecture. My approach in difficult conversations was candid and empathetic; I escalated issues appropriately and maintained trust. I’m recognised for thought leadership on emerging tools and continue to model “do the right thing” standards for the team.
-a) We Take Ownership
-	•	Stepped into the gap, delivered early: Assumed interim PO duties, stabilised the roadmap, and accelerated the VSaaS CSI cutover ahead of plan, reducing cost and risk without service degradation.
-	•	Decisive, candid leadership: Handled sensitive availability matters professionally; promptly escalated concerns to senior leadership—balancing empathy with standards.
-	•	E3 alumnus mindset: Completed the E3 Advanced Engineering program; applying the leadership to drive innovation and collaboration. Pursuing Technical Co-Sponsor responsibilities to help evolve the program.
-	•	Secure minimal bases, from guidance to adoption: Partnered with middleware base-image owners to moving language stacks to UBI 9 Minimal/Micro; refreshing Helix/Tekton blueprints; blocked RHEL 7 and s390x UBI where unsupported. Results: reduced CVE footprint, smaller attack surface, faster startup/rollouts; e.g., Java UBI 9 Micro adoption brought critical/high CVEs to zero for Renovate team. Saved ~5 hours/engineer/month on CVE remediation and cut escalations. Drove remediation of secrets in Docker history and sensitive keys in Middleware base images; documented root causes and set a firm “no secrets in images” standard.
-b) We Deliver With Pride
-	•	Raise the engineering bar: Set a strategic direction for Container Security products by migrating code to GitHub Enterprise, enabling GitHub Copilot adoption, and driving adherence to the Developer Manifesto. Instituted mandatory code reviews, SonarQube checks with test-coverage gating, Renovate automation for base-image upgrades, and Gen-AI code review (JP Squad/Delphyne) across repos—improving code hygiene, reducing defects, and elevating developer experience.
-
-	•	Operational excellence at scale: Sustained reliable services—VSaaS ~180k scans/month (99.5% success rate) and 3PIIP ingested ~2,400 new third-party images YTD —while modernising releases via RoD + PTS (cycle time days → hours).
-	•	Fix root causes, not symptoms: Standardised VTM Best Practices with GEM/exploitability gating across VSaaS and pipelines, eliminating multi-day manual reviews and preventing late-cycle rework. Led a rigorous Chainguard evaluation; identified scanner-compatibility gaps and operational friction; recommended strengthening approved JPMC base images and guidance.
-c) We Succeed Together
-	•	Invest in people: Manage 4 FTE + 1 contractor with personalised growth plans; run focused stand-ups/sprints/retros; maintained morale through change. Interviewed 20+ candidates to strengthen capacity (ongoing).
-	•	Mentorship & coaching: Delivered enablement sessions (LightSpeed & GitHub migrations, Renovate, RoD, JP Squad) so partner teams adopt modern tooling with confidence; active in firm programs—the Diversity Operating Committee Mentorship Program and Caliber Global Leadership Accelerator—coaching and mentoring colleagues across the firm.
-	•	Stakeholder-centric delivery: Weekly alignment with SRE/Ops and PM/PQA to balance risk, speed, and reliability; used retro insights to drive tangible process improvements.
+SRE Engagement Summary (VSaaS and Other Services)
+Scope of SRE involvement:
+SRE team is currently engaged only with VSaaS.
+They are not yet involved in 3PIIP, UBI, or MW pipeline services.
+Current contributions and progress (VSaaS):
+The team reviewed our existing monitoring setup and helped migrate dashboards into Grafana, improving visibility and maintainability.
+They’ve been very supportive for dashboard-related activities and general SRE tasks.
+Configured Netcool alert notifications for VSaaS failures — a key improvement in operational monitoring.
+While they don’t provide direct support for VSaaS incidents, they are available for any SRE-related guidance or implementation, which helps reduce dependency on our engineering resources.
+Impact and improvements:
+Improved observability and alerting setup for VSaaS.
+Reduced engineering load on our side for SRE-type work.
+Faster identification of failures through integrated alerting and dashboarding.
+Areas not yet covered:
+No active SRE support for pipelines (3PIIP, UBI, MW).
+No end-to-end incident management or client support ownership by SRE yet.
+Next steps / future outlook:
+The biggest value add going forward would be for SRE to take full operational ownership of VSaaS, including:
+Handling VSaaS failure events end-to-end.
+Providing client-facing support for incidents and queries.
+This would free up our engineers to focus entirely on product development and improvements.
