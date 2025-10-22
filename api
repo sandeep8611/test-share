@@ -1,7 +1,4 @@
-Hi Shekar,
-Haroon has been following up for several weeks now regarding the Python RHEL 9 base image delivery and Miniconda image optimization, but there has been no update or sharing of progress from your end.
-As you are aware, Haroon has already stepped in to help on this activity — which is an additional responsibility for him — yet he has not been receiving the necessary support.
-Currently, the Miniconda UBI8/UBI9 images are not meeting expectations. They significantly exceed the intended size and thus defeat the purpose of using UBI9-minimal as a base image. It’s important that we address this before any release of the Red Hat Python UBI9 base image, as releasing with the current approach would undermine our optimization goals.
-Could you please:
-Work with Harpal to review and fix the Miniconda image build approach (including the multi-stage Dockerfile optimization shared by Haroon), and
-Provide a clear status update on the delivery of the Red Hat Python UBI9 base image by the end of this week.
+Thank you for your response and clarification. I understand that I wasn’t marked complete due to partial attendance. However, I’ve been repeatedly asking what needs to be done next — could you please confirm the required steps to resolve this?
+Since I couldn’t attend the full training session, I’d appreciate guidance on how to proceed. Should I re-enroll, retake the session, or can this course be removed from my LMS to avoid it remaining indefinitely “In Progress”?
+This is my 5th or 6th follow-up on the same issue, and I still haven’t received clear direction. Apologies if I sound persistent, but I really want to close this out properly and follow the right process.
+Thank you for your understanding and help in resolving this matter.
