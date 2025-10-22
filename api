@@ -1,21 +1,7 @@
-SRE Engagement Summary (VSaaS and Other Services)
-Scope of SRE involvement:
-SRE team is currently engaged only with VSaaS.
-They are not yet involved in 3PIIP, UBI, or MW pipeline services.
-Current contributions and progress (VSaaS):
-The team reviewed our existing monitoring setup and helped migrate dashboards into Grafana, improving visibility and maintainability.
-They’ve been very supportive for dashboard-related activities and general SRE tasks.
-Configured Netcool alert notifications for VSaaS failures — a key improvement in operational monitoring.
-While they don’t provide direct support for VSaaS incidents, they are available for any SRE-related guidance or implementation, which helps reduce dependency on our engineering resources.
-Impact and improvements:
-Improved observability and alerting setup for VSaaS.
-Reduced engineering load on our side for SRE-type work.
-Faster identification of failures through integrated alerting and dashboarding.
-Areas not yet covered:
-No active SRE support for pipelines (3PIIP, UBI, MW).
-No end-to-end incident management or client support ownership by SRE yet.
-Next steps / future outlook:
-The biggest value add going forward would be for SRE to take full operational ownership of VSaaS, including:
-Handling VSaaS failure events end-to-end.
-Providing client-facing support for incidents and queries.
-This would free up our engineers to focus entirely on product development and improvements.
+Hi Shekar,
+Haroon has been following up for several weeks now regarding the Python RHEL 9 base image delivery and Miniconda image optimization, but there has been no update or sharing of progress from your end.
+As you are aware, Haroon has already stepped in to help on this activity — which is an additional responsibility for him — yet he has not been receiving the necessary support.
+Currently, the Miniconda UBI8/UBI9 images are not meeting expectations. They significantly exceed the intended size and thus defeat the purpose of using UBI9-minimal as a base image. It’s important that we address this before any release of the Red Hat Python UBI9 base image, as releasing with the current approach would undermine our optimization goals.
+Could you please:
+Work with Harpal to review and fix the Miniconda image build approach (including the multi-stage Dockerfile optimization shared by Haroon), and
+Provide a clear status update on the delivery of the Red Hat Python UBI9 base image by the end of this week.
