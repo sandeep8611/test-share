@@ -1,4 +1,5 @@
-Thank you for your response and clarification. I understand that I wasn’t marked complete due to partial attendance. However, I’ve been repeatedly asking what needs to be done next — could you please confirm the required steps to resolve this?
-Since I couldn’t attend the full training session, I’d appreciate guidance on how to proceed. Should I re-enroll, retake the session, or can this course be removed from my LMS to avoid it remaining indefinitely “In Progress”?
-This is my 5th or 6th follow-up on the same issue, and I still haven’t received clear direction. Apologies if I sound persistent, but I really want to close this out properly and follow the right process.
-Thank you for your understanding and help in resolving this matter.
+Hey team, just to clarify the intent behind this rule —
+Chris’s note distinguishes between external and internal image pipelines for a reason.
+For external images, we treat a GEM CVE as already the worst case — so we skip exploitability checks because the assumption is that exposure and lack of control make it critical by default.
+For internal images, we do check exploitability even if it’s GEM, because we often have more context, compensating controls, and want to prioritise based on real risk, not just severity tags.
+So the logic isn’t inconsistent — it’s about different risk postures for different asset classes. That said, we should make sure the definitions of “GEM,” “exploitability,” and “external vs internal” are documented clearly so there’s no ambiguity in future reviews.
