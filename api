@@ -1,5 +1,1 @@
-Hey team, just to clarify the intent behind this rule —
-Chris’s note distinguishes between external and internal image pipelines for a reason.
-For external images, we treat a GEM CVE as already the worst case — so we skip exploitability checks because the assumption is that exposure and lack of control make it critical by default.
-For internal images, we do check exploitability even if it’s GEM, because we often have more context, compensating controls, and want to prioritise based on real risk, not just severity tags.
-So the logic isn’t inconsistent — it’s about different risk postures for different asset classes. That said, we should make sure the definitions of “GEM,” “exploitability,” and “external vs internal” are documented clearly so there’s no ambiguity in future reviews.
+I’m leaning toward keeping the same logic for internal images as well (i.e., continue checking exploitability even if GEM), unless anyone has objections or sees a better approach. Happy to get your thoughts.
