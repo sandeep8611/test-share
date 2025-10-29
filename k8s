@@ -1,1 +1,46 @@
-Have you tried using Co-pilot to generate test cases? Typing /tests in the chat usually triggers it to generate test cases for the code currently in view-often with decent coverage. It's pretty handy for getting started or covering standard cases quickly.
+Pipelines (3PIIP, UBI, Middleware)
+Owns VTM best-practice migration, UBI Micro base image, Jenkins OSS migration, and ongoing 3PIIP support.
+• Works with LSE, Jenkins, Middleware, Ops/SRE, Artifactory, App/dev, and Security/ISO teams.
+Delivered 44%→96% success rate; reduced ingestion time 3.55 days→<10 min; eliminated manual VA; major CVE and image-size reductions across UBI and K&S.
+Aquasec
+Owns federated-registry adoption, Aqua console integration, automated testing framework, Twistlock→Aqua CSI migration, HA MVP, and Chainguard evaluation.
+• Works with Aqua, LSE, Artifactory, OpenShift Eng, VSaaS, Ops/Networking, and vendors (AquaSec, Chainguard).
+Reduced Artifactory load 25%; enabled regression testing; delivered seamless migration, DR, and HA improvements; avoided licensing spend; led container security hiring.
+FITR
+Owns FITR library + CS API contributions and container statistics reporting; used FITR data to enhance image hygiene.
+• Works with Aquasec, DRIFT/Reporting, LSE, Artifactory, and Supply Chain teams.
+Delivered actionable insights on base-image health; implemented controls to block risky promotions; closed backdoor vulnerabilities.
+
+
+
+VSaaS – CSI Migration
+Owns migration from legacy Twistlock CSI to Aqua, delivered a quarter early (Q2 vs Q3) while meeting E3 commitments.
+• Works with VSaaS, Ops/SRE, Networking, AquaSec, and OpenShift teams.
+Enabled early decommissioning of legacy CSI, reducing infra risk and cost, and improving platform experience.
+VSaaS – Major Platform Upgrade (Flask & Connexion)
+Led VSaaS services upgrade to Flask + Connexion; directly engaged maintainers to resolve upstream rollout blocker.
+• Works with VSaaS and Connexion (open source) teams.
+Modernised stack for maintainability/performance, unblocked roadmap items, and reduced future technical risk.
+VTM Best Practice Library (Container Products)
+Implemented VTM best practice library and integrated it across container products (VSaaS, 3PIIP, UBI, MW).
+• Works with the wider Container Security team.
+Standardised and automated processes, improving end-to-end delivery times and consistency.
+
+
+
+FITR
+Stepped up as acting PO after Chris Clayton’s retirement; maintained roadmap, unblockages, and delivery of FITR milestones.
+• Works with FITR, Reporting/DRIFT, AquaSec, and Security teams.
+Sustained delivery momentum and stakeholder alignment; kept FITR production-ready and valuable for DRIFT and downstream integrations.
+UBI
+Delivered UBI 9 Minimal (foundation for UBI 9 Micro); demonstrated full ownership of UBI pipeline and guided base-image owners on correct build approach.
+• Works with base-image owner teams and Security/ISOs.
+Standardised modern base images, reducing size and CVE exposure while accelerating rollout speed across teams.
+3PIIP / Middleware
+Supported Enterprise→OSS Jenkins migration and ongoing 3PIIP maintenance; ensured consistent standards in UBI 9 Minimal–based images.
+• Works with App/dev teams, Artifactory, Security/ISOs, Jenkins platform, and Middleware.
+Enabled smoother CI/CD migration and improved image quality across pipelines.
+VSaaS
+Delivered feature to add Medium-count CVEs in tabular reports.
+• Works with VSaaS team.
+Enhanced vulnerability reporting accuracy and visibility.
