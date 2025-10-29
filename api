@@ -1,6 +1,10 @@
-Hi Brendan,
-I’m reaching out because my SNOW template recertification request has now been rejected 5–6 times, and each time a different team member reviews it and provides a different reason for rejection.
-To clarify — I’m not creating a new template, only recertifying an existing one that was already approved and in use. The current version already follows the description format your team is requesting.
-Could you please review the template once and share all required feedback points together, or help align the reviewers on what exactly needs to be changed (if anything)? I’d be happy to make any updates needed, but receiving different reasons for rejection each time is becoming very time-consuming.
-Each submission requires updating the template, getting internal approvals, and then waiting for final review — only to have it rejected again with inconsistent comments. I’d really appreciate your help in streamlining this process so we can close it out efficiently.
-Thank you for your understanding and support.
+Pipelines, Aquasec & FITR
+Owns VTM best-practice migration, UBI Micro base image, Jenkins OSS migration, federated-registry adoption, Aqua console integration, automated testing, Twistlock→Aqua CSI migration, FITR library and CS API contributions, and ongoing 3PIIP support • Works with LSE, Jenkins, Middleware, Ops/SRE, Artifactory, App/Dev, Security/ISO, Aqua, OpenShift Eng, VSaaS, Networking, DRIFT/Reporting, and Supply Chain teams Delivered 44%→96% success rate, reduced ingestion time from 3.55 days to <10 min, eliminated manual VA, reduced CVEs and image size across UBI and K&S, cut Artifactory load by 25%, enabled regression testing and HA/DR improvements, avoided licensing spend, enhanced container hygiene through FITR data insights, and implemented controls blocking risky promotions.
+
+
+VSaaS (CSI Migration, Platform Upgrade) & VTM Best Practice Library
+Owns migration from legacy Twistlock CSI to Aqua, major VSaaS platform upgrade to Flask + Connexion, and implementation of the VTM best-practice library across container products (VSaaS, 3PIIP, UBI, MW) • Works with VSaaS, Ops/SRE, Networking, AquaSec, OpenShift, Connexion (open source), and Container Security teams Delivered the CSI migration a quarter early (Q2 vs Q3) while meeting E3 commitments, enabling early legacy decommissioning to reduce infra risk and cost; modernized VSaaS stack for maintainability and performance, resolving upstream rollout blockers and reducing technical debt; and standardized delivery practices across products, improving end-to-end speed and consistency.
+
+
+FITR, UBI, 3PIIP/Middleware & VSaaS
+Owns FITR roadmap and delivery as acting PO post–Chris Clayton’s retirement, UBI 9 Minimal foundation and pipeline, 3PIIP maintenance and Jenkins OSS migration, and VSaaS vulnerability reporting enhancements • Works with FITR, Reporting/DRIFT, AquaSec, Security/ISO, base-image owners, App/Dev, Artifactory, Jenkins platform, Middleware, and VSaaS teams Sustained FITR delivery momentum and stakeholder alignment; standardized modern base images to reduce size and CVE exposure; ensured consistent image quality across CI/CD pipelines; and improved reporting accuracy with new CVE visibility features.
