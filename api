@@ -1,1 +1,3 @@
-OpenShift does enforce those controls (like non-root enforcement), but do we have the same guarantees for other platforms like EKS or Google Cloud? Or what if those controls change in the future?
+Hey Haroon — looping you in since I spoke with Romeo earlier. Just to align — we’re asking all base image owners to move to RHEL 9 Minimal and also produce clean, optimized images, not just larger RHEL 8 ports.
+Similar to what we did with Python Miniconda — smaller, cleaner, no secrets, better efficiency.
+You both are doing a great job driving this. Feels like we’re finally heading in the right direction — this will hugely improve our security posture (CVEs) and overall efficiency for the dev community.
