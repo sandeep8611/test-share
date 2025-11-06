@@ -1,7 +1,4 @@
-Hi Stef,
-Thanks for the great questions — let me add a bit more context on each point.
-Approved base images: You’re right — currently only JPMC-approved base images can be pulled. However, some developers and teams still build wrappers on top of middleware images or continue using older, insecure images. EE capabilities could help detect and flag cases where non-approved images are attempted or manually sideloaded, allowing us to maintain visibility and enforce compliance more consistently.
-Appropriate user: This focuses on validating that containers don’t run as root (unless explicitly justified). The rule would help enforce best practices around container security and least privilege.
-Image tags: The idea is to avoid using latest or untagged images. Enforcing versioned tags improves traceability and reproducibility of builds.
-These are just a few examples for now. I mainly wanted to get insights into your team’s current roadmap and an idea of the timeframe if we were to start implementing such rules.
-As mentioned before, we’d love to extend our EE capabilities for containers and avoid building a separate tool since we already have this great platform. We’re happy to collaborate or support in any way to help prioritize or implement these enhancements.
+You’re right that OpenShift enforces strong controls (like non-root enforcement), but I was also thinking ahead to other platforms such as EKS or Google Cloud where those same guardrails might not exist by default — or could change in the future. Having EE policies in place would give us a consistent layer of governance across environments, regardless of the platform.
+On the tag point — understood about tags being mutable. The idea isn’t to treat the tag itself as immutable, but rather to ensure teams are tagging images in a standardized, traceable way (instead of using latest or no tag at all). That traceability helps us track provenance and align with compliance or audit requirements.
+Ultimately, the goal is not to recreate existing OpenShift behavior but to extend EE visibility so we can detect configuration drift, exceptions, or policy gaps across multiple runtime environments.
+Thanks again for the feedback — happy to discuss further if it’d be helpful to walk through a few real examples.
