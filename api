@@ -1,2 +1,91 @@
-Hi Noor,
-I’m not sure why, but I can’t see Nuro’s feedback or his commentary for the end-of-year review in Workday. I can see the rest of the team’s inputs without any issues. I’ve asked him to raise an HR ticket about it, but just wanted to check if you’ve come across this before.
+
+
+INterview 
+Manager review
+Nodir/Houssem VTM
+
+Newsletter
+Training
+
+
+12:00
+Manager review
+Job rac - update job description + workday task
+Oyin tickets
+Nic meeting base image
+
+
+VTM finish
+CV review
+Ryddian meet
+Content eng exc
+
+Training,townhalletc..
+Emailaction + zero email
+Roadmap nic 
+
+Haroon stepped into the Product Owner role for the FITR project mid-year after Chris’s retirement and successfully guided it to production. He demonstrated strong leadership by collaborating with the MW team to improve base images across all languages and by driving delivery of the UBI 9 Minimal initiative. He has also ensured the stability of critical container security services, including the 3PiiP pipeline, supporting ongoing operational continuity for our users.
+As he continues to grow into his role as SVP, I expect Haroon to take full ownership of his workstreams and proactively lead them by ensuring roadmaps and JIRA items are well defined. I would also like to see him engage more closely with teams such as Aqua and other key stakeholders, mentor and guide team members, and elevate the visibility of our work through client demos and presentations. Additionally, taking broader accountability such as identifying high-priority workstreams, contributing to overall team objectives, and supporting delivery across the team will further strengthen his leadership impact. Expanding his ownership beyond core areas will position him well to broaden his portfolio and grow as a senior leader in the team.
+Risk
+Haroon proactively identified potential risks during the migration from Enterprise Jenkins to Open Source Jenkins and took steps to ensure pipeline stability throughout the transition, minimizing impact to our users. He also completed all required training on time.
+Earlier in the year, there was a breach of the firm’s Personal Trading and Investment Policy, which has been discussed with Haroon. He is expected to fully comply with this and all firm policies going forward. There have been no further incidents since, demonstrating his continued adherence to compliance expectations and a strengthened sense of accountability.
+
+Fin
+Haroon contributed to the integration of VTM Best Practice rules into our pipelines, helping to automate the previously manual Vulnerability Assessment (VA) review process. This work has significantly improved efficiency by reducing reliance on manual reviews and delivering faster, more consistent feedback to our users. Additionally, the 3PIIP pipeline success rate increased from approximately 44% to 96%, and image ingestion times were reduced from days to minutes on average. He also played an important role in ensuring a smooth transition of our services—including 3PIIP, MW, and UBI pipelines—during the firmwide migration from Enterprise Jenkins to Open Source Jenkins, a change contributing to over $1MM in annual licensing savings.
+
+
+Client
+Haroon successfully delivered the UBI9 Minimal hardened image, providing users with a lightweight and secure base that reduces the overall attack surface. He also continues to support users of the 3PIIP pipelines, ensuring reliability and responsiveness.
+As a senior member of the team, Haroon is encouraged to further expand his visibility and stakeholder engagement. Proactively sharing product updates through demos or presentations with wider JP teams, and engaging more closely with key stakeholders across and beyond the team, would help increase awareness of our services and strengthen his cross-team relationships and professional network.
+Romeo
+====
+Romeo has performed well this year, settling into his role and contributing not only to pipeline development but also to broader areas of our container security products. He has demonstrated strong initiative by stepping outside his comfort zone to support projects such as VSaaS and AquaSec. He also showed effective leadership through his collaboration with the MW team to improve base images across all languages and by driving delivery of the UBI 9 Micro initiative. Additionally, he has played an important role in ensuring the stability of critical container security services, including the 3PiiP pipeline, helping maintain operational continuity for our users. Romeo has also taken on mentoring responsibilities with Oyin, involving him in meaningful work on the 3PiiP pipeline.
+As he continues to grow, I encourage Romeo to further strengthen his engagement with internal team members and key stakeholders. Expanding his accountability, contributing to broader team objectives, and supporting delivery across the team will continue to enhance his leadership impact.
+Risk
+Romeo proactively identifies risks associated with external changes, such as the Artifactory federated instance migration and the Jenkins migration. In both cases, he played a key role in ensuring our container security services continued to operate seamlessly for users. He also took preventive action by blocking RHEL 7 in the MW pipeline to mitigate potential vulnerabilities. Additionally, he completed all required training on time.
+
+Financial
+
+Romeo contributed to the integration of VTM Best Practice rules into our pipelines, automating the previously manual Vulnerability Assessment (VA) process. This work is expected to significantly improve efficiency by reducing manual effort and providing faster, more consistent feedback to users. He also played a key role in improving the 3PIIP pipeline, increasing success rates from approximately 44% to 96% and reducing image ingestion times from days to minutes on average.
+Romeo additionally supported Noor with the CSI migration for VSaaS, which was delivered well ahead of schedule. He also played an important role in ensuring a smooth transition of our services—including 3PIIP, MW, and UBI pipelines—during the firmwide migration from Enterprise Jenkins to Open Source Jenkins, a change contributing to over $1MM in annual licensing savings.
+His contributions to engineering excellence—such as developing an automated testing framework for Aqua and onboarding tools like Renovate and Squad—have further strengthened the team’s operational efficiency, quality, and long-term maintainability.
+Client
+omeo plays an important role in developing new features for our pipeline services and providing critical support to users. He consistently ensures that user queries are addressed effectively and that clients receive clear guidance on onboarding and using our pipelines. His contribution to the migration of our pipelines to the Artifactory federated instance reflects strong ownership and a willingness to engage beyond his core responsibilities—including developing an understanding of Aqua and supporting its migration. His presentation on UBI Micro during the Hands-on call was a valuable way to increase visibility of our work, and I encourage him to continue sharing updates and insights through similar forums.
+Looking ahead, Romeo’s continued focus on user engagement, proactive communication, and collaboration beyond pipeline-specific tasks will help broaden his impact and further strengthen relationships with our clients and stakeholders.
+
+
+Noor
+====
+Leadership
+Noor is a highly capable and technically talented member of the team, consistently delivering high-quality outcomes across our products. His commitment to completing tasks with precision and maintaining strong engineering excellence is evident in all of his work.
+To accelerate his growth, Noor is encouraged to take greater end-to-end ownership of workstreams by driving initiatives more independently and expanding his scope beyond technical execution. While his technical strengths are a clear asset, stepping outside his technical comfort zone to build stronger relationships with key stakeholders—such as Operations, SRE, partner teams, and our clients—will be important for his continued development. Strengthening these relationships will not only broaden his influence but also enable him to design and deliver product features holistically and lead workstreams independently from concept to completion.
+
+Risk
+Noor consistently contributes to improving engineering excellence and strengthening security across VSaaS and Image Validation. His ongoing work to integrate VTM rules into VSaaS is critical in enhancing the firm’s overall security posture. He also proactively improves product security by regularly upgrading dependencies within our codebase. Noor completed all required training on time.
+To continue developing in this area, Noor should ensure that all compliance-related deadlines are consistently met. For example, his mid-year review was submitted after the deadline due to vacation. Maintaining timely completion of all compliance obligations will be essential as his responsibilities grow.
+
+Fian
+Noor’s delivery of the CSI migration for VSaaS ahead of schedule contributed to meaningful cost savings, as the early decommissioning of legacy CSI resources reduced infrastructure spend sooner than planned. His strong engineering execution throughout the migration improved the platform’s overall quality and maintainability, reducing long-term operational overhead. This work reflects a high level of technical discipline and contributes directly to sustained efficiency and cost optimization for the firm.
+
+Client
+Noor is an exceptionally talented and technically strong member of the team, and his collaborative, positive working style is highly valued. As part of his continued career progression, he is encouraged to more regularly showcase his work through demos and presentations—both within the team and across broader forums—to increase visibility and highlight the impact of his contributions.
+Strengthening relationships with stakeholders and partner teams will be essential in extending the reach of his work. By stepping up his external engagement and playing a more visible role in shaping and communicating product improvements, Noor can further enhance client outcomes and drive even greater product excellence across the firm.
+
+
+Oman
+====
+Leadership
+Oman is progressing well as a junior member of the team. He is receptive to guidance, collaborates effectively, and consistently delivers quality work. His ownership of the Aqua Statistics reporting script has been particularly valuable for management, and his achievement in earning the AWS Certified Architect certification—along with presenting at the All Hands session—demonstrates his commitment to growth and expanding his capabilities.
+As he continues to develop, Oman is encouraged to deepen his technical understanding of the tools and platforms we work with. This will help him take greater ownership of tasks and operate more independently. Strengthening his ability to perform root cause analysis and address issues from an end-to-end perspective will further enhance his problem-solving skills, enabling him to craft long-term, strategic solutions rather than short-term fixes. This growth will increase his confidence, impact, and overall leadership potential.
+
+Risk
+Oman has contributed meaningfully to strengthening the security posture of our codebase by upgrading libraries within the VSaaS codebase, ensuring our dependencies remain secure and up to date. He also completed all required training on time.
+As he advances in his career, it will be important for Oman to proactively highlight potential risks or timeline concerns—especially when sprint tasks may be at risk of slipping. Strengthening his ability to identify blockers early, seek support promptly, and maintain open communication with both internal team members and partner teams will be key to ensuring timely and reliable delivery.
+
+
+Financial
+Oman has consistently taken on new tasks and expanded his knowledge across various areas of our product. His growing involvement in 3PiiP is helping him develop a broader understanding of the platform. He also contributed to the successful migration of several codebases to GitHub, supporting the firm’s strategic direction to move away from Bitbucket. This work helps reduce long-term maintenance overhead and aligns our tooling with firmwide standards, contributing to greater operational efficiency.
+
+Client
+Oman has been actively involved in the pipeline team, taking responsibility for rebuilding and upgrading pipeline nodes to maintain stability. This work required him to learn new technologies and tools, and by stepping outside his comfort zone and delivering successfully, he demonstrated strong adaptability and initiative. He has also been a key contributor to the Aqua Statistics project, consistently addressing feature requests and resolving bugs to support users effectively.
+As he continues to grow, Oman is encouraged to further expand his involvement across additional workstreams within our product. Broadening his contributions will help him build deeper technical expertise and strengthen his relationships within the team and with the wider group in the year ahead.
