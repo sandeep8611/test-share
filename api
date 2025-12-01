@@ -1,3 +1,22 @@
-VSaaS + FITR Integration: VSaaS is now fully integrated with FITR. The VSaaS tabular report has been enhanced to include a detailed image layer breakdown by ancestry, providing improved visibility into image composition and potential risks.
-Image Assurance Policies: Image Assurance Policies are now incorporated directly into the VSaaS report, strengthening governance and enabling more consistent security validation.
-MW Images Transition to UBI 9 Minimal: The transition to UBI 9 Minimal is underway. Our Java and Python (Miniconda) images have already completed the move, reducing image footprint and aligning with our hardened base-image strategy.
+ach time Docker builds an image, it sends the entire build context — everything inside your project directory — to the Docker daemon.
+A carefully maintained .dockerignore file ensures that only essential files are included in that context. This prevents unnecessary “fluff” from being sent during builds and helps maintain a clean and secure repository.
+A solid .dockerignore helps you:
+Reduce image bloat by excluding logs, cache files, build artifacts, and other clutter
+Speed up builds by reducing the amount of data the daemon needs to process
+Avoid accidental leakage of secrets, such as .env files, SSH keys, certificates, or internal configs
+Keep your repository tidy, much like how .gitignore keeps version control clean
+Common patterns you should consider excluding:
+.git
+.gitignore
+node_modules/
+.vscode/
+*.log
+.env
+*.pem
+*.key
+dist/
+build/
+coverage/
+*.tmp
+Think of .dockerignore as the Dockerfile’s safety net:
+it ensures only the necessary components make their way into your build, improving both performance and security without any extra effort at runtime.
