@@ -1,5 +1,13 @@
-Hussain has become an integral member of the Container Security team. He consistently demonstrates strong ownership of his deliverables and requires minimal supervision to produce high-quality outcomes. His technical skills are excellent, and he frequently assists other team members, contributing to overall team effectiveness.
-He is a highly collaborative team player who works well with colleagues across the group. His positive attitude and willingness to support others have made him well-liked and respected within the team.
-This year, Hussain played a critical role in delivering the Full Image Tree Reporting (FITR) initiative, one of our most complex and high-impact workstreams. His contributions were instrumental to the project’s success, and he continues to be a reliable and trusted team member whom I can count on.
-Looking forward, I encourage Hussain to increase his engagement with the broader organization and external stakeholders. Doing so will not only support his professional growth but also enhance the visibility and impact of our team’s work across JPMC and the broader developer and application community.
-I wish him continued success in his development and look forward to his ongoing contributions.
+Hi <Name>,
+I own the VSaaS image scanning API that is currently integrated as a soft block in our Tekton CI pipelines in JPMC.
+We now want to move to hard gating for container scanning, aligned with the existing GATR gating process that CI already uses for other controls. Specifically, I would like to understand how GATR is wired into Tekton today and what the recommended pattern is for onboarding an additional gate (VSaaS) so that:
+Vulnerability findings from VSaaS can be evaluated as part of GATR,
+Pipelines can be hard-failed based on policy, and
+Overrides/waivers follow the same GATR workflow and audit trail.
+Would you be available for a 30-minute session to walk through GATR’s current integration in Tekton and discuss design options for adding VSaaS as a gate?
+Proposed agenda:
+Quick overview of current VSaaS + Tekton soft-gating implementation
+Overview of how GATR integrates with Tekton and how gates are modeled
+Options to integrate VSaaS into GATR (data flow, APIs, pass/fail criteria)
+Rollout approach (pilot projects, feature flags, fallbacks)
+If this works for you, please suggest a time that suits your calendar, or I can send a placeholder.
