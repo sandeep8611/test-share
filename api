@@ -1,13 +1,30 @@
-Hi <Name>,
-I own the VSaaS image scanning API that is currently integrated as a soft block in our Tekton CI pipelines in JPMC.
-We now want to move to hard gating for container scanning, aligned with the existing GATR gating process that CI already uses for other controls. Specifically, I would like to understand how GATR is wired into Tekton today and what the recommended pattern is for onboarding an additional gate (VSaaS) so that:
-Vulnerability findings from VSaaS can be evaluated as part of GATR,
-Pipelines can be hard-failed based on policy, and
-Overrides/waivers follow the same GATR workflow and audit trail.
-Would you be available for a 30-minute session to walk through GATR’s current integration in Tekton and discuss design options for adding VSaaS as a gate?
-Proposed agenda:
-Quick overview of current VSaaS + Tekton soft-gating implementation
-Overview of how GATR integrates with Tekton and how gates are modeled
-Options to integrate VSaaS into GATR (data flow, APIs, pass/fail criteria)
-Rollout approach (pilot projects, feature flags, fallbacks)
-If this works for you, please suggest a time that suits your calendar, or I can send a placeholder.
+Understand the current Gating service implemented in the LSE pipeline, engage with service owners, and define the integration and onboarding approach required to incorporate VSaaS (Image Scanning API) into the existing gating workflow.
+Description
+The LSE pipeline already contains a functional Gating service that enforces compliance checks prior to image promotion. Before implementing VSaaS-based gating, the team must fully evaluate the existing architecture, workflows, policy evaluation logic, ownership model, and integration points.
+This story establishes those baselines, identifies constraints or gaps, and results in a documented onboarding plan that outlines how VSaaS will be incorporated into the LSE gating service without disrupting current functionality.
+Activities include stakeholder engagement, architectural review, API compatibility assessment, and mapping of VSaaS scan outputs into the LSE Gating decision engine.
+Objectives
+Map the current LSE Gating service architecture and process flow.
+Identify required touchpoints for integrating VSaaS scanning and gating logic.
+Establish relationships and responsibilities between VSaaS team and LSE pipeline maintainers.
+Define an actionable onboarding plan for VSaaS integration into the existing Gating service.
+Acceptance Criteria
+Documentation describing the current LSE Gating service, including:
+Architecture, workflow, and gating decision sequence
+Data and artifact inputs required for gating
+Current policies and severity thresholds
+Integration points and dependencies
+Meeting(s) completed with relevant LSE Gating service owners and CI/CD maintainers.
+Compatibility assessment of VSaaS scan outputs with LSE gating logic completed and documented.
+A documented onboarding plan created that includes:
+Required integration changes
+Data mappings (VSaaS scan results → Gating service inputs)
+Sequence diagram or flow defining how VSaaS will plug into gating
+Estimated engineering effort and timeline
+Risks, constraints, or architectural gaps identified and captured.
+Story accepted after review with both VSaaS team and LSE pipeline owners.
+Deliverables
+LSE Gating service assessment report (architecture + workflow).
+Stakeholder map and engagement summary.
+VSaaS integration onboarding plan.
+Updated documentation repository containing findings.
