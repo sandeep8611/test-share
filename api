@@ -1,4 +1,59 @@
-I wanted to provide a brief update on a few items:
-I have completed the manager review with Romeo, which means all manager reviews for my team are now finalized.
-Romeo raised one piece of feedback related to the Financial category. As you know, it is often challenging to set clear expectations for achieving ratings of 1 or 2 in this area, particularly given our team’s focus on Container Security. I thought his feedback was constructive, and I had discussed a similar point with Chris previously. I addressed Romeo’s concern for now, but I told him I would also speak with you in January and follow up with him afterward.
-I had a 1:1 with Noor, and he reiterated his interest in relocating to a JPMC location in the US. I informed him that there are no opportunities in our team at the moment but suggested he connect with you to explore whether any options may exist more broadly. He may reach out to you directly.
+Attendees
+LSE Team
+Gating Service Team
+VSaaS Team
+Not Attendees (Informed)
+Mike, Niv – LSE Team
+James – Snyk Team
+Noor – Container Security (VSaaS Sponsor)
+1. Context & Objective
+The Container Security team owns VSaaS (Vulnerability Scanning as a Service), which provides container image scanning via the VSaaS API. VSaaS is currently integrated into Lightspeed CI pipelines (and other pipelines) and delivers actionable vulnerability findings to developers as part of a shift‑left security model.
+The objective of this discussion was to:
+Understand the existing enterprise Gating service currently used by Snyk
+Evaluate how VSaaS can onboard into this Gating service
+Clarify inputs, expectations, and ownership across teams
+The goal is to enable mandatory gating for container images that do not meet VSaaS security thresholds (VTM standard).
+2. Current State – Enterprise Gating Service (As‑Is)
+Based on discussions with the Gating Service team (Ray and Anzi) and prior alignment with the Snyk team:
+Lightspeed CI – Feature Branch
+Gating Service is not currently used for gating in CI feature branch pipelines.
+CI/CD – Release/Main Branch
+Gating Service is used in CD (Harness) to enforce gates.
+Gating results are surfaced in the Lightspeed UI Gates tab.
+Failed gates can be overridden via an Opt‑Out / Exception process using OneApproval.
+Snyk is a production reference implementation of this flow.
+3. VSaaS Scanning & Proposed Gating Flow
+VSaaS scans container images after the image is built and pushed to Artifactory during the Lightspeed CI build.
+VSaaS produces a detailed JSON scan report including:
+Exploitable CVEs
+GEM findings
+Assurance policy violations
+Other vulnerability metadata
+Sample VSaaS scan reports (pass/fail) were shared for reference.
+The proposal discussed is:
+VSaaS to participate in CD gating, similar to Snyk
+Where feasible, VSaaS results may also be displayed in the LightSpeed UI Gates tab
+4. Integration Discussion & Open Clarifications
+In CD (Harness), the Gating Service orchestrates calls to scanning services (e.g., Snyk, VSaaS).
+The Gating Service requires certain inputs from Lightspeed CI to initiate scan result evaluation.
+For VSaaS, the only required input is the container image name(s) built during the Lightspeed CI run.
+Lightspeed already passes image name today to VSaaS API during LSE CI Build for image scanning.
+There is an expectation from the Gating Service team that:
+Each scanning service exposes an API endpoint that the Gating Service can call to retrieve scan results and determine gating status.
+The VSaaS team shared:
+A sample VSaaS JSON response currently returned to developers.
+Open Question to Ray's team (Gating Service team):
+Is the current VSaaS JSON response sufficient for direct consumption by the Gating Service, or are additional fields / transformations required?
+
+6. Open Questions (Action‑Oriented)
+Gating Service team to answer - What is the formal onboarding contract for new scanning services into the Gating service?
+Gating Service team to answer - What changes, if any, are required in VSaaS API responses for gating consumption?
+Which team owns onboarding delivery and roadmap commitment for VSaaS gating?
+7. Next Steps (Proposed)
+Gating Service team to review the shared VSaaS JSON response and confirm compatibility or required changes.
+VSaaS and Gating Service teams to conduct a focused technical deep‑dive on integration specifics.
+Define and document a VSaaS onboarding approach into the existing Gating service.
+Align ownership and timeline for onboarding VSaaS into gating.
+8. Ask from VSaaS Team
+We would like to align on clear next steps and ownership to ensure VSaaS is formally onboarded into the enterprise Gating service and included in relevant team roadmaps
+VSaaS gating is a mandatory security control aligned to VTM standards and is required to be onboarded using the existing enterprise Gating service, similar to Snyk
