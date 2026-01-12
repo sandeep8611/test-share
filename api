@@ -1,7 +1,2 @@
-uick update from my discussion with Pravesh regarding Jenkins.
-Their team is driving a strategic move from Jenkins to Tekton.
-Our 3PiiP External Ingestion pipeline (Jenkins) is an official/approved use case, and they confirmed there will be no immediate plug-off and no impact without prior notice.
-Pravesh mentioned a new strategic ingestion solution called “Cinedal” (Romeo is also involved), which they see as the long-term direction for ingestion use cases.
-Timeline is not immediate — likely 1–2 quarters.
-Pravesh said he will work with us and share more details; I’ll pass those along once available.
-At this stage, there isn’t enough clarity to add migration or re-platforming work for 3PiiP into our roadmap given current priorities. I’ll also speak with Haroon and Romeo tomorrow, but any addition of this stream would likely require deprioritizing existing roadmap items.
+Separately, Romeo has set up a meeting with the OpenShift Operator pipeline team to discuss potentially moving them into 3PiiP. This appears non-trivial, given their current model (direct ingestion of large volumes of images into Artifactory) versus 3PiiP’s scan-and-gate-before-ingest approach. I’ll gather more details tomorrow to better understand the use case and feasibility.
+At this point, both items lack clear scope and sizing, so it’s difficult to responsibly add migration or re-platforming work into the roadmap without deprioritizing existing commitments. I’ll follow up with more clarity once I have additional information.
