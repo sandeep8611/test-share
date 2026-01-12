@@ -1,46 +1,7 @@
-VSaaS API Scalability, Resilience, and Availability Improvements
-
-As adoption of containerized workloads across JPMC continues to grow, the load on the VSaaS (Vulnerability Scanning as a Service) API is increasing steadily. To ensure the platform can reliably support current and projected demand, this epic focuses on assessing and improving the scalability, resilience, and availability of the VSaaS API. This includes evaluating current architecture, OpenShift resource configurations, autoscaling strategies, memory utilization, and overall operational robustness to support increased API traffic throughout the year.
-Epic Description
-The VSaaS API is a critical dependency for vulnerability scanning across an expanding container footprint at JPMC. With container counts increasing month over month, API throughput, stability, and fault tolerance are becoming increasingly important.
-This epic aims to proactively address scale-related risks by:
-Assessing current VSaaS API performance under increasing load
-Identifying bottlenecks in compute, memory, and networking
-Reviewing and optimizing OpenShift resource configuration (CPU/memory requests and limits)
-Evaluating and improving autoscaling mechanisms (HPA/KEDA where applicable)
-Investigating and remediating memory leaks or inefficient resource usage
-Improving resilience and availability characteristics (graceful degradation, restart behavior, pod disruption handling)
-Ensuring the API can meet reliability and performance expectations as demand grows this year
-The outcome of this epic should be a more scalable, resilient, and production-ready VSaaS API that can support continued growth without service degradation.
-Goals / Objectives
-Support increased API load driven by container growth across JPMC
-Improve horizontal and/or vertical scalability of the VSaaS API
-Increase resilience to traffic spikes, pod failures, and node disruptions
-Ensure efficient and predictable resource utilization in OpenShift
-Reduce risk of outages caused by memory leaks or resource exhaustion
-In Scope
-VSaaS API architecture and deployment model
-OpenShift resource requests/limits configuration
-Autoscaling configuration and tuning
-Load and stress testing
-Memory profiling and leak analysis
-Availability and resilience improvements
-Out of Scope (for this Epic)
-Feature development unrelated to scalability or reliability
-Changes to upstream scanning engines unless required for API stability
-Non-containerized deployment models
-Success Criteria / Acceptance Criteria
-VSaaS API demonstrates stable behavior under projected peak load
-Autoscaling responds effectively to increased traffic without manual intervention
-No known memory leaks or unbounded memory growth under sustained load
-Improved uptime and reduced risk of load-related incidents
-Clear documentation of scaling and resource configuration best practices
-Example Child Tickets (Stories / Tasks)
-You can create tickets under this epic such as:
-Assess current VSaaS API traffic patterns and growth projections
-Perform load and stress testing on VSaaS API
-Review and optimize OpenShift CPU/memory requests and limits
-Implement or tune HPA/KEDA autoscaling for VSaaS API
-Investigate and remediate VSaaS API memory leak issues
-Validate resilience during pod restarts and node failures
-Document recommended scaling and deployment configurations
+uick update from my discussion with Pravesh regarding Jenkins.
+Their team is driving a strategic move from Jenkins to Tekton.
+Our 3PiiP External Ingestion pipeline (Jenkins) is an official/approved use case, and they confirmed there will be no immediate plug-off and no impact without prior notice.
+Pravesh mentioned a new strategic ingestion solution called “Cinedal” (Romeo is also involved), which they see as the long-term direction for ingestion use cases.
+Timeline is not immediate — likely 1–2 quarters.
+Pravesh said he will work with us and share more details; I’ll pass those along once available.
+At this stage, there isn’t enough clarity to add migration or re-platforming work for 3PiiP into our roadmap given current priorities. I’ll also speak with Haroon and Romeo tomorrow, but any addition of this stream would likely require deprioritizing existing roadmap items.
