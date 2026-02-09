@@ -1,5 +1,16 @@
-Hi,
-Thank you for the update and for helping move the approval forward — much appreciated.
-For future recertifications, I would like to clarify expectations around ownership. While I’m always happy to support and provide input as the template owner, I was expecting the Operations team to drive the approval process end-to-end, including coordination with approvers, as part of operational execution.
-Could you also please check the rejection comment that appeared earlier? If anything from my side is needed, please feel free to ping me or call me on Zoom and I’ll be glad to assist.
-Thanks again for your support.
+Roadmap discuss
+1. Houssem not in -> options?
+   Dockerfile improvement recommendations
+   Image security improvement recommendations
+   VSaaS scaling and resiliency hardening
+   FITR caching mechanism
+   Observability enhancement for VTM (vsaas polling, etc..)
+   Replace VSaaS tabular text report with a HTML or other tich format
+   (Possible) Develop Library for image hygiene rules)
+
+  VSaaS user support
+  VSaaS operatoinal + BAU
+  Feature/Bug/Performance tickets/requests
+  
+ Houssem Handover
+  
