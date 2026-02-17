@@ -1,16 +1,5 @@
-Roadmap discuss
-1. Houssem not in -> options?
-   Dockerfile improvement recommendations
-   Image security improvement recommendations
-   VSaaS scaling and resiliency hardening
-   FITR caching mechanism
-   Observability enhancement for VTM (vsaas polling, etc..)
-   Replace VSaaS tabular text report with a HTML or other tich format
-   (Possible) Develop Library for image hygiene rules)
+grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.json | sort -u > json_cves.txt
+grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.json | sort -u > json_cves.txt
+grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.csv | sort -u > csv_cves.txt
 
-  VSaaS user support
-  VSaaS operatoinal + BAU
-  Feature/Bug/Performance tickets/requests
-  
- Houssem Handover
-  
+comm -3 csv_cves.txt json_cves.txt
