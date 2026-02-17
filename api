@@ -3,3 +3,13 @@ grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.json | sort -u > json_cves.txt
 grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.csv | sort -u > csv_cves.txt
 
 comm -3 csv_cves.txt json_cves.txt
+
+I have attached both CAR lists: the Container CARs (CSV file) currently in use, and the App Sec CARs (JSON file shared by Jamie).
+I also compared the CVE entries between the Container CSV and App Sec JSON files after extracting, sorting, and removing duplicates to ensure an accurate comparison.
+Summary of results:
+• 20 CVEs are present in the Container CAR file but not in the App Sec CAR file.
+• 60 CVEs are present in the App Sec CAR file but not in the Container CAR file.
+• The remaining CVEs are common to both datasets.
+This comparison highlights gaps between the two sources and helps identify vulnerabilities missing from each dataset. The detailed lists of differences can be shared if needed for further review or reconciliation.
+Please let me know if you would like the detailed output or any follow-up analysis.
+Best regards,
