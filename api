@@ -3,9 +3,5 @@ grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.json | sort -u > json_cves.txt
 grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.csv | sort -u > csv_cves.txt
 
 comm -3 csv_cves.txt json_cves.txt
-Hi,
-Thanks for driving this initiative — this will definitely help improve service stability and on-call effectiveness.
-Before assigning an engineer, could you please share the list of the top VSAAS errors along with their frequency and impact, as well as the expected collaboration model? Additional context will help us determine the appropriate next steps, ensure we assign the right person, and estimate the effort involved.
-It would also help to clarify ownership boundaries — specifically whether the collaboration is limited to validating runbook steps or also includes implementing code or configuration changes when permanent fixes are required. Please note that your team is also welcome to enhance VSAAS code directly when needed through our standard PR and contribution process.
-Once we have this additional context, we can nominate an appropriate engineer or establish a collaboration model that scales well going forward.
-Best regards,
+Hi Noor — just to confirm my understanding: we should continue using the Container GEM feed we currently receive for container gating, and keep application gating using the App Sec GEM feed, i.e., keep both feeds separate as today. Is that correct?
+
