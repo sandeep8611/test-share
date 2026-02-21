@@ -1,7 +1,47 @@
-grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.json | sort -u > json_cves.txt
-grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.json | sort -u > json_cves.txt
-grep -o 'CVE-[0-9]\{4\}-[0-9]\+' file.csv | sort -u > csv_cves.txt
+I should be selected for iLEAD because I am already operating at an enterprise control point within JPMC’s container ecosystem, and I am ready to scale my leadership impact further.
+I currently lead container security capabilities across JPMC, owning several strategic platforms:
+VSaaS (AquaSec backend), which scans over 200,000 internal images monthly and provides actionable, developer-tailored vulnerability insights to improve our container security posture firmwide.
+3PIIP, the only strategic solution for securely onboarding third-party container images into JPMC in a repeatable and compliant manner.
+UBI Pipeline, ensuring Red Hat UBI base images (Micro, Minimal, Standard) are securely ingested and made available to our developer community as soon as new versions are released.
+These platforms sit at critical points in JPMC’s software supply chain. My role requires balancing security rigor with developer velocity, influencing cross-functional stakeholders, and driving automation at scale.
+Through revitalizing 3PIIP and modernizing ingestion and scanning workflows, I have demonstrated the ability to turn complex, multi-team challenges into measurable enterprise outcomes. However, I recognize that scaling impact at the next level requires stronger enterprise influence, broader cross-line collaboration, and deeper innovation capabilities.
+iLEAD will help me:
+Strengthen executive presence to influence beyond technical domains
+Expand my enterprise network to drive cross-business innovation
+Sharpen strategic thinking to evolve from platform owner to enterprise change leader
+I am not seeking the program as validation of past delivery, but as an accelerator to shape broader strategic outcomes across JPMC’s technology and security landscape.
+I am committed to translating the program’s learning into sustained, measurable enterprise value.
 
-comm -3 csv_cves.txt json_cves.txt
-Hi Noor — just to confirm my understanding: we should continue using the Container GEM feed we currently receive for container gating, and keep application gating using the App Sec GEM feed, i.e., keep both feeds separate as today. Is that correct?
 
+
+I identified a critical opportunity to revive and modernize the stalled 3rd Party Image Ingestion Pipeline (3PIIP) — a strategically important initiative that had been delayed for several years due to technical complexity, unclear ownership, and cross-organizational misalignment.
+Recognizing its importance to JPMC’s container security and developer enablement strategy, I took full ownership and approached the effort as both a product and transformation initiative.
+Step 1: Re-establish Strategic Alignment
+I rebranded and repositioned the initiative as 3PIIP, clearly articulating its value proposition and aligning stakeholders across ICG, CTO, CTI, Cyber, and the Container Platform teams. I facilitated requirement alignment sessions, clarified governance expectations, and built executive visibility to re-establish momentum.
+Step 2: Root Cause & User-Centric Redesign
+Through structured user interviews and feedback analysis, I identified core blockers:
+Manual VA review delays
+High ingestion error rates
+Limited transparency in approval workflows
+Legacy infrastructure constraints (RHEL 7 dependency)
+I redesigned the workflow by:
+Introducing automated VA reviews based on an agreed rule set
+Migrating to the new VTM standard
+Decommissioning legacy RHEL 7 infrastructure and enabling RHEL 8 & 9 (UBI) images
+Partnering with the Artifactory team to retire the manual ingestion process
+Designing an automated support model in the absence of a dedicated support team
+Step 3: Execution & Enterprise Migration
+I led the migration of 30+ teams — including flagship platforms such as CrowdStrike, Qualys, Postgres, and Spark — from a manual process to the new automated pipeline, ensuring minimal disruption and meeting critical security and compliance deadlines. The solution is now adopted by 80+ teams firmwide.
+Tangible Impact
+The transformation delivered measurable, enterprise-level outcomes:
+Ingestion time reduced from 4 days to <10 minutes
+Error rate reduced by 80%
+Pass rate improved from ~44% to 96%
+~5 FTE hours saved per image ingestion
+Legacy process fully decommissioned
+Inline migration from Twistlock to Aquasec completed
+Faster vulnerability scans (within 1 day of RHEL release)
+Reduced operational risk and security exposure
+Accelerated time-to-market for application teams
+Today, 3PIIP is the strategic and only approved mechanism for onboarding third-party container images into JPMC. What had remained stalled for years is now a productionized, scalable enterprise capability.
+My manager described the delivery as exceeding expectations and credited me with turning a multi-year stalled initiative into a successful production platform with growing adoption.
