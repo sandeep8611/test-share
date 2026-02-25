@@ -1,107 +1,20 @@
-Analyze VSaaS Scan Duration Distribution and Propose Optimal CI Timeout Value
-Story Type
-Investigation / Technical Analysis
-Background
-Currently, CI invokes VSaaS container image scan and times out after 5 seconds, only printing the report link.
-There is a proposal to modify CI behavior to wait for scan completion and print a human-readable report in console logs.
-However, scan duration varies significantly depending on:
-Image size (MB)
-Layer count
-Dependency count (e.g., GEMs, npm packages, etc.)
-Vulnerability count
-System load
-Before proposing a new timeout value to the CI team (e.g., 30s, 60s, 120s), we must quantify:
-What percentage of scans complete within candidate timeout values
-The impact on CI build duration
-The failure rate vs timeout tradeoff
-This story focuses on collecting empirical data and producing a data-backed recommendation.
-Objective
-Determine an optimal timeout value for CI that:
-Maximizes scan completion rate during build
-Minimizes CI pipeline slowdown
-Is supported by statistical evidence (p90, p95, p99)
-Scope
-In Scope
-Collect historical VSaaS scan duration data (minimum 2–4 weeks).
-Compute scan duration percentiles:
-p50
-p90
-p95
-p99
-Model failure rate for candidate timeout values:
-30s
-60s
-90s
-120s
-180s
-Segment analysis by:
-Image size bucket (small / medium / large)
-Dependency count bucket (optional if available)
-Produce recommendation with clear tradeoff analysis.
-Out of Scope
-Changing CI behavior
-Implementing polling logic
-Modifying VSaaS performance
-Key Questions to Answer
-If timeout = 30s, what % of scans complete?
-If timeout = 60s, what % complete?
-What is the long-tail behavior?
-How much additional CI time is consumed at each candidate timeout?
-Does scan time scale linearly with image size?
-Methodology
-Step 1 — Data Collection
-Collect:
-scan_start_time
-scan_end_time
-duration_seconds
-image_size_mb
-dependency_count (if available)
-vulnerability_count (if available)
-scan_status
-Time window: last 14–30 days
-Minimum sample size target: ≥ 500 scans (or statistically meaningful volume)
-Step 2 — Statistical Analysis
-Compute:
-Mean (for reference only)
-Median (p50)
-p90
-p95
-p99
-Maximum
-Generate:
-Histogram of scan duration
-Cumulative Distribution Function (CDF)
-Timeout vs Completion Rate table
-Example table (expected output format):
-Timeout	% Scans Completed	% Timed Out
-30s	88%	12%
-60s	94%	6%
-120s	98.5%	1.5%
-Step 3 — CI Impact Modeling
-For each candidate timeout:
-Estimate additional average CI duration impact.
-Estimate worst-case impact (p95 scenario).
-Calculate expected additional CI minutes per 100 builds.
-Deliverables
-Statistical summary document
-Graphs:
-Duration histogram
-CDF curve
-Timeout vs Completion Rate table
-Written recommendation including:
-Proposed timeout value
-Expected completion percentage
-Expected CI overhead
-Risk assessment
-Acceptance Criteria
- At least 2 weeks of scan data analyzed
- Percentiles (p50, p90, p95, p99) calculated
- Timeout vs failure rate modeled
- CI time impact estimated
- Final recommendation documented with rationale
- Results reviewed with Security and CI stakeholders
-Definition of Done
-The team can confidently answer:
-“If we set CI timeout to X seconds, Y% of scans will complete during build.”
-And:
-“This change will increase average CI duration by Z seconds.”
+Client & Franchise Outcomes
+Goal: Deliver VSaaS Gating in LSE
+By the end of Q2 2026, assume full Product Owner accountability for the VSaaS Gating initiative and successfully deliver the VSaaS Gating solution in LSE in partnership with LSE and Gating Service teams, enabling at least 80% of targeted application teams to onboard and actively use the solution, with documented implementation guidance and stakeholder sign-off.
+Measurement Criteria:
+	•	VSaaS Gating limited beta by Q1
+	•	VSaaS Gating production deployed in LSE by Q2
+	•	≥80% of identified app teams onboarded
+	•	Published onboarding documentation
+	•	Formal sign-off from LSE and Gating Service stakeholders
+
+Client & Franchise Outcomes
+Goal: Deliver Dockerfile and Image Security Recommendations as a Service
+By the end of Q2 2026, assume Product Owner accountability for delivering Dockerfile Improvement Recommendations as a Service and Image Security Improvement Recommendations as a Service, establishing a formalized collaboration plan and agreed delivery timeline with the Gen-AI team, completing required onboarding and governance approvals, and enabling production rollout.
+
+
+Risk & Control
+Goal: Transition VSaaS & Pipeline Operational Ownership to SRE Team
+By the end of Q1 2026, define, agree, and publish the end-to-end support and operational model for VSaaS and Pipeline products (3PiiP and UBI), and transition full production support ownership to SRE Team, evidenced by documented sign-off, implemented monitoring/alerting standards, and 100% SRE-led BAU support.
+
+
