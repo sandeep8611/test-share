@@ -1,20 +1,3 @@
-Client & Franchise Outcomes
-Goal: Deliver VSaaS Gating in LSE
-By the end of Q2 2026, assume full Product Owner accountability for the VSaaS Gating initiative and successfully deliver the VSaaS Gating solution in LSE in partnership with LSE and Gating Service teams, enabling at least 80% of targeted application teams to onboard and actively use the solution, with documented implementation guidance and stakeholder sign-off.
-Measurement Criteria:
-	•	VSaaS Gating limited beta by Q1
-	•	VSaaS Gating production deployed in LSE by Q2
-	•	≥80% of identified app teams onboarded
-	•	Published onboarding documentation
-	•	Formal sign-off from LSE and Gating Service stakeholders
-
-Client & Franchise Outcomes
-Goal: Deliver Dockerfile and Image Security Recommendations as a Service
-By the end of Q2 2026, assume Product Owner accountability for delivering Dockerfile Improvement Recommendations as a Service and Image Security Improvement Recommendations as a Service, establishing a formalized collaboration plan and agreed delivery timeline with the Gen-AI team, completing required onboarding and governance approvals, and enabling production rollout.
-
-
-Risk & Control
-Goal: Transition VSaaS & Pipeline Operational Ownership to SRE Team
-By the end of Q1 2026, define, agree, and publish the end-to-end support and operational model for VSaaS and Pipeline products (3PiiP and UBI), and transition full production support ownership to SRE Team, evidenced by documented sign-off, implemented monitoring/alerting standards, and 100% SRE-led BAU support.
-
-
+We discussed supporting SHA-based ingestion in the 3PiiP pipeline and created the corresponding stories. The work is currently in our backlog; however, we have not been able to make progress due to higher-priority items that required immediate attention.
+Once capacity opens up, I will review the scope and come back with a clear execution plan and timeline for progressing this work.
+Please let me know if you'd like me to reprioritize it relative to current commitments.
