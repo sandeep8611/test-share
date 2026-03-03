@@ -1,39 +1,8 @@
-Hi Ashish,
-
-Thank you again for gathering the information regarding Skopeo and clarifying its current “restricted” status. This is very helpful.
-
-Before we proceed further, I would like to clarify a few governance and process-related points to ensure we are aligned with enterprise requirements.
-
-As context, our intended use case is to use Skopeo to copy container images from an external registry into an internal JPMC registry while preserving the image digest (SHA) to ensure artifact integrity and immutability across environments.
-
-I would appreciate your help confirming the following:
-
-1. Ownership, Upgrades, and CVE Management
-
-* Who is currently the accountable owner for Skopeo within the organization?
-* Who tracks CVEs associated with Skopeo and its dependencies?
-* If a critical vulnerability is identified, what is the remediation SLA and who is responsible for patching?
-* Who would be accountable during a production incident involving Skopeo?
-* What is the currently approved/internal version of Skopeo (if any)?
-* What is the latest upstream version available?
-* Are we permitted to adopt the latest version prior to production usage, and is there any internal validation or CAB approval required for upgrades?
-
-2. Approval Requirements (CAP / Risk Exception / Intake)
-
-* Can you confirm whether usage of Skopeo requires CAP, Risk Exception (RE), or any formal intake process?
-* Does its “restricted” status imply any documentation or risk acceptance requirement before production usage?
-* Does embedding Skopeo within CI/CD pipelines change the approval requirement?
-
-3. Usage Boundaries
-
-* Are there any restrictions on copying images from external registries into internal registries?
-* Are there any required controls (e.g., scanning, signing, audit logging, service accounts) we must implement prior to production use?
-
-Since we would be using Skopeo as part of the container supply chain flow (external → internal registry) and preserving SHA integrity, I want to ensure we are fully aligned on security, compliance, and operational accountability before moving forward.
-
-Please let me know if it would be easier to discuss live.
-
-Thanks again for your help.
-
-Best regards,
-[Your Name]
+Could you please clarify:
+What are the key architectural differences (tenancy model, governance controls, operational boundaries)?
+Are there any functional or infrastructure limitations we should consider when assessing migration?
+Is there a recommended migration or evaluation framework for workloads moving from Classic to Cloud at JP?
+Additionally, the documentation indicates that when a Cloud at JP cluster reaches capacity, a new cluster must be provisioned. In the Classic model, we were able to extend cluster capacity by adding nodes without standing up a separate cluster.
+Is in-place cluster expansion supported in Cloud at JP?
+Or is scaling intentionally designed to occur only via provisioning additional clusters?
+This will help us align capacity planning and long-term scaling strategy.
