@@ -1,8 +1,5 @@
-Could you please clarify:
-What are the key architectural differences (tenancy model, governance controls, operational boundaries)?
-Are there any functional or infrastructure limitations we should consider when assessing migration?
-Is there a recommended migration or evaluation framework for workloads moving from Classic to Cloud at JP?
-Additionally, the documentation indicates that when a Cloud at JP cluster reaches capacity, a new cluster must be provisioned. In the Classic model, we were able to extend cluster capacity by adding nodes without standing up a separate cluster.
-Is in-place cluster expansion supported in Cloud at JP?
-Or is scaling intentionally designed to occur only via provisioning additional clusters?
-This will help us align capacity planning and long-term scaling strategy.
+📉 Stop Chasing CVEs: Reduce Container Vulnerabilities by Up to 96% with a Simple Base Image Change
+Imagine eliminating up to 96% of container vulnerabilities simply by updating your FROM statement.
+With UBI9-Minimal and UBI9-Micro, application teams can dramatically reduce container footprints, minimize unnecessary packages, and significantly lower the overall vulnerability surface.
+By removing unused components, these lightweight base images help reduce vulnerability debt, accelerate container startup, and improve deployment efficiency across container platforms.
+Build smaller. Deploy faster. Secure by design.
