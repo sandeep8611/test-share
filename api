@@ -1,5 +1,141 @@
-📉 Stop Chasing CVEs: Reduce Container Vulnerabilities by Up to 96% with a Simple Base Image Change
-Imagine eliminating up to 96% of container vulnerabilities simply by updating your FROM statement.
-With UBI9-Minimal and UBI9-Micro, application teams can dramatically reduce container footprints, minimize unnecessary packages, and significantly lower the overall vulnerability surface.
-By removing unused components, these lightweight base images help reduce vulnerability debt, accelerate container startup, and improve deployment efficiency across container platforms.
-Build smaller. Deploy faster. Secure by design.
+Container base images are a foundational component of application security, performance, and operational efficiency. Within JPMC, the recommended base images for secure application delivery are built on Red Hat Universal Base Image (UBI).
+This provides application teams with an opportunity not only to migrate to RHEL 9, but also to adopt UBI9 Minimal and UBI9 Micro base images — one of the most effective ways to implement a Secure-by-Design strategy.
+These compact base images significantly reduce the vulnerability footprint, while also reducing image size and improving container startup performance.
+Compared to the legacy Standard image formulation, UBI9 Minimal and Micro images dramatically reduce the number of installed packages and therefore reduce the number of potential vulnerabilities.
+If you are planning to upgrade to RHEL UBI9, this article outlines how to get the greatest benefit from that transition. Even teams already using UBI9 Standard images can realise significant security and operational improvements by switching to Minimal or Micro variants.
+Why the Shift Matters: Eliminating “Vulnerability Debt”
+Quote: Every unnecessary package removed from a base image removes a potential vulnerability before it ever reaches production.
+Traditional Standard base images mirror the historical approach of installing applications on full operating systems running on physical servers.
+As a result, Standard UBI images often include more than 180 packages, many of which are unnecessary for containerised workloads.
+Every additional package introduces potential:
+	•	attack surface
+	•	vulnerability exposure
+	•	operational maintenance overhead
+Utilities such as shells, package managers, and other OS components that are rarely needed in runtime containers may still appear in VSaaS (Vulnerability Scanning as a Service) vulnerability scans and require remediation.
+Reducing the number of packages helps eliminate this “vulnerability debt” at its source and aligns container builds with our Secure-by-Design engineering strategy.
+
+
+Package Footprint Comparison
+Choosing a leaner base image optimises the entire JPMC software delivery lifecycle (SDLC).
+
+Base Image Series
+Image Path
+Package Count
+UBI9 Standard
+docker-enterprise-prod/jp-soe-rhel/rhel9ubi
+~185
+UBI9 Minimal
+docker-enterprise-prod/jp-soe-rhel/rhelgubi-minimal
+~108
+UBI9 Micro
+docker-enterprise-prod/jp-soe-rel/rhe gubi-micro
+~22
+
+Reducing package count has several practical benefits across the container platform.
+The Ripple Effect of Small Images:
+	•	Faster Builds and Deployments: Smaller images reduce the overall build context and layer compression overhead, enabling faster LightSpeed builds and quicker Harness deployments.
+	•	Infrastructure Efficiency: Smaller images require fewer resources to push, pull, and store within container registries such as Artifactory. This leads to:
+	⁃	Faster read and write operations in the artifactory
+	⁃	Reduced network bandwidth consumption during image distribution
+	⁃	Lower Artifactory storage usage
+	⁃	Faster artifact replication across environments
+	•	Developer Experience:  Fewer packages result in fewer Renovate pull requests and fewer GEMs or exploitable CVEs detected during VSaaS scans, reducing the likelihood of LightSpeed builds or Harness deployments failing security gating checks.
+
+
+Measured Impact: CVE Reduction
+
+
+Upgrading from UBI8 to UBI9 provides updated packages and addresses risks associated with running older operating system versions.
+However, the largest security improvements come from reducing the number of installed components.
+Fewer packages directly translate into fewer potential vulnerabilities. 
+Here's what we found when we recently did some measurements
+Migration Path
+Approximate CVE Reduction
+UBI8 → UBI9 Standard
+~25%
+UBI8 → UBI9 Minimal
+~74%
+UBI8 → UBI9 Micro
+~96%
+These improvements occur because the attack surface is dramatically reduced.
+
+
+
+
+
+
+
+Choosing the Right Base Image: Minimal vs Micro
+
+
+UBI9 Minimal
+The goal is to pick the smallest base image your application can support.
+
+Feature
+Includes microdnf, a lightweight package manager similar to yum/dnf.
+When to use
+Use UBI9 Minimal when you need to install additional dependencies during the Docker build process while still maintaining a smaller image footprint.
+Summary
+Good balance between flexibility and security
+
+UBI9 Micro
+Feature
+No package manager and an extremely small runtime footprint.
+When to use
+Ideal for:
+	•	Internet facing or internally sensitive applications that require hardened production images. 
+	•	short-lived jobs requiring fast startup
+Summary
+Maximum security, minimum footprint
+
+
+
+
+"Note: As well as picking the  smallest base image you’re comfortable with, you typically should be using a a multi-stage build. The base image choice is most critical in the final stage, as this is the artifact that is actually scanned by VSaaS for vulnerabilities  and deployed to production. This approach ensures your production image remains small, secure, and optimised for performance. For examples and guidance, see Multi-Stage Builds: Efficiency in Action and Multi-Stage Docker Builds
+
+
+
+Approved Middleware Base Images Now Available
+
+
+The Container Image Development Guide now provides a single reference page listing all approved and recommended Middleware base images capturing JPMC good practice in a single page.
+Today, 100% of recommended images are built on UBI9 Minimal or Micro.
+Migrating from Standard base images to these approved images provides immediate benefits:
+	•	Smaller container images
+	•	Faster deployments
+	•	Reduced vulnerability exposure (including GEMs and Exploitable CVEs)
+	•	Standardised container best practices
+
+
+JPMC Best Practices for Container Excellence
+
+
+Once migrated, following container best practices ensures images remain secure and efficient.
+Automate with Renovate:
+Renovate automatically creates pull requests when updated and more secure base image tags become available. Never use the :latest tag. Use version tags (e.g. 1.2.3) or immutable SHA digests (image@sha256:...).
+
+Build Immutable Containers
+All application binaries and dependencies should be included during the image build process.
+Downloading binaries at runtime is a critical anti-pattern because it:
+	•	bypasses VSaaS scanning
+	•	introduces supply chain risks
+	•	reduces deployment reproducibility
+
+Rebuild Images Regularly
+Even if your application code does not change, the security landscape evolves continuously. Container images should therefore be rebuilt periodically to ensure:
+	•	Updated base image patches are incorporated
+	•	New security fixes and vulnerability remediations are included
+	•	Container registry retention policies (e.g., Artifactory) do not impact image availability for deployments
+Regular rebuilds help ensure container workloads remain secure, compliant, and reliable over time.
+Keep Container Images as Small as Possible
+Smaller container images deploy faster and inherently reduce the attack surface by limiting the number of installed components. Fewer components also reduce the likelihood of GEM, REC, and Common Vulnerabilities and Exposures (CVEs) appearing in the image lifecycle.
+For practical techniques on reducing container image size, refer to “5 Tricks to Slim Your Containers.”
+
+
+Get Started Today
+Ready to shrink your container footprint and reduce vulnerabilities?
+Checkout the following resources:
+	•	UBI Minimal / Micro Overview
+	•	5 Clever Tricks to Streamline Your Container Images
+	•	Container Image Development Guide
+Adopting UBI9 Minimal and Micro enables teams to build containers that are smaller, faster, and more secure by design.
