@@ -1,4 +1,27 @@
-I’ve drafted the roadmap and organized it into two tables here: [Confluence link].
-The first table includes the items I believe are essential and must be part of the roadmap regardless of assumptions—these are the “can’t miss” items.
-The second table includes additional items that may be lower priority, may not fit depending on bandwidth, or may need your input to determine whether they should move into the first table.
-When you have a chance, I’d appreciate your feedback on whether the categorization makes sense and if any items should be moved between tables. We can also go through it in more detail during our 1:1 on Monday.
+Interview Feedback – Candidate Evaluation
+Recommendation: Proceed to next stage
+Strengths
+Good knowledge of Kubernetes and container technologies, demonstrating solid understanding of the ecosystem.
+Good overall understanding of the end-to-end SDLC, including container build processes, image scanning, and deployment workflows.
+Communication was clear and effective, with answers delivered in a structured and understandable way.
+Weaknesses
+Hands-on experience appears somewhat limited based on the depth of responses provided during the interview.
+A deeper technical validation and practical experience check would be beneficial in the second interview round through more detailed technical discussions or scenario-based questions.
+
+
+
+
+Interview Feedback – Candidate Evaluation
+Recommendation: No – Do not proceed to next stage
+Strengths
+Good communication skills; able to think through questions and articulate responses clearly.
+Demonstrated a constructive approach to problem-solving—when unfamiliar with a specific tool or topic, attempted to reason through how the solution might work.
+Shows understanding of architecture principles and high-level system thinking.
+Maintained a professional attitude during the interview and expressed interest in growing further in a technical role.
+Weaknesses
+Limited knowledge and experience in Kubernetes and container technologies, which are core requirements for this role.
+Very little hands-on experience with Kubernetes; some exposure to AWS ECS, but not at the depth expected.
+While some architectural answers were reasonable, hands-on engineering depth appeared inconsistent, with several responses lacking practical clarity.
+Overall technical profile does not currently meet the team’s core requirements around containers and Kubernetes.
+Conclusion
+Although the candidate demonstrated good communication and a positive technical mindset, the lack of sufficient experience in Kubernetes and container ecosystems makes them not a suitable fit for this team at this time.
