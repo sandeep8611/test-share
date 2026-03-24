@@ -1,9 +1,17 @@
-Noor – I reviewed the manifesto. One key observation is that it currently mixes container principles and Kubernetes principles.
-The Core Principles section is largely focused on Kubernetes pod architecture (pods, readiness probes, scaling, etc.) rather than container fundamentals. A container manifesto would normally focus more on areas like container image design, security, supply chain practices, and lifecycle management. Containers exist independently of orchestration platforms, so those principles should ideally be covered as well.
-For example, container-focused guidance could include things like keeping images minimal, moving toward minimal/micro base images, using .dockerignore, image immutability, and secure build practices.
-If these Kubernetes practices are intended, it might help to clearly separate container principles from Kubernetes orchestration principles. For instance, “Know When Pods Are Ready” is really describing Kubernetes readiness/liveness probes, not a container concept.
-There are also a couple of technical points that might benefit from clarification:
-“One Process Per Pod” – Kubernetes commonly runs multiple containers in a pod (sidecars, init containers such as Vault agents). A more accurate phrasing might be “one primary application responsibility per container.”
-“Prefer HTTPS” – Kubernetes handles TCP/UDP workloads equally well, so framing this as an optimization for Kubernetes may not be entirely accurate.
-From a security standpoint, it may also be worth explicitly referencing VSaaS image scanning, since vulnerability management is a key part of the container image lifecycle.
-Overall the direction is strong, but separating container image principles from Kubernetes workload design principles would likely make the manifesto clearer and more complete.
+VSaaS (within pipeline) – checks vs blocking
+What we check for:
+All identified vulnerabilities across severity levels (Critical, High, Medium, etc.)
+Exploitability classification (e.g. GEM / exploitable CVEs)
+Malware-related findings (where identified by Aqua scanning)
+What triggers FAIL (VTM validation):
+VSaaS marks VTM VALIDATION = FAIL where exploitable vulnerabilities are present (e.g. GEM or exploitable CVEs)
+This is reflected in the scan report status
+What we block for (current behaviour):
+Pipeline gating is aligned to VTM VALIDATION status
+Images with FAIL status (i.e. exploitable vulnerabilities) are blocked from promotion
+Malware handling:
+Malware-type findings (e.g. MAL classification) appear to be treated as exploitable vulnerabilities by Aqua
+As a result, they contribute to a FAIL status indirectly
+There is no separate/explicit malware-only blocking control (i.e. not independently enforced outside exploitability criteria)
+Example:
+Example report shows VTM VALIDATION: FAIL due to exploitable CVE(s)
