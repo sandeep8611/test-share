@@ -1,17 +1,1 @@
-VSaaS (within pipeline) – checks vs blocking
-What we check for:
-All identified vulnerabilities across severity levels (Critical, High, Medium, etc.)
-Exploitability classification (e.g. GEM / exploitable CVEs)
-Malware-related findings (where identified by Aqua scanning)
-What triggers FAIL (VTM validation):
-VSaaS marks VTM VALIDATION = FAIL where exploitable vulnerabilities are present (e.g. GEM or exploitable CVEs)
-This is reflected in the scan report status
-What we block for (current behaviour):
-Pipeline gating is aligned to VTM VALIDATION status
-Images with FAIL status (i.e. exploitable vulnerabilities) are blocked from promotion
-Malware handling:
-Malware-type findings (e.g. MAL classification) appear to be treated as exploitable vulnerabilities by Aqua
-As a result, they contribute to a FAIL status indirectly
-There is no separate/explicit malware-only blocking control (i.e. not independently enforced outside exploitability criteria)
-Example:
-Example report shows VTM VALIDATION: FAIL due to exploitable CVE(s)
+https://img.buzzfeed.com/buzzfeed-static/static/2023-12/6/21/asset/5b32ba422f0a/sub-buzz-652-1701898583-1.png?downsize=900%3A%2A&output-format=auto&output-quality=auto
