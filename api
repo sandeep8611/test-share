@@ -1,1 +1,4 @@
-https://img.buzzfeed.com/buzzfeed-static/static/2023-12/6/21/asset/5b32ba422f0a/sub-buzz-652-1701898583-1.png?downsize=900%3A%2A&output-format=auto&output-quality=auto
+We are currently working with the Gating Service team to understand the end-to-end rollout approach (i.e., whether this will be phased or enforced directly, similar to how Snyk was introduced in LightSpeed CI).
+From our side, the VSaaS integration is complete in DEV (new endpoint available for the Gating Service to consume). However, the Gating Service team has not yet implemented their corresponding changes, which means we are currently blocked from validating the end-to-end flow in the LightSpeed lower environments.
+Until their implementation is ready and we can complete E2E testing, we won’t have full clarity on the production rollout strategy (phased vs. immediate enforcement).
+Additionally, as discussed, the current LightSpeed CI UI is expected to be deprecated, with the Gating Service team building a new UI for gate visibility and control. We are actively following up for updates on this, but progress visibility has been limited so far.
