@@ -1,4 +1,13 @@
-We are currently working with the Gating Service team to understand the end-to-end rollout approach (i.e., whether this will be phased or enforced directly, similar to how Snyk was introduced in LightSpeed CI).
-From our side, the VSaaS integration is complete in DEV (new endpoint available for the Gating Service to consume). However, the Gating Service team has not yet implemented their corresponding changes, which means we are currently blocked from validating the end-to-end flow in the LightSpeed lower environments.
-Until their implementation is ready and we can complete E2E testing, we won’t have full clarity on the production rollout strategy (phased vs. immediate enforcement).
-Additionally, as discussed, the current LightSpeed CI UI is expected to be deprecated, with the Gating Service team building a new UI for gate visibility and control. We are actively following up for updates on this, but progress visibility has been limited so far.
+Hi Terry,
+I hope you’re well.
+I’ve recently been selected for the iLEAD program and wanted to clarify a few points regarding expense handling and corporate card usage.
+As per the program guidance, most costs will be covered centrally, with evening meals charged to our respective lines of business. I understand that I should use my corporate card for certain expenses and wanted to confirm the approach before proceeding, as this will be my first time using the corporate card and submitting expense claims.
+Specifically:
+I plan to book my travel (air or train) using my corporate card — the approval for this is attached.
+I will also use the card for evening meals and other incidental expenses such as taxis and local travel.
+Could you please advise on the following:
+Are there any daily or per-transaction limits I should be aware of?
+Do I need any additional approvals for these types of expenses?
+I’ve CC’d the iLEAD program organisers in case there are any program-specific details to confirm.
+Thanks in advance for your guidance.
+Best regards,
