@@ -20,3 +20,9 @@ Containers must be easily replaceable without manual intervention. Workloads sho
 Ensure fast startup and graceful shutdown
 Containers should initialize quickly and handle termination signals correctly, allowing for clean shutdown within defined time constraints.
 Designing containers as stateless and disposable improves scalability, resilience, and operational consistency across environments.
+
+
+Secrets Handling
+Containers must not embed or persist sensitive information at any stage of the image lifecycle. Secrets must be securely managed and injected only at runtime. Sensitive data such as passwords, API keys, certificates, and tokens must not be included in Dockerfiles, image layers, or application code. Long-lived credentials must not be stored in environment variables. All secrets (passwords, keys, certificates) must be stored, managed, and accessed through HashiCorp Vault.
+Stateless and Disposable Containers
+Containers must be designed as stateless, ephemeral, and replaceable units with no dependency on local state. Application state must be stored externally (e.g., databases, object storage, or managed services), and containers must not rely on in-memory or filesystem persistence across restarts. Any required persistence must be handled outside the container. Containers must be easily replaceable without manual intervention, support fast initialization, and handle termination signals correctly to ensure clean shutdown within defined time constraints. This design improves scalability, resilience, and operational consistency across environments.
