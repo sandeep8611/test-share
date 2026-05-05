@@ -1,11 +1,27 @@
-Hi Team,
-VSaaS is currently operating normally and scans are functioning as expected. The earlier failures were not due to a VSaaS outage, but were caused by an ongoing Artifactory federated binary instance performance issue.
-Root Cause
-Performance degradation in the Artifactory federated instance is delaying container image synchronization between primary and federated repositories.
-Impact
-Intermittent VSaaS scan failures occur when images are not yet synchronized or are delayed in propagation.
-Status
-VSaaS: Healthy
-Artifactory Federation: Degraded (under investigation)
-Next Steps
-The Artifactory team is actively working to restore normal federation performance and reduce sync latency.
+<div style="font-family: Calibri, Arial, sans-serif; font-size: 12pt; color: #000;">
+  <p style="margin: 0; font-size: 12pt;">
+    <strong>Sandeep</strong> | Container Security Lead
+  </p>
+  <p style="margin: 0; font-style: italic; color: #555;">
+    Frictionless security, enabling faster business delivery
+  </p>
+
+  <p style="margin: 10px 0 5px 0;"><strong>Key Initiatives & Resources</strong></p>
+
+  <ul style="margin: 0; padding-left: 18px;">
+    <li><strong>VSaaS</strong> – Scans internal container images; integrated with LightSpeed for shift-left security</li>
+    <li><strong>3PiiP</strong> – Automated external image imports &amp; updates</li>
+    <li><strong>Container Guidelines</strong> – Best practices and latest approved base images</li>
+    <li><strong>Build Better Images</strong> – 5 quick wins to slim your container images</li>
+    <li><strong>Migrate to UBI 9 (Minimal/Micro)</strong> – Standardized, secure base image adoption</li>
+    <li><strong>DiP (Docker Improvement Preset)</strong> – Improve your Dockerfile with JPMC policies &amp; best practices</li>
+    <li><strong>WHO</strong> – Ownership clarity: who owns what across container services</li>
+  </ul>
+
+  <p style="margin: 10px 0 0 0;">
+    <a href="https://go/container-development" style="color: #0563C1; text-decoration: none;">Container Guidelines</a> |
+    <a href="https://go/slim-container" style="color: #0563C1; text-decoration: none;">Build Better Images</a> |
+    <a href="https://go/ubi" style="color: #0563C1; text-decoration: none;">UBI Migration</a> |
+    <a href="https://go/dip" style="color: #0563C1; text-decoration: none;">DiP</a>
+  </p>
+</div>
