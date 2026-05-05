@@ -1,28 +1,15 @@
-Secrets Handling
-Containers must not embed or persist sensitive information at any stage of the image lifecycle. Secrets must be managed securely and injected only at runtime.
-Never bake secrets into container images
-Sensitive data such as passwords, API keys, certificates, or tokens must not be included in Dockerfiles, image layers, or application code. Embedding secrets in images creates irreversible exposure risk.
-Avoid long-lived credentials in environment variables
-Environment variables are not considered a secure storage mechanism, as they can be exposed through logs, debugging tools, or process inspection. Only short-lived, dynamically generated credentials may be used where strictly necessary.
-Use centralized secret management with HashiCorp Vault
-All secrets (passwords, keys, certificates) must be stored, managed, and accessed through Vault. Vault provides secure storage, access control, auditing, and dynamic secret generation.
-Do not rely on platform-native secret stores as a source of truth
-Mechanisms such as OpenShift or Kubernetes Secrets are not sufficient as primary secret management solutions. They may only be used as transient delivery mechanisms when backed by Vault.
-Proper secret handling reduces the risk of credential leakage, strengthens auditability, and ensures compliance with enterprise security requirements.
-Stateless and Disposable Containers
-Containers must be designed as ephemeral, replaceable units with no dependency on local state.
-Containers must be stateless
-Application state must be stored externally (e.g., databases, object storage, or managed services). Containers should not retain or depend on in-memory or filesystem state across restarts.
-No reliance on local filesystem persistence
-Data written to the container filesystem is non-durable and must not be required for application continuity. Any required persistence must be handled outside the container.
-Design for disposability and rapid recovery
-Containers must be easily replaceable without manual intervention. Workloads should tolerate restarts, rescheduling, and scaling without impacting functionality.
-Ensure fast startup and graceful shutdown
-Containers should initialize quickly and handle termination signals correctly, allowing for clean shutdown within defined time constraints.
-Designing containers as stateless and disposable improves scalability, resilience, and operational consistency across environments.
-
-
-Secrets Handling
-Containers must not embed or persist sensitive information at any stage of the image lifecycle. Secrets must be securely managed and injected only at runtime. Sensitive data such as passwords, API keys, certificates, and tokens must not be included in Dockerfiles, image layers, or application code. Long-lived credentials must not be stored in environment variables. All secrets (passwords, keys, certificates) must be stored, managed, and accessed through HashiCorp Vault.
-Stateless and Disposable Containers
-Containers must be designed as stateless, ephemeral, and replaceable units with no dependency on local state. Application state must be stored externally (e.g., databases, object storage, or managed services), and containers must not rely on in-memory or filesystem persistence across restarts. Any required persistence must be handled outside the container. Containers must be easily replaceable without manual intervention, support fast initialization, and handle termination signals correctly to ensure clean shutdown within defined time constraints. This design improves scalability, resilience, and operational consistency across environments.
+Hi Team,
+VSaaS is now operating normally and successfully scanning images. The errors previously observed were not due to a VSaaS service outage, but rather downstream effects of an ongoing Artifactory federated binary instance performance issue.
+Root Cause
+The issue is caused by performance degradation in the Artifactory federated instance, impacting the timely synchronization of container images between the main Artifactory and federated instances.
+As a result, VSaaS scan requests may intermittently fail when required image artifacts are:
+Not yet synchronized, or
+Delayed in propagation across federated and main artifactory repositories
+Recent Changes
+There have been no recent changes on the VSaaS side. The issue is isolated to the Artifactory federated instance and remains under active investigation by the artifactory team.
+Current Status
+VSaaS: Healthy and functioning as expected
+Artifactory Federation: Degraded performance (ongoing)
+Impact: Image synchronization delays
+Mitigation / Next Steps
+The Artifactory team is actively working to stabilize federation performance and reduce synchronization latency
