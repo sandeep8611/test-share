@@ -1,15 +1,11 @@
 Hi Team,
-VSaaS is now operating normally and successfully scanning images. The errors previously observed were not due to a VSaaS service outage, but rather downstream effects of an ongoing Artifactory federated binary instance performance issue.
+VSaaS is currently operating normally and scans are functioning as expected. The earlier failures were not due to a VSaaS outage, but were caused by an ongoing Artifactory federated binary instance performance issue.
 Root Cause
-The issue is caused by performance degradation in the Artifactory federated instance, impacting the timely synchronization of container images between the main Artifactory and federated instances.
-As a result, VSaaS scan requests may intermittently fail when required image artifacts are:
-Not yet synchronized, or
-Delayed in propagation across federated and main artifactory repositories
-Recent Changes
-There have been no recent changes on the VSaaS side. The issue is isolated to the Artifactory federated instance and remains under active investigation by the artifactory team.
-Current Status
-VSaaS: Healthy and functioning as expected
-Artifactory Federation: Degraded performance (ongoing)
-Impact: Image synchronization delays
-Mitigation / Next Steps
-The Artifactory team is actively working to stabilize federation performance and reduce synchronization latency
+Performance degradation in the Artifactory federated instance is delaying container image synchronization between primary and federated repositories.
+Impact
+Intermittent VSaaS scan failures occur when images are not yet synchronized or are delayed in propagation.
+Status
+VSaaS: Healthy
+Artifactory Federation: Degraded (under investigation)
+Next Steps
+The Artifactory team is actively working to restore normal federation performance and reduce sync latency.
