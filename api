@@ -1,3 +1,4 @@
+Use multi-stage Docker builds only when they provide meaningful separation between build-time and runtime dependencies. Avoid introducing artificial builder stages when no compilation, packaging, dependency installation, or artifact generation occurs.
 <div style="font-family: Calibri, Arial, sans-serif; font-size: 12pt; color: #000;">
   <p style="margin: 0; font-size: 12pt;">
     <strong>Sandeep</strong> | Container Security Lead
