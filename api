@@ -1,28 +1,12 @@
-Use multi-stage Docker builds only when they provide meaningful separation between build-time and runtime dependencies. Avoid introducing artificial builder stages when no compilation, packaging, dependency installation, or artifact generation occurs.
-<div style="font-family: Calibri, Arial, sans-serif; font-size: 12pt; color: #000;">
-  <p style="margin: 0; font-size: 12pt;">
-    <strong>Sandeep</strong> | Container Security Lead
-  </p>
-  <p style="margin: 0; font-style: italic; color: #555;">
-    Frictionless security, enabling faster business delivery
-  </p>
-
-  <p style="margin: 10px 0 5px 0;"><strong>Key Initiatives & Resources</strong></p>
-
-  <ul style="margin: 0; padding-left: 18px;">
-    <li><strong>VSaaS</strong> – Scans internal container images; integrated with LightSpeed for shift-left security</li>
-    <li><strong>3PiiP</strong> – Automated external image imports &amp; updates</li>
-    <li><strong>Container Guidelines</strong> – Best practices and latest approved base images</li>
-    <li><strong>Build Better Images</strong> – 5 quick wins to slim your container images</li>
-    <li><strong>Migrate to UBI 9 (Minimal/Micro)</strong> – Standardized, secure base image adoption</li>
-    <li><strong>DiP (Docker Improvement Preset)</strong> – Improve your Dockerfile with JPMC policies &amp; best practices</li>
-    <li><strong>WHO</strong> – Ownership clarity: who owns what across container services</li>
-  </ul>
-
-  <p style="margin: 10px 0 0 0;">
-    <a href="https://go/container-development" style="color: #0563C1; text-decoration: none;">Container Guidelines</a> |
-    <a href="https://go/slim-container" style="color: #0563C1; text-decoration: none;">Build Better Images</a> |
-    <a href="https://go/ubi" style="color: #0563C1; text-decoration: none;">UBI Migration</a> |
-    <a href="https://go/dip" style="color: #0563C1; text-decoration: none;">DiP</a>
-  </p>
-</div>
+The “AI Agent Knowledge Capture and Scaling” proposal shows strong potential, but the current model appears to focus mainly on accelerated productivity (~£5.85m saving) without fully accounting for:
+• ongoing AI/token consumption costs
+• scaling and capacity limitations
+• operational/compliance costs and risks in a regulated environment
+For the “Software Ingestion Modernisation” proposal, direct cost savings are harder to attribute to a single team because this is a foundational enterprise platform capability.
+The value comes from enabling and accelerating cost savings across development teams by:
+• accelerating software ingestion onboarding into JPMC
+• reducing manual engineering effort and delivery friction
+• improving security, governance, and standardisation
+• reducing operational risk
+• enabling faster delivery and time-to-market across many teams
+This is similar to platforms like Stylus, where the platform itself is not the end cost-saving outcome, but the enterprise enabler that allows downstream teams to deliver faster, more securely, and more efficiently at scale.
