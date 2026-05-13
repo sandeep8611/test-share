@@ -1,24 +1,5 @@
-Your draft is already strong. I tightened the flow, reduced repetition, improved the tone slightly, and made the technical positioning more precise and executive-friendly while keeping it empathetic and professional.
-
-I appreciate the candid feedback, and honestly, I agree with several parts of your response.
-
-You are absolutely right that for many teams this is not literally a “change the FROM statement and everything magically works” exercise. Containers are rarely that simple, especially in JPMC where teams have accumulated years of dependencies, custom tooling, legacy runtimes, and operational assumptions around larger images.
-
-In practice, many applications will require additional packages, utilities, or dependency tooling to be explicitly installed when moving to UBI9 Minimal or Micro.
-
-That said, for most teams — not all, but most — reducing unnecessary packages and unused components does materially reduce attack surface and operational vulnerability debt. We have seen real internal examples where teams moving from larger or legacy images to UBI9 Minimal/Micro significantly reduced reported CVEs, and the referenced numbers come from those observed migrations rather than arbitrary marketing claims.
-
-A major issue we still see today is teams running:
-
-* end-of-support base images,
-* old UBI7 images,
-* heavily customized non-certified images,
-* or carrying years of unnecessary packages inherited over time.
-
-Unfortunately, many developer teams understandably focus primarily on the application layer, while in reality teams own the complete container image stack — including the base layers and everything introduced through them.
-
-I also agree that the migration will never be 100% frictionless for every application. Some workloads genuinely require larger images or additional tooling, and that is completely valid. The goal is not to force every team into the smallest possible image, but rather to help the majority of teams move toward better-supported, better-maintained, and more secure container foundations aligned with current best practices.
-
-For many teams, the migration is actually achievable with relatively small changes once unnecessary dependencies are identified. For others, it will require more substantial refactoring. That variance is expected in any enterprise modernization effort.
-
-I genuinely appreciate the feedback — especially around migration guidance and DNF/repository clarity. Those are areas where we can continue improving the developer experience. If you have additional suggestions on what would make migrations easier or less frustrating for teams, I would absolutely love to hear them.
+Containers should run a single primary long-lived process which defines the container’s lifecycle, health, and exit status. The container should terminate when the primary process exits.
+Running multiple long-lived processes within the same container is discouraged, as it complicates health monitoring, logging, scaling, and failure recovery. For example, if a container runs both Java and Python processes, the container may continue running even if one of the processes has failed, resulting in hidden application degradation.
+When multiple cooperating processes are required, each process should run in its own container and be co-located within the same Kubernetes Pod. This allows processes to communicate over localhost or shared volumes while preserving process isolation and independent health management.
+Some exception scenarios may exist, particularly with third-party vendor applications that internally spawn worker processes or combine runtimes across multiple languages. These cases should remain the exception rather than the standard approach for internally developed JPMC applications.
+Adhering to a single primary process per container improves health reporting, resilience, operational visibility, and independent scaling behavior.
