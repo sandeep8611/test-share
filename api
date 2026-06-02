@@ -1,5 +1,16 @@
-Containers should run a single primary long-lived process which defines the container’s lifecycle, health, and exit status. The container should terminate when the primary process exits.
-Running multiple long-lived processes within the same container is discouraged, as it complicates health monitoring, logging, scaling, and failure recovery. For example, if a container runs both Java and Python processes, the container may continue running even if one of the processes has failed, resulting in hidden application degradation.
-When multiple cooperating processes are required, each process should run in its own container and be co-located within the same Kubernetes Pod. This allows processes to communicate over localhost or shared volumes while preserving process isolation and independent health management.
-Some exception scenarios may exist, particularly with third-party vendor applications that internally spawn worker processes or combine runtimes across multiple languages. These cases should remain the exception rather than the standard approach for internally developed JPMC applications.
-Adhering to a single primary process per container improves health reporting, resilience, operational visibility, and independent scaling behavior.
+Hi everyone,
+
+As our teams continue adopting AI-assisted development tools such as Copilot and Devin, we're exploring ways to ensure generated code remains aligned with our application architecture, design patterns, and engineering standards.
+
+One approach we're considering is maintaining an `agents.md` (or similar instruction file) at the root of each repository. The idea is to provide architectural context, coding conventions, approved patterns, dependency rules, and other repository-specific guidance so that AI coding tools operate within consistent guardrails across developers.
+
+I'm interested in learning how other application teams are approaching this. Specifically:
+
+* Are you using `agents.md`, Copilot instructions, or similar repository-level AI guidance?
+* What types of architectural or engineering rules have you found most valuable to include?
+* Have you implemented any additional controls (e.g., architecture validation, PR checks, custom review processes) to prevent AI-generated code from introducing architectural drift?
+* Any lessons learned or best practices you'd recommend?
+
+Would appreciate hearing about your experiences and approaches.
+
+Thanks.
