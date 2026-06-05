@@ -1,16 +1,11 @@
-Hi everyone,
+Hi Nic,
 
-As our teams continue adopting AI-assisted development tools such as Copilot and Devin, we're exploring ways to ensure generated code remains aligned with our application architecture, design patterns, and engineering standards.
+Long story short, I now recall why Java is included in some of the NGINX/NodeJS and other MW images.
 
-One approach we're considering is maintaining an `agents.md` (or similar instruction file) at the root of each repository. The idea is to provide architectural context, coding conventions, approved patterns, dependency rules, and other repository-specific guidance so that AI coding tools operate within consistent guardrails across developers.
+From previous discussions with the MW and NGC teams, Java isn't required by NGINX, NodeJS, or the other MW runtimes themselves. The dependency comes from the CyberArk NGC client, which is currently used for certificate and secret retrieval automation. NGC is Java-based and includes client-side cryptographic functionality, so Java becomes a dependency of the image.
 
-I'm interested in learning how other application teams are approaching this. Specifically:
+The MW teams are trying to slim down their UBI9 Minimal/Micro images, but at the moment there doesn't appear to be a native alternative to NGC. The NGC team also indicated they don't currently have plans or capacity to develop one without a clear business case, requirements, and funding.
 
-* Are you using `agents.md`, Copilot instructions, or similar repository-level AI guidance?
-* What types of architectural or engineering rules have you found most valuable to include?
-* Have you implemented any additional controls (e.g., architecture validation, PR checks, custom review processes) to prevent AI-generated code from introducing architectural drift?
-* Any lessons learned or best practices you'd recommend?
+From a base image uplift perspective, this appears to be one of the key blockers preventing some MW images from becoming truly minimal.
 
-Would appreciate hearing about your experiences and approaches.
-
-Thanks.
+Given that, do you think this is something we should simply accept as a current platform constraint, or is there enough value in image minimisation, CVE reduction, and standardisation to justify building a business case and engaging the relevant stakeholders?
