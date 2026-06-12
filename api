@@ -1,11 +1,23 @@
-Hi Nic,
+subject: Re: jlink approach for NGC and image optimization
 
-Long story short, I now recall why Java is included in some of the NGINX/NodeJS and other MW images.
+Thanks, I agree that we should avoid any solution that requires hundreds of application teams to modify their Dockerfiles or build processes, as adoption will inevitably be inconsistent.
 
-From previous discussions with the MW and NGC teams, Java isn't required by NGINX, NodeJS, or the other MW runtimes themselves. The dependency comes from the CyberArk NGC client, which is currently used for certificate and secret retrieval automation. NGC is Java-based and includes client-side cryptographic functionality, so Java becomes a dependency of the image.
+From my perspective, image size is only one aspect of the problem that jlink addresses. The broader challenge is defining a **standard, platform-supported pattern for secret retrieval** rather than having each team implement and maintain it independently. Otherwise, we risk inconsistent implementations, version drift, and increased operational and security overhead.
 
-The MW teams are trying to slim down their UBI9 Minimal/Micro images, but at the moment there doesn't appear to be a native alternative to NGC. The NGC team also indicated they don't currently have plans or capacity to develop one without a clear business case, requirements, and funding.
+I see the jlink approach as a pragmatic short-term improvement, as it can be delivered transparently by the MW team without requiring application teams to understand or adopt jlink themselves.
 
-From a base image uplift perspective, this appears to be one of the key blockers preventing some MW images from becoming truly minimal.
+Longer term, I agree that we should evaluate whether this capability is better provided by the LSE build pipeline or another platform-managed mechanism (for example, a standardized init/sidecar pattern or an agentless integration such as CyberArk WCS where supported), rather than embedding Java-based dependencies into every runtime image.
 
-Given that, do you think this is something we should simply accept as a current platform constraint, or is there enough value in image minimisation, CVE reduction, and standardisation to justify building a business case and engaging the relevant stakeholders?
+From a platform perspective, I see the options as follows:
+
+| **Approach**                                                   | **Assessment**                                                                                                       |
+| -------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| **Full JDK + NGC embedded in every base image**                | Current state. Simple for consumers but increases image size, attack surface, and maintenance burden.                |
+| **Application teams install NGC themselves**                   | Decentralizes ownership, leading to inconsistent implementations, version drift, and increased operational overhead. |
+| **Platform-managed jlink runtime**                             | A good short-term improvement that significantly reduces footprint while remaining transparent to application teams. |
+| **Platform-provided init/sidecar image**                       | A strong medium-term option that centralizes ownership and removes Java from non-Java runtime images.                |
+| **Agentless integration (e.g., CyberArk WCS where supported)** | A potential target architecture that eliminates the runtime dependency entirely where the use case permits.          |
+
+With **LSE hard gating approaching**, reducing unnecessary dependencies in our platform-managed base images will become increasingly important. The more we can centralize ownership and provide secure defaults at the platform level, the easier it will be for application teams to meet the gating requirements without additional effort.
+
+I'm happy to work with MW, NGC, LSE, and Developer Enablement to define a standardized enterprise pattern and target architecture that balances security, operational simplicity, and developer experience.
