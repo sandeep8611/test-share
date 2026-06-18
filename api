@@ -1,27 +1,57 @@
-# Leadership Pillar Commentary
+## Mid-Year Review
 
-## We Take Ownership
+### Overall Executive Summary
 
-Throughout the first half of the year, I significantly expanded my leadership responsibilities by driving the strategic direction and delivery of the firm's Container Security platform portfolio. In addition to leading VSaaS, 3PiiP, and the UBI platform, I extended my ownership to multiple strategic initiatives including Docker Improvement Presets (DiP), Hard Gating integration within LSE/Harness CI/CD pipelines, Middleware Base Image Upliftment, Operator Pipeline migration to 3PiiP, Container Hub Reporting (CHRIS), VSaaS scalability and resiliency improvements, and the adoption of GenAI capabilities across our engineering ecosystem.
+During H1 2026, I expanded my leadership scope from managing core Container Security platforms to driving the strategic direction of the broader Container Security portfolio, encompassing platform modernisation, developer enablement, engineering excellence, operational resilience, governance, and enterprise architecture. While leading a lean team of four engineers, I am driving the delivery of multiple strategic initiatives including enterprise VSaaS gating, UBI 9 modernisation, Middleware Base Image Upliftment, Docker Improvement Presets (DiP), Operator Pipeline integration into 3PiiP, VSaaS scalability improvements, and the foundation for the Unified Container Hub (CHRIS), while continuing to support business-as-usual operations and technical debt reduction.
 
-These initiatives have been delivered while leading a lean team of four engineers, requiring strong prioritization, execution discipline, and continuous adaptation to changing business priorities. Recognizing the growing demand for our platforms, I partnered closely with HR to expand the team and successfully hired two additional engineers who are expected to join in Q3, strengthening our long-term delivery capability.
+Beyond delivering technology solutions, I focused on creating sustainable organisational capability by establishing enterprise container standards, improving platform governance through telemetry-driven insights, strengthening cross-functional partnerships, enabling developer self-service, and adopting GenAI capabilities across our engineering lifecycle. I also expanded the team's capacity by hiring two additional engineers, onboarded new Product and SRE support functions, and invested in leadership development through the iLead programme and Engineering Excellence mentoring.
 
-I continue to invest in my own leadership development by participating in the iLead program, expanding my leadership skills, organizational network, and ability to influence across the firm. I have also embraced new technologies by championing the adoption of GenAI engineering tools such as Squad, Devin, Stylus, and GitHub Copilot, integrating them into our software development lifecycle to improve engineering productivity and quality.
+The outcomes of these initiatives have materially strengthened the firm's container security posture, accelerated modernisation, improved developer productivity, increased platform resiliency, reduced operational risk, and established scalable foundations for future growth.
 
-## We Deliver With Pride
+### Pillar 1: Leadership
 
-My focus this year has been on creating long-term value through platform modernization, standardization, and operational excellence. I have driven the enterprise adoption of UBI 9 Minimal and Micro base images, partnering closely with Middleware and Artifactory teams to ensure internal base images are secure, compliant, and optimized. By introducing engineering best practices such as multi-stage container builds, jlink patterns, and the removal of unnecessary Java runtimes, we have significantly reduced image sizes, lowered CVE exposure, and improved the overall efficiency of our container ecosystem.
+Throughout H1, I demonstrated leadership by taking ownership well beyond my immediate responsibilities and driving the strategic evolution of the Container Security portfolio. My ownership expanded from VSaaS, 3PiiP, and UBI to include DiP, Hard Gating integration, Middleware Base Image Upliftment, Operator Pipeline migration, Container Hub (CHRIS), VSaaS resiliency, engineering governance, and GenAI adoption across our engineering practices.
 
-I have continued to strengthen the reliability and scalability of VSaaS, which now processes over 300,000 image scans each month, through performance optimization, resiliency hardening, and platform improvements that support continued growth while maintaining operational excellence.
+Despite operating with a lean engineering team, I successfully balanced strategic delivery, operational support, technical debt reduction, and innovation. Recognising future demand, I acted as hiring manager to expand the team with two additional engineers joining in Q3 and onboarded a new Product Owner to accelerate delivery across the portfolio.
 
-Beyond engineering delivery, I expanded my role by partnering with our Project Manager to strengthen governance across the Container Security portfolio, ensuring product roadmaps, PTS compliance, and strategic initiatives remain aligned with organizational objectives while proactively addressing technical debt and operational risk.
+I invested in my own development through the iLead leadership programme while continuing to mentor colleagues through the Engineering Excellence (E3) programme and promote a culture of innovation by embedding AI-assisted engineering tools such as Copilot, Stylus, Devin, Squad, and Citi Assist into our software development lifecycle.
 
-## We Succeed Together
+Collaboration has been fundamental to my leadership approach. I established a joint operational model with SRE for VSaaS and 3PiiP, partnered with Middleware and Artifactory to modernise enterprise base images, supported multiple teams, including Vault, in adopting Release-on-Demand, expanded governance alongside Project Management, and built strong partnerships across engineering organisations to deliver shared strategic outcomes.
 
-Collaboration and enablement have been central themes of my leadership approach. I partnered closely with the SRE organization to establish an end-to-end operational support model for VSaaS and 3PiiP, defining clear processes, responsibilities, and support procedures that improve platform reliability and operational maturity.
+### Pillar 2: Risk & Control
 
-I have also worked across multiple engineering organizations to accelerate adoption of strategic capabilities. VSaaS became the first team to adopt the Release-on-Demand (RoD) platform, after which I actively supported the onboarding of the Aquatic and Vault teams, helping them modernize their production delivery processes and share best practices across organizations.
+I significantly strengthened the firm's container security controls by enhancing VSaaS gating policies beyond GEMs and exploitable CVEs and implementing these controls within LSE pipelines to improve preventative risk management.
 
-Recognizing the importance of developing talent, I onboarded our new Product Owner, Avtar, enabling him to quickly become effective within the Container Security portfolio and assume ownership responsibilities. As an Engineering Excellence (E3) alumnus, I continue to contribute back to the program by serving as a role player and mentor, helping develop future engineering leaders and promoting a culture of continuous learning.
+To support sustainable governance, I designed advanced telemetry and reporting capabilities that provide visibility into policy compliance, vulnerable images, CVE trends, and remediation progress. These capabilities enable data-driven decision-making and proactive risk management rather than reactive reporting.
 
-Across all initiatives, I have focused on breaking down organizational barriers, fostering strong partnerships with Middleware, Artifactory, SRE, Product Management, and engineering teams, and creating scalable solutions that deliver lasting value for developers and the broader organization.
+I led the enterprise modernisation of container base images through adoption of UBI 9 Minimal and Micro standards, reducing RHEL 7 usage to approximately 2% while introducing multi-stage build patterns, jlink optimisation, non-root execution standards, and slimmer runtime images. These initiatives substantially reduced the attack surface, lowered CVE exposure, improved compliance, and established long-term engineering standards across the organisation.
+
+### Pillar 3: Financial Performance
+
+I focused on delivering scalable engineering solutions that improve performance while optimising infrastructure utilisation and long-term operating costs.
+
+VSaaS now supports more than 300,000 image scan requests per month, and I led multiple initiatives to improve throughput, reduce scan latency, optimise polling strategies, strengthen resiliency, and enable zero-downtime deployments. These improvements position the platform for continued growth without proportional infrastructure expansion.
+
+Enterprise adoption of UBI 9 Minimal and Micro images, combined with multi-stage build patterns and jlink optimisation, significantly reduced container image sizes, storage requirements, network transfer costs, and runtime overhead while lowering ongoing maintenance effort and security remediation costs.
+
+I also influenced the broader enterprise architecture by reframing Java dependency removal into a strategic secret management pattern, aligning senior stakeholders around a centralised solution that avoids fragmented implementations and creates a scalable foundation for future compliance initiatives, including LSE hard gating.
+
+Delivering an expanding portfolio with a lean engineering team while leveraging automation, standardised platforms, and shared operational models has maximised organisational value and improved engineering efficiency.
+
+### Pillar 4: Client & Franchise Outcomes
+
+My initiatives have focused on improving the experience, productivity, and security of our internal engineering community.
+
+I led the modernisation of Middleware base images, migrating the majority of image families to UBI 9 while delivering substantial reductions in image size and security vulnerabilities. I established engineering standards through multi-stage builds, jlink optimisation, and slim container patterns, publishing guidance that has been broadly adopted across the engineering community.
+
+To simplify modernisation efforts, I productised Docker Improvement Presets (DiP) through Stylus, enabling developers to improve Dockerfiles with minimal effort while accelerating adoption of enterprise standards. I further supported developer enablement through Engineering Excellence publications, UBI modernisation guidance, and container optimisation best practices.
+
+I designed the future architecture for Operator Pipeline integration into 3PiiP, extending enterprise security controls and governance to additional delivery pipelines.
+
+By partnering closely with Middleware, Artifactory, SRE, Product Management, Release Engineering, and application teams, I have helped establish a more secure, standardised, scalable, and developer-centric container ecosystem that will continue delivering value across the firm.
+
+### Priorities for H2 2026
+
+My focus for the second half of the year is to complete the production rollout of VSaaS hard gating within LSE, deliver Operator Pipeline integration into 3PiiP, transition the CHRIS platform from design into implementation, launch Dockerfile Improvement Recommendation services, continue enterprise adoption of UBI 9 Minimal and Micro standards, and further scale VSaaS to support continued growth while maintaining operational excellence.
+
+I will also focus on successfully onboarding new team members, continuing the adoption of GenAI across engineering workflows, strengthening cross-functional partnerships, and establishing the next generation of secure, resilient, and developer-friendly container platforms for the firm.
