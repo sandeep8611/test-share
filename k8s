@@ -1,27 +1,2 @@
-Interview Feedback – Candidate Evaluation
-Recommendation: Proceed to next stage
-Strengths
-Good knowledge of Kubernetes and container technologies, demonstrating solid understanding of the ecosystem.
-Good overall understanding of the end-to-end SDLC, including container build processes, image scanning, and deployment workflows.
-Communication was clear and effective, with answers delivered in a structured and understandable way.
-Weaknesses
-Hands-on experience appears somewhat limited based on the depth of responses provided during the interview.
-A deeper technical validation and practical experience check would be beneficial in the second interview round through more detailed technical discussions or scenario-based questions.
-
-
-
-
-Interview Feedback – Candidate Evaluation
-Recommendation: No – Do not proceed to next stage
-Strengths
-Good communication skills; able to think through questions and articulate responses clearly.
-Demonstrated a constructive approach to problem-solving—when unfamiliar with a specific tool or topic, attempted to reason through how the solution might work.
-Shows understanding of architecture principles and high-level system thinking.
-Maintained a professional attitude during the interview and expressed interest in growing further in a technical role.
-Weaknesses
-Limited knowledge and experience in Kubernetes and container technologies, which are core requirements for this role.
-Very little hands-on experience with Kubernetes; some exposure to AWS ECS, but not at the depth expected.
-While some architectural answers were reasonable, hands-on engineering depth appeared inconsistent, with several responses lacking practical clarity.
-Overall technical profile does not currently meet the team’s core requirements around containers and Kubernetes.
-Conclusion
-Although the candidate demonstrated good communication and a positive technical mindset, the lack of sufficient experience in Kubernetes and container ecosystems makes them not a suitable fit for this team at this time.
+The current solution leverages an established enterprise platform that provides user identity verification and access control enforcement for VSaaS. Implementing a custom authentication and authorization mechanism would largely duplicate existing capabilities while requiring significant engineering effort, operational support, security reviews, and ongoing maintenance.
+Given that the existing controls already provide robust authentication and authorization, the additional investment would deliver limited incremental security or business benefit. Therefore, we believe the current approach remains the most practical and cost-effective solution.
