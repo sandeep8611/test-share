@@ -1,61 +1,72 @@
-# Upcoming Container Security Hard Gating in Lightspeed Enterprise (LSE)
+Dear Developer Community,
 
-### Strengthening Container Security Across JPMC
+This notice is to inform you of an important upcoming enhancement to container security within Lightspeed Enterprise (LSE).
 
----
+The Container Security team will be transitioning the current VSaaS container image checks from **Soft Gating** to **Hard Gating** within LSE. The gate will enforce security controls based on findings that are already available today through the integrated VSaaS scan reports, including:
 
-## Why are we introducing Hard Gating?
+* GEMs
+* Exploitable CVEs
+* Malware
+* Image Age policy violations
 
-As container adoption continues to grow, so does the risk of vulnerable, outdated, or compromised container images reaching our Kubernetes environments.
+### Why Are We Making This Change?
 
-To improve our security posture and reduce deployment risk, Container Security is introducing **Hard Gating** within LSE for high-risk container security findings.
+As container adoption continues to grow across the firm, it is increasingly important to ensure that vulnerable, outdated, or potentially compromised images do not make their way into our Kubernetes environments.
 
-### Hard Gate Criteria
+This enhancement will strengthen our container security posture and reduce deployment risk by preventing high-risk images from progressing through the software delivery lifecycle.
 
-🔒 GEMs (Critical Security Findings)
+### Rollout Timeline
 
-🔒 Exploitable CVEs
+The Container Security team will provide additional rollout and enforcement details in the coming weeks.
 
-🔒 Malware Detection
+Current planning is:
 
-🔒 Image Age Policy Violations
+* **July 2026:** Initial rollout to a targeted set of CSI IDs
+* **Q3/Q4 2026:** Expansion to all in-scope CSI IDs
 
----
+### What Does This Mean for You?
 
-## What is changing?
+Today, VSaaS reports provide visibility into container security findings but do not prevent pipeline progression.
 
-### Today
+Following enforcement, container images that do not meet the defined gating criteria may cause LSE pipelines to fail until the findings are remediated or an approved exception is obtained through the established One Approval process.
 
-✓ VSaaS scans container images
+### Action Required
 
-✓ Findings are visible in scan reports
+Please begin preparing now by:
 
-✓ Pipelines continue to deploy (Soft Gating)
+* Reviewing your VSaaS reports for potential gate failures
+* Remediating findings proactively where possible
+* Understanding your application's exposure to:
 
-### Future State
+  * GEMs
+  * Exploitable CVEs
+  * Malware
+  * Image Age policy violations
 
-✓ VSaaS findings will be enforced through LSE Hard Gating
+### Recommended Resources
 
-✓ Non-compliant images will fail policy checks
+To help teams prepare, we recommend:
 
-✓ High-risk images will be prevented from progressing through the pipeline
-
----
-
-## What should teams do now?
-
-✔ Review your VSaaS reports
-
-✔ Identify findings that would fail future gates
-
-✔ Remediate issues proactively
-
-✔ Engage Container Security for guidance and support
-
----
+* Enable Renovate to automatically consume updated base images
+* Adopt DiP (Dockerfile Improvement Preset) to align Dockerfiles with JPMC standards and best practices
+* Migrate to supported UBI9 Minimal or UBI9 Micro base images
+* Review the Container Image Development Guide
+* Review "5 Clever Tricks to Streamline Your Container Images"
 
 ### Key Message
 
 **Today's VSaaS Report = Tomorrow's Gate**
 
-The data used for gating already exists today. We encourage teams to review their VSaaS findings now and prepare ahead of enforcement.
+The information used for future enforcement is already available in VSaaS today. We strongly encourage teams to review their reports and address findings ahead of enforcement.
+
+### Need Help?
+
+If you have questions or require assistance reviewing your container images, please contact:
+
+**CISO GLOBAL Container Security VSaaS Support**
+
+The Container Security team is committed to supporting teams throughout this transition and will provide additional communications, documentation, and guidance as rollout progresses.
+
+Thank you for your partnership in helping strengthen container security across the firm.
+
+Container Security Team
