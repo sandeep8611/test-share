@@ -1,72 +1,17 @@
-Dear Developer Community,
+Hi Team,
 
-This notice is to inform you of an important upcoming enhancement to container security within Lightspeed Enterprise (LSE).
+I hope you're doing well.
 
-The Container Security team will be transitioning the current VSaaS container image checks from **Soft Gating** to **Hard Gating** within LSE. The gate will enforce security controls based on findings that are already available today through the integrated VSaaS scan reports, including:
+We would like to contribute an article to the next Engineering Excellence newsletter highlighting our recent work on **Container Modernisation**. The proposed content will cover:
 
-* GEMs
-* Exploitable CVEs
-* Malware
-* Image Age policy violations
+* **VSaaS LSE Hard Gating for Containers** – improving compliance and security through mandatory gating.
+* **Migrating to UBI 9 Minimal/Micro Base Images** – guidance, benefits, and best practices for adopting Red Hat UBI 9 Minimal/Micro images.
+* **Docker Improvement Preset (DiP)** – how teams can leverage DiP to simplify container hardening and optimize Docker image quality.
 
-### Why Are We Making This Change?
+Could you please let us know who we should coordinate with to submit this content for publication in the next Engineering Excellence newsletter? We'd be happy to provide the article, supporting materials, and any additional information needed.
 
-As container adoption continues to grow across the firm, it is increasingly important to ensure that vulnerable, outdated, or potentially compromised images do not make their way into our Kubernetes environments.
+Looking forward to your guidance.
 
-This enhancement will strengthen our container security posture and reduce deployment risk by preventing high-risk images from progressing through the software delivery lifecycle.
+Best regards,
 
-### Rollout Timeline
-
-The Container Security team will provide additional rollout and enforcement details in the coming weeks.
-
-Current planning is:
-
-* **July 2026:** Initial rollout to a targeted set of CSI IDs
-* **Q3/Q4 2026:** Expansion to all in-scope CSI IDs
-
-### What Does This Mean for You?
-
-Today, VSaaS reports provide visibility into container security findings but do not prevent pipeline progression.
-
-Following enforcement, container images that do not meet the defined gating criteria may cause LSE pipelines to fail until the findings are remediated or an approved exception is obtained through the established One Approval process.
-
-### Action Required
-
-Please begin preparing now by:
-
-* Reviewing your VSaaS reports for potential gate failures
-* Remediating findings proactively where possible
-* Understanding your application's exposure to:
-
-  * GEMs
-  * Exploitable CVEs
-  * Malware
-  * Image Age policy violations
-
-### Recommended Resources
-
-To help teams prepare, we recommend:
-
-* Enable Renovate to automatically consume updated base images
-* Adopt DiP (Dockerfile Improvement Preset) to align Dockerfiles with JPMC standards and best practices
-* Migrate to supported UBI9 Minimal or UBI9 Micro base images
-* Review the Container Image Development Guide
-* Review "5 Clever Tricks to Streamline Your Container Images"
-
-### Key Message
-
-**Today's VSaaS Report = Tomorrow's Gate**
-
-The information used for future enforcement is already available in VSaaS today. We strongly encourage teams to review their reports and address findings ahead of enforcement.
-
-### Need Help?
-
-If you have questions or require assistance reviewing your container images, please contact:
-
-**CISO GLOBAL Container Security VSaaS Support**
-
-The Container Security team is committed to supporting teams throughout this transition and will provide additional communications, documentation, and guidance as rollout progresses.
-
-Thank you for your partnership in helping strengthen container security across the firm.
-
-Container Security Team
+[Your Name]
