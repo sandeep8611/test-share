@@ -1,17 +1,14 @@
-Hi Team,
+Noor has been a strong team player throughout the first half of the year, demonstrating a collaborative mindset and willingness to step in when needed. He showed initiative by taking ownership of resolving issues when the VSaaS development environment was impacted by the load balancer incident, helping the team restore normal operations.
+This year, I have encouraged Noor to broaden his ownership beyond individual tasks by leading the DiP workstream. He has made good progress and is well positioned to further develop his leadership skills by driving the DiP vision, collaborating closely with the Product Owner, Avtar, and effectively delegating work and partnering with Oyin. I believe this opportunity will help Noor expand his influence, strengthen stakeholder engagement, and grow as a technical leader during the second half of the year.
 
-I hope you're doing well.
 
-We would like to contribute an article to the next Engineering Excellence newsletter highlighting our recent work on **Container Modernisation**. The proposed content will cover:
+Noor contributed to strengthening the security across VSaaS and Image Validation. He successfully delivered the integration of the VTM library with the Image Validation script, supporting the secure ingestion of external images through the 3PiiP platform.
+Noor consistently delivers well-tested code with strong test coverage, helping to minimise implementation risk and maintain solution quality. He also completed all mandatory training on time.
 
-* **VSaaS LSE Hard Gating for Containers** – improving compliance and security through mandatory gating.
-* **Migrating to UBI 9 Minimal/Micro Base Images** – guidance, benefits, and best practices for adopting Red Hat UBI 9 Minimal/Micro images.
-* **Docker Improvement Preset (DiP)** – how teams can leverage DiP to simplify container hardening and optimize Docker image quality.
 
-Could you please let us know who we should coordinate with to submit this content for publication in the next Engineering Excellence newsletter? We'd be happy to provide the article, supporting materials, and any additional information needed.
+Noor made good progress in automating the population of the ManagerRepo page through scripting. Following the handover from Houssem, he took ownership of the solution and successfully expanded its use across both DiP and Container Modernisation. This automation has helped development teams consistently use up-to-date base images, improving their image security. Noor also improved the performance of identifying GEM CVEs in container images.
 
-Looking forward to your guidance.
 
-Best regards,
-
-[Your Name]
+During the first half of the year, Noor took ownership of driving the DiP (Dockerfile Improvement Preset) workstream and has made good progress towards making DiP available to developers through Workspace. He also played a key role in testing DiP for Friends and Family teams, advancing the DiP preset to community status, and adoption across engineering teams.
+Noor has leveraged GenAI tools such as GitHub Copilot and Squad in his day-to-day development, improving code quality and delivery efficiency, which contributes to a more reliable and secure container security platform for our users.
+Looking ahead, I encourage Noor to build on this momentum by taking end-to-end ownership of the DiP vision, driving broader adoption across the development community, and expanding support for additional runtimes (e.g., Java and Python) and other developer use cases to maximise its impact.
