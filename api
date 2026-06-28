@@ -1,69 +1,50 @@
-Harpal
-L
-
-Harpal has demonstrated strong leadership and ownership by driving two of the team's key strategic initiatives this year. Firstly, he has led the VSaaS LSE Gating workstream, working closely with the Gating Service  to progress the solution into production, with our CSI applications now beginning to adopt the new VSaaS Gating controls. Throughout the initiative, Harpal has overcome several technical and stakeholder challenges, including designing and delivering a new Gating report UI to address the limitations of the existing LS UI, ensuring the project continued to progress despite these constraints.
-Secondly, Harpal has built strong partnerships with the Middleware teams to drive the optimisation of middleware base images, promoting engineering best practices such as UBI 9 Minimal adoption, multi-stage container builds, and Renovate onboarding. His ability to collaborate across multiple teams and influence engineering standards has been a significant contribution to improving both security and developer experience across the platform.
-In addition, Harpal is proactively partnering with the NGC team in developing a jlink-based NGC artefact. This initiative aims to enable development teams to use NGC within container images without requiring a full Oracle JDK installation, reducing image size and the overall attack surface. His willingness to collaborate across teams and invest in long-term platform improvements demonstrates strong technical leadership and strategic thinking.
-
-As a senior member of the team, I encourage Harpal to further broaden his leadership beyond the successful delivery of individual workstreams. This includes mentoring and supporting other team members, driving engineering excellence across our products such as VSaaS and 3PiiP, and continuing to champion the adoption of GenAI tooling to improve engineering productivity and code quality across the team. His initiatives to evaluate and introduce Devin, together with sharing his COIN implementation with the wider Container Engineering team, are strong examples of his leadership in driving innovation and fostering knowledge sharing.
-I also encourage Harpal to strengthen his collaboration with Avtar and the SRE team to ensure our product roadmap remains aligned with developer needs, operational support continues to mature, and we continue delivering capabilities that provide long-term value to our development community.
-
-
-R
-Harpal made a significant contribution to strengthening our security posture through the upliftment of middleware base images, helping our development teams adopt more secure and up-to-date base images. He worked closely with the Middleware teams to drive the adoption of engineering best practices, including implementing multi-stage builds, delivering updated middleware runtime base images (Java, Python, Messaging, etc.) built on the latest UBI 9 Minimal/Micro base images, and onboarding the Middleware teams to Renovate. This enables middleware base images to be updated and delivered promptly whenever new UBI/RHEL base images are released.
-These improvements help ensure applications remain aligned with the latest base image updates, reduce security vulnerabilities, improve consistency across middleware images, and accelerate the adoption of security fixes across the development community.
-In addition, Harpal regularly supported our engineering team by reviewing pull requests and providing technical guidance to help maintain the quality and security of our deliverables. He also completed all mandatory training on time.
-As Harpal continues to lead the base image upliftment work, I encourage him to view it as an ongoing capability rather than a one-time initiative. Building stronger strategic partnerships with our product teams and maintaining continuous collaboration will help ensure base images remain current, security best practices are consistently adopted, and updates are delivered efficiently to our developer community.
-
-F
-Harpal delivered one of the team's most impactful engineering initiatives this year by leading the optimisation of our middleware container images and driving the migration to UBI 9 Minimal/Micro. His work has enabled application teams to build and release their applications more quickly while maintaining a stronger security posture.
-Through these optimisations, Harpal reduced image sizes by up to 60% (for example, reducing the Python runtime image from 580MB to 187MB) and achieved substantial reductions in security vulnerabilities across our middleware runtime images. Key improvements included eliminating 100% of Critical CVEs and reducing High-severity CVEs by more than 80% for runtime images such as Python and Golang. He also championed engineering best practices by implementing multi-stage container builds, adopting UBI 9 Minimal as the standard base image, and removing unnecessary packages to reduce the overall attack surface.
-In addition, Harpal continued to support the UBI delivery pipeline, ensuring updated base images were released reliably and on time for our development teams.
-As Harpal builds on this success, I encourage him to continue driving automation and standardisation across our middleware platform while partnering closely with product teams to accelerate the delivery of these optimised base images. Embedding these practices as a consistent engineering standard across all middleware runtime images will further enhance engineering efficiency, strengthen our security posture, and deliver long-term value to our developer community.
-
-C
-Harpal has taken ownership of the VSaaS LSE Gating workstream, one of the team's key strategic initiatives for this year, and has made significant progress in moving it towards production. Through his efforts, the solution has now been introduced into production, with our CSI applications whitelisted to adopt the new Gating controls.
-Harpal has worked closely with the Gating Service and LSE teams to ensure our technical requirements were understood and delivered. Throughout the project, he encountered several technical and stakeholder challenges but consistently demonstrated resilience and ownership in driving the initiative forward. A notable example was overcoming the limitations of the existing LS UI, which could not support the required functionality. Rather than allowing this to become a blocker, Harpal adapted the existing interface where possible while also designing and developing a new UI to present the Gating report, ensuring the solution remained usable for developers.
-His ability to collaborate across teams, navigate technical constraints, and deliver practical solutions has been instrumental in progressing this initiative and improving the developer experience while strengthening our container security platform.
-As the workstream moves towards broader adoption, I encourage Harpal to continue expanding his ownership beyond the technical implementation by strengthening partnerships with the Gating Service and LSE teams, working closely with Avtar to drive awareness and adoption across the development community, and ensuring the solution continues to evolve based on developer feedback and business needs.
-
+VP Ranking
+1. Rimas
+2, Nodir
+Both have delivered strongly, but Rimas is operating at a broader platform and architectural level, influencing multiple workstreams, whereas Nodir is successfully transitioning into leading a single strategic workstream (DiP).
 
 
 
 Rimas
+Scope of role SME for the VSaaS and 3PiiP platforms, responsible for driving architecture, platform scalability, security controls.
+What has changed since last year Rimas has broadened his influence beyond technical delivery. He now working on multiple workstreams and initiatives, drives architectural decisions, mentors junior engineers, and is recognised as the technical expert for VSaaS and 3PiiP.
+Assessment Exceeding expectations.
+Examples
+	•	Designed and delivered the Operator Pipeline integration into 3PiiP, working closely with the Operator Pipeline and Artifactory teams to deliver an end-to-end solution.
+	•	Increased the VSaaS security gating bar by implementing malware detection, image age threshold gating and proactive malware notifications.
+	•	Delivered the VSaaS active-active architecture, improving platform resilience and removing the dependency on a single Aqua Console.
+	•	Drove scalability improvements through memory optimisation, SIGTERM handling and platform performance investigations.
+	•	Working on the CHRIS workstream to improve the developer journey.
+	•	Acts as the technical SME for VSaaS and 3PiiP.
+	•	Consistently demonstrates good engineering through development, testing, telemetry and documentation.
+	•	Supporting Aquasec team on their tasks which is a rare contribution from anyone in our team
+	•	Supporting both VSaaS and 3PiiP platform - users queries, incident tickets, feature gaps etc…
 
-L
-Rimas has consistently demonstrated strong technical leadership throughout the first half of the year and has become the go-to subject matter expert for both the 3PiiP and VSaaS platforms. Both engineers and stakeholders value his deep technical knowledge and frequently seek his guidance when resolving complex technical challenges. He has demonstrated a strong sense of ownership by proactively identifying and resolving issues across VSaaS, 3PiiP and the Container Security APIs, including responding to production incidents, improving error handling, and driving root-cause analysis to strengthen the overall resilience of our platform.
-Rimas consistently delivers with pride by maintaining a high engineering standard across everything he delivers. Whether implementing new security capabilities such as malware detection and image age threshold gating, designing the Operator Pipeline integration with 3PiiP, or improving VSaaS scalability through the active-active architecture, he ensures solutions are well designed, thoroughly tested, supported by telemetry and accompanied by clear technical documentation. He also invests time mentoring junior engineers, including Oyin and Safa, across the Container Security team, sharing his knowledge and helping others develop their technical capability.
-In addition, Rimas' contribution to the Aquasec platform has been an excellent example of his leadership beyond the immediate team. By supporting the wider Aquasec team, he has extended his technical influence across multiple teams while helping improve the resilience and operational support of both VSaaS and the wider container security ecosystem.
-Rimas is a highly valued member of the team whose commitment and dedication to solving difficult problems is one of his greatest strengths. His willingness to take ownership of new strategic initiatives, such as the CHRIS workstream, while continuing to ensure our container security platform remains scalable and available for the developer community, demonstrates both technical leadership and a strong sense of accountability.
-As Rimas continues to grow, I encourage him to further develop his stakeholder engagement by remaining open to different perspectives and approaches. His technical judgement is highly respected, and by encouraging broader collaboration, listening to alternative viewpoints and maintaining flexibility when shaping solutions, he will strengthen alignment across teams and further increase his effectiveness in influencing complex workstreams and senior stakeholders.
+	•	Mentoring Oyin and Safa.
+	•	
 
-R
-Rimas strengthened our container security controls by successfully implementing malware detection and image age threshold gating within VSaaS and 3PiiP. These additional gating criteria have significantly raised our security bar, strengthening our defence-in-depth strategy and reducing the risk of insecure container images reaching production. He also implemented proactive email notifications for malware detections, enabling faster identification and remediation of security issues before they impact our developer community.
-In addition, Rimas consistently dedicates time to reviewing pull requests across the team, providing constructive and candid feedback to developers. I consider this to be a high-impact contribution, as it provides an important human control within our engineering process, ensuring code quality, security and engineering excellence before changes are released into production. He has also improved our Dockerfile standards by introducing multi-stage build patterns, helping reduce image sizes, minimise vulnerabilities and improve the overall security posture of our container platform.
-Rimas is consistently proactive in identifying security gaps across our container platform and takes ownership of driving them through to resolution. As he continues to build on these strengths, I encourage him to further influence our long-term security strategy by driving the adoption of security best practices across partner teams and continuing to raise the engineering standards of our container security platform.
+Nodir
+Scope of role leading the DiP workstream while SME across VSaaS, Image Validation, VTM library and ownership of our some other workstreams.
+What has changed since last year Nodir has progressed from owning individual technical deliverables to leading the DiP workstream, taking greater ownership of this initiative and collaborating with PO and developer community
+Examples
+	•	Took ownership of the DiP workstream and is leading delivery towards the first community release in Stylus Workspaces.
+	•	Delivered the VTM integration into Image Validation to strengthen secure ingestion of external images and VSaaS
+	•	Automated the ManagerRepo page, now supporting both DiP and Container Modernisation.
+	•	Improved GEM CVE detection performance to enhance and support Gating.
+	•	Consistently delivers high-quality code with strong test coverage and engineering discipline.
+Development focus Continue growing technical leadership by independently driving the DiP roadmap, proactively managing delivery risks, engage closely with stakeholders, and expanding delegation across the team.
+Harpal
+Scope of role Ownership of VSaaS LSE Gating critical workstream, Middleware Base Image Upliftment
+What has changed since last year Harpal has expanded his role beyond technical delivery by leading critical initiatives involving multiple stakeholder teams. He has developed stronger partnerships across Middleware, Gating Service  teams while driving these critical strategic initiatives.
+Assessment exceeding expectations.
+Examples
+	•	Led the optimisation and migration of middleware runtime images to UBI 9 Minimal/Micro, significantly reducing image sizes and security vulnerabilities.
+	•	Delivered engineering improvements including multi-stage container builds and Renovate adoption, strengthening the long-term security posture of middleware images.
+	•	Led the VSaaS LSE Gating workstream, working closely with the Gating Service and LSE teams to progress the solution into production.
+	•	Designed and delivered a new Gating report UI to overcome limitations in the existing LS UI.
+	•	Established strong partnerships with Middleware teams, improving engineering standards across multiple runtime images.
+	•	GenAI adoption through Devin and sharing the COIN implementation with the wider Container Engineering team.
 
-F
-Rimas made a significant contribution towards improving the scalability, resilience and operational efficiency of the VSaaS platform during the first half of the year. He successfully implemented an active-active architecture for VSaaS, removing the dependency on a single Aqua Console and significantly improving platform resilience. He also led investigations into Readiness and Liveness probe optimisation, memory optimisation (including MALLOC tunables), and enhanced SIGTERM handling to improve the reliability of VSaaS deployments and reduce deployment-related disruption.
-These improvements have strengthened the stability and operational efficiency of the VSaaS platform while establishing a good foundation for future infrastructure optimisation and lower operating costs as platform adoption continues to grow.
-As Rimas continues to build on this work, I encourage him to take greater ownership of the long-term scalability and availability roadmap for VSaaS by working closely with the SRE team, particularly Perminder and Vincent. As VSaaS becomes an increasingly critical service within our container security platform, with the introduction of hard gating in LSE, it is essential that the platform continues to scale reliably to meet growing demand. Driving capacity planning, resilience improvements and operational readiness in partnership with the SRE team will help ensure VSaaS remains a highly available, resilient and trusted scanning service for our developer community.
 
-
-C
-Rimas has made a significant contribution to improving the developer experience and strengthening our container security platform through many strategic initiatives during the first half of the year.
-One of his key achievements was leading the onboarding of the Operator pipeline into 3PiiP. This was a technically complex initiative, with several integration challenges across multiple platforms. Rimas designed an elegant end-to-end solution that enables Operator images to pass through 3PiiP security controls before being ingested internally. He worked closely with the Operator Pipeline and Artifactory teams, bringing stakeholders together, aligning on the solution design, and ensuring the implementation met the requirements of all teams involved.
-Rimas also made a significant contribution to the VSaaS Gating workstream by extending the Gating criteria to include image age and malware detection. In addition to the technical implementation, he ensured the appropriate technical and user documentation was produced. His deliveries consistently demonstrate a high standard of engineering, with comprehensive test coverage, strong engineering practices, and telemetry to measure operational success.
-More recently, Rimas has taken ownership of the Container Hub (CHRIS) initiative. Although this was not part of the original roadmap plan for the year, he has shown good ownership and proactively begun shaping the solution. I have been particularly impressed by his willingness to take ownership of this new workstream to deliver additional value for our developer community.
-As Rimas continues to build on these achievements, I encourage him to continue strengthening partnerships with our stakeholder teams and driving early engagement with developers to validate solutions and measure adoption. Building on his strong technical leadership with broader product and stakeholder influence will help maximise the impact of these strategic initiatives.
-
-
-Avtar
-Since joining the team as Product Owner, Avtar has made a positive contribution by providing direction across our strategic workstreams. He has played an important role in driving the DiP workstream alongside Nodir, helping progress the first community release of DiP within Stylus Workspaces. This is an important milestone that will enable developers to modernise their Dockerfiles more easily through the Dockerfile Improvement Preset (DiP).
-Avtar has also made a valuable contribution to the VSaaS Gating workstream, working closely with Harpal to help keep delivery on track. 
-His support with sprint planning and backlog prioritisation has helped the team remain focused on the highest-value work and deliver measurable outcomes during the first half of the year. 
-In addition, his work to establish a clear support model between the SRE and Engineering teams has been instrumental in ensuring the SRE team can effectively support our VSaaS and 3PiiP products while allowing engineers to focus on delivering new capabilities for the developer community.
-The next stage of Avtar's development is to become more independent in driving our workstreams as a Product Owner. I would like to see him take greater ownership of defining workstream roadmaps, establishing measurable success criteria, and ensuring engineering teams and management have a clear understanding of priorities and expected outcomes. I also encourage Avtar to engage more continuously with the developer community to better understand their challenges, gather feedback, and identify gaps. This will help him shape workstream roadmaps that are driven by developer needs and ensure we continue delivering capabilities that provide meaningful value to our engineering community.
-For example, for the DiP workstream, I believe there is an opportunity for Avtar to drive developer adoption, define success metrics, and build awareness across the development community. Similarly, for the VSaaS Gating workstream, I would encourage him to continue strengthening partnerships with the Gating Service, LSE and developer community, ensuring developer communications and engagements, onboarding processes and supporting documentation are in place so that the solution is not only technically delivered but also successfully adopted. 
-I also believe Avtar would benefit from continuing to deepen his understanding of our container security products, including the technical challenges, areas of technical debt and long-term platform priorities. This will help him make more informed prioritisation decisions and define stronger product roadmaps. Given his role spans multiple engineering teams, I also see an opportunity for him to strengthen collaboration across both Adam's and Ali's teams, as well as continue developing the partnership with the SRE team to ensure clear operational roadmaps and support processes are established.
-Overall, I have found Avtar to be a positive addition to the team. As he gains more experience in the Product Owner role, I believe his biggest opportunity is to evolve from coordinating delivery to independently owning the vision, roadmap, stakeholder engagement and measurable success of our strategic workstreams.
+Oyin (AVP)
+Scope of role Software engineer contributing to DiP, platform modernisation, repository maintenance and engineering improvements across the Container Security platform.
