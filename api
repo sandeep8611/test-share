@@ -1,57 +1,9 @@
-### Introduction (20–30 sec)
+Oyin has significantly broadened the scope of his role by taking ownership of the DiP workstream following Houssem's departure. As the primary engineer driving DiP, he has stepped into a much larger responsibility, contributing to the delivery of one of the team's key strategic initiatives while continuing to support platform modernisation and engineering improvements. This represents a notable increase in both ownership and technical scope compared with last year.
 
-"Before we get into the demo, I'd like to spend a couple of minutes talking about an important upcoming enhancement to Lightspeed Enterprise for container security.
 
-The Container Security team will soon be introducing hard gating for container images within LSE, similar to the application security gating model that many teams are already familiar with today."
-
----
-
-### Why Hard Gating? (45 sec)
-
-"As container adoption continues to grow across the firm, so does the importance of ensuring that vulnerable, outdated, or potentially compromised images do not make their way into our Kubernetes environments.
-
-To give you a sense of scale, VSaaS scanned more than 300,000 container images through LSE last month alone.
-
-The objective is straightforward: improve our container security posture, reduce risk, and prevent high-risk images from progressing through the software delivery lifecycle."
-
----
-
-### What Is Changing? (45 sec)
-
-"VSaaS is already integrated with LSE today and provides visibility into container security findings.
-
-What's changing is that these findings will move from visibility to enforcement through hard gating.
-
-The gate will evaluate criteria such as GEMs, exploitable CVEs, malware detection, and image age policy violations.
-
-Importantly, this is not a new scanning solution and it is not introducing new data. The information used for gating already exists in your VSaaS reports today."
-
----
-
-### How Can Teams Prepare? (45 sec)
-
-"There are several things teams can do today to prepare.
-
-First, review your VSaaS reports and identify findings that could fail future gates.
-
-Second, enable Renovate to help keep your base images current by automatically raising pull requests when updates become available.
-
-Third, adopt the Dockerfile Improvement Preset, or DiP, to align your Dockerfiles with JPMC standards and best practices.
-
-We also encourage teams to migrate to supported UBI9 Minimal or UBI9 Micro base images and follow the Container Image Development Guide for secure container development practices."
-
----
-
-### Key Takeaway (15 sec)
-
-"If you remember one thing from today's session, let it be this:
-
-**Today's VSaaS Report equals tomorrow's gate.**
-
-The easiest way to prepare for hard gating is to start reviewing and addressing your VSaaS findings now."
-
----
-
-### Transition to Demo (10 sec)
-
-"With that context, I'd like to hand over to Harpal, who will walk through a short demonstration of the hard gating experience and show where this information is already available today within VSaaS."
+xamples
+Played a key role in testing the DiP Friends & Family release, improving confidence ahead of wider adoption.
+Supported the migration of repositories to RHEL 9 Minimal/Micro base images.
+Ensured Renovate pull requests were reviewed and merged in a timely manner, helping repositories remain secure and up to date.
+Contributed to the Bitbucket to GitHub migration and supported the Python 3.13 migration across VSaaS and related repositories.
+Demonstrated a positive team attitude by supporting ad hoc work and responding well to changing priorities.
