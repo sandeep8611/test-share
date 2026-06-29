@@ -1,50 +1,57 @@
-VP Ranking
-1. Rimas
-2, Nodir
-Both have delivered strongly, but Rimas is operating at a broader platform and architectural level, influencing multiple workstreams, whereas Nodir is successfully transitioning into leading a single strategic workstream (DiP).
+### Introduction (20–30 sec)
 
+"Before we get into the demo, I'd like to spend a couple of minutes talking about an important upcoming enhancement to Lightspeed Enterprise for container security.
 
+The Container Security team will soon be introducing hard gating for container images within LSE, similar to the application security gating model that many teams are already familiar with today."
 
-Rimas
-Scope of role SME for the VSaaS and 3PiiP platforms, responsible for driving architecture, platform scalability, security controls.
-What has changed since last year Rimas has broadened his influence beyond technical delivery. He now working on multiple workstreams and initiatives, drives architectural decisions, mentors junior engineers, and is recognised as the technical expert for VSaaS and 3PiiP.
-Assessment Exceeding expectations.
-Examples
-	•	Designed and delivered the Operator Pipeline integration into 3PiiP, working closely with the Operator Pipeline and Artifactory teams to deliver an end-to-end solution.
-	•	Increased the VSaaS security gating bar by implementing malware detection, image age threshold gating and proactive malware notifications.
-	•	Delivered the VSaaS active-active architecture, improving platform resilience and removing the dependency on a single Aqua Console.
-	•	Drove scalability improvements through memory optimisation, SIGTERM handling and platform performance investigations.
-	•	Working on the CHRIS workstream to improve the developer journey.
-	•	Acts as the technical SME for VSaaS and 3PiiP.
-	•	Consistently demonstrates good engineering through development, testing, telemetry and documentation.
-	•	Supporting Aquasec team on their tasks which is a rare contribution from anyone in our team
-	•	Supporting both VSaaS and 3PiiP platform - users queries, incident tickets, feature gaps etc…
+---
 
-	•	Mentoring Oyin and Safa.
-	•	
+### Why Hard Gating? (45 sec)
 
-Nodir
-Scope of role leading the DiP workstream while SME across VSaaS, Image Validation, VTM library and ownership of our some other workstreams.
-What has changed since last year Nodir has progressed from owning individual technical deliverables to leading the DiP workstream, taking greater ownership of this initiative and collaborating with PO and developer community
-Examples
-	•	Took ownership of the DiP workstream and is leading delivery towards the first community release in Stylus Workspaces.
-	•	Delivered the VTM integration into Image Validation to strengthen secure ingestion of external images and VSaaS
-	•	Automated the ManagerRepo page, now supporting both DiP and Container Modernisation.
-	•	Improved GEM CVE detection performance to enhance and support Gating.
-	•	Consistently delivers high-quality code with strong test coverage and engineering discipline.
-Development focus Continue growing technical leadership by independently driving the DiP roadmap, proactively managing delivery risks, engage closely with stakeholders, and expanding delegation across the team.
-Harpal
-Scope of role Ownership of VSaaS LSE Gating critical workstream, Middleware Base Image Upliftment
-What has changed since last year Harpal has expanded his role beyond technical delivery by leading critical initiatives involving multiple stakeholder teams. He has developed stronger partnerships across Middleware, Gating Service  teams while driving these critical strategic initiatives.
-Assessment exceeding expectations.
-Examples
-	•	Led the optimisation and migration of middleware runtime images to UBI 9 Minimal/Micro, significantly reducing image sizes and security vulnerabilities.
-	•	Delivered engineering improvements including multi-stage container builds and Renovate adoption, strengthening the long-term security posture of middleware images.
-	•	Led the VSaaS LSE Gating workstream, working closely with the Gating Service and LSE teams to progress the solution into production.
-	•	Designed and delivered a new Gating report UI to overcome limitations in the existing LS UI.
-	•	Established strong partnerships with Middleware teams, improving engineering standards across multiple runtime images.
-	•	GenAI adoption through Devin and sharing the COIN implementation with the wider Container Engineering team.
+"As container adoption continues to grow across the firm, so does the importance of ensuring that vulnerable, outdated, or potentially compromised images do not make their way into our Kubernetes environments.
 
+To give you a sense of scale, VSaaS scanned more than 300,000 container images through LSE last month alone.
 
-Oyin (AVP)
-Scope of role Software engineer contributing to DiP, platform modernisation, repository maintenance and engineering improvements across the Container Security platform.
+The objective is straightforward: improve our container security posture, reduce risk, and prevent high-risk images from progressing through the software delivery lifecycle."
+
+---
+
+### What Is Changing? (45 sec)
+
+"VSaaS is already integrated with LSE today and provides visibility into container security findings.
+
+What's changing is that these findings will move from visibility to enforcement through hard gating.
+
+The gate will evaluate criteria such as GEMs, exploitable CVEs, malware detection, and image age policy violations.
+
+Importantly, this is not a new scanning solution and it is not introducing new data. The information used for gating already exists in your VSaaS reports today."
+
+---
+
+### How Can Teams Prepare? (45 sec)
+
+"There are several things teams can do today to prepare.
+
+First, review your VSaaS reports and identify findings that could fail future gates.
+
+Second, enable Renovate to help keep your base images current by automatically raising pull requests when updates become available.
+
+Third, adopt the Dockerfile Improvement Preset, or DiP, to align your Dockerfiles with JPMC standards and best practices.
+
+We also encourage teams to migrate to supported UBI9 Minimal or UBI9 Micro base images and follow the Container Image Development Guide for secure container development practices."
+
+---
+
+### Key Takeaway (15 sec)
+
+"If you remember one thing from today's session, let it be this:
+
+**Today's VSaaS Report equals tomorrow's gate.**
+
+The easiest way to prepare for hard gating is to start reviewing and addressing your VSaaS findings now."
+
+---
+
+### Transition to Demo (10 sec)
+
+"With that context, I'd like to hand over to Harpal, who will walk through a short demonstration of the hard gating experience and show where this information is already available today within VSaaS."
