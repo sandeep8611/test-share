@@ -1,22 +1,135 @@
-can you review my feedback? don't change much but just wondering if this is too negative.. Manager Review
-Avtar joined JPMC as an SVP in January this year as technical product owner for AquaSec and VSaaS teams. Overthe last six months, he's made positive contributions across ourrange of deliverables, made progress towards helping teams become more organised and mentoring some of the more junior members of the team. Avtar has been a positive addition to ourteams and can become a key part of our wider teams. However, to do so requires some development on container security & product knowledge and being more proactive on our backlog management and spring planning.
-Key contributions:
-- Helping drive the DiP workstream alongside Nodir. Helping to take this through to first community release within Stylus Workspaces which will enable developers to modernise their Docker builds and reduce potential security issues.
-- Valuable contributions to the VSaaS gating workstream, working closely with the engineering team to keep delivery on track. This will help to stop potential security issues getting into production environments. provided support with sprint planning and backlog prioritisation which have started to help the team manage their work to focus on priorities.
-helped establish a support model between SRE and VSaaS engineering teams, which will allow engineering teams focus on delivering new capabilities. taken over ownership of PTS tasks for VSaaS and Aqua, helping take away some of the "paperwork" away from engineering leads.
-owning the end-to-end VA testing for CS and VSaaS API & Uls. Working the VA team to schedule the testing, updating JPMC security teams on the progress of this testing (for compliance reasons) and complete all
-pre-test checks, and leveraging the engineering knowledge of Safaa to help push this along.
-identifies friction and potential issues in the team and then raises these concerns to engineering leads to help find a way forward, Avtar has done this recently where he felt a colleague could change changed their
-presentation approach to allow a more collaborative session with the team. Avtar is going to be providing this feedback backto the team memberto help them adapt their approach.
-Despite these positive contributions across our products, I do believe Avtar is behind where I would expectan SVP to be after six months in this role. Butl am confident that Avtar canget back on track bythe end of the year by improving in some development areas.
-Improving understanding of JPMC processes. This will allow Avtar to better plan for work and ensure work is planned on the appropriate timelines. On his contributions to the certification of the new Aqua components, Avtar created a set of JIRAs and then pulled them into one sprint, where they should be spread out over at least three sprints. If you're unsure on timelines or dependencies, then you can ask the team.
-- Improving understanding of container security and our products, this will help make more informed prioritisation decisions, define stronger product roadmaps and accurate updates. For some recent PTS monthly updates, Adam has had to get involved to alter these updates as they're not accurate and provided feedback to Avtar around the expectations of the context of these updates covering all work and progress.
-Proactive management and monitoring of backlog refinement and sprint planning. Avtar has started to help with the management of the backlog, however this has still required significant involvement from engineering and we're still going on a sprint-by-sprint basis. Having multiple sprints planned ahead of time helps the team better understand priorities and upcoming deliverables. Adam has also had to remind. Avtar a couple of times recently that there areJIRAs in the sprint which a yet to be review or should not be a priority for that sprint. There is also scope to provide more transparency and reviews of the sprints to help with further planning. For example, what JIRAs were added mid-sprint and why, and what was pushed back because of this? What JIRAs were carried over at the end of the sprint and why, is there anything we could have done to stop this happening?
-Managing time across Aqua and VSaaS projects, making sure progress is being made on both projects. Avtar should managing his time across the two workstreams, the priorities and the expectations to the
-engineering leads. This is currently still with the engineering leads (Adam and Ali) to help track Avtars split across the workstreams and priorities for upcoming week(s).
-Defining and owning his deliverables end-to-end. Avtar contributed to the current certification of new Aqua components by creating a TPPC and accompanying templates. However, this is only one part of the overall deliverable, the expectation was to be more involved in the overall process; collaborating with the vendor to schedule the SaaS releases, collaborating with internal teams to schedule component releases and being more involved on the vendor side to understand the bugs and features being delivered. This is still being driven by the engineers, so there is still some scope here to improve the scope of tasks on owning the end-to-end deliverable.
-Being more involved in vendor relationships. There is scope here for Avtarto be more involved with the alignment between engineering and Aqua vendor. Keeping track of JPMC'S asks and outstanding issues and when the vendoris delivering those and helping to define the roadmap with the vendor to ensure that any JPMC feature requests are prioritised internally and taken to the vendor. This is still all being managed and driven bythe engineers.
-Going into the backend of 2026, there are further opportunities to:
-Take ownership of roadmaps, through driving the conversations and definition of the 2027 roadmaps.
-Improve collaboration across our work streams. As you become more familiar with the range of deliverables across our team(s) and their priorities, you will be able to help more efficiently prioritise across our
-workstreams and enabling better cross-team working more often. There may be cases where for certain sprints we can pull developers away from Aqua and onto VSaaS for example. " If you change - highlight the change please. Don't change too much
+Overall, I don't think it's *too negative*, but I do think it reads a bit harsher than it probably needs to because:
+
+* It has one short strengths section followed by a much longer development section.
+* Some phrases ("behind where I would expect an SVP to be", "significant involvement", "Adam has had to remind...") can feel quite personal rather than developmental.
+* A few examples are very specific and repeat the same underlying point (planning, backlog management, product knowledge).
+
+I would keep almost everything, but soften a few sentences so they sound more like coaching than criticism. Below I've **bolded only the changes I'd make.**
+
+---
+
+### Opening
+
+> Avtar joined JPMC as an SVP in January this year as technical product owner for AquaSec and VSaaS teams. Over the last six months, he's made positive contributions across our range of deliverables, made progress towards helping teams become more organised and mentoring some of the more junior members of the team. Avtar has been a positive addition to our teams and can become a key part of our wider teams. However, to do so requires some development on container security & product knowledge and being more proactive on our backlog management and sprint planning.
+
+✅ I think this is balanced already.
+
+---
+
+### Overall assessment
+
+Current:
+
+> Despite these positive contributions across our products, I do believe Avtar is behind where I would expect an SVP to be after six months in this role. But I am confident that Avtar can get back on track by the end of the year by improving in some development areas.
+
+I'd change to:
+
+> Despite these positive contributions across our products, **I believe there is still scope for Avtar to continue developing towards the level I would expect from an SVP after six months in the role.** I am confident that Avtar can **make strong progress** by the end of the year by focusing on the development areas below.
+
+**Reason:** "behind where I would expect" is quite blunt. The revised version delivers the same message without sounding like he's failing.
+
+---
+
+### JPMC processes
+
+Current:
+
+> If you're unsure on timelines or dependencies, then you can ask the team.
+
+I'd make it:
+
+> **If there is any uncertainty around timelines or dependencies, I would encourage Avtar to engage with the team early to help with planning.**
+
+This feels more like coaching.
+
+---
+
+### Container security / product knowledge
+
+Current:
+
+> Adam has had to get involved to alter these updates as they're not accurate...
+
+I'd make it:
+
+> **Adam has provided support in refining some recent PTS monthly updates to ensure they accurately reflected the overall progress and context, and has shared feedback around the expected level of detail for future updates.**
+
+Same point, less accusatory.
+
+---
+
+### Sprint planning
+
+Current:
+
+> Adam has also had to remind Avtar a couple of times recently...
+
+I'd change to:
+
+> **There have also been occasions where reminders were needed to review JIRAs within the sprint or reconsider whether they should remain sprint priorities.**
+
+Removes the "manager correcting employee" tone while keeping the fact.
+
+---
+
+### Managing time
+
+Current:
+
+> This is currently still with the engineering leads (Adam and Ali) to help track Avtar's split...
+
+I'd change to:
+
+> **This currently still relies on support from the engineering leads (Adam and Ali) to help coordinate priorities across both workstreams, with an opportunity for Avtar to take greater ownership over time.**
+
+Much more developmental.
+
+---
+
+### End-to-end ownership
+
+Current:
+
+> This is still being driven by the engineers...
+
+I'd change to:
+
+> **This is currently still being driven largely by the engineering team, presenting an opportunity for Avtar to take broader ownership of the end-to-end delivery process.**
+
+---
+
+### Vendor relationships
+
+Current:
+
+> This is still all being managed and driven by the engineers.
+
+I'd change to:
+
+> **This is currently still being managed primarily by the engineering team, with scope for Avtar to take on greater ownership of the vendor relationship and roadmap alignment.**
+
+---
+
+### End section
+
+Current:
+
+> Going into the backend of 2026...
+
+I'd change to:
+
+> **Going into the second half of 2026...**
+
+("backend of 2026" doesn't sound quite right.)
+
+---
+
+## Overall feedback
+
+I actually think this is a fair review. It recognises his achievements, gives concrete examples, and clearly identifies development areas.
+
+The only sentence I'd strongly recommend changing is:
+
+> **"I do believe Avtar is behind where I would expect an SVP to be after six months..."**
+
+because that's the one line that is most likely to be remembered from the review. Reframing it as **"there is still scope to develop towards the level expected of an SVP"** communicates the same assessment while keeping the tone constructive. The rest mainly benefits from small wording tweaks to make it sound more like coaching than criticism.
