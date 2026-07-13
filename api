@@ -1,15 +1,41 @@
-+Noor,
-
-Hi Niv/Nayan,
-
-Thanks for the feedback.
-
-The communication intentionally references a **Q3 / Early Q4** rollout because the objective of this initial announcement is to build awareness and educate development teams ahead of enforcement, rather than announce a specific go-live date.
-
-As this is an important change to the developer experience, we'd like teams to begin reviewing their VSaaS reports now and addressing any findings so they're well prepared before hard gating is enabled for their applications.
-
-It is also worth noting that VSaaS-specific guidance—such as gating criteria, remediation guidance, and container security best practices—is maintained within the VSaaS documentation. We will continue to ensure that our communications reference the appropriate LSE and VSaaS documentation, depending on the information being provided.
-
-Going forward, if possible, it would be helpful to establish a streamlined process for these awareness communications. We expect to share periodic updates, guidance, and reminders throughout the rollout, and having a lightweight review process would help us keep developers informed in a timely manner.
-
-Thanks, as always, for your collaboration and support.
+VSaaS Hard Gating Workflow
+1. CI Pipeline Execution
+Pipeline Triggered
+A developer commits code, triggering the Lightspeed CI pipeline.
+Image Build & VSaaS Scan
+The container image is built.
+VSaaS scans the image and produces security findings.
+Policy Evaluation
+The Gating Service retrieves the VSaaS findings and evaluates them against the configured container security policies:
+GEMs
+Malware
+Image Age
+Gate Decision
+PASS: The image satisfies all configured policies and deployment proceeds.
+FAIL: One or more gating policies are violated and deployment is blocked.
+2. Remediation Workflow
+When a gate fails:
+Pipeline Blocked
+Deployment to downstream environments is prevented until the gate is satisfied or an approved exception exists.
+Review VSaaS Report
+The developer reviews the VSaaS HTML report to identify the failing policy and understand the remediation required.
+Choose a Resolution
+Option A – Remediate
+The developer resolves the issue by:
+Updating the base image
+Removing malware
+Resolving GEM findings
+Refreshing image age
+The changes are committed and the pipeline is re-executed.
+Option B – Request Exception
+If remediation is not immediately possible (for example, no vendor fix exists or a temporary business exception is required), the developer requests an exception through the existing Lightspeed approval process.
+3. Exception Workflow
+Exception requests follow the existing approval model.
+Development environments: Automatically approved
+UAT / Production: Approval required from the appropriate application and security approvers (for example CSI Owner, L3 Head or TISO).
+Once approved, deployment can proceed according to the approved exception.
+Architecture Notes
+VSaaS owns container image scanning and security findings.
+Gating Service owns policy evaluation and enforcement decisions.
+Lightspeed owns pipeline orchestration, deployment workflow, and exception integration.
+Developers consume the VSaaS report to understand and remediate gate failures.
