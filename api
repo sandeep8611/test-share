@@ -1,12 +1,14 @@
 +Noor,
 
-Hi Niv,
+Hi Niv/Nayan,
 
-The communication intentionally references a **Q3 / Early Q4** rollout because the objective of this initial announcement is to start building awareness and educating development teams ahead of enforcement, rather than announcing a specific go-live date.
+Thanks for the feedback.
+
+The communication intentionally references a **Q3 / Early Q4** rollout because the objective of this initial announcement is to build awareness and educate development teams ahead of enforcement, rather than announce a specific go-live date.
 
 As this is an important change to the developer experience, we'd like teams to begin reviewing their VSaaS reports now and addressing any findings so they're well prepared before hard gating is enabled for their applications.
 
-Once the rollout dates are finalized for each phase, we'll follow up with more targeted communications that include the specific enforcement dates.
+It is also worth noting that VSaaS-specific guidance—such as gating criteria, remediation guidance, and container security best practices—is maintained within the VSaaS documentation. We will continue to ensure that our communications reference the appropriate LSE and VSaaS documentation, depending on the information being provided.
 
 Going forward, if possible, it would be helpful to establish a streamlined process for these awareness communications. We expect to share periodic updates, guidance, and reminders throughout the rollout, and having a lightweight review process would help us keep developers informed in a timely manner.
 
