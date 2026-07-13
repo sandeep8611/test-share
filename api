@@ -1,7 +1,13 @@
-Thank you for your feedback and for taking the time to review the Quick Start Guide. We're glad to hear of your interest in DiP.
++Noor,
 
-As Oyin mentioned, this is the first release of the **Dockerfile Improvement Preset (DiP)** integrated with Stylus. Our initial focus is to provide developers with an easy way to improve Dockerfiles by aligning them with JPMC container security standards and best practices.
+Hi Niv,
 
-At this stage, DiP is available through the Stylus integration, which is the recommended way to leverage its capabilities.
+The communication intentionally references a **Q3 / Early Q4** rollout because the objective of this initial announcement is to start building awareness and educating development teams ahead of enforcement, rather than announcing a specific go-live date.
 
-As this is our initial release, we are actively seeking feedback from users like you. Your input will help us enhance both the functionality of DiP and the supporting documentation in future releases. We would greatly appreciate any feedback or suggestions after you've had the opportunity to use it in your projects.
+As this is an important change to the developer experience, we'd like teams to begin reviewing their VSaaS reports now and addressing any findings so they're well prepared before hard gating is enabled for their applications.
+
+Once the rollout dates are finalized for each phase, we'll follow up with more targeted communications that include the specific enforcement dates.
+
+Going forward, if possible, it would be helpful to establish a streamlined process for these awareness communications. We expect to share periodic updates, guidance, and reminders throughout the rollout, and having a lightweight review process would help us keep developers informed in a timely manner.
+
+Thanks, as always, for your collaboration and support.
