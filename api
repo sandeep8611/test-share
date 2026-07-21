@@ -1,13 +1,25 @@
-+Noor
+📢 **Looking for Pilot Teams – VSaaS Container Hard Gating in Lightspeed**
 
-Hi Ray, Lilac,
+Hi everyone,
 
-Thanks for the feedback.
+The Container Security team is looking for a small number of teams to participate in the **VSaaS Container Hard Gating pilot** within Lightspeed Enterprise.
 
-The intent of this communication is to begin building awareness of the upcoming VSaaS hard gating capability and encourage teams to review their existing VSaaS reports ahead of enforcement.
+This is an opportunity to try the new gating capability before wider rollout and help us improve the overall developer experience.
 
-Noor will discuss this further with Lilac so we can align on the rollout approach and incorporate any agreed feedback before moving forward with broader communications.
+### What does the gate check?
 
-We appreciate everyone's collaboration and support in making this transition as smooth as possible for our developer community.
+* ✅ GEMs
+* ✅ Malware
+* ✅ Image Age policy
 
-Thanks.
+### Why participate?
+
+* Validate that your applications are ready for upcoming hard gating
+* Provide feedback on the gating workflow, reports, and remediation experience
+* Help shape the rollout before broader adoption across LSE
+
+During the pilot, we'll work closely with participating teams to gather feedback and make improvements where needed.
+
+If your team is interested in participating, or you'd like to learn more, please reply to this thread or contact me directly.
+
+Thanks in advance for helping us make this rollout successful!
