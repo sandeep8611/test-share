@@ -1,25 +1,9 @@
-📢 **Looking for Pilot Teams – VSaaS Container Hard Gating in Lightspeed**
+Thanks for pulling this together. I had a discussion with you earlier, and I think it would be good to broaden the planning slightly before we execute the production rotation.
 
-Hi everyone,
+1. **Scope:** VSaaS is only one of the consumers of the Aqua Console API. We also have other production integrations (e.g. 3PIIP, UBI, Middleware, Statistics, etc.). Given the end-of-July deadline, I'm happy to collaborate, but we should confirm the full inventory of products using Aqua Console and have a coordinated rotation plan for each to avoid missing any consumers.
 
-The Container Security team is looking for a small number of teams to participate in the **VSaaS Container Hard Gating pilot** within Lightspeed Enterprise.
+2. **Production support:** For the production change, I'd recommend having an experienced operations/platform engineer available as a "support minder." If anything unexpected happens during the key rotation, they can perform an emergency rollback or switch-over to minimise any impact to the LSE pipelines.
 
-This is an opportunity to try the new gating capability before wider rollout and help us improve the overall developer experience.
+3. **Validation:** Before rotating production keys, can we complete the process in the lower environments first (DEV/UAT), including issuing new API keys for local development? Running with the new keys for a few days would give us confidence that all integrations continue to work before we make the production change.
 
-### What does the gate check?
-
-* ✅ GEMs
-* ✅ Malware
-* ✅ Image Age policy
-
-### Why participate?
-
-* Validate that your applications are ready for upcoming hard gating
-* Provide feedback on the gating workflow, reports, and remediation experience
-* Help shape the rollout before broader adoption across LSE
-
-During the pilot, we'll work closely with participating teams to gather feedback and make improvements where needed.
-
-If your team is interested in participating, or you'd like to learn more, please reply to this thread or contact me directly.
-
-Thanks in advance for helping us make this rollout successful!
+If we align on the above, I think we'll significantly reduce the risk while still meeting the deadline.
