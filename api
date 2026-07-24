@@ -1,9 +1,5 @@
-Thanks for pulling this together. I had a discussion with you earlier, and I think it would be good to broaden the planning slightly before we execute the production rotation.
-
-1. **Scope:** VSaaS is only one of the consumers of the Aqua Console API. We also have other production integrations (e.g. 3PIIP, UBI, Middleware, Statistics, etc.). Given the end-of-July deadline, I'm happy to collaborate, but we should confirm the full inventory of products using Aqua Console and have a coordinated rotation plan for each to avoid missing any consumers.
-
-2. **Production support:** For the production change, I'd recommend having an experienced operations/platform engineer available as a "support minder." If anything unexpected happens during the key rotation, they can perform an emergency rollback or switch-over to minimise any impact to the LSE pipelines.
-
-3. **Validation:** Before rotating production keys, can we complete the process in the lower environments first (DEV/UAT), including issuing new API keys for local development? Running with the new keys for a few days would give us confidence that all integrations continue to work before we make the production change.
-
-If we align on the above, I think we'll significantly reduce the risk while still meeting the deadline.
+Hi Noor,
+I was thinking of another idea for the Gating rollout.
+Since the current soft gate is easy to overlook, many teams may not realize they're already failing the VSaaS gate. Rather than starting with hard gating in UAT/Production, could we explore using the Gating Service to enforce the gate in the Dev environment only?
+If the VSaaS gate fails in Dev, developers would receive a clear warning and could auto-approve the deployment to continue. This would make teams aware that they're failing the gate today while avoiding any impact to higher environments. It also gives them time to remediate issues (such as Image Age) before hard gating is introduced in UAT/Production.
+It might be a good middle ground between today's soft gating, which is often ignored, and full hard gating in higher environments. Just a thought.
