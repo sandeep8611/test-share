@@ -1,5 +1,11 @@
-Hi Noor,
-I was thinking of another idea for the Gating rollout.
-Since the current soft gate is easy to overlook, many teams may not realize they're already failing the VSaaS gate. Rather than starting with hard gating in UAT/Production, could we explore using the Gating Service to enforce the gate in the Dev environment only?
-If the VSaaS gate fails in Dev, developers would receive a clear warning and could auto-approve the deployment to continue. This would make teams aware that they're failing the gate today while avoiding any impact to higher environments. It also gives them time to remediate issues (such as Image Age) before hard gating is introduced in UAT/Production.
-It might be a good middle ground between today's soft gating, which is often ignored, and full hard gating in higher environments. Just a thought.
+Hi Adam,
+
+Hope you're having a good weekend.
+
+Could you please let me know which keys have been rotated so far? Also, would it be possible for us to go through the remaining rotations together next week?
+
+As I mentioned previously, it would be really helpful to have the key inventory table below so that we don't lose any of the capabilities we currently have while working together as one engineering team. My main concern is making sure we don't end up in a situation where our engineering team can't troubleshoot or reproduce issues efficiently. For example, the **prod-ose** and **uat-ose** keys are critical for reproducing issues and supporting the Container Scan API.
+
+I'd like us to use Monday to agree on an approach that maintains our ability to support the platform efficiently while meeting any security requirements around key rotation.
+
+Have a great weekend!
