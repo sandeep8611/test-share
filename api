@@ -1,9 +1,1 @@
-Evidence attached:
-Screenshot of the LSE pipeline showing the VSaaS Image Scanning gate integrated under the Gating tab.
-Screenshot from the example pipeline (177207 CSI) demonstrating the integrated VSaaS Image Scanning gate.
-Summary:
-VSaaS Container Image Scanning has been successfully integrated with the LSE Gating Service.
-The integration is available within the LSE deployment pipeline.
-The current implementation operates in Soft Gating mode, allowing developers to view image scan results and gate status without blocking deployments.
-This milestone establishes the integration foundation for the planned transition to Hard Gating in a subsequent CAP milestone.
-Please let me know if any additional evidence or information is required.
+Plan for the s390x work: Harpal will manually deliver one image for now so we have something available in the short term. In parallel, we'll involve Rory to work on automating the pipeline. The automation will take some time, but this approach ensures we have an image available while that work progresses.
