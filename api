@@ -1,11 +1,9 @@
-Hi Adam,
-
-Hope you're having a good weekend.
-
-Could you please let me know which keys have been rotated so far? Also, would it be possible for us to go through the remaining rotations together next week?
-
-As I mentioned previously, it would be really helpful to have the key inventory table below so that we don't lose any of the capabilities we currently have while working together as one engineering team. My main concern is making sure we don't end up in a situation where our engineering team can't troubleshoot or reproduce issues efficiently. For example, the **prod-ose** and **uat-ose** keys are critical for reproducing issues and supporting the Container Scan API.
-
-I'd like us to use Monday to agree on an approach that maintains our ability to support the platform efficiently while meeting any security requirements around key rotation.
-
-Have a great weekend!
+Evidence attached:
+Screenshot of the LSE pipeline showing the VSaaS Image Scanning gate integrated under the Gating tab.
+Screenshot from the example pipeline (177207 CSI) demonstrating the integrated VSaaS Image Scanning gate.
+Summary:
+VSaaS Container Image Scanning has been successfully integrated with the LSE Gating Service.
+The integration is available within the LSE deployment pipeline.
+The current implementation operates in Soft Gating mode, allowing developers to view image scan results and gate status without blocking deployments.
+This milestone establishes the integration foundation for the planned transition to Hard Gating in a subsequent CAP milestone.
+Please let me know if any additional evidence or information is required.
