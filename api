@@ -1,1 +1,6 @@
-Plan for the s390x work: Harpal will manually deliver one image for now so we have something available in the short term. In parallel, we'll involve Rory to work on automating the pipeline. The automation will take some time, but this approach ensures we have an image available while that work progresses.
+Hi,
+Please find the updated screenshot attached, now showing the desktop date and timestamp.
+As mentioned previously, the current implementation operates in Soft Gating mode, allowing developers to view the gate status and image scan results without blocking deployments.
+The next step is the transition to Hard Gating. We have already onboarded two family CSIs (including my own) to the hard gating capability and are now working to onboard additional application teams as part of the phased rollout.
+One of the current challenges is that some application teams are hesitant to enable hard gating because it would block deployments to higher environments when the VSaaS gate fails. Noor and I are working together on the onboarding approach to help drive adoption and support additional teams.
+Please let me know if you require any further information.
