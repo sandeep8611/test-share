@@ -1,6 +1,9 @@
-Hi,
-Please find the updated screenshot attached, now showing the desktop date and timestamp.
-As mentioned previously, the current implementation operates in Soft Gating mode, allowing developers to view the gate status and image scan results without blocking deployments.
-The next step is the transition to Hard Gating. We have already onboarded two family CSIs (including my own) to the hard gating capability and are now working to onboard additional application teams as part of the phased rollout.
-One of the current challenges is that some application teams are hesitant to enable hard gating because it would block deployments to higher environments when the VSaaS gate fails. Noor and I are working together on the onboarding approach to help drive adoption and support additional teams.
-Please let me know if you require any further information.
+Hi Noor,
+
+I think the reason we haven't received any meaningful feedback from this CSI is that none of their container images have failed the VSaaS gate.
+
+I checked the last 28 days of scan results and couldn't find any images that failed the gating criteria. As a result, they haven't experienced the gating workflow or remediation process, so they don't have much feedback to provide.
+
+I've asked Andrew if he can share additional CSIs that have images failing the gate so we can gather more representative feedback.
+
+Thanks.
