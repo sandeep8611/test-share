@@ -1,9 +1,13 @@
-Hi Noor,
+Hi Team,
 
-I think the reason we haven't received any meaningful feedback from this CSI is that none of their container images have failed the VSaaS gate.
+Just following up on the email Haroon sent below regarding the Python base image naming.
 
-I checked the last 28 days of scan results and couldn't find any images that failed the gating criteria. As a result, they haven't experienced the gating workflow or remediation process, so they don't have much feedback to provide.
+Could you please prioritize releasing a new version using the previous naming convention (i.e. the packaged Python version)? The current naming convention appears to have broken Renovate's ability to detect Python version upgrades, which means many teams may not receive update recommendations for their base images. This could eventually lead to outdated base images and gating failures.
 
-I've asked Andrew if he can share additional CSIs that have images failing the gate so we can gather more representative feedback.
+As Harpal mentioned, keeping the image name aligned with the packaged Python version (e.g. `3.14`, `3.13`), rather than the Miniconda release version, provides a stable image name and allows Renovate to continue automatically suggesting Python version upgrades across major and minor releases, instead of being limited to updates within the same image family.
 
-Thanks.
+If there are any concerns or alternative approaches, we're happy to discuss them. However, we'd appreciate it if this could be treated as a priority before more teams begin encountering gating failures due to stale base images.
+
+Appreciate any update you can share.
+
+Thanks,
