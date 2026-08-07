@@ -1,13 +1,13 @@
 Hi Team,
 
-Just following up on the email Haroon sent below regarding the Python base image naming.
+Thanks for the update.
 
-Could you please prioritize releasing a new version using the previous naming convention (i.e. the packaged Python version)? The current naming convention appears to have broken Renovate's ability to detect Python version upgrades, which means many teams may not receive update recommendations for their base images. This could eventually lead to outdated base images and gating failures.
+I just want to make sure there isn't any misunderstanding about the request. My concern isn't about when a new Miniconda version will be certified, but rather about the naming convention used for the certified Python base images.
 
-As Harpal mentioned, keeping the image name aligned with the packaged Python version (e.g. `3.14`, `3.13`), rather than the Miniconda release version, provides a stable image name and allows Renovate to continue automatically suggesting Python version upgrades across major and minor releases, instead of being limited to updates within the same image family.
+Previously, the images were named after the packaged Python version (e.g. `3.13`, `3.14`), which provided a stable image name. This allowed Renovate to automatically recommend upgrades when new Python versions became available.
 
-If there are any concerns or alternative approaches, we're happy to discuss them. However, we'd appreciate it if this could be treated as a priority before more teams begin encountering gating failures due to stale base images.
+With the current naming convention based on the Miniconda release, Renovate can no longer recommend upgrades across Python versions. As a result, teams are no longer receiving automated upgrade recommendations and may continue using older Python base images unless they manually discover and switch to a different image.
 
-Appreciate any update you can share.
+I would suggest setting up a quick call with @Harpal, as he can explain the Renovate behaviour in more detail if helpful. It is important that we get the naming convention right so Renovate continues to work as intended, as it did previously.
 
-Thanks,
+Thanks.
