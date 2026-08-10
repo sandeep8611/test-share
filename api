@@ -1,13 +1,13 @@
-Hi Team,
+# Secure Containers. Faster Feedback. Safer Releases.
 
-Thanks for the update.
+**VSaaS Image Gating is now integrated with LightSpeed Enterprise (LSE).**
 
-I just want to make sure there isn't any misunderstanding about the request. My concern isn't about when a new Miniconda version will be certified, but rather about the naming convention used for the certified Python base images.
+Container images are automatically evaluated for **GEMs, Malware, and Image Age**, providing developers with a clear **PASS/FAIL** status and actionable findings directly in the CI/CD workflow.
 
-Previously, the images were named after the packaged Python version (e.g. `3.13`, `3.14`), which provided a stable image name. This allowed Renovate to automatically recommend upgrades when new Python versions became available.
+### Why it matters
 
-With the current naming convention based on the Miniconda release, Renovate can no longer recommend upgrades across Python versions. As a result, teams are no longer receiving automated upgrade recommendations and may continue using older Python base images unless they manually discover and switch to a different image.
+**Find security issues earlier. Remediate faster. Avoid deployment surprises.**
 
-I would suggest setting up a quick call with @Harpal, as he can explain the Renovate behaviour in more detail if helpful. It is important that we get the naming convention right so Renovate continues to work as intended, as it did previously.
+Review your VSaaS results today and prepare for the upcoming **Hard Gating** rollout.
 
-Thanks.
+**[Learn More →] | [Get Help / Onboard →]**
