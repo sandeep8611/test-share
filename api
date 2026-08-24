@@ -1,13 +1,5 @@
-# Secure Containers. Faster Feedback. Safer Releases.
+Thanks Philip. Just to add some context from the Container Security side:
 
-**VSaaS Image Gating is now integrated with LightSpeed Enterprise (LSE).**
+We provided the Citi-compliant RHEL9 s390x base container image to Vasil Katsarski and Atanas Bogdanovski. The image was brought into Citi and scanned using VSaaS before being made available to the development team, and I understand they are now using it.
 
-Container images are automatically evaluated for **GEMs, Malware, and Image Age**, providing developers with a clear **PASS/FAIL** status and actionable findings directly in the CI/CD workflow.
-
-### Why it matters
-
-**Find security issues earlier. Remediate faster. Avoid deployment surprises.**
-
-Review your VSaaS results today and prepare for the upcoming **Hard Gating** rollout.
-
-**[Learn More →] | [Get Help / Onboard →]**
+Philip, when you refer to the “CISO provided tool”, am I correct in assuming you are referring to the 3PIIP external image ingestion process used to bring the IBM images into Citi? Any third-party container images being ingested into the firm should go through 3PIIP, which provides the appropriate security scanning.
