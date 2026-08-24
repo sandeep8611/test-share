@@ -1,5 +1,3 @@
-Thanks Philip. Just to add some context from the Container Security side:
+Jon, I would add that if they build their own s390x images internally, the current strategic LSE toolchain does not support s390x, which creates a separate gap in the standard build and automated scanning process.
 
-We provided the Citi-compliant RHEL9 s390x base container image to Vasil Katsarski and Atanas Bogdanovski. The image was brought into Citi and scanned using VSaaS before being made available to the development team, and I understand they are now using it.
-
-Philip, when you refer to the “CISO provided tool”, am I correct in assuming you are referring to the 3PIIP external image ingestion process used to bring the IBM images into Citi? Any third-party container images being ingested into the firm should go through 3PIIP, which provides the appropriate security scanning.
+Separately, if they run their workloads outside Kubernetes on LinuxONE, the downstream runtime reporting constraint Alex highlighted would also apply.
