@@ -1,3 +1,12 @@
-Jon, I would add that if they build their own s390x images internally, the current strategic LSE toolchain does not support s390x, which creates a separate gap in the standard build and automated scanning process.
+Hi Sean, all,
 
-Separately, if they run their workloads outside Kubernetes on LinuxONE, the downstream runtime reporting constraint Alex highlighted would also apply.
+Just to clarify Haroon's response, as I don't believe there are conflicting messages.
+
+Haroon's response distinguishes between the internally rebuilt and hardened s390x UBI base image and the third-party IBM OSO images. For the OSO images, VSaaS scanning does not replace the required 3PiiP process for onboarding external/third-party images into the environment.
+
+The outstanding question is whether the OSO images can be successfully ingested through 3PiiP. If there is a technical limitation preventing this, that is the point Haroon was referring to for further discussion with Noor; it does not change the standard 3PiiP process.
+
+Haroon has received the meeting invitation from Altin, and I can also join the call to help clarify the 3PiiP process and discuss any technical limitations.
+
+Thanks,
+[Your Name]
