@@ -1,12 +1,10 @@
-Hi Sean, all,
-
-Just to clarify Haroon's response, as I don't believe there are conflicting messages.
-
-Haroon's response distinguishes between the internally rebuilt and hardened s390x UBI base image and the third-party IBM OSO images. For the OSO images, VSaaS scanning does not replace the required 3PiiP process for onboarding external/third-party images into the environment.
-
-The outstanding question is whether the OSO images can be successfully ingested through 3PiiP. If there is a technical limitation preventing this, that is the point Haroon was referring to for further discussion with Noor; it does not change the standard 3PiiP process.
-
-Haroon has received the meeting invitation from Altin, and I can also join the call to help clarify the 3PiiP process and discuss any technical limitations.
-
-Thanks,
-[Your Name]
+Hi all,
+Ahead of the upcoming discussion, I wanted to share a summary of the key areas that, based on the discussions to date, I believe would benefit from further clarification. Understanding the end-to-end architecture and deployment model will be important in answering these questions.
+1. IBM OSO image onboarding and supply chain
+The IBM OSO images are not currently following the standard 3PIIP ingestion path. How the end-to-end process from ingestion through scanning, storage and deployment, including how the necessary controls and approval gates are applied.
+2. Internally built s390x images
+The project is also developing its own s390x images, while the current LSE toolchain does not support s390x. How the tactical approach for this project works and the longer-term direction, including ownership and approval of the build pattern, and how controls are applied across build, scanning, promotion, image integrity and traceability.
+3. Deployment, runtime security and observability
+Where and how the workloads will run and what security, runtime and observability controls are available within that environment. 
+4. Vulnerability management and reporting
+How vulnerabilities identified across both IBM-supplied and internally built images will be identified, tracked, remediated and reported through the appropriate vulnerability management lifecycle.
