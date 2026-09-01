@@ -1,15 +1,15 @@
-Noor, welcome back. Quick update on a few workstreams.
+Noor, welcome back. Just a quick update on a few workstreams.
 
-**Digital Assets Custody:** This came up with Jon last week, and I’ve been working through it with Jon and Chris H. The project is already quite advanced, but it looks like some of the standard security processes have not been followed, and some activities have progressed through approaches that are outside the standard process.
+**Digital Assets Custody:** This came up with Jon last week and I’ve been working through it with Jon and Chris H. The project is already quite advanced, but it looks like some of the standard security processes haven’t been followed and a few things have been progressed in a non-standard way.
 
 In short:
 
-1. **IBM OSO appliance:** The team has been manually decrypting/extracting components from the IBM encrypted appliance, bringing them into JPMC and scanning them with VSaaS. There seems to have been an assumption that this approach was approved by Harpal, but my understanding is that Harpal did not approve this as the production onboarding process.
+1. **IBM OSO appliance:** The team have been manually decrypting/extracting components from the IBM encrypted appliance, bringing them into JPMC and scanning them with VSaaS. There seems to have been an assumption that this approach was approved by Harpal, but my understanding is that Harpal didn’t approve this as the production onboarding process.
 
-2. **Internally built s390x images:** They are also developing their own CI/CD solution because LSE does not currently support s390x. I’ve been discussing with Jon whether we can use LSE for the Java build and existing source/dependency scanning controls, publish the approved artefact to Artifactory, and use their pipeline only for the s390x-specific build/package step.
+2. **Internally built s390x images:** They’re also developing their own CI/CD solution as LSE doesn’t currently support s390x. I’ve been discussing with Jon whether we can still use LSE for the Java build and the existing source/dependency scanning controls, publish the approved artefact to Artifactory, and then use their pipeline only for the s390x-specific build/package step.
 
-They also have an open CAP with a mid-September target, so I’ve been helping Jon work through the gaps and possible ways forward. We can go through the details when you have time.
+They also have an open CAP with a mid-September target, so I’ve been helping Jon work through the gaps and possible ways forward. Happy to go through the details when you have some time.
 
-**VSaaS Gating:** I followed up on the email thread with Ian/Lilac/Jason and also reached out to Jon for support while you were out. I’m not sure if there were any discussions offline, but there hasn’t been any update on the email thread.
+**VSaaS Gating:** I followed up on the email thread with Ian/Lilac/Jason and also reached out to Jon for support while you were out. Not sure if there were any discussions offline, but there hasn’t been any update on the email thread.
 
-We need their alignment to move forward with the **Hard Gating migration and developer communications**. I’d appreciate your help in getting this unblocked.
+We need their alignment to move forward with the **Hard Gating migration and developer communications**. Would appreciate your help in getting this unblocked.
