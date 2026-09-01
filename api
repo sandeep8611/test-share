@@ -1,15 +1,13 @@
-Noor, welcome back. Just a quick update on a few workstreams.
+Hi team, just wanted to echo a couple of things and make sure we’re all on top of them.
 
-**Digital Assets Custody:** This came up with Jon last week and I’ve been working through it with Jon and Chris H. The project is already quite advanced, but it looks like some of the standard security processes haven’t been followed and a few things have been progressed in a non-standard way.
+Firstly, **training** — please have a quick check of anything you’ve got outstanding, particularly if you have anything due in the next 7 days. If you’re on the list, please make sure you get it completed. If you’re not sure what you have due, just give me a shout.
 
-In short:
+If you think your name is listed for incomplete training but you believe you completed it on time, please grab some screenshots so we have something to refer back to.
 
-1. **IBM OSO appliance:** The team have been manually decrypting/extracting components from the IBM encrypted appliance, bringing them into JPMC and scanning them with VSaaS. There seems to have been an assumption that this approach was approved by Harpal, but my understanding is that Harpal didn’t approve this as the production onboarding process.
+Secondly, **office attendance**. HR are going to be keeping a closer eye on this, so please make sure you’re meeting the current expectations. Don’t assume anything or rely on previous arrangements.
 
-2. **Internally built s390x images:** They’re also developing their own CI/CD solution as LSE doesn’t currently support s390x. I’ve been discussing with Jon whether we can still use LSE for the Java build and the existing source/dependency scanning controls, publish the approved artefact to Artifactory, and then use their pipeline only for the s390x-specific build/package step.
+If you’ve had an agreed exception to work remotely for a period of time, that should have been discussed with me and documented by email, with a valid reason.
 
-They also have an open CAP with a mid-September target, so I’ve been helping Jon work through the gaps and possible ways forward. Happy to go through the details when you have some time.
+I know these things can sometimes feel like admin, but they are being taken seriously, so please don’t let either training or office attendance slip and end up causing an avoidable HR issue.
 
-**VSaaS Gating:** I followed up on the email thread with Ian/Lilac/Jason and also reached out to Jon for support while you were out. Not sure if there were any discussions offline, but there hasn’t been any update on the email thread.
-
-We need their alignment to move forward with the **Hard Gating migration and developer communications**. Would appreciate your help in getting this unblocked.
+Thanks all.
