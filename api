@@ -1,21 +1,15 @@
-Chris, very useful.
-Just sharing a few additional notes/thoughts from my side based on the earlier discussions and my understanding from yesterday's call. Please correct me if I have misunderstood anything.
-For my own understanding, I tried split the issues into two areas:
-1. IBM OSO appliance
-The OSO appliance itself is a specialised IBM/vendor solution and, I think, should be considered separately from the JPMC-developed plugins.
-The software stack is managed and supplied by IBM and installed using the IBM-supported deployment model. As discussed, the team has taken additional steps to obtain/decrypt components and scan them using VSaaS. This gives us some additional vulnerability visibility, but it is a manual process and not really a standard automated container ingestion/scanning flow.
-My understanding is that the question here is what the right assurance and control process should be for this type of vendor appliance, rather than automatically trying to fit it into the standard 3PIIP/container ingestion model. Need to understand what assurance is provided by IBM and the platform around things such as integrity, authenticity, patching and vulnerability management.
-2. JPMC-developed OSO plugins
-This feels like the main outstanding area, and again I split it into two parts.
-Build / image lifecycle
-The team is developing its own s390x CI/CD approach because LSE does not currently support s390x. From the earlier discussions, the team is using the mainframe CI/CD pipeline with Jenkins orchestration, with the build running on LinuxONE.
-The main thing to work through is the end-to-end control model around:
-Build → scanning → approval/promotion → storage → integrity/traceability → ownership
-Deployment / runtime security / vulnerability management
-My understanding is that the plugins are currently installed manually, with no standard automated deployment path.
-The other gaps discussed were:
-	•	No runtime security capability providing ongoing visibility of the plugins.
-	•	No established process for ongoing vulnerability assessment.
-	•	No VTM process for tracking, ownership and remediation of vulnerabilities.
-So, my understanding is that these are the areas Jon was asking to ensure are captured and addressed through one of the ISRPs.
-The main distinction I took away from the discussion is that we should separate the vendor appliance assurance question from the end-to-end security lifecycle for the JPMC-developed plugins.
+Noor, welcome back. Quick update on a few workstreams.
+
+**Digital Assets Custody:** This came up with Jon last week, and I’ve been working through it with Jon and Chris H. The project is already quite advanced, but it looks like some of the standard security processes have not been followed, and some activities have progressed through approaches that are outside the standard process.
+
+In short:
+
+1. **IBM OSO appliance:** The team has been manually decrypting/extracting components from the IBM encrypted appliance, bringing them into JPMC and scanning them with VSaaS. There seems to have been an assumption that this approach was approved by Harpal, but my understanding is that Harpal did not approve this as the production onboarding process.
+
+2. **Internally built s390x images:** They are also developing their own CI/CD solution because LSE does not currently support s390x. I’ve been discussing with Jon whether we can use LSE for the Java build and existing source/dependency scanning controls, publish the approved artefact to Artifactory, and use their pipeline only for the s390x-specific build/package step.
+
+They also have an open CAP with a mid-September target, so I’ve been helping Jon work through the gaps and possible ways forward. We can go through the details when you have time.
+
+**VSaaS Gating:** I followed up on the email thread with Ian/Lilac/Jason and also reached out to Jon for support while you were out. I’m not sure if there were any discussions offline, but there hasn’t been any update on the email thread.
+
+We need their alignment to move forward with the **Hard Gating migration and developer communications**. I’d appreciate your help in getting this unblocked.
