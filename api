@@ -1,31 +1,12 @@
-Role expansion
-Rimas role has expanded significantly beyond his original responsibilities as a member of the Container Security team. He is now an SME and technical owner across multiple critical platforms and capabilities, including 3PiiP, VSaaS, security gating, UBI and Middleware pipelines, Aqua, reporting, and CHRIS.
-His responsibilities have expanded from delivery within individual workstreams to broader ownership of architecture, technical direction, resiliency, scalability, security controls, and cross-platform integration. He is now accountable for key parts of the wider Container Security ecosystem and the dependencies between them. This represents a significant increase in the scope, complexity, and accountability of his role.
+Just to add some clarity from the 3PiiP perspective.
 
-Justification
-Rimas has demonstrated sustained performance at a level beyond his current role, with significantly broader technical ownership and accountability across the Container Security ecosystem. He has moved from contributing to individual workstreams to becoming an SME and technical lead across multiple critical platforms.
-The expanded scope is addressing an important need within the team as our Container Security platforms have become more interconnected and enterprise-critical. Rimas provides the technical ownership needed across these platforms to ensure they remain secure, resilient, scalable, and fit for continued adoption.
-His consistent ownership of complex, cross-platform initiatives and ability to take problems from design through production and ongoing operations demonstrate that he is already operating at the level expected of the proposed role.
+As discussed with Chris M. on the call, the initial image ingestion through the 3PiiP pipeline will make the image available in **INT Artifactory**.
 
+I would suggest working with Chris H. and the EKS Security team to confirm that the image can be pulled from INT Artifactory into the EKS cluster you are planning to deploy to. My understanding from the meeting was that the initial deployment would be into a lower/lab environment.
 
+If the intention is to promote the image into Production, the **Information Security Review Process (ISRP)** would also need to be completed.
 
-Please describe the expanded responsibilities (Justification)
-Rimas role has expanded from contributing within individual workstreams to independently owning and serving as the SME/technical lead across multiple critical components of the Container Security ecosystem. His expanded responsibilities include:
-3PiiP Pipeline Rimas is the SME and technical lead for 3PiiP, the only approved enterprise route for securely ingesting external container images. The platform has ingested 350+ images, with 150+ promoted into production last month. He has driven key capability enhancements, including digest-based image ingestion, support for previously unsupported OpenShift operator and platform images, and closing alternative paths used to ingest images outside the approved security process.
-VSaaS Rimas is the SME for VSaaS, the primary container image scanning API available to developers. His responsibility now extends to architecture, resiliency, scalability, availability, and security gating. He led the Active-Active design for the Aqua dependency, gating implementation including Image Age and Malware criteria, and improvements addressing memory leaks, readiness, and zero-downtime deployment. VSaaS processes 200K+ image scans for LSE alone.
-Container Security Reporting and Alerting Rimas has taken ownership of key container security reporting, including FITR statistics and malware detection reporting, as well as associated alerting to key stakeholders. This has expanded his responsibilities into ongoing security visibility and risk management.
-UBI and Middleware Image Pipelines Rimas is the SME for the UBI ingestion pipeline, ensuring current and approved RHEL-based images are available to the development community. He also has a key role in the Middleware pipeline, which provides approved runtime images across Java, Python, NodeJS, Tomcat, Go, Nginx, .NET, and messaging technologies.
-Container Security Gating Rimas led the PoC, design, and production rollout of VTM rule expansion and Image Age validation across VSaaS, 3PiiP, and Middleware. This expanded his role from individual platform delivery to implementing common security controls across multiple Container Security products.
-Aqua Rimas has expanded his technical ownership across Aqua Console, CS API, Aqua Statistics, and related services. He led the technical enhancements required for the migration of the main Artifactory to a federated instance and ensured successful integration across VSaaS, 3PiiP, and Middleware pipelines, coordinating dependencies across multiple platform teams.
-CHRIS Rimas is leading the end-to-end workstream for Container Hub Reporting and Image Scanning from design to implementation.
+For completeness, please also refer to the **3PiiP documentation**, which provides further details on the image ingestion process and relevant controls.
 
-How was the work being performed before?
-Previously, Container Security responsibilities were shared across a small team of four engineers, with ownership distributed across different platforms and workstreams. Following the departure of a contractor in Q1, the team had less capacity at the same time that the Container Security ecosystem was expanding, making several ownership and capability gaps more visible.
-Rimas stepped up to take ownership of a number of these gaps and has since expanded his responsibilities well beyond his original scope. For example, the operator and platform image pipeline relied on an insecure and manual process for ingesting images, which Rimas addressed through the 3PiiP platform. The migration of the main Artifactory instance to a federated model introduced an unplanned technical requirement across multiple Container Security platforms, which Rimas took ownership of and drove through implementation. Similarly, security gating was a key capability gap in 3PiiP, and Rimas led the design and implementation of the required controls.
-
-
-Why was this individual selected vs. peers in the current Job/C-Level?
-Rimas was selected based on the breadth and depth of his technical expertise, his ability to operate independently, and his demonstrated ability to take ownership of complex problems beyond his immediate area of responsibility.
-His ownership across 3PiiP, VSaaS, security gating, image pipelines, Aqua, reporting, and CHRIS gives him a breadth of knowledge across the Container Security ecosystem that is unique within the wider team at his level. He is a go-to SME for complex issues that require an end-to-end understanding of the environment, from the VSaaS scanning layer through the Aqua platform and its dependent services.
-This combination of deep technical expertise and broad ecosystem knowledge allows Rimas to identify issues and dependencies that cross platform boundaries, make informed technical decisions, and drive solutions through to implementation. This breadth of ownership and ability to connect the different parts of the ecosystem is a key reason he was selected for the expanded role.
-
+Thanks,
+[Your Name]
