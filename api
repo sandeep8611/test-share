@@ -1,12 +1,8 @@
-Just to add some clarity from the 3PiiP perspective.
-
-As discussed with Chris M. on the call, the initial image ingestion through the 3PiiP pipeline will make the image available in **INT Artifactory**.
-
-I would suggest working with Chris H. and the EKS Security team to confirm that the image can be pulled from INT Artifactory into the EKS cluster you are planning to deploy to. My understanding from the meeting was that the initial deployment would be into a lower/lab environment.
-
-If the intention is to promote the image into Production, the **Information Security Review Process (ISRP)** would also need to be completed.
-
-For completeness, please also refer to the **3PiiP documentation**, which provides further details on the image ingestion process and relevant controls.
-
-Thanks,
-[Your Name]
+Rimantas’ role has expanded from an individual contributor focused on specific projects and engineering activities to a cross-product SME and technical lead for the wider Container Security platform.
+Previously, Rimantas was primarily responsible for delivering work within his assigned projects. Design, architecture and tooling decisions were generally reviewed and approved by senior team members. For example, the VSaaS active-active design initially was escalated to Chris C. (SVP) for review and sign-off, with Rimantas focused mainly on the implementation.
+Today, Rimantas is the go-to technical SME across VSaaS, FITR, 3PiiP, UBI, Middleware, Reporting, CS API and parts of Aqua. He is now involves in designs decision for review before implementation, particularly for Gating, VSaaS changes and VSaaS-LSE integrations. He is also taking ownership of technical tooling decisions and the design and delivery of larger cross-product initiatives.
+Two examples that demonstrate the change in scope are:
+	•	CHRIS: Rimantas is leading the technical design and delivery of a completely new service, covering the architecture, data storage, backend services and frontend. He delivered the initial POC within one week and then worked with a two-engineer team to deliver the MVP within a month. The architecture will also allow CHRIS to integrate with VSaaS, Gating, 3PiiP and other Container Security services in the future.
+	•	Operator/Platform Image Ingestion: Rimantas identified and took ownership of a gap where the OpenShift Platform team was using a non-approved process to import images. He worked with the Platform and Artifactory teams to design an approach based on the standard 3PiiP pattern. The migration is now underway and the new pipeline has already been executed approximately 100 times.
+Rimantas has also taken on responsibilities that were not previously assigned to his role, such as developing a separate malware detection and alerting capability outside the existing VSaaS and 3PiiP services.
+The key change is that Rimantas is no longer only delivering against defined requirements. He is now helping define the technical approach, reviewing designs, developing across cross-product boundaries, and taking ownership of new capabilities from architecture through production. Responsibilities that previously required escalation to more senior technical leadership are now being handled by Rimantas within his expanded scope.
