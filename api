@@ -6,3 +6,15 @@ Two examples that demonstrate the change in scope are:
 	•	Operator/Platform Image Ingestion: Rimantas identified and took ownership of a gap where the OpenShift Platform team was using a non-approved process to import images. He worked with the Platform and Artifactory teams to design an approach based on the standard 3PiiP pattern. The migration is now underway and the new pipeline has already been executed approximately 100 times.
 Rimantas has also taken on responsibilities that were not previously assigned to his role, such as developing a separate malware detection and alerting capability outside the existing VSaaS and 3PiiP services.
 The key change is that Rimantas is no longer only delivering against defined requirements. He is now helping define the technical approach, reviewing designs, developing across cross-product boundaries, and taking ownership of new capabilities from architecture through production. Responsibilities that previously required escalation to more senior technical leadership are now being handled by Rimantas within his expanded scope.
+
+
+
+The proposed promotion recognises Rimantas significant transition from an Individual Contributor to a Technical Lead and cross-product SME within the Container Security team. His scope has expanded beyond delivery within assigned workstreams to include architectural decision-making, technical ownership of FITR, and leadership of new capabilities where there was no existing owner or architecture.
+Following Chris C.’s departure, Rimantas has taken on architectural responsibilities that previously required SVP-level review. Following Control Plane resource Houssem’s departure, he also assumed ownership of FITR while continuing to support the wider Container Security platform. In parallel, he has taken on two new initiatives — CHRIS and Operator/Platform image ingestion, driving both from initial concept through implementation.
+The impact of this expanded scope is measurable. Rimantas built a malware detection and alerting mechanism outside the existing VSaaS and 3PiiP services, which has already intercepted two malware events before they reached SOC detection or production. His VSaaS Gating design and architectural guidance is addressing a specific CAP, while the Operator/Platform ingestion solution is addressing a separate CAP/Risk Exception and has already been executed approximately 1,000 times as part of the migration.
+At the same time, 3PiiP is processing approximately 300–500 images per month across 100+ CSI teams, and Rimantas continues to provide technical ownership across the UBI and Middleware pipelines, VSaaS, Aqua and reporting. He also delivered the CHRIS proof of concept within days and the MVP within one month with a two-engineer team.
+Taken together, these results demonstrate that Rimantas is already operating with a materially broader level of technical ownership, decision-making and accountability than his previous role required. The revelling/promotion aligns his role with the scope and level at which he is now consistently operating.
+Table attached..
+
+
+
