@@ -1,5 +1,42 @@
-Rimas was selected based on the breadth and depth of his technical expertise, his ability to operate independently, and his demonstrated ability to take ownership of complex problems beyond his immediate area of responsibility.
-His ownership across 3PiiP, VSaaS, security gating, image pipelines, Aqua, reporting, and CHRIS gives him a breadth of knowledge across the Container Security ecosystem that is unique within the wider team at his level. He is a go-to SME for complex issues that require an end-to-end understanding of the environment, from the VSaaS scanning layer through Aqua and the dependent services.
-A key differentiator is his ability to connect technical decisions to the wider Container Vulnerability Appetite. Through his work on Gating, Image Age and Malware controls, approved image ingestion, UBI adoption, and proactive malware detection, he has helped strengthen the controls used to prevent vulnerable or unsafe images from progressing through the container lifecycle. His work on the VSaaS Gating redesign and Operator/Platform image ingestion is also addressing identified CAP/Risk Exceptions.
-Rimas also consistently takes ownership of problems that are not simply assigned to him. He has independently identified gaps, defined the technical approach, and driven solutions through implementation and production. Examples include the standalone malware detection capability, CHRIS, the Operator/Platform image ingestion remediation, and the redesign of VSaaS Gating.
-This combination of technical depth, end-to-end product knowledge, independent ownership, and measurable impact on Container Vulnerability Appetite differentiates Rimas from his peers and was a key factor in selecting him for the expanded role.
+Hi team,
+
+Picking up on our earlier discussion around the team/platform name, one suggestion was **Container Enablement Service**.
+
+I think **Container Enablement** is a good description of what we do and the broader scope of our capabilities. We are not just providing scanning — we’re enabling teams across the container image lifecycle, including VSaaS, 3PiiP, Image Gating, DiP, UBI, CHRIS/Container Hub, malware detection, reporting, etc.
+
+What I think we’re missing is a **distinctive and memorable brand name** that can represent Container Enablement as a platform — similar to how **LightSpeed** represents the CI/CD ecosystem or **Stylus** represents the internal GenAI platform.
+
+The idea would be:
+
+**[Brand Name]**
+*Container Enablement Platform*
+
+And then have our individual capabilities underneath the brand, for example:
+
+**Foundry**
+
+* Foundry Scan → VSaaS
+* Foundry Ingest → 3PiiP / External Image Ingestion
+* Foundry Gate → Image Gating
+* Foundry Harden → DiP
+* Foundry Base → UBI
+* Foundry Hub → CHRIS / Container Hub & Reporting
+
+### Current brand ideas
+
+**Foundry** — build, shape and strengthen
+**Vanguard** — at the forefront / leading edge
+**Forge** — build and strengthen
+**Strata** — layers / layered platform
+**Nexus** — central connection point
+
+The thinking is that **Container Enablement** remains the description of our service/capability, while the one-word name becomes the **recognisable brand** for everything we are building.
+
+For example:
+
+> **Foundry**
+> *Container Enablement Platform*
+
+Would be great to get your thoughts on which brand feels the most natural, memorable and representative of our team's overall mission — and please share any other names you think would work better.
+
+Once we have team input, I'll consolidate the shortlist and share it with management.
