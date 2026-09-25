@@ -1,11 +1,20 @@
-Hi [Name],
+Hi Ray,
 
-Thanks for sharing the feedback. I appreciate you raising these points.
+We’ve identified a potential blocker with the hard-gating rollout that could become a significant delivery risk for us.
 
-On the Drift meeting, I understand your point about the short notice when the meeting time was changed. This week we have had limited capacity with Rimas being unwell, while the team is also covering Gating, CHRIS and other priorities. With Rimas, Harpal, Mohammed and myself all involved in the meeting you requested, finding a time that worked for everyone was difficult. That said, I agree that where we do need to move a meeting, we should give as much notice as possible.
+As we start raising hard-gating requests for L7 segment owners, we’ve found that the Gating system requires **two approvers to be configured for each segment** before a request can be raised. I’ve checked around 20 segments so far, and only 4–5 currently have two approvers configured in the Gating UI. I’ve also seen segments where **no approver is currently listed**.
 
-On the discussion itself, I think the reason we spent some time going over the points again was because I wasn't completely clear on the problem we were trying to solve and the proposed approach. The discussion helped me understand the requirement better, and I shared my feedback that, based on the information available at the time, I wasn't convinced that the proposed approach was the right way to solve the problem. I think it was useful to have that discussion before moving forward.
+This could become a significant blocker to our gradual rollout, particularly given our **end-November commitment to have all CSIs onboarded**. If the majority of segments have the same gap, we may not be able to progress the hard-gating requests through the current process.
 
-Regarding the PR, we did discuss this briefly in stand-up and agreed that we would pick it up afterwards. Unfortunately, once the meeting finished, we didn't get back to it.
+Could we look at some options together to address this early? For example:
 
-Thanks again for raising the points. I appreciate the feedback and agree that we can continue to improve how we coordinate and follow things through.
+1. **Gating Service to establish/validate the required two approvers** for the segments.
+2. **Consider relaxing the requirement to one approver** being configured, at least for this initial rollout.
+3. **Agree a temporary/manual exception approach** for the initial segments, so the approval configuration does not become a critical-path dependency.
+
+As VSaaS will be one of the first teams onboarding to hard-gating at this scale, and with the delivery deadline in mind, we’d like to start gradually migrating L7 segments next week for testing. It would be useful to identify and address this dependency together early, so we can keep the rollout on track and also establish a smooth onboarding process for teams that follow.
+
+Happy to discuss and work through whichever option makes most sense from the Gating Service side.
+
+Thanks,
+Sandeep
