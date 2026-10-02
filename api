@@ -1,77 +1,43 @@
-Rimas’ role has expanded from an individual contributor delivering within assigned engineering workstreams to a cross-product SME and technical lead with ownership across multiple Container Security platforms and capabilities.
-Previously, Rimas primarily delivered engineering work within defined projects, with broader architecture and design decisions reviewed or approved by senior technical leadership. His responsibilities were focused mainly on implementation within individual workstreams rather than technical ownership across the wider Container Security ecosystem.
-Today, his responsibilities include:
-- 3PiiP: Rimas is the primary technical SME and point of contact for 3PiiP, the only approved enterprise route for external container image ingestion. He owns technical onboarding decisions, pipeline design, security controls and engagement with application teams, ISOs, CSI owners, Artifactory and Platform teams. 3PiiP now supports 100+ CSI teams and approximately 300–500 images per month.
-- VSaaS: Rimas is the SME for the container image scanning API and now owns technical decisions across architecture, resiliency, scalability, availability and security gating. He has driven the Active-Active design for the Aqua dependency, VSaaS Gating, Image Age and Malware controls, and zero-downtime deployment. VSaaS processes 350K+ image scan requests per month.
-- CHRIS: Rimas has taken technical ownership of CHRIS, a new Container Hub reporting and image-scanning service. He designed the solution across architecture, backend services, data storage and frontend, delivered the POC within days and led a two-engineer team to deliver the MVP within one month. The architecture provides a foundation for future integration with VSaaS, Gating and 3PiiP.
-- Cross-product architecture and technical decision-making: Rimas now reviews and provides technical direction on designs across Gating, VSaaS, 3PiiP and CHRIS. Design decisions that previously required escalation to senior technical leadership are now being reviewed and resolved within his expanded scope.
-- Operator/Platform image ingestion: Rimas identified and took ownership of the gap where OpenShift Platform was using a non-approved process to import platform and operator images. He designed the replacement approach using the standard 3PiiP pattern and is coordinating implementation with Platform and Artifactory teams. The new pipeline has executed approximately 1,000 times during the migration and is addressing a separate CAP/Risk Exception.
-- FITR and Reporting: Following Houssem’s departure, Rimas assumed primary technical ownership of FITR and FITR Reporting. He also owns key Container Security reporting and alerting, including FITR statistics and malware reporting, providing security visibility to relevant stakeholders.
-- UBI and Middleware: Rimas is the SME for the UBI ingestion pipeline and has expanded his role into the Middleware image pipeline, supporting approved base and runtime images across Java, Python, NodeJS, Tomcat, Go, Nginx, .NET and messaging technologies.
-- Aqua and platform integrations: Rimas provides technical expertise across Aqua Console, CS API and Aqua reporting, including the technical changes required to migrate the main Artifactory integration to a federated instance and ensure VSaaS, 3PiiP and Middleware pipelines continued to operate with the new model.
-- Proactive malware detection: Rimas independently identified a gap in malware detection outside the existing VSaaS and 3PiiP services and built a separate detection and alerting capability. The service has already detected two malware events before SOC detection or production exposure.
-- Hiring and technical assessment: Rimas has expanded his contribution to team and organizational capability by serving as an interview panelist for senior engineering roles across multiple teams, completing approximately 20 interviews over the last eight months.
-Overall, the role has changed from delivering against defined requirements within individual workstreams to defining technical approaches, reviewing architecture, making cross-product technical decisions, creating new capabilities and taking responsibility for their delivery and ongoing operation. His current scope spans the core Container Security image supply chain, scanning, security controls, reporting and supporting platforms.
+Measurable Impact
+- Malware Detection: Built a malware detection and alerting mechanism outside VSaaS/3PiiP, resulting in 2 malware events intercepted before SOC detection or PROD exposure.
+- VSaaS Gating: Provided architectural guidance for VSaaS Gating, enabling a shift-left approach to security controls.
+- Operator/Platform Image Ingestion: Designed and delivered the new ingestion approach, with approximately 1,000 pipeline executions to date.
+- 3PiiP: Acts as the SME and go-to technical contact, supporting approximately 300–500 images per month across 100+ CSI teams.
+- UBI: Acts as the SME and go-to technical contact, driving adoption of UBI-micro/UBI-minimal to 5.7%.
+- CHRIS – POC: Designed and delivered a greenfield proof of concept, completed within days.
+- CHRIS – MVP: Led technical delivery with a two-engineer team, delivering the MVP within one month.
+- VSaaS: Acts as the SME and go-to technical contact for the platform, supporting 350K+ image scan requests monthly.
 
 
 
-
-Containerisation is a key part of JPMC’s technology strategy for compute and application modernisation. Over the last few years, adoption of containers and the requirements around container scanning, secure image ingestion, reporting, image modernisation and security controls have increased significantly. This has expanded the scale and complexity of the Container Security function and required the team to take on broader responsibilities to deliver critical capabilities for application teams.
-The Container Security ecosystem has evolved from individual services into an interconnected platform spanning VSaaS, 3PiiP, UBI, Middleware, Gating, Aqua, FITR, Reporting and CHRIS. These capabilities have dependencies across the container lifecycle, requiring architecture, security, resiliency and operational decisions to be considered across product boundaries. This growth requires technical ownership that extends beyond individual workstreams.    Pasted markdown
-Rimas has consistently stepped into this broader need as the platform has grown. Following Chris Clayton’s departure, he took on architectural review and technical feedback that previously required SVP-level involvement. Following Houssem’s departure from the Control Plane team, he assumed ownership of the FITR workstream while continuing to support the wider Container Security platform. He also took ownership of two new initiatives this year — CHRIS and Operator/Platform image ingestion — driving both from initial concept through implementation. His expanded scope now also includes FITR Reporting, VSaaS Gating, Operator/Platform CAP remediation and a standalone malware detection capability.    Pasted markdown
-The impact is measurable. VSaaS processes 350K+ image scan requests per month, while 3PiiP supports 100+ CSI teams and approximately 300–500 images per month. Rimas has contributed to VSaaS resiliency and availability improvements, including Active-Active architecture and zero-downtime deployment, while expanding security controls through Gating, Image Age and Malware checks. The Operator/Platform ingestion solution has executed approximately 1,000 times during migration, and the independently developed malware capability has detected two malware events before SOC detection or production exposure.    Pasted markdown
-The role is therefore changing from delivery within defined workstreams to broader technical ownership across the Container Security ecosystem, including architectural decision-making, cross-product dependencies, new capability development and risk remediation. Rimas is already operating at this broader scope and providing technical direction across multiple teams and platforms.    Pasted markdown
-Formalising the role at the proposed level aligns his accountability with the scope at which he is already operating and supports JPMC’s strategy of enabling secure, scalable and resilient container adoption across the enterprise.
-
-
-His work has had measurable impact across the wider Container Security platform. 
-Table for measurable impact
-Measurable Impact		
-Area	Evidence	Scale / Outcome / Impact
-Malware Detection	built a malware detection and alerting mechanism outside
-VSaaS/3PiiP	2 malware events intercepted before SOC detection or PROD
-VSaaS Gating	Architectural guidance for VSaaS Gating	Security control shift-left
-Operator/Platform image ingestion	Design and delivering	¿1,000 pipeline executions to date
-ЗРі¡Р	SME and go-to contact	¿300-500 images/month; 100+ CSI teams
-UBI	SME and go-to contact	UBI-micro/UBI-minimal adoption rate 5.7%
-CHRIS - POC	Designed and delivered a greenfield proof of concept	Delivered within days
-CHRIS - MVP	Led technical delivery with a two-engineer team	Delivered in 1 month
-VSaaS	SME and go-to contact	350K+ image scan requests monthly
-
-
-Responsibilities that have been added/expanded to this role which substantiate the proposed promotion
-Responsibility	BEFORE	NOW	Specifically Delivered	Real Impact
-SME & Cross-
-Organization Influence	Primarily focused on his own team and assigned container security products workstreams, with limited engagement outside
-Container Security team.	Provides technical and architectural support on broader
-including VSaaS, 3PiiP, UBI, FITR, and CHRIS.	Partnered with SRE team to provide architecture and technical analysis underpinning VSaaS scalability, resiliency and performance decisions on these initiative.	His technical input is now influencing decisions beyond his immediate team and helping shape solutions across the wider team.
-Technical Lead -
-CHRIS (new service)	CHRIS project is a new initiative with no technical lead responsibility for this new service/	Technical lead responsible for the architecture and delivery of CHRIS, including backend, data storage, and frontend, managing two-engineer team.	Delivered the POC within days and the MVP within one month using Devin Al and GitHub Copilot; standardized on modern tooling.	Platform designing for future integration with VSaaS, DiP, and 3PIIP - a force-multiplying architecture rather than a single-purpose tool.
-Operator/Platform
-Images Ingestion
-Framework	OpenShift Platform team was importing images via a non-approved pattern with manual scanning process	Owns the technical design and implementation of the new ingestion approach, working directly with Platform and
-Artifactory teams and aligning it to the 3PiiP pattern.	Pipeline has executed¿$1,000 times during migration; target state scans ~180 images per platform release plus ~300-500 operator images, scaling to 3,000+ at full adoption.	Approved pattern for Operator/Platform image ingestion, once migration is finalized.
-Cross-Product	Engineering contribution was primarily within
-Engineering Leadership individual workstreams and products.	Acts as an SME across VSaaS,
-АРІ.	FITR, 3PIIP, UBI, MW, Reporting, CS Provides technical input to the VSaaS Gating redesign, DiP base-
-image selection, and Aqua reporting improvements/duplications and conflicting approaches.	Design decisions are now made with a broader understanding of dependencies across the Container Security ecosystem, reducing duplication
-Technical Mentorship &
-Talent Development	No formal mentorship responsibility.	Provides ongoing technical mentorship to two engineers - Safaa and Oyin. Supports them in taking greater ownership of complex tasks.	Guided Safaa through the migration of deprecated pyartifactory (core FITR dependency) with zero disruption; mentored Oyin toward greater ownership and independent critical thinking on complex projects.	Builds additional technical capability within the team and reduces reliance on a single individual for critical areas.
-ЗРІІР	Contributor to 3PIIP but was not the SME or go-to contact	SME and go-to contact for Artifactory team on 3rd-party image ingestion questions; represents 3PIIP in cross-team discussions.	Drives adoption of new gating policies on 3PIIP, image age checking and malware blocking.	Enabled additional automated controls onto 3PIIP (~300-500 images/month across 100+ onboarded
-CSI teams) with no delivery blockers.
-
-
-				
-Proactive Malware
-Detection Capability	No standalone malware detection/warning capability existed outside the existing VSaas and 3PIIP services	Independently identified the gap and built a separate malware detection and warning mechanism, outside of and additional to VSaaS/3PIIP, on his own initiative through Nic's guidance	Designed, built, and operationalized the standalone detection/warning service	Has already detected two malware events before they reached SOC detection or the PROD environment - adding a security capability that did not previously exist within the team's tooling.
-
-
-
-1. We Take Ownership – Operator/Platform Image Ingestion
-The OpenShift Platform team was using a non-approved process to import platform and operator images, creating a security and CAP/Risk gap. Rimas identified the issue and took ownership of the remediation, even though it was outside his original scope. He worked directly with the Platform and Artifactory teams to design an approach aligned to the standard 3PiiP pattern and drove the implementation through migration. The new pipeline has already executed approximately 1,000 times, providing a standardised and secure approach for Operator/Platform image ingestion.
-2. We Deliver With Pride – CHRIS
-Rimas took technical ownership of CHRIS, a completely new Container Hub reporting and image-scanning service with no existing architecture or implementation to build on. He designed the solution across the backend, data storage and frontend, delivered the initial POC within days and led a two-engineer team to deliver the MVP within one month. He also established consistent engineering tooling and practices across the service. The architecture was designed with future integration into VSaaS, Gating and 3PiiP in mind, ensuring the solution could scale beyond the initial MVP.
-
-
-We Succeed Together – Cross-Team Technical Leadership
-Rimas consistently works across team boundaries to deliver outcomes for Container Security and the wider organisation. He partners closely with SRE, Platform, Artifactory, application teams, ISOs and CSI teams on complex technical decisions and delivery. He also supports team capability through mentoring and has played an active role in interviewing and successfully hiring senior engineers into the wider organisation, including Rory, Mohamed and Vinaya. His ability to assess technical capability, influence across teams and bring the right people into the organisation has strengthened both delivery capacity and the broader engineering capability.
+Expanded Responsibilities and Impact
+- SME & Cross-Organization Influence
+  - Before: Primarily focused on his own team and assigned Container Security product workstreams, with limited engagement outside the Container Security team.
+  - Now: Provides technical and architectural support across broader initiatives, including VSaaS, 3PiiP, UBI, FITR and CHRIS.
+  - Specifically Delivered: Partnered with the SRE team to provide architecture and technical analysis underpinning VSaaS scalability, resiliency and performance decisions.
+  - Real Impact: His technical input now influences decisions beyond his immediate team and helps shape solutions across the wider organisation.
+- Technical Lead – CHRIS (New Service)
+  - Before: CHRIS was a new initiative with no established technical lead responsibility.
+  - Now: Technical lead responsible for CHRIS architecture and delivery, including backend, data storage and frontend, while managing a two-engineer team.
+  - Specifically Delivered: Delivered the POC within days and the MVP within one month using Devin AI and GitHub Copilot, while standardising on modern engineering tooling.
+  - Real Impact: Created a platform designed for future integration with VSaaS, DiP and 3PiiP, providing a reusable foundation rather than a single-purpose solution.
+- Operator/Platform Image Ingestion Framework
+  - Before: The OpenShift Platform team was importing images through a non-approved pattern with a manual scanning process.
+  - Now: Owns the technical design and implementation of the new ingestion approach, working directly with Platform and Artifactory teams and aligning it to the 3PiiP pattern.
+  - Specifically Delivered: The pipeline has executed approximately 1,000 times during migration. The target state will scan approximately 180 images per platform release plus 300–500 operator images, scaling to 3,000+ images at full adoption.
+  - Real Impact: Establishes an approved pattern for Operator/Platform image ingestion once migration is finalised.
+- Cross-Product Technical Ownership
+  - Before: Engineering contribution was primarily within individual workstreams and products.
+  - Now: Acts as an SME across VSaaS, FITR, 3PiiP, UBI, Middleware, Reporting and CS API.
+  - Specifically Delivered: Provides technical input to the VSaaS Gating redesign, DiP base-image selection and Aqua reporting improvements, while considering dependencies across the wider Container Security ecosystem.
+  - Real Impact: Technical decisions are now made with a broader understanding of cross-product dependencies, helping reduce duplication and conflicting approaches.
+- Technical Mentorship & Talent Development
+  - Before: No formal mentorship responsibility.
+  - Now: Provides ongoing technical mentorship to Safaa and Oyin, supporting them in taking greater ownership of complex tasks.
+  - Specifically Delivered: Guided Safaa through the migration from deprecated pyartifactory, a core FITR dependency, with zero disruption; mentored Oyin towards greater ownership and independent critical thinking on complex projects.
+  - Real Impact: Builds additional technical capability within the team and reduces reliance on a single individual for critical areas.
+- 3PiiP
+  - Before: Contributor to 3PiiP but was not the SME or go-to technical contact.
+  - Now: SME and go-to contact for the Artifactory team on third-party image ingestion questions and represents 3PiiP in cross-team discussions.
+  - Specifically Delivered: Drives adoption of new gating policies on 3PiiP, including image-age checking and malware blocking.
+  - Real Impact: Enabled additional automated security controls across approximately 300–500 images per month and 100+ onboarded CSI teams, without creating delivery blockers.
