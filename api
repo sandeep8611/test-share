@@ -1,43 +1,23 @@
-Measurable Impact
-- Malware Detection: Built a malware detection and alerting mechanism outside VSaaS/3PiiP, resulting in 2 malware events intercepted before SOC detection or PROD exposure.
-- VSaaS Gating: Provided architectural guidance for VSaaS Gating, enabling a shift-left approach to security controls.
-- Operator/Platform Image Ingestion: Designed and delivered the new ingestion approach, with approximately 1,000 pipeline executions to date.
-- 3PiiP: Acts as the SME and go-to technical contact, supporting approximately 300–500 images per month across 100+ CSI teams.
-- UBI: Acts as the SME and go-to technical contact, driving adoption of UBI-micro/UBI-minimal to 5.7%.
-- CHRIS – POC: Designed and delivered a greenfield proof of concept, completed within days.
-- CHRIS – MVP: Led technical delivery with a two-engineer team, delivering the MVP within one month.
-- VSaaS: Acts as the SME and go-to technical contact for the platform, supporting 350K+ image scan requests monthly.
+Yes. This is the **Rationale for Role** content, and it is currently well over 4,000 characters because it includes the detailed responsibility evidence that belongs more naturally in the Responsibilities section.
 
+For the **Rationale** section, I would keep the organisational need, why the role changed, and the strongest evidence—but remove the detailed Before/Now breakdown. That gives us a much stronger rationale and avoids duplication.
 
+### Rationale for Role — under 4,000 characters
 
-Expanded Responsibilities and Impact
-- SME & Cross-Organization Influence
-  - Before: Primarily focused on his own team and assigned Container Security product workstreams, with limited engagement outside the Container Security team.
-  - Now: Provides technical and architectural support across broader initiatives, including VSaaS, 3PiiP, UBI, FITR and CHRIS.
-  - Specifically Delivered: Partnered with the SRE team to provide architecture and technical analysis underpinning VSaaS scalability, resiliency and performance decisions.
-  - Real Impact: His technical input now influences decisions beyond his immediate team and helps shape solutions across the wider organisation.
-- Technical Lead – CHRIS (New Service)
-  - Before: CHRIS was a new initiative with no established technical lead responsibility.
-  - Now: Technical lead responsible for CHRIS architecture and delivery, including backend, data storage and frontend, while managing a two-engineer team.
-  - Specifically Delivered: Delivered the POC within days and the MVP within one month using Devin AI and GitHub Copilot, while standardising on modern engineering tooling.
-  - Real Impact: Created a platform designed for future integration with VSaaS, DiP and 3PiiP, providing a reusable foundation rather than a single-purpose solution.
-- Operator/Platform Image Ingestion Framework
-  - Before: The OpenShift Platform team was importing images through a non-approved pattern with a manual scanning process.
-  - Now: Owns the technical design and implementation of the new ingestion approach, working directly with Platform and Artifactory teams and aligning it to the 3PiiP pattern.
-  - Specifically Delivered: The pipeline has executed approximately 1,000 times during migration. The target state will scan approximately 180 images per platform release plus 300–500 operator images, scaling to 3,000+ images at full adoption.
-  - Real Impact: Establishes an approved pattern for Operator/Platform image ingestion once migration is finalised.
-- Cross-Product Technical Ownership
-  - Before: Engineering contribution was primarily within individual workstreams and products.
-  - Now: Acts as an SME across VSaaS, FITR, 3PiiP, UBI, Middleware, Reporting and CS API.
-  - Specifically Delivered: Provides technical input to the VSaaS Gating redesign, DiP base-image selection and Aqua reporting improvements, while considering dependencies across the wider Container Security ecosystem.
-  - Real Impact: Technical decisions are now made with a broader understanding of cross-product dependencies, helping reduce duplication and conflicting approaches.
-- Technical Mentorship & Talent Development
-  - Before: No formal mentorship responsibility.
-  - Now: Provides ongoing technical mentorship to Safaa and Oyin, supporting them in taking greater ownership of complex tasks.
-  - Specifically Delivered: Guided Safaa through the migration from deprecated pyartifactory, a core FITR dependency, with zero disruption; mentored Oyin towards greater ownership and independent critical thinking on complex projects.
-  - Real Impact: Builds additional technical capability within the team and reduces reliance on a single individual for critical areas.
-- 3PiiP
-  - Before: Contributor to 3PiiP but was not the SME or go-to technical contact.
-  - Now: SME and go-to contact for the Artifactory team on third-party image ingestion questions and represents 3PiiP in cross-team discussions.
-  - Specifically Delivered: Drives adoption of new gating policies on 3PiiP, including image-age checking and malware blocking.
-  - Real Impact: Enabled additional automated security controls across approximately 300–500 images per month and 100+ onboarded CSI teams, without creating delivery blockers.
+Containerisation is a key part of Citi’s technology strategy for compute and application modernisation. Over the last few years, adoption of containers and requirements around container scanning, secure image ingestion, reporting, image modernisation and security controls have increased significantly. This has expanded the scale and complexity of the Container Security function and required broader technical ownership to deliver critical capabilities for application teams.
+
+The Container Security ecosystem has evolved from individual services into an interconnected platform spanning VSaaS, 3PiiP, UBI, Middleware, Gating, Aqua, FITR, Reporting and CHRIS. These capabilities have dependencies across the container lifecycle, requiring architecture, security, resiliency and operational decisions to be considered across product boundaries. The growth of this ecosystem requires technical ownership that extends beyond individual workstreams.
+
+Rimas has consistently stepped into this broader need as the platform has grown:
+
+- **Broader technical leadership:** Following Chris Clayton’s departure, Rimas took on architectural review and technical feedback that previously required SVP-level involvement. He now provides technical direction across multiple Container Security products and works with SRE on VSaaS scalability, resiliency and performance decisions.
+
+- **Expanded ownership:** Following Houssem’s departure from the Control Plane team, Rimas assumed ownership of the FITR workstream while continuing to support the wider Container Security platform. His scope has also expanded to FITR Reporting, VSaaS Gating, CAP/Risk remediation and standalone malware detection.
+
+- **New capabilities:** Rimas took ownership of two new initiatives, CHRIS and Operator/Platform image ingestion, driving both from initial concept through implementation. CHRIS delivered a POC within days and an MVP within one month with a two-engineer team. The Operator/Platform pipeline has executed approximately **1,000 times** during migration.
+
+- **Enterprise scale:** Rimas is the technical SME for VSaaS, supporting **350K+ image scan requests per month**, and for 3PiiP, supporting **100+ CSI teams and approximately 300–500 images per month**.
+
+- **Security outcomes:** He identified and addressed a gap in standalone malware detection, with the resulting capability detecting **two malware events before SOC detection or production exposure**. He has also expanded automated security controls through VSaaS Gating and 3PiiP, including Image Age and Malware controls.
+
+The role has therefore changed from delivery within defined engineering workstreams to **broader technical ownership across architecture, cross-product dependencies, new capability development, security controls and risk remediation**. Rimas is already operating at this broader scope. Formalising the role aligns accountability with the responsibilities he is currently carrying and with Citi’s strategy for secure, scalable and resilient container adoption.
