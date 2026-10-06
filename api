@@ -1,23 +1,11 @@
-Yes. This is the **Rationale for Role** content, and it is currently well over 4,000 characters because it includes the detailed responsibility evidence that belongs more naturally in the Responsibilities section.
+Sure thing, Sean.
 
-For the **Rationale** section, I would keep the organisational need, why the role changed, and the strongest evidence—but remove the detailed Before/Now breakdown. That gives us a much stronger rationale and avoids duplication.
+**TL;DR:** To enable VSaaS Container Image hard gating in LSE for a segment, we need the Segment Head and Portfolio Architect details. A number of segments currently have one or both missing in Gating Service, so my team is reaching out to segment owners/Portfolio Architects to close those gaps.
 
-### Rationale for Role — under 4,000 characters
+For some reason, your name is also missing against your L7 segment, Sean. I’ll take care of that and get it updated.
 
-Containerisation is a key part of Citi’s technology strategy for compute and application modernisation. Over the last few years, adoption of containers and requirements around container scanning, secure image ingestion, reporting, image modernisation and security controls have increased significantly. This has expanded the scale and complexity of the Container Security function and required broader technical ownership to deliver critical capabilities for application teams.
+**Rodd’s role as Portfolio Architect:** Once we raise the hard-gating request for your segment, we’ll need approval from either you or Rodd. That’s essentially the only action required from the Segment Head/Portfolio Architect.
 
-The Container Security ecosystem has evolved from individual services into an interconnected platform spanning VSaaS, 3PiiP, UBI, Middleware, Gating, Aqua, FITR, Reporting and CHRIS. These capabilities have dependencies across the container lifecycle, requiring architecture, security, resiliency and operational decisions to be considered across product boundaries. The growth of this ecosystem requires technical ownership that extends beyond individual workstreams.
+Once approved, VSaaS hard gating will be enforced for container images deployed through LSE for your segment. If the VSaaS security checks don’t pass, deployment to higher environments will be blocked.
 
-Rimas has consistently stepped into this broader need as the platform has grown:
-
-- **Broader technical leadership:** Following Chris Clayton’s departure, Rimas took on architectural review and technical feedback that previously required SVP-level involvement. He now provides technical direction across multiple Container Security products and works with SRE on VSaaS scalability, resiliency and performance decisions.
-
-- **Expanded ownership:** Following Houssem’s departure from the Control Plane team, Rimas assumed ownership of the FITR workstream while continuing to support the wider Container Security platform. His scope has also expanded to FITR Reporting, VSaaS Gating, CAP/Risk remediation and standalone malware detection.
-
-- **New capabilities:** Rimas took ownership of two new initiatives, CHRIS and Operator/Platform image ingestion, driving both from initial concept through implementation. CHRIS delivered a POC within days and an MVP within one month with a two-engineer team. The Operator/Platform pipeline has executed approximately **1,000 times** during migration.
-
-- **Enterprise scale:** Rimas is the technical SME for VSaaS, supporting **350K+ image scan requests per month**, and for 3PiiP, supporting **100+ CSI teams and approximately 300–500 images per month**.
-
-- **Security outcomes:** He identified and addressed a gap in standalone malware detection, with the resulting capability detecting **two malware events before SOC detection or production exposure**. He has also expanded automated security controls through VSaaS Gating and 3PiiP, including Image Age and Malware controls.
-
-The role has therefore changed from delivery within defined engineering workstreams to **broader technical ownership across architecture, cross-product dependencies, new capability development, security controls and risk remediation**. Rimas is already operating at this broader scope. Formalising the role aligns accountability with the responsibilities he is currently carrying and with Citi’s strategy for secure, scalable and resilient container adoption.
+Before approving the request, if you or Rodd have any questions or need support from my team, we’re happy to help.
