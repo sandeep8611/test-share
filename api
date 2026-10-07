@@ -1,11 +1,9 @@
-Sure thing, Sean.
+Thanks for the clarification.
 
-**TL;DR:** To enable VSaaS Container Image hard gating in LSE for a segment, we need the Segment Head and Portfolio Architect details. A number of segments currently have one or both missing in Gating Service, so my team is reaching out to segment owners/Portfolio Architects to close those gaps.
+1. **Adoption Plan & Priorities:** Avtar will share the high-level plan we are currently executing for the phased rollout.
 
-For some reason, your name is also missing against your L7 segment, Sean. I’ll take care of that and get it updated.
+2. **Segment Approvers:** Please add my SOEID and Noor’s SOEID as the designated segment approvers.
 
-**Rodd’s role as Portfolio Architect:** Once we raise the hard-gating request for your segment, we’ll need approval from either you or Rodd. That’s essentially the only action required from the Segment Head/Portfolio Architect.
+3. **VSaaS Gate / Opt-out Approvers:** Could you clarify what you mean by the opt-out requests going to the “wrong queue”? I’m assuming this is following the same exception/approval process currently used for the existing GEM gate.
 
-Once approved, VSaaS hard gating will be enforced for container images deployed through LSE for your segment. If the VSaaS security checks don’t pass, deployment to higher environments will be blocked.
-
-Before approving the request, if you or Rodd have any questions or need support from my team, we’re happy to help.
+If you are asking us to provide the SOEID for the **Head L3** approver, you can use **Noor** for this.
