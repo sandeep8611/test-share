@@ -1,29 +1,38 @@
 Hi Noor,
 
-Please find below my proposed EOY ratings for the team across Leadership, Financial, Risk and Client/Franchise, along with a brief rationale for each.
+Please find below my proposed EOY ratings for the team across Leadership, Financial, Risk and Client/Franchise, along with my overall ranking for the four VPs.
+
+### Proposed EOY ratings
 
 | Team member | Leadership | Financial | Risk | Client/Franchise |
 |---|---:|---:|---:|---:|
 | Harpal (SVP) | 3 | 3 | 2 | 2 |
 | Rimas (VP) | 2 | 3 | 2 | 2 |
 | Nodir (VP) | 3 | 3 | 3 | 3 |
-| Mohamed | 3 | 3 | 3 | 3 |
 | Rory (VP) | 3 | 3 | 3 | 3 |
+| Mohamed | 3 | 3 | 3 | 3 |
 | Oyin (AVP) | 2 | 3 | 3 | 2 |
 
-**Key contributions**
+### Key contributions
 
-- **Harpal:** Stronger ownership of VSaaS, including Image Scanning Gating, Base Image Upliftment with Middleware, and collaboration with SRE on service reliability. His Gating delivery involved significant integration challenges and supported an important security control change.
-- **Rimas:** Led the unplanned CHRIS MVP workstream through to UAT, while taking ownership of Operator image ingestion through 3PiiP and progressing other key platform deliveries.
-- **Nodir:** Took ownership of DiP, working with Avtar and the Container Security, Stylus and SRE teams on integrations, releases, model upgrades and operational support.
-- **Mohamed and Rory:** Both have made a positive start since joining in August and July respectively. I’ve proposed 3s across all categories, given the shorter period available to assess their sustained impact.
+- **Harpal:** Improved ownership of VSaaS, including Image Scanning Gating, Base Image Upliftment with Middleware, and collaboration with SRE on service reliability. He also supported Rory’s onboarding and development.
+- **Rimas:** Led the unplanned CHRIS MVP workstream through to UAT and took ownership of Operator image ingestion through 3PiiP, alongside Artifactory federation migration and VSaaS support across multiple Aqua consoles.
+- **Nodir:** Took ownership of DiP, working with Avtar and the wider team on Gating integration, Stylus releases, model upgrades, analytics and operational support.
+- **Rory and Mohamed:** Both have made a positive start since joining in July and August respectively. I’ve proposed 3s across all categories, given the shorter period available to assess their sustained impact.
 - **Oyin:** Took greater ownership of DiP, engaged with teams to support adoption, and developed reusable prompts for different runtime images, including Java and Nginx.
 
-For Oyin, I’d appreciate your view on the proposed Leadership rating of 2, given the progress he has made in taking ownership of DiP and supporting adoption across teams.
+### Overall VP ranking
 
-I’ll also provide the required 1:n rankings where multiple team members share the same rating, based on their relative contribution and impact.
+1. **Rimas – 1:4**
+2. **Nodir – 2:4**
+3. **Rory – 3:4**
+4. **Mohamed – 4:4**
 
-Happy to discuss any of the proposed ratings.
+This is my proposed relative ranking based on contributions and impact during the year. Rory and Mohamed have both made a positive start, although they have had less time in role.
+
+For Oyin, I’d also appreciate your view on the proposed Leadership rating of 2, given the progress he has made in taking ownership of DiP and supporting adoption across teams.
+
+Happy to discuss any of the proposed ratings or rankings.
 
 Thanks,  
 Aly
