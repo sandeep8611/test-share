@@ -1,5 +1,29 @@
-Thanks for putting this together. One piece of feedback from my side — for the **Aqua/CHRIS sections**, I feel the updates are currently quite story/task-oriented, which makes them harder to use for management reporting.
+Hi Noor,
 
-Could we make the sprint updates more **outcome and impact focused** — highlighting what was delivered, the security/production value, key milestones, and any significant progress or risks, rather than individual stories and SPs?
+Please find below my proposed EOY ratings for the team across Leadership, Financial, Risk and Client/Franchise, along with a brief rationale for each.
 
-The detailed story-level information is useful for the Scrum view, but for the management report I think a more **executive-level summary of “what changed and why it matters”** would make it much more effective.
+| Team member | Leadership | Financial | Risk | Client/Franchise |
+|---|---:|---:|---:|---:|
+| Harpal (SVP) | 3 | 3 | 2 | 2 |
+| Rimas (VP) | 2 | 3 | 2 | 2 |
+| Nodir (VP) | 3 | 3 | 3 | 3 |
+| Mohamed | 3 | 3 | 3 | 3 |
+| Rory (VP) | 3 | 3 | 3 | 3 |
+| Oyin (AVP) | 2 | 3 | 3 | 2 |
+
+**Key contributions**
+
+- **Harpal:** Stronger ownership of VSaaS, including Image Scanning Gating, Base Image Upliftment with Middleware, and collaboration with SRE on service reliability. His Gating delivery involved significant integration challenges and supported an important security control change.
+- **Rimas:** Led the unplanned CHRIS MVP workstream through to UAT, while taking ownership of Operator image ingestion through 3PiiP and progressing other key platform deliveries.
+- **Nodir:** Took ownership of DiP, working with Avtar and the Container Security, Stylus and SRE teams on integrations, releases, model upgrades and operational support.
+- **Mohamed and Rory:** Both have made a positive start since joining in August and July respectively. I’ve proposed 3s across all categories, given the shorter period available to assess their sustained impact.
+- **Oyin:** Took greater ownership of DiP, engaged with teams to support adoption, and developed reusable prompts for different runtime images, including Java and Nginx.
+
+For Oyin, I’d appreciate your view on the proposed Leadership rating of 2, given the progress he has made in taking ownership of DiP and supporting adoption across teams.
+
+I’ll also provide the required 1:n rankings where multiple team members share the same rating, based on their relative contribution and impact.
+
+Happy to discuss any of the proposed ratings.
+
+Thanks,  
+Aly
