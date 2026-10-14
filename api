@@ -1,5 +1,7 @@
-Sai, I think we spoke about this before, but it would be helpful to get a bit more context on the overall approach and how we’re thinking about this long term. Do we have any documentation or a high-level flow/architecture we can go through?
+Sai, I think we spoke about this before, but it would be helpful to get a bit more context on the overall approach and how we’re thinking about this long term. I can see the value in what we’re trying to achieve, and I have confidence in the direction we’re heading and the technical work you’re driving. I just want to make sure we’ve thought through the bigger picture.
+
+Do we have any documentation or a high-level flow/architecture we can go through?
 
 I’d also like to understand what we’re expecting from LSE and any other stakeholders we’re depending on, and how much we’re relying on them. For example, what happens if their approach or capabilities change in the future?
 
-Just want to make sure we have the bigger picture and are aligned on the approach before we go too far down this route.
+Just want to make sure we’re aligned on the overall approach and have considered the longer-term dependencies before we go too far down this route.
