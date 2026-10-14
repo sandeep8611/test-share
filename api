@@ -1,7 +1,14 @@
-Sai, I think we spoke about this before, but it would be helpful to get a bit more context on the overall approach and how we’re thinking about this long term. I can see the value in what we’re trying to achieve, and I have confidence in the direction we’re heading and the technical work you’re driving. I just want to make sure we’ve thought through the bigger picture.
+### VSaaS Resilience – Aqua Incident Follow-up
 
-Do we have any documentation or a high-level flow/architecture we can go through?
+Bring the Aqua and VSaaS teams together, with relevant SRE/CS API and LSE Gating representatives, to agree how we improve resilience following today's incident.
 
-I’d also like to understand what we’re expecting from LSE and any other stakeholders we’re depending on, and how much we’re relying on them. For example, what happens if their approach or capabilities change in the future?
+As we roll out hard gating, we need to ensure scanning remains reliable and that dependency issues don't leave us without timely security results.
 
-Just want to make sure we’re aligned on the overall approach and have considered the longer-term dependencies before we go too far down this route.
+**Agenda:**
+- **Monitoring:** How can we detect service degradation earlier?
+- **Failover and recovery:** Can we automate failover and safely restore normal service?
+- **Capacity and dependencies:** What caused today's throughput drop, and how do we prevent recurrence?
+- **Gating behaviour:** How should VSaaS/LSE handle delayed or unavailable scans without compromising security?
+- **Actions and ownership:** Agree immediate safeguards, prioritised improvements, owners and timelines.
+
+**Outcome:** A clear, actionable resilience plan to support the ongoing hard-gating rollout.
