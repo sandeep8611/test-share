@@ -1,29 +1,3 @@
-Hi all,
+**Mo – Aqua Enhanced Monitoring**
 
-Thanks for the discussion today. We identified gaps in monitoring, alerting and failover following the Aqua incident, where image-scanning functionality degraded on the production OAC console and the alert took around 40 minutes to trigger.
-
-As we progress with the VSaaS hard-gating rollout, we need to ensure service degradation is detected promptly and that we have a reliable recovery process.
-
-**Agreed actions and owners**
-
-1. **Mohamed – Monitoring and alerting**
-   - Investigate the delayed alert, including thresholds and monitoring data from the incident.
-   - Follow up with the MRM team on anomaly detection.
-   - Work with Nick on 24/7 VSaaS monitoring and a real-time dashboard.
-   - Document current monitoring gaps and propose improvements.
-   - Plan chaos-engineering exercises with Rimantas and Aqua, where appropriate.
-
-2. **Ionut – Aqua and CS API health checks**
-   - Engage Aqua/AquaSec to review their monitoring and alerting, and request better detection of degraded scanning functionality.
-   - Investigate enhancements to the CS API health endpoint to identify partial service failures, building on Adam’s previous investigation.
-
-3. **Rimantas – Failover and recovery**
-   - Review and update the incident playbook, including when and how to redirect traffic to UAT OAC if Prod OAC scanning is degraded.
-
-4. **Perminder – CS API logging**
-   - Investigate missing incoming request logs associated with the reported 5% failure rate.
-
-Please keep the group updated on progress, highlighting any blockers and proposed timelines.
-
-Thanks,  
-Muhammad
+Implement in-house monitoring to detect Aqua service degradation and partial failures in real time. Current health checks return HTTP 200 even when scanning functionality is degraded. The enhanced monitoring should provide reliable health signals to support active-active load balancing and ensure traffic is directed to healthy consoles.
