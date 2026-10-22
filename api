@@ -1,1 +1,7 @@
-Image Gating Opt-Outs: Provide clear justification for why remediation is not possible and select the correct category. Use “No Fix Available / False Positives” only when applicable. US-hours coverage is provided by a US delegate. Check the latest approved base images: https://go/managedrepos
+As discussed in our last stand-up, we’ve now set up separate groups for DiP, Pipeline, CHRIS and VSaaS (still thinking this one through 😊).
+
+The aim is to improve visibility across all our workstreams and make sure everyone has the opportunity to stay informed and contribute, even when they’re not directly working on that area. This could be through following discussions, sharing ideas, reviewing PRs or helping out where relevant, while keeping clear ownership within each workstream.
+
+If you’re not in any of the groups, please ping here and we’ll get you added.
+
+As always, all feedback is welcome — good or bad, what’s working or what isn’t. Let’s give this approach a go and see how it works for everyone. We can always adapt as we go along based on what works best for the team.
