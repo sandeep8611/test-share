@@ -1,12 +1,1 @@
-Hi Mohamed, I’m looking to define the dashboard requirements for VSaaS hard-gating as we roll it out across JPMC CI/CD. A few initial metrics I had in mind:
-
-- **Gate adoption & compliance:** % of segments/CSIs and images passing/failing, and overall adoption.
-- **Image age:** Trends in images compliant with the 90-day policy and base image age improvement.
-- **Vulnerability posture:** Trends in Critical/High vulnerabilities, GEMs and malware findings.
-- **Opt-out exceptions:** Requests raised, approved/rejected/pending, ageing and expiry tracking.
-- **Developer impact:** Pipeline blocks, common failure reasons and remediation trends.
-- **Auditability:** Historical gate decisions, policy violations and exception approval trails.
-
-The aim is to give management visibility of our security posture, the effectiveness of hard-gating and its impact on developers.
-
-Could you let me know what we can support through existing SRE dashboards and where we might need additional work? I’ll continue to add to the list as we progress.
+CVE trend tracking: Track changes in the number of unique images with CVEs above Low severity and those with Critical/High CVEs, including percentage change over time (e.g. +25% and +79% over the last six weeks).
