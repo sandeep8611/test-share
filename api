@@ -1,7 +1,12 @@
-As discussed in our last stand-up, we’ve now set up separate groups for DiP, Pipeline, CHRIS and VSaaS (still thinking this one through 😊).
+Hi Mohamed, I’m looking to define the dashboard requirements for VSaaS hard-gating as we roll it out across JPMC CI/CD. A few initial metrics I had in mind:
 
-The aim is to improve visibility across all our workstreams and make sure everyone has the opportunity to stay informed and contribute, even when they’re not directly working on that area. This could be through following discussions, sharing ideas, reviewing PRs or helping out where relevant, while keeping clear ownership within each workstream.
+- **Gate adoption & compliance:** % of segments/CSIs and images passing/failing, and overall adoption.
+- **Image age:** Trends in images compliant with the 90-day policy and base image age improvement.
+- **Vulnerability posture:** Trends in Critical/High vulnerabilities, GEMs and malware findings.
+- **Opt-out exceptions:** Requests raised, approved/rejected/pending, ageing and expiry tracking.
+- **Developer impact:** Pipeline blocks, common failure reasons and remediation trends.
+- **Auditability:** Historical gate decisions, policy violations and exception approval trails.
 
-If you’re not in any of the groups, please ping here and we’ll get you added.
+The aim is to give management visibility of our security posture, the effectiveness of hard-gating and its impact on developers.
 
-As always, all feedback is welcome — good or bad, what’s working or what isn’t. Let’s give this approach a go and see how it works for everyone. We can always adapt as we go along based on what works best for the team.
+Could you let me know what we can support through existing SRE dashboards and where we might need additional work? I’ll continue to add to the list as we progress.
