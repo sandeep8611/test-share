@@ -1,42 +1,23 @@
-# Stakeholder Feedback – Avtar
+ ensure the work was progressing towards successful developer adoption.
 
-## Contributions
+I would like to be able to delegate a workstream to Avtar with confidence that he will take ownership, coordinate the relevant stakeholders, manage dependencies and drive it forward without requiring regular intervention from me.
 
-Avtar has supported several important initiatives within my team this year:
+### 4. Strengthen alignment between sprint delivery and strategic priorities
 
-- **VSaaS Gating:** He has helped coordinate communications with developers and supported the migration of L7 segments. As of 30 October 2026, 88 of 119 L7 segments have migrated to Gating controls, representing good progress on this strategic CAP Level 2 initiative.
-- **Roadmap planning:** He has contributed to defining next year's roadmap and coordinating priorities across the team.
-- **Team delivery:** He has facilitated stand-ups and supported sprint ceremonies, helping maintain delivery momentum.
-- **Developer engagement:** He has contributed to the branding and positioning of our Container Security capabilities for the wider Citi developer community.
+Currently, engineers largely create and manage their own Jira stories for sprint planning. I would like Avtar to take a more active role in ensuring sprint activities are aligned with the agreed product roadmap and strategic priorities.
 
-Overall, I appreciate Avtar's contribution and the support he has provided to the team.
+For example, when ad hoc work is introduced during a sprint, such as Alex's scanner testing requirements or the API endpoint migration from V0 to V1, I would expect Avtar to assess the impact on existing commitments, understand which engineers and workstreams are affected, and help the team make informed prioritisation decisions.
 
-## Areas for further development
+I have noticed several occasions where ad hoc tasks have been taken on without sufficient challenge around their priority or impact on existing commitments. I have then had to step in and ask why the work was being undertaken and what planned activities would be affected.
 
-My expectations of Avtar as a Product Owner are higher, particularly around independent ownership, proactive communication and driving outcomes.
+This is an important part of the PO role: ensuring that the team is not simply completing individual tickets, but making deliberate progress towards agreed business outcomes.
 
-I recognise that Avtar is a shared resource across two engineering teams, which brings competing priorities. However, I would like to see him take greater end-to-end ownership of his assigned workstreams, rather than relying on engineering leads or myself to follow up on progress, status and blockers.
+## Overall feedback
 
-There have been occasions when I have had to chase updates or ask about challenges that I would have expected him to raise proactively, ideally with proposed actions or recommendations. I believe there are four key areas where he can develop further.
+I recognise that this is Avtar's first year in the PO role and that supporting two engineering teams brings additional challenges.
 
-### 1. Develop a deeper understanding of the product roadmap and business requirements
+However, I believe he has the opportunity to make a much broader impact by developing greater independence and taking stronger ownership of his workstreams. The key transition I would like to see is from coordinating delivery activities to genuinely owning the product roadmap, understanding business priorities, managing competing demands and proactively driving outcomes with the engineering teams.
 
-I would like Avtar to move beyond coordinating individual tasks and develop a clearer understanding of the workstreams we are delivering, why they matter and the business outcomes we are aiming to achieve.
+Making this transition would increase his contribution across both teams and allow me to spend less time on product coordination and day-to-day delivery management, and more time focusing on technical strategy, engineering excellence and the wider direction of the platform.
 
-This does not necessarily require deep technical knowledge, but understanding the purpose, priorities and expected outcomes of each initiative is essential. It would enable him to drive the roadmap more independently, challenge priorities where necessary and ensure engineering effort remains aligned with the objectives agreed with Nic and other stakeholders.
-
-For context, my team has been working across six main workstreams this year, but Avtar's involvement has primarily focused on VSaaS Gating and DiP. Within VSaaS Gating, his main contribution has been supporting segment migration and developer communications. With DiP, I have not yet seen the level of product ownership or roadmap contribution I would expect from the PO role. Nodir and Oyin have largely been creating and managing their own engineering tasks, and I would like Avtar to take a more active role in defining the roadmap, coordinating priorities and driving progress towards the intended outcomes.
-
-### 2. Take greater ownership of assigned tasks and manage competing priorities
-
-There have been several occasions where tasks have made limited progress until I have followed up, at which point it has become clear that Avtar has been occupied with other commitments.
-
-I appreciate that competing priorities are inevitable when supporting two teams. However, I would like him to manage his commitments more proactively, communicate when priorities conflict and seek support from myself or Adam where necessary, rather than allowing tasks to stall or progress to become unclear.
-
-I would expect him to provide regular updates, highlight risks early and make recommendations on how competing demands should be managed.
-
-### 3. Independently drive the roadmap for assigned workstreams
-
-This is probably the biggest development opportunity for Avtar. This year, I asked him to focus primarily on VSaaS Gating and DiP, providing a clear opportunity to demonstrate end-to-end Product Ownership.
-
-Taking DiP as an example, I would have liked to see him independently drive the roadmap, understand the key milestones and dependencies, establish what needed to be delivered and when, and work with Nodir and Oyin to ensure the work was
+I am sharing this feedback constructively because I believe Avtar has the potential to become a much more effective Product Owner. I would like to see him build on the foundations established during his first year and demonstrate greater ownership, independence and impact going forward.
