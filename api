@@ -1,23 +1,25 @@
- ensure the work was progressing towards successful developer adoption.
+Hi Noor,
 
-I would like to be able to delegate a workstream to Avtar with confidence that he will take ownership, coordinate the relevant stakeholders, manage dependencies and drive it forward without requiring regular intervention from me.
+I've looked into the rollback concern raised by Leo and wanted to share my understanding from the VSaaS side.
 
-### 4. Strengthen alignment between sprint delivery and strategic priorities
+The key point is that **VSaaS Image Scanning Gating happens at build time**, when the image is scanned and the gating report is generated. Gating Service uses that existing report during deployment rather than triggering a fresh scan each time.
 
-Currently, engineers largely create and manage their own Jira stories for sprint planning. I would like Avtar to take a more active role in ensuring sprint activities are aligned with the agreed product roadmap and strategic priorities.
+I see three possible scenarios:
 
-For example, when ad hoc work is introduced during a sprint, such as Alex's scanner testing requirements or the API endpoint migration from V0 to V1, I would expect Avtar to assess the impact on existing commitments, understand which engineers and workstreams are affected, and help the team make informed prioritisation decisions.
+**1. Rollback using Harness rollback functionality**
 
-I have noticed several occasions where ad hoc tasks have been taken on without sufficient challenge around their priority or impact on existing commitments. I have then had to step in and ask why the work was being undertaken and what planned activities would be affected.
+If the team uses Harness' built-in rollback feature to restore the previous version (N-1), my understanding is that this should not be blocked by VSaaS Image Scanning Gating.
 
-This is an important part of the PO role: ensuring that the team is not simply completing individual tickets, but making deliberate progress towards agreed business outcomes.
+**2. Manually rolling back to a previous version through Harness**
 
-## Overall feedback
+If the previous image is still available in Artifactory, Harness should be able to deploy it using its existing VSaaS scan/gating report. It should not require a new scan or gating evaluation.
 
-I recognise that this is Avtar's first year in the PO role and that supporting two engineering teams brings additional challenges.
+**3. Rolling back to an older version where the image is no longer available in Artifactory**
 
-However, I believe he has the opportunity to make a much broader impact by developing greater independence and taking stronger ownership of his workstreams. The key transition I would like to see is from coordinating delivery activities to genuinely owning the product roadmap, understanding business priorities, managing competing demands and proactively driving outcomes with the engineering teams.
+In this case, the team would not be able to redeploy the original image. They would need to rebuild it and generate a new VSaaS scan/gating report before deployment.
 
-Making this transition would increase his contribution across both teams and allow me to spend less time on product coordination and day-to-day delivery management, and more time focusing on technical strategy, engineering excellence and the wider direction of the platform.
+**My understanding is that the normal rollback scenarios (1 and 2) should not be blocked by VSaaS Image Scanning Gating.** The third scenario is more of an image-retention/availability issue than a gating issue.
 
-I am sharing this feedback constructively because I believe Avtar has the potential to become a much more effective Product Owner. I would like to see him build on the foundations established during his first year and demonstrate greater ownership, independence and impact going forward.
+I think we should validate these scenarios with the Harness and Gating Service teams to confirm the actual behaviour, but based on how VSaaS integration works today, I don't think we should need a separate rollback exemption specifically for Image Scanning Gating.
+
+Thanks.
