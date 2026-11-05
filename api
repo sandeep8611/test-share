@@ -1,25 +1,28 @@
-Hi Noor,
 
-I've looked into the rollback concern raised by Leo and wanted to share my understanding from the VSaaS side.
+Hi team,
 
-The key point is that **VSaaS Image Scanning Gating happens at build time**, when the image is scanned and the gating report is generated. Gating Service uses that existing report during deployment rather than triggering a fresh scan each time.
+I wanted to raise an important concern around how LightSpeed CD Gating handles rollback operations during production releases, as this could introduce a significant operational risk.
 
-I see three possible scenarios:
+When a team deploys to production and encounters a critical functional issue during Production Validation, they may need to roll back immediately to the previous production version (N-1) to restore service.
 
-**1. Rollback using Harness rollback functionality**
+The concern is that Gating Service appears to evaluate the rollback against the currently active security gates. As a result, a previously deployed and successfully running production version may now fail those checks, preventing the rollback.
 
-If the team uses Harness' built-in rollback feature to restore the previous version (N-1), my understanding is that this should not be blocked by VSaaS Image Scanning Gating.
+A few examples:
 
-**2. Manually rolling back to a previous version through Harness**
+- **Newly identified GEMs:** The N-1 version may have passed when originally deployed, but a GEM has since been identified. The rollback would now fail the GEM gate.
+- **Expired exceptions:** A version may have been deployed under an approved seven-day opt-out. Once the exception expires, rolling back to that same version could be blocked.
+- **Changing security policies:** Vulnerability findings and security policies can change over time, potentially preventing a previously running production version from being restored.
 
-If the previous image is still available in Artifactory, Harness should be able to deploy it using its existing VSaaS scan/gating report. It should not require a new scan or gating evaluation.
+This creates a difficult situation during production incidents, where teams could be left with a faulty release and no straightforward way to roll back. We are already hearing concerns from application teams, as blocking rollback could have a significant impact on Citi's services, availability and recovery times.
 
-**3. Rolling back to an older version where the image is no longer available in Artifactory**
+**My recommendation is that Harness rollback operations should not re-trigger the standard Gating Service security checks.** Where a rollback targets the immediately preceding production artefact (N-1), under an active and approved ServiceNow Change Request, it should be allowed as an emergency recovery action without being blocked by current security findings.
 
-In this case, the team would not be able to redeploy the original image. They would need to rebuild it and generate a new VSaaS scan/gating report before deployment.
+Of course, this should be a controlled rollback mechanism with appropriate restrictions and auditability, rather than a general bypass of Hard Gating for new deployments.
 
-**My understanding is that the normal rollback scenarios (1 and 2) should not be blocked by VSaaS Image Scanning Gating.** The third scenario is more of an image-retention/availability issue than a gating issue.
+With GEM identification becoming more frequent and security enforcement continuing to strengthen, I think it is important that we address this as soon as possible.
 
-I think we should validate these scenarios with the Harness and Gating Service teams to confirm the actual behaviour, but based on how VSaaS integration works today, I don't think we should need a separate rollback exemption specifically for Image Scanning Gating.
+Could you please investigate why the standard gates are being invoked during Harness rollback and work with the LightSpeed team to agree on an appropriate solution?
+
+Happy to discuss and work through the implementation approach together.
 
 Thanks.
