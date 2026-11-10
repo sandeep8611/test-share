@@ -1,28 +1,14 @@
+Hi,
 
-Hi team,
+We are the Container Security team and receive the Container GEM list from Vinod's team whenever new GEMs are identified.
 
-I wanted to raise an important concern around how LightSpeed CD Gating handles rollback operations during production releases, as this could introduce a significant operational risk.
+This request is simply to add the following RHSA identifiers to the existing Container GEM list:
 
-When a team deploys to production and encounters a critical functional issue during Production Validation, they may need to roll back immediately to the previous production version (N-1) to restore service.
+- RHSA-2026:90501 (RHEL 8)
+- RHSA-2026:90495 (RHEL 9)
 
-The concern is that Gating Service appears to evaluate the rollback against the currently active security gates. As a result, a previously deployed and successfully running production version may now fail those checks, preventing the rollback.
+Aqua reports these findings against the RHSA identifiers, so we need them included to ensure our container gating correctly identifies and blocks them. The underlying CVE (CVE-2026-111497) is already in the GEM list.
 
-A few examples:
-
-- **Newly identified GEMs:** The N-1 version may have passed when originally deployed, but a GEM has since been identified. The rollback would now fail the GEM gate.
-- **Expired exceptions:** A version may have been deployed under an approved seven-day opt-out. Once the exception expires, rolling back to that same version could be blocked.
-- **Changing security policies:** Vulnerability findings and security policies can change over time, potentially preventing a previously running production version from being restored.
-
-This creates a difficult situation during production incidents, where teams could be left with a faulty release and no straightforward way to roll back. We are already hearing concerns from application teams, as blocking rollback could have a significant impact on Citi's services, availability and recovery times.
-
-**My recommendation is that Harness rollback operations should not re-trigger the standard Gating Service security checks.** Where a rollback targets the immediately preceding production artefact (N-1), under an active and approved ServiceNow Change Request, it should be allowed as an emergency recovery action without being blocked by current security findings.
-
-Of course, this should be a controlled rollback mechanism with appropriate restrictions and auditability, rather than a general bypass of Hard Gating for new deployments.
-
-With GEM identification becoming more frequent and security enforcement continuing to strengthen, I think it is important that we address this as soon as possible.
-
-Could you please investigate why the standard gates are being invoked during Harness rollback and work with the LightSpeed team to agree on an appropriate solution?
-
-Happy to discuss and work through the implementation approach together.
+This isn't an application support request. Could you please direct us to the appropriate team or process for updating the Container GEM list?
 
 Thanks.
