@@ -1,19 +1,17 @@
 Hi Nic,
 
-I would not recommend taking Hari through to the next stage.
+I would not recommend taking this candidate through to the second round.
 
 **Strengths:**
-- Good knowledge of infrastructure and strong expertise in Infrastructure as Code (IaC).
-- Good understanding of security practices and vulnerability scanning tools, including Fancol.
-- Experience working closely with platform teams and supporting application teams with infrastructure requirements.
-- Good understanding of CI/CD capabilities and providing platform services to end users, including researchers and teachers.
-- Very good communication skills and a positive personality. He would be a good person to work with.
+- Strong Kubernetes knowledge, particularly from an infrastructure, management and operational perspective. This is clearly part of their day-to-day role.
+- Good understanding of Kubernetes concepts and operations.
+- Reasonable knowledge of Docker and containers, although struggled to explain some concepts in depth. For example, they understood multi-stage builds but struggled when asked to explain the practical implementation.
+- Communication was good. They were direct, honest and comfortable acknowledging when they didn't know something.
 
 **Areas for Improvement:**
-- Limited Kubernetes knowledge.
-- Some understanding of containers, but lacks deeper technical experience in this area.
-- Limited software development experience, particularly around hands-on development.
+- Very limited hands-on software development experience.
+- No practical experience in API development.
+- Limited understanding of unit testing, including how to write and implement unit tests.
+- Overall, the development experience required for this role is largely missing.
 
-**Overall:** Hari has a good infrastructure and platform engineering background, with strong communication and collaboration skills. However, given our team's requirements around container technologies, Kubernetes, security engineering and development, I don't think his technical experience is quite aligned with what we are looking for at this stage.
-
-Thanks.
+**Overall:** The candidate has a strong infrastructure and Kubernetes background, with good operational experience. However, hands-on development, Python, API development and unit testing are important requirements for our team. Given the significant gap in these areas, I would not recommend progressing them to the next stage.
