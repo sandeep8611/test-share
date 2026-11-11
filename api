@@ -1,17 +1,11 @@
-Hi Nic,
+The key teams and individuals involved in Gating include:
 
-I would not recommend taking this candidate through to the second round.
+1. **Gating Service Team (Ray's team):** Jazmin, Jasper, Ranjeet, Yogesh and Venkata for their ongoing collaboration and support.
 
-**Strengths:**
-- Strong Kubernetes knowledge, particularly from an infrastructure, management and operational perspective. This is clearly part of their day-to-day role.
-- Good understanding of Kubernetes concepts and operations.
-- Reasonable knowledge of Docker and containers, although struggled to explain some concepts in depth. For example, they understood multi-stage builds but struggled when asked to explain the practical implementation.
-- Communication was good. They were direct, honest and comfortable acknowledging when they didn't know something.
+2. **US-hours Opt-out Support:** Phaneendra and Mo Seck for covering opt-out requests during US hours and helping ensure timely responses.
 
-**Areas for Improvement:**
-- Very limited hands-on software development experience.
-- No practical experience in API development.
-- Limited understanding of unit testing, including how to write and implement unit tests.
-- Overall, the development experience required for this role is largely missing.
+3. **Middleware Team:** For their responsiveness in rebuilding and repaving base images at short notice, particularly when zero-day GEMs are ingested and cause images to fail Gating.
 
-**Overall:** The candidate has a strong infrastructure and Kubernetes background, with good operational experience. However, hands-on development, Python, API development and unit testing are important requirements for our team. Given the significant gap in these areas, I would not recommend progressing them to the next stage.
+4. **LightSpeed Team:** Jason, Lilac, Nic and others for their partnership and support in integrating and enabling Gating within LightSpeed.
+
+These are the key contributors who come to mind. There may be a few others across the partner teams, but these individuals and teams have played an important role in helping us move Gating forward.
