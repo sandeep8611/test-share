@@ -1,53 +1,32 @@
-Hi Noor,
+Risk and Control – Rimas
+Rimas has made some very good contributions to strengthening security controls across our Container Security portfolio. 
+His original work on image-age validation has become an important part of our VSaaS Gating controls in LSE, helping ensure teams use images that meet our defined age requirements.
+Another achievement was his contribution of the Operator Pipeline integration into 3PiiP. He helped move the old process away from a manual and error-prone approach to a controlled ingestion process, where Operator images go through 3PiiP validation before being brought into Citi. This has strengthened our security controls and improved consistency in how operator third-party images are ingested.
+I also value Rimas's involvement in reviewing other developers' PRs. He provides direct and constructive feedback, often on time-sensitive changes, helping maintain code quality and engineering standards across our Container Security codebase. I consider this a high-impact contribution, as it provides an important human control within our engineering process, helping ensure code quality, security and engineering excellence before changes are released into production.
+One good example was the VSaaS Gating implementation, where the initial PR was particularly large. Rimas provided some good feedback that helped break the changes into smaller, more manageable PRs, making them easier to review, validate and maintain. This demonstrates his attention to engineering quality and his willingness to help other developers deliver better solutions.
+I would encourage him to continue sharing his technical knowledge and maintaining the high standard of his PR reviews. Going forward, I would also like him to focus on creating more opportunities for other team members to get involved and contribute to workstreams such as the Operator Pipeline and CHRIS. This includes ensuring knowledge is shared effectively across the team and making it easier for others to contribute independently. This will help build wider team capability, develop other engineers' skills and strengthen the team's overall ownership of these workstreams.
 
-I agree that moving to a 30-day threshold is the right direction, and I would favour one clear enforcement date rather than moving through 60 and then 30 days.
+Financial Performance – Rimas
+Rimas has made good contributions to improving the scalability, resilience of VSaaS. He worked on investigations into readiness and liveness probe optimisation, memory management (including MALLOC tunables, which Perminder is currently progressing with Mo and Harpal) and improved SIGTERM handling to make VSaaS deployments more reliable and reduce deployment-related disruption.
+He also involved in CHRIS, an initiative that was not originally part of our roadmap, and helped develop it from initial concept to a POC within weeks and an MVP within a few months. This demonstrated his ability to take on additional responsibilities and deliver against an emerging business need.
+As VSaaS moves towards hard gating for developers and CHRIS progresses towards production, I would like Rimas to work more closely with the SRE team, particularly Perminder, Keith and Mahaveer, to ensure we operate as one team and have a shared approach to scalability, resilience and operational support.
+I would also like Rimas to help build stronger knowledge sharing across the team so that other engineers, particularly those not currently involved in CHRIS day-to-day, can contribute more easily to its development. Sharing knowledge and distributing engineering responsibilities will help build wider team capability and avoid creating dependencies on a small number of individuals.
+Another important area is infrastructure efficiency. As CHRIS moves towards production, I would like Rimas to work closely with me, the team and SRE to assess infrastructure requirements carefully, provisioning with optmise and make sure we use our existing infrastructure resources efficiently. Infrastructure decisions should be driven by genuine capacity and business requirements, balancing scalability and resilience with cost efficiency.
 
-**One suggestion on timing:** Rather than targeting the end of March for enforcement, I would consider enabling the 30-day threshold at the end of February. We can start communicating now, including developer sessions, emails and banners in the VSaaS reports. I appreciate that opt-out requests will initially increase, but this will give teams a clear deadline and create the necessary urgency to remediate. Where teams fail for the first time, we could consider a time-bound exception to give them until the end of March to fix the issue, rather than waiting until March to enforce and then dealing with another wave of exception requests. This would need to be supported by a clear remediation plan.
+Client and Franchise Outcomes – Rimas
+Rimas has made good contribution to improving the experience and capabilities we provide to our developer community.
+His contribution and delivery of the Operator Pipeline integration into 3PiiP has been an important achievement. Teams can now use the approved ingestion process rather than relying on the previous manual approach, making image ingestion more consistent, controlled, faster  and efficient. 
+His work on CHRIS, alongside Mohamed, has also progressed well, with the solution now available in the UAT environment and already demonstrating its potential value to application teams across Citi.
+I also value Rimas's input into how we design and build our services. He identifies opportunities to reuse functionality across VSaaS and 3PiiP rather than duplicating existing capabilities or maintaining separate implementations. This strategy in around how we design and share reporting capabilities for application teams is particularly important as our product portfolio (now adding CHRIS) continues to grow.
+As we continue to introduce more capabilities for developers, I would like Rimas to help drive a more connected Container Security platform rather than allowing individual capabilities to develop into separate product silos. This means promoting reusable solutions, encouraging collaboration across workstreams and sharing technical knowledge across the team so that expertise is not concentrated around specific individuals. This will be an important area for us to focus on together, requiring close collaboration to ensure we build an integrated platform with shared ownership and consistent engineering standards.
+I would also encourage him to continue strengthening relationships with our key stakeholders and partner teams, ensuring that our solutions remain aligned with developer needs and that we take a consistent approach across the wider Container Security portfolio.
 
-A few things I think we need to address:
-
-**1. Latest approved base-image check in VSaaS**
-
-We should enhance VSaaS to distinguish genuinely outdated images from the latest approved base image. If Red Hat or an internal Managed Repo has not published a newer image, the base-image age check should not automatically flag consuming teams.
-
-However, we need to identify the latest approved and supported image stream, not simply the latest tag or digest available in Artifactory. Otherwise, teams could continue consuming an old image indefinitely because it remains the latest available in that repository. It would be useful to understand how the Drift team currently handles this.
-
-**2. Internal base-image availability and refresh cadence**
-
-This is probably my biggest concern. The challenge isn't just UBI; internal image owners across Java, Python, Tomcat, web server and other image families need to rebuild and publish regularly. If they don't, application teams could fail the gate even when they have rebuilt their own images.
-
-We should also use this opportunity to challenge the size and composition of some of these images. For example, one of our Python images is over 650 MB unpacked. We should look at what is being added on top of UBI and whether there is scope to optimise them. At a minimum, image owners need to be able to rebuild and repave images quickly.
-
-**3. Red Hat engagement**
-
-We should engage Red Hat and get their commitment and clarity on the refresh cadence for UBI 9 and UBI 10, particularly whether they can provide updated images within a 30-day window.
-
-**4. UBI 10 strategy**
-
-I think we should bring UBI 10 into the roadmap as soon as possible. Asking teams to migrate to the latest UBI 9 now and then repeat the exercise for UBI 10 could create unnecessary work. We should factor UBI 10 into the wider image-modernisation strategy rather than treating it as a separate exercise.
-
-**5. CHRIS production and reporting**
-
-I would make getting CHRIS into production a high priority in our roadmap. We need teams to see image-age compliance at CSI level, including how many images are over 30 days.
-
-Ideally, we should provide the same VSaaS Gating experience in CHRIS, not just the pass/fail numbers but also the remediation recommendations. If we can't deliver that quickly, we can provide ad hoc reports initially, although this will create additional manual effort for our team.
-
-**6. Dashboard and visibility**
-
-We should include a metric showing the number of images failing because no newer approved base image is available. This will help distinguish application-team remediation issues from upstream image availability issues.
-
-**Other risks/dependencies to consider:**
-
-- **Java 17 end of support:** Application teams using Citi-certified Java 17 need to migrate to Java 25 by January 2027. This could be an opportunity to align the Java migration with the image-modernisation work, although we need to be mindful of the combined impact on application teams.
-- **Gating Service UI:** The team is working on a replacement for the current LightSpeed Gating UI. I don't think we need to make that a dependency; we can continue with the existing UI for this rollout.
-- **Codified control:** I need to confirm this, but if we enable the 30-day threshold in the VSaaS report, we also need to ensure the corresponding Gating Service codified control is updated at the same time. Otherwise, we risk inconsistent reporting and enforcement.
-
-**Proposed timeline:**
-
-- **Now – January:** Start communications, developer sessions, assess the current impact, engage Red Hat and internal image owners, and prioritise the VSaaS/CHRIS enhancements.
-- **End of February:** Enable the 30-day threshold and begin enforcement, with a controlled, time-bound exception process for teams that need additional remediation time.
-- **March:** Work with failing teams and internal image owners to address outstanding issues, with the aim of having teams compliant by the end of March.
-
-Overall, I think we should use this change to drive improvements across the entire container image supply chain. Changing the policy is relatively straightforward; making sure the latest approved images are available, regularly refreshed and easy for application teams to consume is what will make the 30-day requirement sustainable.
-
-Thanks
+Leadership – How: Rimas
+This year, I have given Rimas the opportunity to take on broader responsibilities, particularly through CHRIS, where he has helped lead delivery alongside Mohamed and two engineers from outside our immediate team. He has demonstrated good leadership in organising the work, ensuring engineers have clear priorities for each sprint and keeping the team focused on achieving its objectives. This was particularly important as Avtar was unable to support CHRIS due to his other commitments, and Rimas helped ensured with me we could continue moving the workstream forward without a dedicated PO.
+His work with the 3PiiP and Artifactory teams has also demonstrated his ability to build relationships beyond our immediate team and work with stakeholders to drive wider initiatives. I have consistently seen a good standard of engineering in the work Rimas delivers, and I particularly value his involvement in reviewing other developers' PRs and providing honest, constructive feedback. I would like him to continue playing this role, as it helps maintain engineering quality across the team and supports other engineers in improving their solutions.
+Rimas is a very valuable member of the team, and I have a high level of trust in his technical judgement. I regularly rely on him and Harpal to take ownership of important responsibilities, including when I am away. As he continues to take on broader responsibilities, I see some good opportunities for him to extend his impact even further.
+	•	Develop others and share knowledge: As CHRIS becomes more integrated into our team's portfolio, I would like Rimas, working alongside Mohamed, to help build the capability of more engineers to contribute to the workstream. This includes providing technical guidance, sharing knowledge and making sure others can contribute independently. This will help us build wider team capability and avoid too much reliance on a small number of individuals.
+	•	Share the bigger picture: Rimas generally provides good updates and keeps me informed of progress. There have only been a few occasions, for example around some 3PiiP Operator Pipeline issues, where I needed a little more context to understand the situation. Sometimes the response has been as brief as "No issue" or "we don't need it", without much explanation. 
+	•	Continue growing his leadership influence: Rimas has strong technical opinions, which I value and which are important when shaping solutions. As he works with a wider group of engineers and stakeholders, I would encourage him to continue building alignment by open to different perspectives and remaining open to alternative approaches. This will help him influence decisions beyond his immediate workstream and bring others along with him.
+	•	Help shape consistency across our portfolio: As Rimas becomes involved in more workstreams, I would like us to work closely together on priorities, progress and key technical decisions. As our capabilities continue to grow across VSaaS, 3PiiP, Base Images, and CHRIS, it is increasingly important that we provide a consistent experience to our users, rather than developing each service in isolation. I would like Rimas to play an active role in helping shape this wider direction.
+I have a high level of confidence in Rimas and believe he has the ability to take on even greater responsibilities. He has already demonstrated that he can lead delivery, influence technical decisions and support others. The next step is to extend that impact further by developing people around him, sharing his knowledge and helping shape the direction of our wider Container Security portfolio.
