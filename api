@@ -1,5 +1,10 @@
-Looking ahead, I would like Harpal to continue building on his contribution to VSaaS Gating by working closely with the Gating Services and LightSpeed teams as we expand adoption and improve the developer experience.
+Thanks for the update, Ken.
 
-I would also encourage him to take greater ownership across our wider Container Security portfolio and look for opportunities to make our services more useful and easier for developers to adopt. One example is working closely with the Middleware team to improve our base image recommendation service. Rather than asking application teams to check Managed Repos to identify the latest approved base image, we should aim to provide a clear, specific recommendation of which image they should move to. This would make the remediation process simpler for developers and help accelerate the adoption of secure and up-to-date base images.
+Given the potential impact of this change on both VSaaS and Aqua, I'd like you to work closely with Harpal to ensure we have a thorough technical review and alignment before moving forward. He'll be back on Monday.
 
-I would like Harpal to continue identifying similar opportunities where closer collaboration across teams can improve the capabilities we provide and deliver a more consistent experience for our developer community.
+In the meantime:
+- Have you tested the changes end-to-end, both locally and in the DEV environment?
+- Could you capture the current performance baseline so we have something to compare against after the change? Harpal can support with performance testing when he's back.
+- Can we also ensure there is a clear fallback/rollback mechanism so that, if COIN authentication causes any issues, we can revert to the existing API-key authentication without impacting VSaaS availability?
+
+Thanks.
