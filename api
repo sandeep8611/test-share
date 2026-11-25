@@ -1,14 +1,11 @@
-Hi Adam / Team,
+Following our discussion today, I wanted to clarify again that VSaaS uses an Artifactory identity token as the password for Basic Authentication. This is not a traditional password and provides a more secure authentication mechanism.
 
-Following our discussion, I wanted to clarify that VSaaS uses an Artifactory identity token as the password for Basic Authentication. This is not a traditional static password and provides a more secure authentication mechanism.
+Given this, could you help us understand the specific security concern with the current implementation?
 
-Given this, could you help us understand the specific security concern with the current implementation and why it warrants a Medium rating?
+We also already have an existing RE (519281) covering authentication for VSaaS, so I would expect this scenario to be covered under the existing RE rather than requiring an additional item or increasing its severity.
 
-We also already have an existing RE covering authentication for VSaaS, so I would expect this scenario to be covered under the existing RE rather than requiring an additional item or increasing its severity. Could you please clarify if there is a specific gap in the current RE coverage?
+@Abigail – could you please help review this from a risk/RE perspective and advise whether the existing RE provides sufficient coverage and why an increase in severity would be required?
 
-Myself and the team are happy to support with any technical questions or provide further clarification.
+We're happy to provide any technical details or clarification needed.
 
-As tomorrow is my last working day before the holidays, could we park any decision on associating this finding with our existing RE and revisit it in the new year? Alternatively, I can arrange for someone from my team to work with you in my absence if further clarification is needed.
-
-Thanks,  
-Sandeep
+As tomorrow is my last working day before the holidays, I'd appreciate if we could align on the approach before proceeding. If further technical clarification is needed, I can arrange for someone from my team to work with you in my absence.
