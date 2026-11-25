@@ -1,9 +1,12 @@
-Noor, wanted to flag something and get your advice.
+Hi Adam / Team,
 
-There’s a VA finding in VSaaS relating to the use of Basic Auth in our API. Adam has requested that it be associated with our existing RE, which would increase its severity from Low to Medium.
+Following our discussion, I wanted to clarify that VSaaS uses an Artifactory identity token as the password for Basic Authentication. This is not a traditional static password, and the use of an identity token provides a more secure authentication mechanism.
 
-I explained that we use an Artifactory identity token as the password, but Devesh maintained in the call that the finding would still be rated Medium because we’re using Basic Auth.
+Given this, could you help us understand the specific security concern with the current implementation and why it warrants a Medium rating, particularly as we already have an existing RE covering our authentication?
 
-We already have an RE covering our authentication, so I’m concerned about the implications of linking this additional finding to it and the potential impact of increasing its severity. I had a call with them just now, but there doesn’t seem to be a clear way forward, as the VA report has already been created.
+Myself and the team are happy to support with any technical questions or provide further clarification.
 
-They’re looking to get this done by the end of the month. As tomorrow is my last day, I wanted to flag this with you and get your guidance on how we should proceed.
+As tomorrow is my last working day before the holidays, could we park any decision to associate this finding with our existing RE and revisit it in the new year once we've had an opportunity to work through the concerns? Alternatively, I can arrange for someone from my team to work with you in my absence if further clarification is needed.
+
+Thanks,  
+Sandeep
