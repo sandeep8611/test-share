@@ -1,12 +1,14 @@
 Hi Adam / Team,
 
-Following our discussion, I wanted to clarify that VSaaS uses an Artifactory identity token as the password for Basic Authentication. This is not a traditional static password, and the use of an identity token provides a more secure authentication mechanism.
+Following our discussion, I wanted to clarify that VSaaS uses an Artifactory identity token as the password for Basic Authentication. This is not a traditional static password and provides a more secure authentication mechanism.
 
-Given this, could you help us understand the specific security concern with the current implementation and why it warrants a Medium rating, particularly as we already have an existing RE covering our authentication?
+Given this, could you help us understand the specific security concern with the current implementation and why it warrants a Medium rating?
+
+We also already have an existing RE covering authentication for VSaaS, so I would expect this scenario to be covered under the existing RE rather than requiring an additional item or increasing its severity. Could you please clarify if there is a specific gap in the current RE coverage?
 
 Myself and the team are happy to support with any technical questions or provide further clarification.
 
-As tomorrow is my last working day before the holidays, could we park any decision to associate this finding with our existing RE and revisit it in the new year once we've had an opportunity to work through the concerns? Alternatively, I can arrange for someone from my team to work with you in my absence if further clarification is needed.
+As tomorrow is my last working day before the holidays, could we park any decision on associating this finding with our existing RE and revisit it in the new year? Alternatively, I can arrange for someone from my team to work with you in my absence if further clarification is needed.
 
 Thanks,  
 Sandeep
