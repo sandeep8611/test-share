@@ -1,12 +1,3 @@
-Hi Matthew,
+Noor, I had a chat with the Middleware team today about the IBCM control for web-app images. They’re mainly looking for a runtime capability to detect if developers have changed configurations or made any unauthorised modifications. Alex thinks Aqua might have something that could help.
 
-Thanks for the update. I've also replied to the other email thread (see attached).
-
-Before we proceed with the CAP, I'd like to get some alignment on the existing RE coverage. As mentioned on the call, we already have RE 519281 covering VSaaS authentication. Given that we're using an Artifactory identity token for Basic Auth, could you clarify why this needs to be treated as an additional risk or result in an increase in the existing RE severity?
-
-Abigail, I'd appreciate your help in reviewing this and confirming whether our existing RE already provides sufficient coverage.
-
-I've also added Noor for visibility and guidance. As I'm out from Friday, Harpal from my team can support any technical discussions or provide further clarification in my absence.
-
-Thanks,  
-Sandeep
+I don’t think there’s anything for us to add to the roadmap from a build-time perspective, as we don’t currently do anything in this space. I’ve asked them to keep us in the loop, and we can support from our side if anything is needed.
