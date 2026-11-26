@@ -1,3 +1,14 @@
-Noor, I had a chat with the Middleware team today about the IBCM control for web-app images. They’re mainly looking for a runtime capability to detect if developers have changed configurations or made any unauthorised modifications. Alex thinks Aqua might have something that could help.
+Hi Arun,
 
-I don’t think there’s anything for us to add to the roadmap from a build-time perspective, as we don’t currently do anything in this space. I’ve asked them to keep us in the loop, and we can support from our side if anything is needed.
+I wanted to check something around Artifactory authentication.
+
+VSaaS currently uses a username and Artifactory identity token (as the password) to authenticate when accessing Artifactory APIs to download image manifests. Artifactory validates the credentials and permissions, returning a 403 or unauthorised response where access is not permitted.
+
+Is it possible to change this so VSaaS can authenticate using the identity token directly, rather than passing it as the password through Basic Auth? For example, using Bearer token authentication, if supported.
+
+Alternatively, are there any other options to avoid using Basic Auth while retaining the same authentication and permission checks?
+
+Would appreciate your thoughts on what's possible.
+
+Thanks,  
+Sandeep
